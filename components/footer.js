@@ -1,9 +1,9 @@
-﻿document.getElementById('footer-placeholder').innerHTML = `<!-- ADVANCED FOOTER -->
+document.getElementById('footer-placeholder').innerHTML = `<!-- ADVANCED FOOTER -->
     <footer>
         <div class="container reveal">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <div class="footer-logo">Lâ€™Esprit Voyages</div>
+                    <div class="footer-logo">L'Esprit Voyages</div>
                     <p>Crafting tailor-made luxury escapes blending elegance, culture, and meaningful local connections across Sri Lanka and the Maldives.</p>
                     <div class="social-icons">
                         <a href="#">Fb</a>
