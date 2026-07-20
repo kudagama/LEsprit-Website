@@ -330,104 +330,104 @@
         /* VALUE PROP */
         .why-us { text-align: center; padding: 12vw 0; }
         .why-us h2 { font-size: 4rem; color: var(--c-dark-blue); margin-bottom: 5rem; }
-        .vp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+        .vp-grid {
+            display: flex;
+            height: 450px;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
         
         .vp-card {
-            background: transparent;
-            padding: 6rem 2.5rem 4rem 2.5rem;
-            border: 1px solid rgba(197, 168, 128, 0.3);
-            border-radius: 200px 200px 10px 10px; /* Elegant Arch Shape */
+            flex: 1;
+            background: var(--c-dark-blue);
+            border-radius: 12px;
             position: relative;
             overflow: hidden;
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
-            z-index: 1;
+            justify-content: flex-end;
+            padding: 3rem;
+            cursor: pointer;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
         
-        .vp-card::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, rgba(197, 168, 128, 0.1), transparent);
-            opacity: 0; transition: opacity 0.6s ease; z-index: -1;
-        }
-        
-        /* Animated Gold Star */
+        /* The massive background number */
         .vp-card::after {
-            content: '✦'; position: absolute; top: 2.5rem; left: 50%;
-            transform: translateX(-50%) scale(0) rotate(90deg);
-            color: var(--c-gold); font-size: 2rem; line-height: 1;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            opacity: 0; z-index: -1;
+            position: absolute; top: -10%; right: -5%;
+            font-size: 15rem; line-height: 1;
+            color: rgba(255, 255, 255, 0.03);
+            font-family: var(--f-serif);
+            transition: all 0.7s ease; z-index: 0;
         }
+        .vp-card:nth-child(1)::after { content: '1'; }
+        .vp-card:nth-child(2)::after { content: '2'; }
+        .vp-card:nth-child(3)::after { content: '3'; }
+        .vp-card:nth-child(4)::after { content: '4'; }
         
         .vp-card:hover {
-            transform: translateY(-20px);
-            border-color: var(--c-gold);
-            background: var(--c-white);
-            box-shadow: 0 25px 50px rgba(197, 168, 128, 0.15);
+            flex: 3;
+            background: var(--c-gold);
+            box-shadow: 0 30px 60px rgba(197, 168, 128, 0.3);
+            transform: translateY(-10px);
         }
-        .vp-card:hover::before { opacity: 1; }
-        .vp-card:hover::after { transform: translateX(-50%) scale(1) rotate(0deg); opacity: 1; }
-
-        .vp-card h4 { font-family: var(--f-serif); font-size: 1.6rem; color: var(--c-dark-blue); margin-bottom: 1.5rem; }
-        .vp-card p { font-size: 0.95rem; color: var(--c-text-light); line-height: 1.8; margin: 0; }
-
-        /* SUSTAINABILITY - EXPANDING ACCORDION */
-        #sustainability {
-            background: linear-gradient(rgba(7, 21, 38, 0.7), rgba(7, 21, 38, 0.95)), url('../images/sustainability.png') center/cover fixed;
-            padding: 10vw 0;
+        .vp-card:hover::after { color: rgba(255, 255, 255, 0.15); right: 5%; }
+        
+        .vp-card h4 {
+            font-family: var(--f-serif); font-size: 1.8rem; color: var(--c-white);
+            margin-bottom: 0; transition: all 0.5s ease; position: relative; z-index: 2;
+            white-space: nowrap;
+        }
+        .vp-card p {
+            font-size: 1rem; color: var(--c-dark-blue); line-height: 1.8;
+            opacity: 0; max-height: 0; overflow: hidden;
+            transition: all 0.5s ease; position: relative; z-index: 2; margin: 0;
+            transform: translateY(20px);
         }
         
-        .sus-accordion {
-            display: flex; width: 100%; height: 500px; gap: 15px; margin: 0 auto;
-        }
+        .vp-card:hover h4 { color: var(--c-dark-blue); margin-bottom: 1rem; white-space: normal; }
+        .vp-card:hover p { opacity: 1; max-height: 150px; transform: translateY(0); }
+
+        /* SUSTAINABILITY */
+        #sustainability { padding-bottom: 12vw; }
+        .sus-container { display: flex; align-items: center; position: relative; }
         
-        .sus-panel {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(197, 168, 128, 0.2);
+        .sus-image {
+            width: 55%; height: 750px;
+            background: url('../images/sustainability.png') center/cover;
             border-radius: 12px;
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative; overflow: hidden; cursor: pointer;
-            display: flex; align-items: flex-end; padding: 3rem;
-        }
-        .sus-panel:hover {
-            flex: 4;
-            background: rgba(197, 168, 128, 0.1);
-            border-color: var(--c-gold);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+            position: relative; z-index: 1;
         }
         
-        .vertical-title {
-            position: absolute; left: 50%; top: 50%;
-            transform: translate(-50%, -50%) rotate(-90deg);
-            font-size: 1.8rem; color: rgba(255,255,255,0.7);
-            white-space: nowrap; font-family: var(--f-serif); font-style: italic;
-            transition: all 0.5s ease;
-        }
-        .sus-panel:hover .vertical-title {
-            opacity: 0; transform: translate(-50%, -50%) rotate(-90deg) scale(0.8);
+        .sus-content {
+            width: 55%; margin-left: -10%; /* Creates the elegant overlap */
+            background: rgba(244, 240, 230, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 5rem 4rem; border-radius: 8px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+            position: relative; z-index: 2;
         }
         
-        .sus-panel-content {
-            opacity: 0; transform: translateY(30px);
-            transition: all 0.6s ease;
-            width: 100%; min-width: 300px; pointer-events: none;
-        }
-        .sus-panel:hover .sus-panel-content {
-            opacity: 1; transform: translateY(0); pointer-events: auto; transition-delay: 0.2s;
-        }
+        .sus-content h2 { font-size: 3.5rem; color: var(--c-dark-blue); margin-bottom: 1.5rem; line-height: 1.1; }
         
-        .sus-panel-content h4 {
-            font-size: 2.2rem; color: var(--c-gold); font-family: var(--f-serif);
-            margin-bottom: 1rem; line-height: 1.2;
+        .sus-list { list-style: none; padding: 0; margin-top: 2rem; }
+        .sus-list li { 
+            padding: 2rem 0; border-bottom: 1px solid rgba(197, 168, 128, 0.3); 
+            position: relative; transition: all 0.5s ease;
+            display: flex; flex-direction: column; justify-content: center;
         }
-        .sus-panel-content p {
-            font-size: 1.1rem; color: rgba(255,255,255,0.9); line-height: 1.8; margin: 0;
+        .sus-list li::before {
+            content: ''; position: absolute; left: 0; bottom: -1px; width: 0%; height: 2px;
+            background: var(--c-gold); transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
+        .sus-list li:hover { padding-left: 2rem; background: rgba(197, 168, 128, 0.05); }
+        .sus-list li:hover::before { width: 100%; }
+        
+        .sus-list h4 { font-family: var(--f-serif); font-size: 1.6rem; color: var(--c-dark-blue); margin-bottom: 0.8rem; transition: color 0.3s; }
+        .sus-list li:hover h4 { color: var(--c-gold); }
+        .sus-list p { font-size: 1rem; color: var(--c-text-light); line-height: 1.6; margin: 0; }
 
         /* FORM */
         .inquiry { 
@@ -543,14 +543,14 @@
             .strength-box { left: 50%; transform: translateX(-50%); bottom: -60px; width: 95%; max-width: none; text-align: center; padding: 2rem; }
             .dest-row, .dest-row:nth-child(even) { flex-direction: column; height: auto; }
             .dest-image { height: 400px; width: 100%; }
-            #sustainability { padding: 15vw 0; }
-            .sus-accordion { flex-direction: column; height: 700px; }
-            .sus-panel { align-items: center; padding: 2rem; border-radius: 8px; }
-            .vertical-title { transform: translate(-50%, -50%) rotate(0); font-size: 1.2rem; font-style: normal; }
-            .sus-panel:hover .vertical-title { transform: translate(-50%, -50%) rotate(0) scale(0.8); }
-            .sus-panel-content h4 { font-size: 1.5rem; text-align: center; }
-            .sus-panel-content p { font-size: 0.95rem; text-align: center; line-height: 1.5; }
-            .vp-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+            .sus-container { flex-direction: column; gap: 0; }
+            .sus-image { width: 100%; height: 400px; margin-bottom: -5rem; border-radius: 0; }
+            .sus-content { width: 95%; margin: 0 auto; padding: 3rem 2rem; z-index: 2; margin-bottom: 2rem; }
+            .vp-grid { display: grid; grid-template-columns: 1fr 1fr; height: auto; margin-top: 1rem; }
+            .vp-card { padding: 3rem 2rem; }
+            .vp-card h4 { margin-bottom: 1rem; white-space: normal; }
+            .vp-card p { opacity: 1; max-height: 500px; transform: none; color: rgba(255,255,255,0.7); }
+            .vp-card:hover { transform: translateY(-5px); }
             .service-list { grid-template-columns: 1fr; margin-top: 3rem; }
             .service-item { padding: 3rem 2rem; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -577,7 +577,8 @@
             .form-wrap { padding: 3rem 2rem; margin: 2rem 1rem 0; }
             .concept-text p { font-size: 1rem; }
             .dest-content { padding: 12vw 6vw; }
-            .vp-grid { grid-template-columns: 1fr; }
+            .vp-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .service-item { padding: 2.5rem 1.5rem; }
             .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
             .btn-luxury { padding: 1.2rem 2rem; width: 100%; }
