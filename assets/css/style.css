@@ -375,6 +375,7 @@
         .vp-card p { font-size: 0.95rem; color: var(--c-text-light); line-height: 1.8; margin: 0; }
 
         /* SUSTAINABILITY */
+        #sustainability { padding-bottom: 12vw; }
         .sus-container { display: flex; align-items: center; position: relative; }
         
         .sus-image {
