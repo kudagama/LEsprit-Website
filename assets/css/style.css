@@ -331,63 +331,80 @@
         .why-us { text-align: center; padding: 12vw 0; }
         .why-us h2 { font-size: 4rem; color: var(--c-dark-blue); margin-bottom: 5rem; }
         .vp-grid {
-            display: flex;
-            height: 450px;
-            gap: 1rem;
-            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
         .vp-card {
-            flex: 1;
-            background: var(--c-dark-blue);
-            border-radius: 12px;
+            background: var(--c-white);
+            border: 1px solid rgba(197, 168, 128, 0.3);
+            padding: 4rem;
             position: relative;
-            overflow: hidden;
-            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 3rem;
-            cursor: pointer;
+            transition: all 0.5s ease;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            border-radius: 4px;
             text-align: left;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            z-index: 1;
         }
         
-        /* The massive background number */
-        .vp-card::after {
-            position: absolute; top: -10%; right: -5%;
-            font-size: 15rem; line-height: 1;
-            color: rgba(255, 255, 255, 0.03);
-            font-family: var(--f-serif);
-            transition: all 0.7s ease; z-index: 0;
+        /* The Stagger Effect */
+        .vp-card:nth-child(even) {
+            transform: translateY(6rem);
         }
-        .vp-card:nth-child(1)::after { content: '1'; }
-        .vp-card:nth-child(2)::after { content: '2'; }
-        .vp-card:nth-child(3)::after { content: '3'; }
-        .vp-card:nth-child(4)::after { content: '4'; }
+        
+        /* Numbering */
+        .vp-card::before {
+            position: absolute;
+            top: -2rem;
+            right: 2rem;
+            font-family: var(--f-serif);
+            font-size: 8rem;
+            color: rgba(197, 168, 128, 0.15);
+            line-height: 1;
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+        .vp-card:nth-child(1)::before { content: '01'; }
+        .vp-card:nth-child(2)::before { content: '02'; }
+        .vp-card:nth-child(3)::before { content: '03'; }
+        .vp-card:nth-child(4)::before { content: '04'; }
         
         .vp-card:hover {
-            flex: 3;
-            background: var(--c-gold);
-            box-shadow: 0 30px 60px rgba(197, 168, 128, 0.3);
-            transform: translateY(-10px);
+            background: var(--c-dark-blue);
+            border-color: var(--c-gold);
+            box-shadow: 0 30px 60px rgba(197, 168, 128, 0.2);
+            z-index: 2;
         }
-        .vp-card:hover::after { color: rgba(255, 255, 255, 0.15); right: 5%; }
+        .vp-card:hover:nth-child(odd) { transform: translateY(-10px); }
+        .vp-card:hover:nth-child(even) { transform: translateY(calc(6rem - 10px)); }
+        
+        .vp-card:hover::before { color: rgba(197, 168, 128, 0.3); transform: translateY(-10px); }
+        .vp-card:hover h4 { color: var(--c-gold); border-color: rgba(197, 168, 128, 0.5); }
+        .vp-card:hover p { color: rgba(255, 255, 255, 0.8); }
         
         .vp-card h4 {
-            font-family: var(--f-serif); font-size: 1.8rem; color: var(--c-white);
-            margin-bottom: 0; transition: all 0.5s ease; position: relative; z-index: 2;
-            white-space: nowrap;
-        }
-        .vp-card p {
-            font-size: 1rem; color: var(--c-dark-blue); line-height: 1.8;
-            opacity: 0; max-height: 0; overflow: hidden;
-            transition: all 0.5s ease; position: relative; z-index: 2; margin: 0;
-            transform: translateY(20px);
+            font-size: 2rem;
+            color: var(--c-dark-blue);
+            margin-bottom: 1.5rem;
+            transition: color 0.5s ease;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(197, 168, 128, 0.3);
+            white-space: normal;
         }
         
-        .vp-card:hover h4 { color: var(--c-dark-blue); margin-bottom: 1rem; white-space: normal; }
-        .vp-card:hover p { opacity: 1; max-height: 150px; transform: translateY(0); }
+        .vp-card p {
+            font-size: 1.05rem;
+            color: var(--c-text-light);
+            line-height: 1.8;
+            transition: color 0.5s ease;
+            margin: 0;
+            opacity: 1;
+            max-height: none;
+            transform: none;
+        }
 
         /* SUSTAINABILITY */
         #sustainability { padding-bottom: 12vw; }
@@ -546,11 +563,11 @@
             .sus-container { flex-direction: column; gap: 0; }
             .sus-image { width: 100%; height: 400px; margin-bottom: -5rem; border-radius: 0; }
             .sus-content { width: 95%; margin: 0 auto; padding: 3rem 2rem; z-index: 2; margin-bottom: 2rem; }
-            .vp-grid { display: grid; grid-template-columns: 1fr 1fr; height: auto; margin-top: 1rem; }
+            .vp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
             .vp-card { padding: 3rem 2rem; }
-            .vp-card h4 { margin-bottom: 1rem; white-space: normal; }
-            .vp-card p { opacity: 1; max-height: 500px; transform: none; color: rgba(255,255,255,0.7); }
-            .vp-card:hover { transform: translateY(-5px); }
+            .vp-card:nth-child(even) { transform: translateY(3rem); }
+            .vp-card:hover:nth-child(odd) { transform: translateY(-5px); }
+            .vp-card:hover:nth-child(even) { transform: translateY(calc(3rem - 5px)); }
             .service-list { grid-template-columns: 1fr; margin-top: 3rem; }
             .service-item { padding: 3rem 2rem; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -577,7 +594,9 @@
             .form-wrap { padding: 3rem 2rem; margin: 2rem 1rem 0; }
             .concept-text p { font-size: 1rem; }
             .dest-content { padding: 12vw 6vw; }
-            .vp-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .vp-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .vp-card:nth-child(even) { transform: none; }
+            .vp-card:hover:nth-child(odd), .vp-card:hover:nth-child(even) { transform: translateY(-5px); }
             .service-item { padding: 2.5rem 1.5rem; }
             .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
