@@ -400,25 +400,39 @@
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .concept-wrapper { flex-direction: column; }
-            .concept-img { width: 100%; height: 500px; }
-            .strength-box { left: 50%; transform: translateX(-50%); bottom: -80px; width: 90%; text-align: center; }
+            .concept-wrapper { flex-direction: column; gap: 2vw; margin-bottom: 8vw; }
+            .concept-img { width: 100%; height: 400px; margin-bottom: 60px; }
+            .strength-box { left: 50%; transform: translateX(-50%); bottom: -60px; width: 95%; max-width: none; text-align: center; padding: 2rem; }
             .dest-row, .dest-row:nth-child(even) { flex-direction: column; height: auto; }
             .dest-image { height: 400px; width: 100%; }
-            .sus-container { flex-direction: column; }
-            .sus-image { width: 100%; height: 400px; }
+            .sus-container { flex-direction: column; gap: 2vw; }
+            .sus-image { width: 100%; height: 400px; margin-bottom: 2rem; }
             .service-item { flex-direction: column; gap: 1rem; padding: 2rem 0; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
-            .nav-links { display: none; }
-            .menu-toggle { display: flex; }
+            
+            /* Mobile Nav */
+            .nav-links { 
+                position: absolute; top: 100%; left: 0; width: 100%; 
+                background: rgba(7, 21, 38, 0.98); backdrop-filter: blur(10px);
+                flex-direction: column; align-items: center; gap: 2rem; padding: 3rem 0;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); transition: clip-path 0.5s ease;
+            }
+            .nav-links.active { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+            .menu-toggle { display: flex; z-index: 101; }
+            .menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+            .menu-toggle.active span:nth-child(2) { opacity: 0; }
+            .menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
         }
         
         @media (max-width: 768px) {
-            section { padding: 20vw 0; }
-            .hero h1 { font-size: 3rem; }
-            .concept-text h2, .dest-content h2, .services-section h2, .why-us h2, .sus-content h2, .inquiry h2 { font-size: 2.5rem; }
+            section { padding: 15vw 0; }
+            .hero h1 { font-size: clamp(2.5rem, 10vw, 3.5rem); }
+            .hero p { font-size: 1.1rem; }
+            .concept-text h2, .dest-content h2, .services-section h2, .why-us h2, .sus-content h2, .inquiry h2 { font-size: 2.2rem; }
+            .concept-text p { font-size: 1rem; }
             .dest-content { padding: 12vw 6vw; }
             .vp-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
+            .btn-luxury { padding: 1.2rem 2rem; width: 100%; }
         }
