@@ -203,11 +203,13 @@
         .strength-box p { font-family: var(--f-serif); font-size: 1.4rem; font-style: italic; color: var(--c-gold); margin: 0; line-height: 1.6; }
 
         .values-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem;
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem;
             padding-top: 2rem;
         }
         
         .value-item {
+            flex: 1 1 300px;
+            max-width: 400px;
             padding: 3rem 2.5rem;
             background: var(--c-dark-blue);
             color: var(--c-white);
