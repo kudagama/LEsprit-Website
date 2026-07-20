@@ -40,6 +40,11 @@
             margin-bottom: 1rem;
             display: block;
         }
+        
+        /* Subtitles on dark backgrounds need a brighter gold */
+        .hero .subtitle, .services-section .subtitle, footer .subtitle {
+            color: var(--c-gold);
+        }
 
         /* Scroll Reveal (Fade Up) */
         .reveal { opacity: 0; transform: translateY(50px); transition: var(--transition); }
