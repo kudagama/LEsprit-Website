@@ -480,6 +480,7 @@
             font-family: var(--f-sans); font-size: 1.1rem; color: var(--c-white);
             transition: var(--transition);
         }
+        .input-group select option { color: var(--c-dark-blue); background: var(--c-white); }
         .input-group input:focus, .input-group select:focus { outline: none; border-bottom-color: var(--c-gold); }
         
         .input-group label {
