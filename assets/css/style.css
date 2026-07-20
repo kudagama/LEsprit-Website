@@ -330,18 +330,49 @@
         /* VALUE PROP */
         .why-us { text-align: center; padding-top: 12vw; }
         .why-us h2 { font-size: 4rem; color: var(--c-dark-blue); margin-bottom: 5rem; }
-        .vp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .vp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; }
         
         .vp-card {
-            padding: 4rem 2rem; border: 1px solid var(--c-gold-dim);
-            transition: var(--transition); background: var(--c-white);
+            background: transparent;
+            padding: 6rem 2.5rem 4rem 2.5rem;
+            border: 1px solid rgba(197, 168, 128, 0.3);
+            border-radius: 200px 200px 10px 10px; /* Elegant Arch Shape */
+            position: relative;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 1;
         }
-        .vp-card:hover { background: var(--c-dark-blue); color: var(--c-white); border-color: var(--c-dark-blue); transform: translateY(-10px); }
-        .vp-card:hover h4 { color: var(--c-gold); }
-        .vp-card:hover p { color: rgba(255,255,255,0.7); }
         
-        .vp-card h4 { font-size: 1.5rem; color: var(--c-dark-blue); margin-bottom: 1.5rem; transition: 0.5s; }
-        .vp-card p { font-size: 0.95rem; color: var(--c-text-light); transition: 0.5s; }
+        .vp-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(197, 168, 128, 0.1), transparent);
+            opacity: 0; transition: opacity 0.6s ease; z-index: -1;
+        }
+        
+        /* Animated Gold Star */
+        .vp-card::after {
+            content: '✦'; position: absolute; top: 2.5rem; left: 50%;
+            transform: translateX(-50%) scale(0) rotate(90deg);
+            color: var(--c-gold); font-size: 2rem; line-height: 1;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0; z-index: -1;
+        }
+        
+        .vp-card:hover {
+            transform: translateY(-20px);
+            border-color: var(--c-gold);
+            background: var(--c-white);
+            box-shadow: 0 25px 50px rgba(197, 168, 128, 0.15);
+        }
+        .vp-card:hover::before { opacity: 1; }
+        .vp-card:hover::after { transform: translateX(-50%) scale(1) rotate(0deg); opacity: 1; }
+
+        .vp-card h4 { font-family: var(--f-serif); font-size: 1.6rem; color: var(--c-dark-blue); margin-bottom: 1.5rem; }
+        .vp-card p { font-size: 0.95rem; color: var(--c-text-light); line-height: 1.8; margin: 0; }
 
         /* SUSTAINABILITY */
         .sus-container { display: flex; gap: 5vw; align-items: center; }
@@ -457,6 +488,7 @@
             .dest-image { height: 400px; width: 100%; }
             .sus-container { flex-direction: column; gap: 2vw; }
             .sus-image { width: 100%; height: 400px; margin-bottom: 2rem; }
+            .vp-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
             .service-list { grid-template-columns: 1fr; margin-top: 3rem; }
             .service-item { padding: 3rem 2rem; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
