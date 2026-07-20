@@ -557,10 +557,11 @@
         /* Responsive */
         @media (max-width: 1024px) {
             .concept-wrapper { flex-direction: column; gap: 2vw; margin-bottom: 8vw; }
-            .concept-img { width: 100%; height: 400px; margin-bottom: 60px; }
-            .strength-box { left: 50%; transform: translateX(-50%); bottom: -60px; width: 95%; max-width: none; text-align: center; padding: 2rem; }
-            .dest-row, .dest-row:nth-child(even) { flex-direction: column; height: auto; }
-            .dest-image { height: 400px; width: 100%; }
+            .concept-img { width: 100%; height: 400px; margin-bottom: 0; }
+            .strength-box { position: relative; left: 0; bottom: 0; transform: none; width: 100%; max-width: 100%; margin-top: -3rem; z-index: 2; margin-bottom: 3rem; }
+            .dest-row, .dest-row:nth-child(even) { flex-direction: column; height: auto; min-height: auto; }
+            .dest-image { height: 400px; width: 100%; flex: none; }
+            .dest-content { padding: 4rem 2rem; }
             .sus-container { flex-direction: column; gap: 0; }
             .sus-image { width: 100%; height: 400px; margin-bottom: -5rem; border-radius: 0; }
             .sus-content { width: 95%; margin: 0 auto; padding: 3rem 2rem; z-index: 2; margin-bottom: 2rem; }
@@ -592,12 +593,13 @@
             .hero h1 { font-size: clamp(2.5rem, 10vw, 3.5rem); }
             .hero p { font-size: 1.1rem; }
             .concept-text h2, .dest-content h2, .services-section h2, .why-us h2, .sus-content h2, .inquiry h2 { font-size: 2.2rem; }
-            .form-wrap { padding: 3rem 2rem; margin: 2rem 1rem 0; }
+            .form-wrap { padding: 2.5rem 1.5rem; margin: 2rem 0 0; }
             .concept-text p { font-size: 1rem; }
-            .dest-content { padding: 12vw 6vw; }
+            .dest-content { padding: 3rem 1.5rem; }
             .vp-grid { grid-template-columns: 1fr; gap: 2rem; }
             .vp-card:nth-child(even) { transform: none; }
             .vp-card:hover:nth-child(odd), .vp-card:hover:nth-child(even) { transform: translateY(-5px); }
+            .vp-card { padding: 2.5rem 1.5rem; }
             .service-item { padding: 2.5rem 1.5rem; }
             .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
