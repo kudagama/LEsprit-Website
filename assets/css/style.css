@@ -557,8 +557,8 @@
         /* Responsive */
         @media (max-width: 1024px) {
             .concept-wrapper { flex-direction: column; gap: 2vw; margin-bottom: 8vw; }
-            .concept-img { width: 100%; height: 400px; margin-bottom: 0; }
-            .strength-box { position: relative; left: 0; bottom: 0; transform: none; width: 100%; max-width: 100%; margin-top: -3rem; z-index: 2; margin-bottom: 3rem; }
+            .concept-img { width: 100%; height: 400px; margin-bottom: 8rem; }
+            .strength-box { position: absolute; left: 50%; bottom: -6rem; transform: translateX(-50%); width: 95%; max-width: none; margin: 0; z-index: 2; padding: 2rem; text-align: center; }
             .dest-row, .dest-row:nth-child(even) { flex-direction: column; height: auto; min-height: auto; }
             .dest-image { height: 400px; width: 100%; flex: none; }
             .dest-content { padding: 4rem 2rem; }
