@@ -2,10 +2,10 @@
             --c-dark-blue: #071526;
             --c-gold: #c5a880;
             --c-gold-dim: rgba(197, 168, 128, 0.3);
-            --c-light: #f9f8f6;
-            --c-white: #ffffff;
-            --c-text: #333333;
-            --c-text-light: #777777;
+            --c-light: #e8e4db;
+            --c-white: #f4f0e6;
+            --c-text: #1a1a1a;
+            --c-text-light: #4a4a4a;
             
             --f-serif: 'Cormorant Garamond', serif;
             --f-sans: 'Montserrat', sans-serif;
@@ -167,7 +167,7 @@
         .concept-wrapper { display: flex; align-items: center; gap: 6vw; margin-bottom: 8vw; }
         .concept-text { flex: 1; padding-right: 2vw; }
         .concept-text h2 { font-size: 4rem; color: var(--c-dark-blue); margin-bottom: 2.5rem; line-height: 1.1; }
-        .concept-text p { font-size: 1.15rem; color: #555; margin-bottom: 2rem; line-height: 1.9; }
+        .concept-text p { font-size: 1.15rem; color: var(--c-text-light); margin-bottom: 2rem; line-height: 1.9; }
         
         .concept-img {
             flex: 1; height: 85vh; position: relative;
@@ -243,6 +243,10 @@
         .dest-content {
             flex: 1; display: flex; flex-direction: column; justify-content: center;
             padding: 8vw; background: var(--c-white); position: relative;
+        }
+        
+        .dest-row:nth-child(even) .dest-content {
+            background: var(--c-light);
         }
         
         .dest-content h2 { font-size: 4.5rem; color: var(--c-dark-blue); margin-bottom: 1rem; line-height: 1; }
