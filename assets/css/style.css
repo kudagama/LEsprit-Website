@@ -32,10 +32,11 @@
         
         .subtitle {
             font-family: var(--f-sans);
-            font-size: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            color: var(--c-gold);
+            letter-spacing: 3px;
+            color: #a87d46; /* Deeper gold for better contrast on light backgrounds */
             margin-bottom: 1rem;
             display: block;
         }
