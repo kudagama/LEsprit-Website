@@ -414,35 +414,57 @@
         .sus-list p { font-size: 1rem; color: var(--c-text-light); line-height: 1.6; margin: 0; }
 
         /* FORM */
-        .inquiry { background: var(--c-light); text-align: center; }
-        .inquiry h2 { font-size: 4rem; color: var(--c-dark-blue); margin-bottom: 1rem; }
+        .inquiry { 
+            background: radial-gradient(circle at center, #0a1e35 0%, var(--c-dark-blue) 100%); 
+            text-align: center; 
+            padding: 10vw 0 12vw;
+            color: var(--c-white);
+        }
+        .inquiry h2 { font-size: 4rem; color: var(--c-white); margin-bottom: 2rem; }
         
-        .form-wrap { max-width: 600px; margin: 4rem auto 0; text-align: left; }
+        .form-wrap { 
+            max-width: 700px; margin: 4rem auto 0; text-align: left; 
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            padding: 5rem 4rem;
+            border: 1px solid rgba(197, 168, 128, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            position: relative;
+        }
         
-        .input-group { margin-bottom: 3rem; position: relative; }
+        /* Subtle gold accent line inside the card */
+        .form-wrap::before {
+            content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+            width: 100px; height: 3px; background: var(--c-gold);
+            border-radius: 0 0 4px 4px;
+        }
+        
+        .input-group { margin-bottom: 3.5rem; position: relative; }
         .input-group input, .input-group select {
             width: 100%; padding: 10px 0; background: transparent; border: none;
-            border-bottom: 1px solid var(--c-text-light);
-            font-family: var(--f-sans); font-size: 1rem; color: var(--c-dark-blue);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-family: var(--f-sans); font-size: 1.1rem; color: var(--c-white);
             transition: var(--transition);
         }
         .input-group input:focus, .input-group select:focus { outline: none; border-bottom-color: var(--c-gold); }
         
         .input-group label {
             position: absolute; top: 10px; left: 0;
-            font-size: 0.9rem; color: var(--c-text-light); text-transform: uppercase; letter-spacing: 2px;
-            pointer-events: none; transition: 0.3s ease;
+            font-size: 0.9rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 2px;
+            pointer-events: none; transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .input-group input:focus ~ label, .input-group input:valid ~ label {
-            top: -20px; font-size: 0.75rem; color: var(--c-gold);
+        .input-group input:focus ~ label, .input-group input:valid ~ label, .input-group select:focus ~ label, .input-group select:valid ~ label {
+            top: -25px; font-size: 0.75rem; color: var(--c-gold);
         }
         
         .btn-luxury {
-            display: inline-block; background: var(--c-dark-blue); color: var(--c-gold);
-            padding: 1.5rem 4rem; text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem;
-            border: none; cursor: pointer; transition: var(--transition); width: 100%;
+            display: inline-block; background: var(--c-gold); color: var(--c-dark-blue);
+            padding: 1.5rem 4rem; text-transform: uppercase; letter-spacing: 4px; font-size: 0.95rem; font-weight: 500;
+            border: 1px solid var(--c-gold); cursor: pointer; transition: all 0.5s ease; width: 100%;
+            border-radius: 4px; margin-top: 1rem;
         }
-        .btn-luxury:hover { background: var(--c-gold); color: var(--c-dark-blue); }
+        .btn-luxury:hover { background: transparent; color: var(--c-gold); box-shadow: 0 10px 30px rgba(197, 168, 128, 0.2); }
 
         /* ADVANCED FOOTER */
         footer {
@@ -532,6 +554,7 @@
             .hero h1 { font-size: clamp(2.5rem, 10vw, 3.5rem); }
             .hero p { font-size: 1.1rem; }
             .concept-text h2, .dest-content h2, .services-section h2, .why-us h2, .sus-content h2, .inquiry h2 { font-size: 2.2rem; }
+            .form-wrap { padding: 3rem 2rem; margin: 2rem 1rem 0; }
             .concept-text p { font-size: 1rem; }
             .dest-content { padding: 12vw 6vw; }
             .vp-grid { grid-template-columns: 1fr; }
