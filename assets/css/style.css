@@ -208,28 +208,41 @@
         }
         
         .value-item {
-            padding: 2.5rem 2rem;
-            background: var(--c-white);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            border-bottom: 2px solid transparent;
+            padding: 3rem 2.5rem;
+            background: var(--c-dark-blue);
+            color: var(--c-white);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
             overflow: hidden;
+            border-radius: 4px;
+            z-index: 1;
         }
         .value-item::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0;
-            background: var(--c-gold); transition: height 0.5s ease;
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(197, 168, 128, 0.1) 0%, transparent 100%);
+            opacity: 0; transition: opacity 0.6s ease; z-index: -1;
         }
         .value-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            border-bottom: 2px solid var(--c-gold);
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(7, 21, 38, 0.3);
         }
-        .value-item:hover::before { height: 100%; }
+        .value-item:hover::before { opacity: 1; }
 
-        .value-item h3 { font-size: 1.6rem; color: var(--c-dark-blue); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1rem; }
-        .value-item h3 span { color: var(--c-gold); font-size: 1.4rem; font-family: var(--f-serif); font-style: italic; font-weight: 500; }
-        .value-item p { font-size: 0.95rem; color: var(--c-text-light); line-height: 1.7; }
+        .value-item h3 { font-size: 1.8rem; color: var(--c-gold); margin-bottom: 1.2rem; position: relative; z-index: 2; font-family: var(--f-serif); font-weight: 500; letter-spacing: 1px; }
+        
+        /* Massive watermark numeral */
+        .value-item h3 span {
+            position: absolute; right: 0px; bottom: -30px; font-size: 8rem; line-height: 1;
+            color: rgba(197, 168, 128, 0.08); font-family: var(--f-serif); font-style: italic;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); z-index: -1; pointer-events: none;
+        }
+        .value-item:hover h3 span {
+            color: rgba(197, 168, 128, 0.15);
+            transform: scale(1.1) rotate(-5deg) translateY(-10px);
+        }
+        
+        .value-item p { font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.8; position: relative; z-index: 2; }
 
         /* DESTINATIONS */
         .dest-section { padding: 0; background: var(--c-white); }
