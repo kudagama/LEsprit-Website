@@ -330,7 +330,7 @@
         /* VALUE PROP */
         .why-us { text-align: center; padding: 12vw 0; }
         .why-us h2 { font-size: 4rem; color: var(--c-dark-blue); margin-bottom: 5rem; }
-        .vp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; }
+        .vp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
         
         .vp-card {
             background: transparent;
