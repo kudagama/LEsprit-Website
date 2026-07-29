@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"components\\\\Hero.jsx -> ./Hero3DCanvas\":{\"id\":\"components\\\\Hero.jsx -> ./Hero3DCanvas\",\"files\":[\"static/chunks/_app-pages-browser_src_components_Hero3DCanvas_jsx.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST='{"components\\\\Hero.jsx -> ./Hero3DCanvas":{"id":952,"files":["static/chunks/b536a0f1.5acff86f321294fb.js","static/chunks/496.2e6a5d1b2cab2b8f.js","static/chunks/952.2f35fa20fa6ba910.js"]}}';
