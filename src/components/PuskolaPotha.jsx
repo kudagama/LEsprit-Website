@@ -77,16 +77,16 @@ export default function PuskolaPotha() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="font-cinzel text-xs tracking-widest text-gold-dark uppercase block mb-2">
+          <span className="font-cinzel text-xs font-bold tracking-widest text-indigo-dark uppercase block mb-2">
             The Philosophy of L’Esprit — The Spirit of Travel
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-indigo-dark mb-4">
             An Unfolding Digital <span className="gold-gradient-text">"Puskola Potha"</span>
           </h2>
           <div className="flex items-center justify-center gap-4 text-gold-primary">
-            <span className="w-16 h-[1px] bg-gradient-to-r from-transparent to-gold-primary" />
-            <span className="text-sm">☸</span>
-            <span className="w-16 h-[1px] bg-gradient-to-l from-transparent to-gold-primary" />
+            <span className="w-16 h-[1px] bg-gradient-to-r from-transparent to-gold-dark" />
+            <span className="text-sm font-bold text-gold-dark">☸</span>
+            <span className="w-16 h-[1px] bg-gradient-to-l from-transparent to-gold-dark" />
           </div>
         </div>
 
@@ -96,25 +96,25 @@ export default function PuskolaPotha() {
           className="relative bg-white border border-gold-border rounded-xl p-8 sm:p-14 shadow-floating"
         >
           {/* Gold Filigree Borders */}
-          <div className="absolute inset-3 border border-gold-primary/20 pointer-events-none rounded-lg" />
-          <div className="absolute top-4 left-4 w-5 h-5 border-t-2 border-l-2 border-gold-primary" />
-          <div className="absolute top-4 right-4 w-5 h-5 border-t-2 border-r-2 border-gold-primary" />
-          <div className="absolute bottom-4 left-4 w-5 h-5 border-b-2 border-l-2 border-gold-primary" />
-          <div className="absolute bottom-4 right-4 w-5 h-5 border-b-2 border-r-2 border-gold-primary" />
+          <div className="absolute inset-3 border border-gold-primary/30 pointer-events-none rounded-lg" />
+          <div className="absolute top-4 left-4 w-5 h-5 border-t-2 border-l-2 border-gold-dark" />
+          <div className="absolute top-4 right-4 w-5 h-5 border-t-2 border-r-2 border-gold-dark" />
+          <div className="absolute bottom-4 left-4 w-5 h-5 border-b-2 border-l-2 border-gold-dark" />
+          <div className="absolute bottom-4 right-4 w-5 h-5 border-b-2 border-r-2 border-gold-dark" />
 
           {/* Narrative & Strength Row */}
           <div className="grid md:grid-cols-12 gap-10 items-center mb-16">
             <div className="md:col-span-7">
-              <span className="font-cinzel text-xs text-gold-dark tracking-widest uppercase block mb-2">
+              <span className="font-cinzel text-xs font-bold text-indigo-dark tracking-widest uppercase block mb-2">
                 L’Esprit — The Spirit of Journeys Narrative
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl text-indigo-dark mb-4">
                 Redefining Authentic 5-Star Luxury
               </h3>
-              <p className="font-sans text-charcoal/80 text-base leading-relaxed mb-4">
-                In French, <strong>L’Esprit Voyages</strong> translates to <em>"The Spirit of Journeys."</em> Rooted in delivering refined, personalized destination experiences, our concept is built upon two decades of passion. We believe luxury travel is not merely visiting a location—it is about communing with the soul, living history, and fine craftsmanship of the land.
+              <p className="font-sans text-charcoal text-base font-normal leading-relaxed mb-4">
+                In French, <strong>L’ESPRIT VOYAGES</strong> translates to <em>"The Spirit of Journeys."</em> Rooted in delivering refined, personalized destination experiences, our concept is built upon two decades of passion. We believe luxury travel is not merely visiting a location—it is about communing with the soul, living history, and fine craftsmanship of the land.
               </p>
-              <p className="font-sans text-charcoal/80 text-base leading-relaxed">
+              <p className="font-sans text-charcoal text-base font-normal leading-relaxed">
                 From mist-shrouded emerald tea plantations in the Central Highlands to pristine, untouched Maldivian coral atolls, every itinerary is hand-stitched for those who seek rare, authentic elegance.
               </p>
             </div>
@@ -123,17 +123,17 @@ export default function PuskolaPotha() {
             <div className="md:col-span-5 bg-gradient-to-br from-emerald-dark to-emerald-medium text-white p-8 rounded-lg border border-gold-border relative overflow-hidden shadow-xl">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gold-primary/10 rounded-full blur-2xl pointer-events-none" />
               <div className="text-3xl mb-3">🏛️</div>
-              <h4 className="font-serif text-xl text-gold-primary mb-3">
+              <h4 className="font-serif text-xl text-gold-primary font-bold mb-3">
                 The Human Heart & Spirit
               </h4>
-              <p className="font-sans text-xs text-emerald-100 leading-relaxed mb-6">
+              <p className="font-sans text-xs text-white leading-relaxed mb-6 font-normal">
                 Backed by <strong>20+ years of local mastery</strong>, our true strength lies in an exclusive, tight-knit network of master artisans, cultural historians, environmentalists, and dedicated chauffeur guides who embody the spirit of authentic hospitality.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="font-cinzel text-[0.65rem] px-3 py-1 bg-gold-primary/15 border border-gold-primary/30 text-gold-warm rounded-full">
+                <span className="font-cinzel text-[0.75rem] font-bold px-3 py-1 bg-gold-primary/20 border border-gold-primary text-gold-warm rounded-full">
                   ✓ 20+ Years Excellence
                 </span>
-                <span className="font-cinzel text-[0.65rem] px-3 py-1 bg-gold-primary/15 border border-gold-primary/30 text-gold-warm rounded-full">
+                <span className="font-cinzel text-[0.75rem] font-bold px-3 py-1 bg-gold-primary/20 border border-gold-primary text-gold-warm rounded-full">
                   ✓ Chauffeur Guides
                 </span>
               </div>
@@ -141,10 +141,10 @@ export default function PuskolaPotha() {
           </div>
 
           {/* 5 Pillars Matrix */}
-          <div className="pt-10 border-t border-gold-primary/20">
+          <div className="pt-10 border-t border-gold-primary/30">
             <div className="text-center mb-10">
-              <span className="font-serif text-2xl text-indigo-dark block">The 5 Pillars of L'Esprit</span>
-              <span className="font-cinzel text-xs text-gold-dark tracking-widest uppercase">
+              <span className="font-serif text-2xl text-indigo-dark font-bold block">The 5 Pillars of L'Esprit</span>
+              <span className="font-cinzel text-xs text-indigo-dark font-bold tracking-widest uppercase">
                 The Foundations of Every Bespoke Voyage
               </span>
             </div>
@@ -157,18 +157,18 @@ export default function PuskolaPotha() {
                     key={p.num}
                     whileHover={{ y: -8, scale: 1.02 }}
                     transition={{ duration: 0.3 }}
-                    className="bg-ivory-sacred border border-gold-border/40 hover:border-gold-primary rounded-lg p-6 relative group transition-colors"
+                    className="bg-ivory-sacred border border-gold-dark/30 hover:border-gold-dark rounded-lg p-6 relative group transition-colors shadow-sm"
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-cinzel text-xs font-bold text-gold-dark">{p.num}</span>
-                      <IconComponent className="w-5 h-5 text-gold-primary" />
+                      <span className="font-cinzel text-xs font-bold text-indigo-dark">{p.num}</span>
+                      <IconComponent className="w-5 h-5 text-indigo-dark" />
                     </div>
-                    <div className="font-serif text-sm text-emerald-dark font-semibold mb-1 uppercase tracking-wider">
+                    <div className="font-serif text-xs text-emerald-dark font-bold mb-1 uppercase tracking-wider">
                       {p.subtitle}
                     </div>
-                    <h4 className="font-serif text-xl text-indigo-dark mb-2">{p.title}</h4>
-                    <p className="font-sans text-xs text-charcoal/70 leading-relaxed">{p.desc}</p>
-                    <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-gold-primary to-gold-warm group-hover:w-full transition-all duration-300 rounded-b-lg" />
+                    <h4 className="font-serif text-xl text-indigo-dark font-bold mb-2">{p.title}</h4>
+                    <p className="font-sans text-xs text-charcoal font-normal leading-relaxed">{p.desc}</p>
+                    <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-gold-dark to-gold-primary group-hover:w-full transition-all duration-300 rounded-b-lg" />
                   </motion.div>
                 );
               })}
