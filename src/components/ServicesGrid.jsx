@@ -54,23 +54,23 @@ export default function ServicesGrid() {
   const filteredServices = filter === "all" ? SERVICES : SERVICES.filter((s) => s.id === filter);
 
   return (
-    <section id="services" className="py-24 bg-ivory-sacred relative">
+    <section id="services" className="py-24 md:py-32 bg-ivory-sacred relative">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-14">
-          <span className="font-decorative text-xs font-bold tracking-widest text-indigo-dark uppercase block mb-2">
+        {/* Minimal Header */}
+        <div className="text-center mb-16">
+          <span className="font-sans text-[0.65rem] font-semibold tracking-[0.2em] text-charcoal/60 uppercase block mb-4">
             Expertise & Logistics
           </span>
-          <h2 className="font-serif text-3xl sm:text-5xl text-indigo-dark mb-4">
-            Signature Services <span className="gold-gradient-text">& Fleet Solutions</span>
+          <h2 className="font-serif text-3xl sm:text-5xl text-charcoal font-medium mb-6">
+            Signature Services <span className="text-gold-dark italic font-light">& Fleet Solutions</span>
           </h2>
-          <p className="font-sans text-charcoal font-normal max-w-xl mx-auto text-sm sm:text-base">
-            Tailored logistics engineered to perfection. Click any card below to explore full capabilities & specifications.
+          <p className="font-sans text-charcoal/70 font-light max-w-xl mx-auto text-sm">
+            Tailored logistics engineered to perfection. Select a capability below to explore full specifications.
           </p>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex justify-center flex-wrap gap-3 mb-12">
+        {/* Minimal Category Filters */}
+        <div className="flex justify-center flex-wrap gap-4 mb-16">
           {[
             { id: "all", label: "All Solutions" },
             { id: "travel", label: "Travel Solutions" },
@@ -80,10 +80,10 @@ export default function ServicesGrid() {
             <button
               key={btn.id}
               onClick={() => setFilter(btn.id)}
-              className={`px-6 py-2.5 rounded-full font-cinzel text-xs font-bold uppercase tracking-wider transition-all border ${
+              className={`px-6 py-3 font-sans text-[0.65rem] font-semibold uppercase tracking-wider transition-all border-b-2 ${
                 filter === btn.id
-                  ? "bg-indigo-dark text-gold-primary border-gold-primary shadow-lg"
-                  : "bg-white text-indigo-dark border-gold-dark/40 hover:bg-gold-primary/10"
+                  ? "border-charcoal text-charcoal"
+                  : "border-transparent text-charcoal/50 hover:text-charcoal"
               }`}
             >
               {btn.label}
@@ -91,8 +91,8 @@ export default function ServicesGrid() {
           ))}
         </div>
 
-        {/* Glass Cards Grid */}
-        <motion.div layout className="grid md:grid-cols-3 gap-8">
+        {/* Minimal Editorial Cards Grid */}
+        <motion.div layout className="grid lg:grid-cols-3 gap-10">
           <AnimatePresence>
             {filteredServices.map((svc) => {
               const IconComp = svc.icon;
@@ -100,30 +100,30 @@ export default function ServicesGrid() {
                 <motion.div
                   key={svc.id}
                   layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.4 }}
-                  className="bg-white border border-gold-dark/30 rounded-xl p-8 shadow-floating hover:border-gold-primary hover:-translate-y-2 transition-all group relative flex flex-col justify-between"
+                  className="bg-white border border-charcoal/5 p-10 flex flex-col justify-between group hover:border-gold-primary/30 transition-colors"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-lg bg-indigo-dark flex items-center justify-center text-gold-primary mb-6 group-hover:bg-gold-primary group-hover:text-indigo-deep transition-colors">
-                      <IconComp className="w-6 h-6" />
+                    <div className="mb-8 text-gold-dark opacity-80">
+                      <IconComp className="w-8 h-8 stroke-[1.5]" />
                     </div>
 
-                    <span className="font-cinzel text-[0.75rem] font-bold text-indigo-dark uppercase tracking-widest block mb-1">
+                    <span className="font-sans text-[0.65rem] font-semibold text-charcoal/50 uppercase tracking-[0.15em] block mb-3">
                       {svc.category}
                     </span>
-                    <h3 className="font-serif text-2xl text-indigo-dark font-bold mb-3">{svc.title}</h3>
-                    <p className="font-sans text-xs text-charcoal font-normal leading-relaxed mb-6">
+                    <h3 className="font-serif text-2xl text-charcoal font-medium mb-4 leading-snug">{svc.title}</h3>
+                    <p className="font-sans text-sm text-charcoal/70 font-light leading-relaxed mb-8">
                       {svc.desc}
                     </p>
 
-                    <ul className="pt-6 border-t border-gold-primary/20 space-y-2 mb-8">
+                    <ul className="space-y-3 mb-10">
                       {svc.features.map((feat) => (
-                        <li key={feat} className="flex items-center gap-2 font-sans text-xs font-medium text-charcoal">
-                          <Check className="w-4 h-4 text-emerald-dark shrink-0 font-bold" />
-                          <span>{feat}</span>
+                        <li key={feat} className="flex items-start gap-3 font-sans text-xs font-light text-charcoal/80">
+                          <span className="w-1.5 h-1.5 rounded-full bg-gold-dark mt-1.5 shrink-0" />
+                          <span className="leading-relaxed">{feat}</span>
                         </li>
                       ))}
                     </ul>
@@ -131,10 +131,10 @@ export default function ServicesGrid() {
 
                   <Link
                     href={`/services/${svc.slug}`}
-                    className="inline-flex items-center gap-2 font-cinzel text-xs font-bold text-indigo-dark hover:text-gold-dark tracking-wider uppercase transition-colors"
+                    className="inline-flex items-center gap-3 font-sans text-[0.65rem] font-semibold text-charcoal hover:text-gold-dark tracking-widest uppercase transition-colors pt-6 border-t border-charcoal/5"
                   >
-                    <span>Explore Extra Details</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-gold-dark" />
+                    <span>View Specifications</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </motion.div>
               );
