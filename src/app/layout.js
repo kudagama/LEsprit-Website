@@ -36,9 +36,9 @@ const cinzelDecorative = Cinzel_Decorative({
 });
 
 export const metadata = {
-  title: "L’ESPRIT VOYAGES | Ultra Luxury Bespoke Travel — Sri Lanka & Maldives",
-  description: "Experience 5-star luxury escapes, private chauffeur tours, and authentic heritage expeditions across Sri Lanka and the Maldives with L'Esprit Voyages. Two decades of unmatched finesse.",
-  keywords: ["Sri Lanka luxury travel", "Maldives overwater villas", "private chauffeur Sri Lanka", "bespoke travel Asia", "L'Esprit Voyages"],
+  title: "L’ESPRIT VOYAGES | The Spirit of Luxury Journeys — Sri Lanka & Maldives",
+  description: "Experience L'Esprit de Voyage — the true spirit of bespoke travel, 5-star luxury escapes, and authentic heritage expeditions across Sri Lanka and the Maldives.",
+  keywords: ["L'Esprit Voyages", "The Spirit of Travel", "Sri Lanka luxury travel", "Maldives overwater villas", "bespoke travel Asia"],
 };
 
 export default function RootLayout({ children }) {

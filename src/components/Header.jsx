@@ -32,7 +32,7 @@ export default function Header() {
             L’ESPRIT VOYAGES
           </span>
           <span className="font-cinzel text-[0.6rem] tracking-[0.25em] text-gold-warm uppercase -mt-1">
-            SRI LANKA & MALDIVES
+            L’ESPRIT DE VOYAGE — SRI LANKA & MALDIVES
           </span>
         </a>
 

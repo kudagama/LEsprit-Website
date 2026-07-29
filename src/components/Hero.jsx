@@ -55,18 +55,18 @@ export default function Hero() {
         >
           <span className="w-2 h-2 rounded-full bg-gold-primary shadow-[0_0_10px_#D4AF37]" />
           <span className="font-cinzel text-xs tracking-widest text-gold-warm uppercase">
-            Sri Lanka & The Maldives — 20+ Years of Craftsmanship
+            L’ESPRIT DE VOYAGE — THE SPIRIT OF BESPOKE JOURNEYS
           </span>
         </motion.div>
 
         {/* Title */}
         <h1 ref={titleRef} className="font-serif text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6 leading-tight">
-          Where Royalty Meets <span className="gold-gradient-text">Authenticity</span>.
+          Where Royalty Meets <span className="gold-gradient-text">The Spirit of Travel</span>.
         </h1>
 
         {/* Subtitle */}
         <p ref={subtitleRef} className="font-sans text-base sm:text-xl text-ivory-sacred/80 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-          Two Decades of Crafting Bespoke Luxury Escapes Across Sri Lanka & The Maldives.
+          Two Decades of Crafting Bespoke Luxury Escapes Across Sri Lanka & The Maldives — Communing with the Soul & Heritage of Every Destination.
         </p>
 
         {/* CTA Button Group */}
@@ -94,7 +94,7 @@ export default function Hero() {
 
         {/* Scroll Indicator */}
         <a href="#concept" className="inline-flex flex-col items-center gap-2 text-gold-warm text-xs font-cinzel tracking-widest uppercase opacity-75 hover:opacity-100 transition-opacity">
-          <span>Unfold The Journey</span>
+          <span>Unfold The Spirit Of Journey</span>
           <ChevronDown className="w-4 h-4 animate-bounce" />
         </a>
       </div>

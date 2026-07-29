@@ -16,7 +16,7 @@ const PILLARS = [
     subtitle: "Creativity & Vision",
     title: "Design",
     icon: Compass,
-    desc: "Custom-tailored, bespoke itineraries designed around your personal rhythm and desires, creating one-of-a-kind voyages.",
+    desc: "Custom-tailored, bespoke itineraries designed around your personal rhythm and desires, capturing the true spirit of discovery.",
   },
   {
     num: "02",
@@ -78,7 +78,7 @@ export default function PuskolaPotha() {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="font-cinzel text-xs tracking-widest text-gold-dark uppercase block mb-2">
-            The Philosophy of L’Esprit
+            The Philosophy of L’Esprit — The Spirit of Travel
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-indigo-dark mb-4">
             An Unfolding Digital <span className="gold-gradient-text">"Puskola Potha"</span>
@@ -106,13 +106,13 @@ export default function PuskolaPotha() {
           <div className="grid md:grid-cols-12 gap-10 items-center mb-16">
             <div className="md:col-span-7">
               <span className="font-cinzel text-xs text-gold-dark tracking-widest uppercase block mb-2">
-                Sacred Heritage Narrative
+                L’Esprit — The Spirit of Journeys Narrative
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl text-indigo-dark mb-4">
                 Redefining Authentic 5-Star Luxury
               </h3>
               <p className="font-sans text-charcoal/80 text-base leading-relaxed mb-4">
-                Rooted in delivering refined, personalized destination experiences, our concept is built upon two decades of passion. We believe luxury travel is not merely visiting a location—it is about communing with the soul, living history, and fine craftsmanship of the land.
+                In French, <strong>L’Esprit Voyages</strong> translates to <em>"The Spirit of Journeys."</em> Rooted in delivering refined, personalized destination experiences, our concept is built upon two decades of passion. We believe luxury travel is not merely visiting a location—it is about communing with the soul, living history, and fine craftsmanship of the land.
               </p>
               <p className="font-sans text-charcoal/80 text-base leading-relaxed">
                 From mist-shrouded emerald tea plantations in the Central Highlands to pristine, untouched Maldivian coral atolls, every itinerary is hand-stitched for those who seek rare, authentic elegance.
@@ -124,10 +124,10 @@ export default function PuskolaPotha() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-gold-primary/10 rounded-full blur-2xl pointer-events-none" />
               <div className="text-3xl mb-3">🏛️</div>
               <h4 className="font-serif text-xl text-gold-primary mb-3">
-                Our Human Heart & Strength
+                The Human Heart & Spirit
               </h4>
               <p className="font-sans text-xs text-emerald-100 leading-relaxed mb-6">
-                Backed by <strong>20+ years of local mastery</strong>, our true strength lies in an exclusive, tight-knit network of master artisans, cultural historians, environmentalists, and dedicated chauffeur guides who transform every transit into an unforgettable story.
+                Backed by <strong>20+ years of local mastery</strong>, our true strength lies in an exclusive, tight-knit network of master artisans, cultural historians, environmentalists, and dedicated chauffeur guides who embody the spirit of authentic hospitality.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="font-cinzel text-[0.65rem] px-3 py-1 bg-gold-primary/15 border border-gold-primary/30 text-gold-warm rounded-full">
@@ -143,9 +143,9 @@ export default function PuskolaPotha() {
           {/* 5 Pillars Matrix */}
           <div className="pt-10 border-t border-gold-primary/20">
             <div className="text-center mb-10">
-              <span className="font-serif text-2xl text-indigo-dark block">Our 5 Core Pillars</span>
+              <span className="font-serif text-2xl text-indigo-dark block">The 5 Pillars of L'Esprit</span>
               <span className="font-cinzel text-xs text-gold-dark tracking-widest uppercase">
-                The Foundations of Every L’Esprit Voyage
+                The Foundations of Every Bespoke Voyage
               </span>
             </div>
 
