@@ -3,58 +3,61 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center bg-indigo-dark pt-32 pb-20 overflow-hidden">
-      {/* Static Minimal Background visual Layer */}
+      {/* Static Background Visual Layer */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity"
+          className="absolute inset-0 bg-cover bg-center opacity-40"
           style={{ backgroundImage: "url('/assets/images/hero.png')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-indigo-deep via-indigo-dark/80 to-indigo-dark/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-indigo-deep via-indigo-dark/70 to-indigo-dark/40" />
       </div>
 
+      {/* Liyavela Framing Vignette */}
+      <div className="absolute inset-6 border border-gold-primary/20 pointer-events-none z-10 hidden sm:block" />
+
       {/* Hero Content */}
-      <div className="relative z-20 max-w-4xl mx-auto px-6 text-center text-ivory-sacred flex flex-col items-center">
-        {/* Minimal Badge */}
-        <div className="inline-flex items-center gap-3 mb-10">
-          <span className="w-1.5 h-1.5 rounded-full bg-gold-primary" />
-          <span className="font-sans text-[0.65rem] tracking-[0.25em] font-medium text-gold-warm uppercase">
-            THE SPIRIT OF BESPOKE JOURNEYS
+      <div className="relative z-20 max-w-5xl mx-auto px-6 text-center text-ivory-sacred">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gold-primary/10 border border-gold-border backdrop-blur-md mb-8">
+          <span className="w-2 h-2 rounded-full bg-gold-primary shadow-[0_0_10px_#D4AF37]" />
+          <span className="font-cinzel text-xs tracking-widest text-gold-warm uppercase">
+            L’ESPRIT DE VOYAGE — THE SPIRIT OF BESPOKE JOURNEYS
           </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-gold-primary" />
         </div>
 
-        {/* High Editorial Title */}
-        <h1 className="font-serif text-5xl sm:text-6xl md:text-[5rem] font-medium tracking-tight mb-8 leading-[1.1] text-ivory-sacred">
-          Where Royalty Meets <br className="hidden sm:block" />
-          <span className="text-gold-warm italic font-light tracking-normal">The Spirit of Travel.</span>
+        {/* Title */}
+        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6 leading-tight">
+          Where Royalty Meets <span className="gold-gradient-text">The Spirit of Travel</span>.
         </h1>
 
-        {/* Elegant Subtitle */}
-        <p className="font-sans text-sm sm:text-base text-ivory-sacred/70 max-w-2xl mx-auto mb-14 font-light leading-relaxed tracking-wide">
+        {/* Subtitle */}
+        <p className="font-sans text-base sm:text-xl text-ivory-sacred/90 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
           Two Decades of Crafting Bespoke Luxury Escapes Across Sri Lanka & The Maldives — Communing with the Soul & Heritage of Every Destination.
         </p>
 
-        {/* Minimal CTA Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-20 w-full sm:w-auto">
+        {/* CTA Button Group */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-5 mb-16">
           <a
             href="#destinations"
-            className="w-full sm:w-auto px-10 py-4 bg-gold-primary text-indigo-deep font-sans text-xs font-semibold uppercase tracking-[0.2em] hover:bg-ivory-sacred transition-colors flex items-center justify-center gap-3"
+            className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-widest rounded shadow-gold flex items-center justify-center gap-3 hover:scale-105 transition-transform"
           >
             <span>Discover Sri Lanka</span>
+            <ArrowRight className="w-4 h-4" />
           </a>
 
           <a
             href="#destinations"
-            className="w-full sm:w-auto px-10 py-4 bg-transparent border border-ivory-sacred/30 text-ivory-sacred font-sans text-xs font-medium uppercase tracking-[0.2em] hover:bg-ivory-sacred/10 transition-colors flex items-center justify-center gap-3"
+            className="w-full sm:w-auto px-8 py-4 bg-indigo-deep/50 border border-gold-primary text-white font-cinzel text-xs font-semibold uppercase tracking-widest rounded backdrop-blur-md hover:bg-gold-primary/20 flex items-center justify-center gap-3 transition-colors hover:scale-105"
           >
             <span>Explore Maldives</span>
+            <ArrowRight className="w-4 h-4" />
           </a>
         </div>
 
         {/* Scroll Indicator */}
-        <a href="#concept" className="inline-flex flex-col items-center gap-3 text-gold-primary/70 text-[0.65rem] font-sans font-medium tracking-[0.3em] uppercase hover:text-gold-primary transition-colors">
-          <span>Unfold The Journey</span>
-          <ChevronDown className="w-4 h-4 opacity-70" />
+        <a href="#concept" className="inline-flex flex-col items-center gap-2 text-gold-warm text-xs font-cinzel tracking-widest uppercase opacity-75 hover:opacity-100 transition-opacity">
+          <span>Unfold The Spirit Of Journey</span>
+          <ChevronDown className="w-4 h-4" />
         </a>
       </div>
     </section>

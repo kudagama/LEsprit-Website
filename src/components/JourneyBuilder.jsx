@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, X } from "lucide-react";
+import { Send, CheckCircle2, X } from "lucide-react";
 
 export default function JourneyBuilder() {
   const [formData, setFormData] = useState({
@@ -15,11 +15,11 @@ export default function JourneyBuilder() {
   const [submitted, setSubmitted] = useState(false);
 
   const styleOptions = [
-    "Ultra Luxury",
-    "Cultural Heritage",
-    "Wildlife Safaris",
-    "Wellness & Ayurveda",
-    "Romantic Escape",
+    "✨ Ultra Luxury",
+    "🏛️ Cultural Heritage",
+    "🐆 Wildlife Safaris",
+    "🌿 Wellness & Ayurveda",
+    "💍 Honeymoon / Romantic Escape",
   ];
 
   const toggleStyle = (style) => {
@@ -36,88 +36,82 @@ export default function JourneyBuilder() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-paper-parchment relative">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="bg-white border border-charcoal/5 rounded p-8 sm:p-16 shadow-glass relative">
-          <div className="text-center mb-16">
-            <span className="font-sans text-[0.65rem] font-semibold text-charcoal/50 tracking-[0.2em] uppercase block mb-4">
+    <section id="contact" className="py-24 bg-paper-parchment relative">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="bg-white border border-gold-border rounded-2xl p-8 sm:p-14 shadow-glass relative">
+          <div className="text-center mb-12">
+            <span className="font-cinzel text-xs font-bold text-indigo-dark tracking-widest uppercase block mb-2">
               Bespoke Concierge
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl text-charcoal font-medium mb-4">
-              Craft Your <span className="text-gold-dark italic font-light">Itinerary</span>
+            <h2 className="font-serif text-3xl sm:text-5xl text-indigo-dark mb-3">
+              Let’s Craft Your <span className="gold-gradient-text">Bespoke Itinerary</span>
             </h2>
-            <p className="font-sans text-charcoal/70 text-sm font-light max-w-xl mx-auto">
-              Share your vision with our Atelier Designers. We curate tailor-made proposals within 24 hours.
+            <p className="font-sans text-charcoal text-sm sm:text-base font-normal max-w-xl mx-auto">
+              Share your travel vision with our Senior Atelier Designers. We will curate a tailor-made proposal within 24 hours.
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-10">
-            <div className="grid sm:grid-cols-2 gap-10">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid sm:grid-cols-2 gap-6">
               {/* Full Name */}
-              <div className="relative">
+              <div>
+                <label className="font-cinzel text-xs font-bold text-indigo-dark tracking-wider uppercase block mb-2">
+                  Full Name *
+                </label>
                 <input
                   type="text"
                   required
-                  id="name"
-                  placeholder=" "
+                  placeholder="e.g. Lord Alexander Wright"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="peer w-full px-0 py-3 bg-transparent border-b border-charcoal/20 text-sm text-charcoal focus:outline-none focus:border-charcoal transition-colors placeholder-transparent"
+                  className="w-full px-4 py-3.5 bg-ivory-sacred border border-gold-dark/40 rounded text-sm text-charcoal font-medium placeholder:text-charcoal/50 focus:outline-none focus:border-gold-primary focus:bg-white transition-all"
                 />
-                <label
-                  htmlFor="name"
-                  className="absolute left-0 top-3 text-xs text-charcoal/50 uppercase tracking-widest font-sans font-semibold transition-all peer-focus:-top-4 peer-focus:text-[0.6rem] peer-focus:text-charcoal peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:[font-size:0.6rem] peer-[:not(:placeholder-shown)]:text-charcoal"
-                >
-                  Full Name
-                </label>
               </div>
 
               {/* Email */}
-              <div className="relative">
+              <div>
+                <label className="font-cinzel text-xs font-bold text-indigo-dark tracking-wider uppercase block mb-2">
+                  Email Address *
+                </label>
                 <input
                   type="email"
                   required
-                  id="email"
-                  placeholder=" "
+                  placeholder="alexander@domain.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="peer w-full px-0 py-3 bg-transparent border-b border-charcoal/20 text-sm text-charcoal focus:outline-none focus:border-charcoal transition-colors placeholder-transparent"
+                  className="w-full px-4 py-3.5 bg-ivory-sacred border border-gold-dark/40 rounded text-sm text-charcoal font-medium placeholder:text-charcoal/50 focus:outline-none focus:border-gold-primary focus:bg-white transition-all"
                 />
-                <label
-                  htmlFor="email"
-                  className="absolute left-0 top-3 text-xs text-charcoal/50 uppercase tracking-widest font-sans font-semibold transition-all peer-focus:-top-4 peer-focus:text-[0.6rem] peer-focus:text-charcoal peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:[font-size:0.6rem] peer-[:not(:placeholder-shown)]:text-charcoal"
-                >
-                  Email Address
-                </label>
               </div>
             </div>
 
             {/* Destination */}
-            <div className="relative pt-2">
-              <label className="text-[0.6rem] text-charcoal uppercase tracking-widest font-sans font-semibold block mb-2">
-                Preferred Destination
+            <div>
+              <label className="font-cinzel text-xs font-bold text-indigo-dark tracking-wider uppercase block mb-2">
+                Preferred Destination *
               </label>
               <select
                 required
                 value={formData.destination}
                 onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
-                className="w-full px-0 py-3 bg-transparent border-b border-charcoal/20 text-sm text-charcoal focus:outline-none focus:border-charcoal transition-colors appearance-none cursor-pointer"
+                className="w-full px-4 py-3.5 bg-ivory-sacred border border-gold-dark/40 rounded text-sm text-charcoal font-medium focus:outline-none focus:border-gold-primary focus:bg-white transition-all"
               >
                 <option value="" disabled>
-                  Select a region...
+                  Select Destination
                 </option>
-                <option value="Sri Lanka">Sri Lanka (Cultural & Wildlife)</option>
-                <option value="Maldives">Maldives (Ocean Sanctuary)</option>
-                <option value="Sri Lanka & Maldives Combined">Sri Lanka & Maldives Combined</option>
+                <option value="Sri Lanka">Sri Lanka (Cultural & Wildlife Expedition)</option>
+                <option value="Maldives">Maldives (Overwater Villa Sanctuary)</option>
+                <option value="Sri Lanka & Maldives Combined">
+                  Sri Lanka & Maldives Combined (Dual Paradise)
+                </option>
               </select>
             </div>
 
             {/* Style Chips */}
-            <div className="pt-2">
-              <label className="text-[0.6rem] text-charcoal uppercase tracking-widest font-sans font-semibold block mb-4">
-                Travel Style & Focus
+            <div>
+              <label className="font-cinzel text-xs font-bold text-indigo-dark tracking-wider uppercase block mb-3">
+                Travel Style & Primary Focus
               </label>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 {styleOptions.map((style) => {
                   const isSelected = selectedStyles.includes(style);
                   return (
@@ -125,10 +119,10 @@ export default function JourneyBuilder() {
                       type="button"
                       key={style}
                       onClick={() => toggleStyle(style)}
-                      className={`px-5 py-2.5 rounded-full text-[0.65rem] font-sans font-semibold uppercase tracking-wider transition-all border ${
+                      className={`px-4 py-2 rounded-full text-xs font-sans font-semibold transition-all border ${
                         isSelected
-                          ? "bg-charcoal text-white border-charcoal"
-                          : "bg-transparent text-charcoal/60 border-charcoal/20 hover:border-charcoal"
+                          ? "bg-indigo-dark text-gold-primary border-gold-primary shadow-md"
+                          : "bg-ivory-sacred text-indigo-dark border-gold-dark/40 hover:bg-gold-primary/10"
                       }`}
                     >
                       {style}
@@ -139,31 +133,29 @@ export default function JourneyBuilder() {
             </div>
 
             {/* Notes */}
-            <div className="relative pt-2">
+            <div>
+              <label className="font-cinzel text-xs font-bold text-indigo-dark tracking-wider uppercase block mb-2">
+                Special Preferences & Requirements
+              </label>
               <textarea
-                rows={3}
-                id="notes"
-                placeholder=" "
+                rows={4}
+                placeholder="Tell us about your estimated travel dates, duration, party size, dietary or flight preferences..."
                 value={formData.notes}
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                className="peer w-full px-0 py-3 bg-transparent border-b border-charcoal/20 text-sm text-charcoal focus:outline-none focus:border-charcoal transition-colors placeholder-transparent resize-none"
+                className="w-full px-4 py-3.5 bg-ivory-sacred border border-gold-dark/40 rounded text-sm text-charcoal font-medium placeholder:text-charcoal/50 focus:outline-none focus:border-gold-primary focus:bg-white transition-all"
               />
-              <label
-                htmlFor="notes"
-                className="absolute left-0 top-3 text-xs text-charcoal/50 uppercase tracking-widest font-sans font-semibold transition-all peer-focus:-top-4 peer-focus:text-[0.6rem] peer-focus:text-charcoal peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:[font-size:0.6rem] peer-[:not(:placeholder-shown)]:text-charcoal"
-              >
-                Special Preferences (Dates, Size, Requirements)
-              </label>
             </div>
 
-            <div className="text-center pt-8">
-              <button
+            <div className="text-center pt-4">
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="px-12 py-4 bg-charcoal text-white font-sans text-xs font-semibold uppercase tracking-[0.2em] hover:bg-gold-dark transition-colors inline-flex items-center gap-3"
+                className="px-10 py-4 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-widest rounded shadow-gold inline-flex items-center gap-3"
               >
-                <span>Submit Request</span>
+                <span>Request Bespoke Proposal</span>
                 <Send className="w-4 h-4" />
-              </button>
+              </motion.button>
             </div>
           </form>
         </div>
@@ -176,34 +168,39 @@ export default function JourneyBuilder() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-charcoal/80 backdrop-blur-sm flex items-center justify-center p-6"
+            className="fixed inset-0 z-50 bg-indigo-deep/80 backdrop-blur-md flex items-center justify-center p-6"
           >
             <motion.div
-              initial={{ scale: 0.95, y: 20 }}
+              initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.95, y: 20 }}
-              className="bg-white p-12 max-w-lg w-full text-center relative shadow-2xl border border-charcoal/5"
+              exit={{ scale: 0.9, y: 20 }}
+              className="bg-white border border-gold-primary rounded-xl max-w-lg w-full p-8 text-center text-charcoal relative shadow-2xl"
             >
               <button
                 onClick={() => setSubmitted(false)}
-                className="absolute top-6 right-6 text-charcoal/50 hover:text-charcoal transition-colors"
+                className="absolute top-4 right-4 text-gold-dark p-2"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="w-12 h-12 rounded-full border border-gold-dark text-gold-dark flex items-center justify-center mx-auto mb-6">
-                <span className="font-serif text-xl italic">L</span>
-              </div>
-              <h3 className="font-serif text-2xl text-charcoal font-medium mb-3">Request Received</h3>
-              <p className="font-sans text-xs text-charcoal/70 font-light mb-8 leading-relaxed">
-                Thank you for your interest in L’ESPRIT VOYAGES. Our Atelier Designers will be in touch shortly.
+              <CheckCircle2 className="w-14 h-14 text-gold-primary mx-auto mb-4" />
+              <h3 className="font-serif text-3xl text-indigo-dark font-bold mb-2">Bespoke Request Received</h3>
+              <p className="font-sans text-xs text-charcoal font-normal mb-6">
+                Thank you for placing your trust in L’ESPRIT VOYAGES.
               </p>
+
+              <div className="bg-ivory-sacred p-4 rounded text-left font-sans text-xs space-y-2 mb-6 border border-gold-border/40 text-charcoal">
+                <p><strong>Name:</strong> {formData.name}</p>
+                <p><strong>Email:</strong> {formData.email}</p>
+                <p><strong>Destination:</strong> {formData.destination}</p>
+                <p><strong>Styles:</strong> {selectedStyles.join(", ")}</p>
+              </div>
 
               <button
                 onClick={() => setSubmitted(false)}
-                className="w-full py-4 bg-charcoal text-white font-sans text-[0.65rem] font-semibold uppercase tracking-[0.2em] hover:bg-gold-dark transition-colors"
+                className="w-full py-3 bg-gold-primary text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-wider rounded"
               >
-                Close
+                Return To Experience
               </button>
             </motion.div>
           </motion.div>

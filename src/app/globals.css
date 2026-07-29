@@ -2,60 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    background-color: #FAF7F2;
+    color: #1A1A1A;
+  }
+
+  body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
-:root {
-  --foreground-rgb: 26, 26, 26;
-  --background-start-rgb: 252, 251, 248;
-  --background-end-rgb: 252, 251, 248;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Modern Editorial Typography Legibility */
-h1, h2, h3, h4, h5, h6 {
-  letter-spacing: -0.01em;
-}
-
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Minimalist Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #FCFBF8;
-}
-::-webkit-scrollbar-thumb {
-  background: #C5B396;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #937F5A;
-}
-
-/* Muted Solid Text classes replacing heavy gradients */
+/* Custom Glassmorphism & Gradient Helpers */
 .gold-gradient-text {
-  color: #C5B396; /* Replaced gradient with solid Champagne gold */
+  background: linear-gradient(135deg, #FFF0BD 0%, #D4AF37 50%, #A87D46 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
-/* Clean Editorial Shadows */
-.shadow-glass {
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
 }
 
-.shadow-floating {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03);
+.glass-panel-dark {
+  background: rgba(7, 21, 38, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+/* Liyavela Background Pattern */
+.liyavela-bg {
+  background-image: url('data:image/svg+xml;utf8,<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg"><path d="M60 0 C75 30 105 30 120 60 C105 90 75 90 60 120 C45 90 15 90 0 60 C15 30 45 30 60 0 Z" fill="none" stroke="%23D4AF37" stroke-width="0.75" stroke-opacity="0.12"/><circle cx="60" cy="60" r="10" fill="none" stroke="%23C5A880" stroke-width="0.75" stroke-opacity="0.15"/></svg>');
 }
