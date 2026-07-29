@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import AudioSoundscape from "./AudioSoundscape";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,7 +54,6 @@ export default function Header() {
 
         {/* Action Controls */}
         <div className="hidden md:flex items-center gap-4">
-          <AudioSoundscape />
           <a
             href="#contact"
             className="px-6 py-2.5 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-wider rounded hover:shadow-gold hover:-translate-y-0.5 transition-all"
@@ -95,7 +93,6 @@ export default function Header() {
                 </a>
               ))}
               <div className="pt-4 flex flex-col gap-4">
-                <AudioSoundscape />
                 <a
                   href="#contact"
                   onClick={() => setMobileMenuOpen(false)}
