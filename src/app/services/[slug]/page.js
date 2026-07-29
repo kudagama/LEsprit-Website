@@ -4,6 +4,7 @@ import { ArrowLeft, Check, Shield, Car, Plane, Compass } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+
 const SERVICE_DATA = {
   "travel-solutions": {
     title: "FIT, GIT & Corporate MICE Logistics",
