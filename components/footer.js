@@ -1,47 +1,58 @@
-document.getElementById('footer-placeholder').innerHTML = `<!-- ADVANCED FOOTER -->
-    <footer>
+document.getElementById('footer-placeholder').innerHTML = `<!-- LUXURY FOOTER WITH REGISTRATION SEAL -->
+    <footer class="site-footer">
+        <div class="footer-liyavela-overlay"></div>
         <div class="container reveal">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">L'Esprit Voyages</div>
-                    <p>Crafting tailor-made luxury escapes blending elegance, culture, and meaningful local connections across Sri Lanka and the Maldives.</p>
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">L’ESPRIT VOYAGES</div>
+                    <p class="footer-tagline">Where Royalty Meets Authenticity.</p>
+                    <p class="footer-desc">Two decades of crafting bespoke luxury escapes, private expeditions, and ultra-high-end journeys across the island of Sri Lanka and the coral atolls of the Maldives.</p>
                     <div class="social-icons">
-                        <a href="#">Fb</a>
-                        <a href="#">Ig</a>
-                        <a href="#">In</a>
+                        <a href="#" aria-label="Instagram"><span>IG</span></a>
+                        <a href="#" aria-label="Facebook"><span>FB</span></a>
+                        <a href="#" aria-label="LinkedIn"><span>IN</span></a>
                     </div>
                 </div>
+                
                 <div class="footer-col">
-                    <h4>Explore</h4>
+                    <h4>Bespoke Journeys</h4>
                     <ul class="footer-links">
-                        <li><a href="#concept">Our Concept</a></li>
-                        <li><a href="#destinations">Destinations</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#sustainability">Sustainability</a></li>
+                        <li><a href="#destinations">Sri Lanka Expeditions</a></li>
+                        <li><a href="#destinations">Maldives Overwater Luxury</a></li>
+                        <li><a href="#destinations">Multi-Paradise Dual Escapes</a></li>
+                        <li><a href="#services">Ayurveda & Wellness Retreats</a></li>
+                        <li><a href="#services">Private Chauffeur Fleet</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-col">
-                    <h4>Legal</h4>
+                    <h4>Company & Heritage</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#concept">Our Philosophy</a></li>
+                        <li><a href="#concept">The 5 Core Pillars</a></li>
+                        <li><a href="#sustainability">Sustainability & Impact</a></li>
+                        <li><a href="#" onclick="openPrivacyModal(); return false;">Privacy Policy</a></li>
+                        <li><a href="#" onclick="openTermsModal(); return false;">Terms of Craftsmanship</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:info@lespritvoyages.com">info@lespritvoyages.com</a></li>
-                        <li><a href="tel:+94112345678">+94 11 234 5678</a></li>
-                        <li>No 12, Luxury Lane,<br>Colombo 07, Sri Lanka</li>
+
+                <div class="footer-col contact-col">
+                    <h4>Private Concierge</h4>
+                    <ul class="footer-contact">
+                        <li><span class="c-icon">✉</span> <a href="mailto:concierge@lespritvoyages.com">concierge@lespritvoyages.com</a></li>
+                        <li><span class="c-icon">📞</span> <a href="tel:+94112345678">+94 (0) 11 234 5678</a></li>
+                        <li><span class="c-icon">📍</span> Private Atelier, Ward Place, Colombo 07, Sri Lanka</li>
                     </ul>
                 </div>
             </div>
-            
+
+            <div class="footer-divider"></div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 L'Esprit Voyages. All Rights Reserved.</p>
-                <div class="footer-badge">
-                    Registered with the Ministry of Tourism Sri Lanka
+                <p>&copy; 2026 L’ESPRIT VOYAGES. All Rights Reserved. Crafted with passion & Sri Lankan cultural heritage.</p>
+                <div class="footer-seal">
+                    <span class="seal-icon">🏛️</span>
+                    <span class="seal-text">Official Registration Seal: <strong>Registered with the Ministry of Tourism Sri Lanka</strong></span>
                 </div>
             </div>
         </div>

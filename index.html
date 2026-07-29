@@ -3,260 +3,579 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'ESPRIT VOYAGES | Ultra Luxury Travel</title>
-    <!-- Premium Fonts -->
+    <title>L’ESPRIT VOYAGES | Ultra Luxury Bespoke Travel — Sri Lanka & Maldives</title>
+    <meta name="description" content="Experience 5-star luxury escapes, private chauffeur tours, and authentic heritage expeditions across Sri Lanka and the Maldives with L'Esprit Voyages. Two decades of unmatched finesse.">
+    <meta name="keywords" content="Sri Lanka luxury travel, Maldives overwater villas, private chauffeur Sri Lanka, bespoke travel Asia, luxury tour operator, L'Esprit Voyages">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Cormorant Garamond for elegant serif, Montserrat for clean modern sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+    <!-- SVG DECORATIVE PATTERNS (LIYAVELA & SINHALESE ARCHITECTURAL MOTIFS) -->
+    <svg style="display: none;">
+        <defs>
+            <!-- Liyavela Organic Scrolling Line-Art Motif Pattern -->
+            <pattern id="liyavela-pattern" width="120" height="120" patternUnits="userSpaceOnUse">
+                <path d="M60 0 C75 30 105 30 120 60 C105 90 75 90 60 120 C45 90 15 90 0 60 C15 30 45 30 60 0 Z" fill="none" stroke="#D4AF37" stroke-width="0.75" stroke-opacity="0.18"/>
+                <circle cx="60" cy="60" r="12" fill="none" stroke="#C5A880" stroke-width="0.75" stroke-opacity="0.25"/>
+                <path d="M60 20 Q80 40 60 60 Q40 80 60 100" fill="none" stroke="#D4AF37" stroke-width="0.5" stroke-opacity="0.2"/>
+            </pattern>
+        </defs>
+    </svg>
+
+    <!-- HEADER / NAVIGATION PLACEHOLDER -->
     <div id="header-placeholder"></div>
 
-    <!-- HERO -->
-    <header class="hero">
-        <div class="hero-img"></div>
-        <div class="hero-content">
-            <span class="subtitle">Welcome to Elegance</span>
-            <h1>L'ESPRIT VOYAGES</h1>
-            <div class="line-v" style="margin: 2rem auto;"></div>
-            <p>"Travel is more than discovering a destination it is about experiencing the soul, spirit, and authenticity of every journey."</p>
-        </div>
-    </header>
+    <!-- MAIN APP WRAPPER -->
+    <main id="main-content">
 
-    <!-- CONCEPT -->
-    <section class="container" id="concept" style="padding-top: 8rem; padding-bottom: 8rem;">
-        <div class="concept-wrapper reveal">
-            <div class="concept-text">
-                <span class="subtitle">Our Philosophy</span>
-                <h2>Redefining Authentic Luxury</h2>
-                <p>With over two decades of expertise in Sri Lanka and the Maldives, we craft tailor-made luxury escapes blending elegance, culture, and meaningful local connections. Rooted in delivering refined and personalized destination experiences, our concept celebrates elegance and local authenticity.</p>
-                <p>Every journey with L'Esprit Voyages is meticulously designed to immerse you in the very essence of your destination.</p>
+        <!-- ========================================================= -->
+        <!-- SECTION 1: HERO EXPERIENCE (THE WOW FACTOR) -->
+        <!-- ========================================================= -->
+        <section class="hero-section" id="hero">
+            <!-- Dynamic Visual Canvas: Video Slideshow with Ambient Particle Canvas -->
+            <div class="hero-media-container">
+                <div class="hero-slide active" style="background-image: url('assets/images/hero.png');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/sri_lanka.png');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/maldives.png');"></div>
+                <div class="hero-video-overlay"></div>
+                <canvas id="hero-particle-canvas"></canvas>
             </div>
-            <div class="concept-img reveal d-1">
-                <div class="strength-box">
-                    <p>Our Strength: A strong network of local experts, artisans, experienced guides, and dedicated chauffeur guides forms the foundation of every journey we craft.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="values-grid reveal d-2" style="margin-top: 8rem;">
-            <div class="value-item">
-                <h3><span>I</span> Design</h3>
-                <p>Meticulously planned itineraries tailored to your unique desires and travel rhythm.</p>
-            </div>
-            <div class="value-item">
-                <h3><span>II</span> Novelty</h3>
-                <p>Curating undiscovered paths and exceptional, unexpected experiences.</p>
-            </div>
-            <div class="value-item">
-                <h3><span>III</span> Finesse</h3>
-                <p>Delivering unparalleled elegance and attention to detail at every touchpoint.</p>
-            </div>
-            <div class="value-item">
-                <h3><span>IV</span> Goodness</h3>
-                <p>Fostering warmth, genuine hospitality, and meaningful human connections.</p>
-            </div>
-            <div class="value-item">
-                <h3><span>V</span> Conservation</h3>
-                <p>Commitment to preserving the natural and cultural heritage of our destinations.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- DESTINATIONS -->
-    <section class="dest-section" id="destinations">
-        <!-- Sri Lanka -->
-        <div class="dest-row">
-            <div class="dest-image">
-                <div class="dest-bg sl-bg"></div>
-            </div>
-            <div class="dest-content">
-                <div class="reveal">
-                    <span class="subtitle">Destination</span>
-                    <h2>Sri Lanka</h2>
-                    <h4>A Land of Timeless Cultural Heritage</h4>
-                    <p>Embark on an unforgettable journey through ancient kingdoms, lush tea estates, and pristine coastlines. Experience extraordinary diversity.</p>
-                    <div class="tags">
-                        <div class="tag-line">UNESCO Sites (Sigiriya, Kandy)</div>
-                        <div class="tag-line">Wildlife Safaris (Yala, Udawalawe)</div>
-                        <div class="tag-line">Wellness & Ayurveda</div>
-                        <div class="tag-line">Culinary Journeys</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Maldives -->
-        <div class="dest-row">
-            <div class="dest-image">
-                <div class="dest-bg mv-bg"></div>
-            </div>
-            <div class="dest-content">
-                <div class="reveal">
-                    <span class="subtitle">Destination</span>
-                    <h2>Maldives</h2>
-                    <h4>The Tropical Paradise</h4>
-                    <p>Experience the ultimate secluded luxury amidst crystal-clear turquoise waters and pristine coral reefs, far away from the ordinary.</p>
-                    <div class="tags">
-                        <div class="tag-line">1,000+ Idyllic Islands & 26 Atolls</div>
-                        <div class="tag-line">Marine Ecosystems (Manta Rays)</div>
-                        <div class="tag-line">Overwater Villa Luxury</div>
-                        <div class="tag-line">Exclusive Surfing Breaks</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <!-- Traditional Liyavela Framing Vignette -->
+            <div class="hero-frame-border"></div>
 
-    <!-- SERVICES -->
-    <section class="services-section" id="services">
-        <div class="container reveal">
-            <span class="subtitle" style="text-align: center;">Curated Offerings</span>
-            <h2>Our Services</h2>
-            
-            <div class="service-list">
-                <div class="service-item reveal d-1">
-                    <div class="service-title">
-                        <span>01</span>
-                        <h3>Travel Solutions</h3>
-                    </div>
-                    <div class="service-details">
-                        Comprehensive solutions tailored for every traveler type, including FIT (Free Independent Travelers), GIT (Group Inclusive Tours), and elite MICE (Meetings, Incentives, Conferences & Exhibitions).
-                    </div>
+            <!-- Hero Content -->
+            <div class="hero-content container">
+                <div class="hero-badge reveal">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Sri Lanka & The Maldives — 20+ Years of Craftsmanship</span>
                 </div>
                 
-                <div class="service-item reveal d-2">
-                    <div class="service-title">
-                        <span>02</span>
-                        <h3>Signature Experiences</h3>
-                    </div>
-                    <div class="service-details">
-                        Immersive thematic journeys ranging from Adventure Expeditions, Hiking & Trekking, and Cycling Tours to Voluntourism Programs, Birdwatching, and Rejuvenating Wellness Retreats.
-                    </div>
-                </div>
+                <h1 class="hero-title reveal d-1">
+                    Where Royalty Meets <span class="gold-gradient-text">Authenticity</span>.
+                </h1>
                 
-                <div class="service-item reveal d-3">
-                    <div class="service-title">
-                        <span>03</span>
-                        <h3>Premium Fleet</h3>
-                    </div>
-                    <div class="service-details">
-                        Comfortable, safe, and luxurious transit utilizing Private Cars, Luxury SUVs, Micro Vans, Deluxe Coaches, and Professional Chauffeur-Driven Vehicles.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <p class="hero-subtitle reveal d-2">
+                    Two Decades of Crafting Bespoke Luxury Escapes Across Sri Lanka & The Maldives.
+                </p>
 
-    <!-- VALUE PROP -->
-    <section class="container why-us">
-        <div class="reveal">
-            <span class="subtitle">The L'Esprit Difference</span>
-            <h2>Why Choose Us</h2>
-        </div>
-        
-        <div class="vp-grid">
-            <div class="vp-card reveal d-1">
-                <h4>Exceptional Quality</h4>
-                <p>Bespoke itineraries crafted with an uncompromising standard of luxury and individualized attention.</p>
-            </div>
-            <div class="vp-card reveal d-2">
-                <h4>Exclusive Benefits</h4>
-                <p>Leveraging our established network to provide unparalleled access and premium value.</p>
-            </div>
-            <div class="vp-card reveal d-3">
-                <h4>Dedicated Support</h4>
-                <p>Round-the-clock assistance ensuring total peace of mind throughout your entire journey.</p>
-            </div>
-            <div class="vp-card reveal d-4">
-                <h4>Trusted Expertise</h4>
-                <p>A fully licensed travel company officially registered with the Ministry of Tourism Sri Lanka.</p>
-            </div>
-        </div>
-    </section>
+                <div class="hero-cta-group reveal d-3">
+                    <a href="#destinations" class="btn-solid-gold" onclick="focusDestination('sri-lanka');">
+                        <span>Discover Sri Lanka</span>
+                        <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </a>
+                    <a href="#destinations" class="btn-outline-gold" onclick="focusDestination('maldives');">
+                        <span>Explore Maldives</span>
+                        <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </a>
+                </div>
 
-    <!-- SUSTAINABILITY -->
-    <section id="sustainability">
-        <div class="container reveal" style="text-align: center; margin-bottom: 4rem;">
-            <span class="subtitle" style="color: var(--c-gold);">Our Commitment</span>
-            <h2 style="color: var(--c-white); font-size: 4rem; margin-bottom: 1.5rem;">Sustainability & Impact</h2>
-            <p style="color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem;">We believe in travel that gives back. Our commitment to sustainable tourism ensures that our journeys positively impact both the environment and local communities.</p>
-        </div>
-        
-        <div class="sus-accordion reveal container" style="max-width: 1600px;">
-            <div class="sus-panel">
-                <span class="vertical-title">Environmental Conservation</span>
-                <div class="sus-panel-content">
-                    <h4>Environmental Conservation</h4>
-                    <p>Proactively managing our footprint across all operations to preserve the pristine nature of our destinations.</p>
+                <div class="hero-scroll-indicator reveal d-4">
+                    <a href="#concept" class="scroll-link">
+                        <span class="mouse-icon"><span class="wheel"></span></span>
+                        <span class="scroll-text">Unfold The Journey</span>
+                    </a>
                 </div>
             </div>
-            <div class="sus-panel">
-                <span class="vertical-title">Community Empowerment</span>
-                <div class="sus-panel-content">
-                    <h4>Community Empowerment</h4>
-                    <p>Engaging in school renovations, infrastructure enhancements, and empowering local artisans.</p>
-                </div>
-            </div>
-            <div class="sus-panel">
-                <span class="vertical-title">Plastic Reduction</span>
-                <div class="sus-panel-content">
-                    <h4>Plastic Reduction</h4>
-                    <p>Introducing reusable water bottles and maintaining vehicle refillable containers for all guests.</p>
-                </div>
-            </div>
-            <div class="sus-panel">
-                <span class="vertical-title">Resource Management</span>
-                <div class="sus-panel-content">
-                    <h4>Resource Management</h4>
-                    <p>Championing energy efficiency and resource conservation across our partner network.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FORM -->
-    <section class="inquiry" id="contact">
-        <div class="container reveal">
-            <span class="subtitle">Begin Your Journey</span>
-            <h2>Craft Your Bespoke Itinerary</h2>
+        <!-- ========================================================= -->
+        <!-- SECTION 2: OUR CONCEPT & CORE VALUES (ANCIENT SCROLL EXPERIENCE) -->
+        <!-- ========================================================= -->
+        <section class="concept-section" id="concept">
+            <div class="puskola-background-motif"></div>
             
-            <div class="form-wrap">
-                <form>
-                    <div class="input-group">
-                        <input type="text" id="name" required>
-                        <label for="name">Your Full Name</label>
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="gold-sub-tag">The Philosophy of L’Esprit</span>
+                    <h2 class="section-title">An Unfolding Digital <span class="gold-gradient-text">"Puskola Potha"</span></h2>
+                    <div class="decorative-divider">
+                        <span class="div-line"></span>
+                        <span class="div-symbol">☸</span>
+                        <span class="div-line"></span>
                     </div>
-                    <div class="input-group">
-                        <input type="email" id="email" required>
-                        <label for="email">Your Email Address</label>
-                    </div>
-                    <div class="input-group" style="margin-top: 40px;">
-                        <select id="dest" required>
-                            <option value="" disabled selected></option>
-                            <option value="sri-lanka">Sri Lanka</option>
-                            <option value="maldives">Maldives</option>
-                            <option value="both">Both (Multi-Destination)</option>
-                        </select>
-                        <label for="dest" style="top: -20px; font-size: 0.75rem; color: var(--c-gold);">Destination Interest</label>
-                    </div>
-                    <button type="button" class="btn-luxury">Submit Inquiry</button>
-                </form>
-            </div>
-        </div>
-    </section>
+                </div>
 
+                <!-- Ancient Palm-Leaf Manuscript Canvas -->
+                <div class="puskola-manuscript-card reveal" id="puskola-card">
+                    <div class="puskola-gold-border"></div>
+                    <div class="puskola-corner top-left"></div>
+                    <div class="puskola-corner top-right"></div>
+                    <div class="puskola-corner bottom-left"></div>
+                    <div class="puskola-corner bottom-right"></div>
+
+                    <div class="puskola-inner-content">
+                        <div class="puskola-intro-grid">
+                            <div class="puskola-text-side">
+                                <span class="puskola-leaf-tag">ලියවැල Heritage Narrative</span>
+                                <h3>Redefining Authentic 5-Star Luxury</h3>
+                                <p>
+                                    Rooted in delivering refined, personalized destination experiences, our concept is built upon two decades of passion. We believe luxury travel is not merely visiting a location—it is about communing with the soul, living history, and fine craftsmanship of the land.
+                                </p>
+                                <p>
+                                    From mist-shrouded emerald tea plantations in the Central Highlands to pristine, untouched Maldivian coral atolls, every itinerary is hand-stitched for those who seek rare, authentic elegance.
+                                </p>
+                            </div>
+                            
+                            <!-- Our Strength Callout -->
+                            <div class="strength-callout-box">
+                                <div class="strength-gold-glow"></div>
+                                <div class="strength-icon">🏛️</div>
+                                <h4>Our Human Heart & Strength</h4>
+                                <p>
+                                    Backed by <strong>20+ years of local mastery</strong>, our true strength lies in an exclusive, tight-knit network of master artisans, cultural historians, environmentalists, and dedicated chauffeur guides who transform every transit into an unforgettable story.
+                                </p>
+                                <div class="strength-badge-row">
+                                    <span class="s-badge">✓ 20+ Years Excellence</span>
+                                    <span class="s-badge">✓ Private Chauffeur Guides</span>
+                                    <span class="s-badge">✓ Curated Artisan Access</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Core Values Matrix (5 Pillars in Sinhala & English) -->
+                        <div class="values-matrix-wrapper">
+                            <div class="matrix-title-row">
+                                <span class="matrix-label">Our 5 Core Pillars</span>
+                                <span class="matrix-sub">The Foundations of Every L’Esprit Voyage</span>
+                            </div>
+
+                            <div class="values-grid">
+                                <!-- Pillar 1 -->
+                                <div class="pillar-card reveal d-1">
+                                    <div class="pillar-num">01</div>
+                                    <div class="pillar-sinhala">නිර්මාණශීලීත්වය</div>
+                                    <h4 class="pillar-title">Design</h4>
+                                    <p class="pillar-desc">Custom-tailored, bespoke itineraries designed around your personal rhythm and desires, creating one-of-a-kind voyages.</p>
+                                    <div class="pillar-hover-line"></div>
+                                </div>
+
+                                <!-- Pillar 2 -->
+                                <div class="pillar-card reveal d-2">
+                                    <div class="pillar-num">02</div>
+                                    <div class="pillar-sinhala">නව්යතාවය</div>
+                                    <h4 class="pillar-title">Novelty</h4>
+                                    <p class="pillar-desc">Unlocking hidden doors, undiscovered trails, and rare private access unavailable through conventional travel routes.</p>
+                                    <div class="pillar-hover-line"></div>
+                                </div>
+
+                                <!-- Pillar 3 -->
+                                <div class="pillar-card reveal d-3">
+                                    <div class="pillar-num">03</div>
+                                    <div class="pillar-sinhala">සියුම් නිමාව</div>
+                                    <h4 class="pillar-title">Finesse</h4>
+                                    <p class="pillar-desc">Uncompromising attention to detail, flawless execution, and seamless 5-star logistics at every single touchpoint.</p>
+                                    <div class="pillar-hover-line"></div>
+                                </div>
+
+                                <!-- Pillar 4 -->
+                                <div class="pillar-card reveal d-4">
+                                    <div class="pillar-num">04</div>
+                                    <div class="pillar-sinhala">යහපත් බව</div>
+                                    <h4 class="pillar-title">Goodness</h4>
+                                    <p class="pillar-desc">Warm Sri Lankan hospitality, genuine human warmth, and respectful immersion with native island communities.</p>
+                                    <div class="pillar-hover-line"></div>
+                                </div>
+
+                                <!-- Pillar 5 -->
+                                <div class="pillar-card reveal d-5">
+                                    <div class="pillar-num">05</div>
+                                    <div class="pillar-sinhala">පරිසර සුරැකුම</div>
+                                    <h4 class="pillar-title">Conservation</h4>
+                                    <p class="pillar-desc">Active stewardship of fragile ecosystems, wildlife sanctuaries, and sacred heritage preservation.</p>
+                                    <div class="pillar-hover-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 3: DUAL PARADISE SHOWCASE (SPLIT INTERACTIVE CANVAS) -->
+        <!-- ========================================================= -->
+        <section class="destinations-section" id="destinations">
+            <div class="container-fluid p-0">
+                <div class="section-header text-center reveal" style="padding-top: 2rem;">
+                    <span class="gold-sub-tag">Two Kingdoms of Wonder</span>
+                    <h2 class="section-title">Dual Paradise <span class="gold-gradient-text">Interactive Showcase</span></h2>
+                    <p class="section-lead">Hover or tap across our dual interactive canvas to explore Sri Lanka’s ancient emerald valleys or the Maldives’ turquoise lagoons.</p>
+                </div>
+
+                <!-- Interactive Split Canvas Wrapper -->
+                <div class="dual-split-canvas" id="dual-split-canvas">
+                    
+                    <!-- Left Panel: Sri Lanka -->
+                    <div class="split-panel panel-sri-lanka active-expanded" id="panel-sri-lanka" data-region="sri-lanka">
+                        <div class="panel-bg" style="background-image: url('assets/images/sri_lanka.png');"></div>
+                        <div class="panel-overlay"></div>
+                        <div class="panel-gold-frame"></div>
+                        
+                        <div class="panel-content">
+                            <span class="panel-tag">Island of Culture & Diversity</span>
+                            <h3 class="panel-title">Sri Lanka</h3>
+                            <p class="panel-subtitle">"A Land of Timeless Cultural Heritage & Extraordinary Diversity"</p>
+                            
+                            <!-- Highlights Grid -->
+                            <div class="panel-highlights">
+                                <div class="highlight-chip">
+                                    <span class="chip-icon">🏛️</span>
+                                    <span class="chip-label">UNESCO Heritage (Sigiriya, Kandy, Anuradhapura)</span>
+                                </div>
+                                <div class="highlight-chip">
+                                    <span class="chip-icon">🐆</span>
+                                    <span class="chip-label">Wildlife Safaris (Yala & Wilpattu Leopards)</span>
+                                </div>
+                                <div class="highlight-chip">
+                                    <span class="chip-icon">🌿</span>
+                                    <span class="chip-label">Ayurvedic Sanctuary & Tea Country</span>
+                                </div>
+                                <div class="highlight-chip">
+                                    <span class="chip-icon">🍲</span>
+                                    <span class="chip-label">Authentic Spice & Culinary Journeys</span>
+                                </div>
+                            </div>
+
+                            <div class="panel-actions">
+                                <button class="btn-panel-gold" onclick="openDestinationModal('sri-lanka');">
+                                    <span>Explore Sri Lanka Itineraries</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Panel: Maldives -->
+                    <div class="split-panel panel-maldives" id="panel-maldives" data-region="maldives">
+                        <div class="panel-bg" style="background-image: url('assets/images/maldives.png');"></div>
+                        <div class="panel-overlay"></div>
+                        <div class="panel-gold-frame"></div>
+                        
+                        <div class="panel-content">
+                            <span class="panel-tag">Secluded Ocean Sanctuary</span>
+                            <h3 class="panel-title">Maldives</h3>
+                            <p class="panel-subtitle">"The Tropical Paradise of the Maldives"</p>
+                            
+                            <!-- Highlights Grid -->
+                            <div class="panel-highlights">
+                                <div class="highlight-chip">
+                                    <span class="chip-icon">🏝️</span>
+                                    <span class="chip-label">1,000+ Idyllic Islands & 26 Natural Atolls</span>
+                                </div>
+                                <div class="highlight-chip">
+                                    <span class="chip-icon">🦈</span>
+                                    <span class="chip-label">Manta Ray & Whale Shark Expeditions</span>
+                                </div>
+                                <div class="highlight-chip">
+                                    <span class="chip-icon">🏡</span>
+                                    <span class="chip-label">Private Overwater Villa Luxury</span>
+                                </div>
+                                <div class="highlight-chip">
+                                    <span class="chip-icon">🏄</span>
+                                    <span class="chip-label">World-Class Surfing & Yacht Charters</span>
+                                </div>
+                            </div>
+
+                            <div class="panel-actions">
+                                <button class="btn-panel-gold" onclick="openDestinationModal('maldives');">
+                                    <span>Explore Maldives Escapes</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 4: SIGNATURE SERVICES & LOGISTICS (GLASS CARDS) -->
+        <!-- ========================================================= -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="gold-sub-tag">Expertise & Logistics</span>
+                    <h2 class="section-title">Signature Services <span class="gold-gradient-text">& Fleet Solutions</span></h2>
+                    <p class="section-lead">Tailored logistics engineered to perfection. From private aviation transfers to dedicated luxury chauffeur guides.</p>
+                </div>
+
+                <!-- Services Filter Tabs -->
+                <div class="services-filter-row reveal">
+                    <button class="svc-tab-btn active" data-filter="all">All Solutions</button>
+                    <button class="svc-tab-btn" data-filter="travel">Travel Solutions</button>
+                    <button class="svc-tab-btn" data-filter="experiences">Signature Experiences</button>
+                    <button class="svc-tab-btn" data-filter="fleet">Premium Fleet</button>
+                </div>
+
+                <!-- Glass Cards Grid -->
+                <div class="services-grid">
+                    
+                    <!-- Card 1: Travel Solutions -->
+                    <div class="service-glass-card reveal d-1" data-category="travel">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-icon">✈️</div>
+                        <span class="card-cat-tag">Travel Solutions</span>
+                        <h3>FIT, GIT & Corporate MICE</h3>
+                        <p>Specialized travel execution for Free Independent Travelers (FIT), Group Inclusive Tours (GIT), and high-level Corporate MICE (Meetings, Incentives, Conferences & Exhibitions).</p>
+                        <ul class="card-feature-list">
+                            <li><span>✓</span> Bespoke Solo & Family FIT Concierge</li>
+                            <li><span>✓</span> Exclusive Group Inclusive Journeys (GIT)</li>
+                            <li><span>✓</span> Executive Incentive & Retreat Planning (MICE)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2: Signature Experiences -->
+                    <div class="service-glass-card reveal d-2" data-category="experiences">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-icon">🧭</div>
+                        <span class="card-cat-tag">Signature Experiences</span>
+                        <h3>Curated Expedition Pursuits</h3>
+                        <p>Immersive thematic journeys led by local specialists across pristine wilderness, cultural sanctuaries, and private coastal reserves.</p>
+                        <ul class="card-feature-list">
+                            <li><span>✓</span> High-Altitude Trekking & Cycling Trails</li>
+                            <li><span>✓</span> Voluntourism & Heritage Conservation</li>
+                            <li><span>✓</span> Expert Birdwatching & Photography Expeditions</li>
+                            <li><span>✓</span> Sacred Ayurveda & Holistic Wellness Retreats</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3: Premium Fleet -->
+                    <div class="service-glass-card reveal d-3" data-category="fleet">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-icon">🚘</div>
+                        <span class="card-cat-tag">Premium Fleet</span>
+                        <h3>Private Chauffeur Fleet & Aviation</h3>
+                        <p>Unmatched ground and air luxury transit with professionally trained English-speaking chauffeur guides and seamless domestic air transfers.</p>
+                        <ul class="card-feature-list">
+                            <li><span>✓</span> Luxury Sedans & SUVs (Mercedes, Land Cruiser)</li>
+                            <li><span>✓</span> Deluxe Micro Vans & Coaster Coaches</li>
+                            <li><span>✓</span> Scenic Domestic Flights & Helicopter Charters</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 5: SUSTAINABILITY & HERITAGE IMPACT -->
+        <!-- ========================================================= -->
+        <section class="sustainability-section" id="sustainability">
+            <div class="container">
+                <div class="sus-hero-card reveal">
+                    <div class="sus-bg-image" style="background-image: url('assets/images/sustainability.png');"></div>
+                    <div class="sus-overlay"></div>
+                    
+                    <div class="sus-content-grid">
+                        <div class="sus-left">
+                            <span class="gold-sub-tag">Ethical Luxury</span>
+                            <h2 class="sus-title">Travel that Leaves a <span class="gold-gradient-text">Lasting Heritage</span></h2>
+                            <p class="sus-desc">
+                                At L’Esprit Voyages, true luxury safeguards the natural beauty and local communities that make our destinations extraordinary. We integrate sustainable practices directly into every itinerary.
+                            </p>
+                            
+                            <div class="sus-metrics-row">
+                                <div class="metric-box">
+                                    <span class="metric-num" id="metric-plastic">100%</span>
+                                    <span class="metric-lbl">Single-Use Plastic Free Vehicles</span>
+                                </div>
+                                <div class="metric-box">
+                                    <span class="metric-num" id="metric-schools">25+</span>
+                                    <span class="metric-lbl">Local Schools & Libraries Renovated</span>
+                                </div>
+                                <div class="metric-box">
+                                    <span class="metric-num" id="metric-artisans">150+</span>
+                                    <span class="metric-lbl">Village Artisans Directly Supported</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Eco-Culture 3 Pillars Panel -->
+                        <div class="sus-pillars-column">
+                            
+                            <!-- Item 1 -->
+                            <div class="sus-item-card reveal d-1">
+                                <div class="sus-icon">🌱</div>
+                                <div class="sus-info">
+                                    <h4>Environmental Impact Reduction</h4>
+                                    <p>Optimized eco-logistics, low-emission fleet routing, and carbon offset initiatives preserving Sri Lanka’s rainforests and Maldivian coral reefs.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="sus-item-card reveal d-2">
+                                <div class="sus-icon">🤝</div>
+                                <div class="sus-info">
+                                    <h4>Community First Initiatives</h4>
+                                    <p>Funding local village school renovations, classroom technology enhancements, and directly commissioning traditional craftspeople.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="sus-item-card reveal d-3">
+                                <div class="sus-icon">💧</div>
+                                <div class="sus-info">
+                                    <h4>Plastic Waste Elimination</h4>
+                                    <p>Complimentary custom copper reusable water bottles provided to guests with continuous vehicle refillable mineral water stations.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 6: TAILOR-MADE JOURNEY BUILDER (FOOTER LEAD FORM) -->
+        <!-- ========================================================= -->
+        <section class="inquiry-section" id="contact">
+            <div class="container">
+                <div class="inquiry-wrapper reveal">
+                    <div class="inquiry-liyavela-frame"></div>
+                    
+                    <div class="inquiry-header text-center">
+                        <span class="gold-sub-tag">Bespoke Concierge</span>
+                        <h2 class="inquiry-title">Let’s Craft Your <span class="gold-gradient-text">Bespoke Itinerary</span></h2>
+                        <p class="inquiry-sub">Share your travel vision with our Senior Atelier Designers. We will curate a tailor-made proposal within 24 hours.</p>
+                    </div>
+
+                    <form id="bespoke-journey-form" class="journey-form">
+                        <div class="form-grid">
+                            
+                            <!-- Full Name -->
+                            <div class="form-group">
+                                <label for="form-fullname">Full Name *</label>
+                                <input type="text" id="form-fullname" required placeholder="e.g. Lord Alexander Wright">
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="form-email">Email Address *</label>
+                                <input type="email" id="form-email" required placeholder="alexander@domain.com">
+                            </div>
+
+                            <!-- Preferred Destination -->
+                            <div class="form-group">
+                                <label for="form-destination">Preferred Destination *</label>
+                                <select id="form-destination" required>
+                                    <option value="" disabled selected>Select Destination</option>
+                                    <option value="Sri Lanka">Sri Lanka (Cultural & Wildlife Expedition)</option>
+                                    <option value="Maldives">Maldives (Overwater Villa Sanctuary)</option>
+                                    <option value="Sri Lanka & Maldives Combined">Sri Lanka & Maldives Combined (Dual Paradise)</option>
+                                </select>
+                            </div>
+
+                            <!-- Travel Style Chips -->
+                            <div class="form-group full-width">
+                                <label>Travel Style & Primary Focus (Select all that apply)</label>
+                                <div class="style-chips-grid">
+                                    <label class="chip-item">
+                                        <input type="checkbox" name="travel_style" value="Ultra Luxury & Concierge" checked>
+                                        <span class="chip-btn">✨ Ultra Luxury</span>
+                                    </label>
+                                    <label class="chip-item">
+                                        <input type="checkbox" name="travel_style" value="Cultural Heritage">
+                                        <span class="chip-btn">🏛️ Cultural Heritage</span>
+                                    </label>
+                                    <label class="chip-item">
+                                        <input type="checkbox" name="travel_style" value="Wildlife & Safaris">
+                                        <span class="chip-btn">🐆 Wildlife Safaris</span>
+                                    </label>
+                                    <label class="chip-item">
+                                        <input type="checkbox" name="travel_style" value="Ayurveda & Wellness">
+                                        <span class="chip-btn">🌿 Wellness & Ayurveda</span>
+                                    </label>
+                                    <label class="chip-item">
+                                        <input type="checkbox" name="travel_style" value="Honeymoon & Romantic">
+                                        <span class="chip-btn">💍 Honeymoon / Escape</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Special Notes -->
+                            <div class="form-group full-width">
+                                <label for="form-notes">Special Preferences & Specific Requirements</label>
+                                <textarea id="form-notes" rows="4" placeholder="Tell us about your estimated travel dates, duration, party size, dietary or flight preferences..."></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="form-action-row text-center">
+                            <button type="submit" class="btn-solid-gold submit-btn">
+                                <span>Request Bespoke Proposal</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER PLACEHOLDER -->
     <div id="footer-placeholder"></div>
 
-    <!-- Scripts -->
+    <!-- ========================================================= -->
+    <!-- INTERACTIVE MODALS -->
+    <!-- ========================================================= -->
+
+    <!-- Destination Modal -->
+    <div class="modal-backdrop" id="destination-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="modal-close" onclick="closeModal('destination-modal');">&times;</button>
+            <div class="modal-header">
+                <span class="modal-tag" id="modal-dest-tag">Destination Brief</span>
+                <h3 class="modal-title" id="modal-dest-title">Sri Lanka Expeditions</h3>
+            </div>
+            <div class="modal-body" id="modal-dest-body">
+                <!-- Dynamically injected via JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <a href="#contact" class="btn-solid-gold" onclick="closeModal('destination-modal');">Craft Journey For This Region</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Success Modal -->
+    <div class="modal-backdrop" id="success-modal" aria-hidden="true">
+        <div class="modal-dialog text-center">
+            <button class="modal-close" onclick="closeModal('success-modal');">&times;</button>
+            <div class="success-icon-wrap">✨</div>
+            <h3 class="modal-title">Bespoke Request Received</h3>
+            <p class="modal-sub">Thank you for placing your trust in L’ESPRIT VOYAGES.</p>
+            <div class="success-summary-box" id="success-summary-content">
+                <!-- Injected JS summary -->
+            </div>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">Our Senior Atelier Travel Designer will review your preferences and deliver a custom itinerary proposal within 24 hours.</p>
+            <button class="btn-solid-gold" onclick="closeModal('success-modal');" style="margin-top: 1.5rem;">Return To Experience</button>
+        </div>
+    </div>
+
+    <!-- Privacy & Terms Modal -->
+    <div class="modal-backdrop" id="info-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="modal-close" onclick="closeModal('info-modal');">&times;</button>
+            <div class="modal-header">
+                <h3 class="modal-title" id="info-modal-title">Privacy Policy & Guarantee</h3>
+            </div>
+            <div class="modal-body" id="info-modal-body">
+                <!-- Injected text -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Dependencies -->
     <script src="components/header.js"></script>
     <script src="components/footer.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
-
