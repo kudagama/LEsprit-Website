@@ -20,7 +20,6 @@ export default function Home() {
       <PuskolaPotha />
       <PalapethiDivider className="my-2" variant="2" />
       <DualParadise />
-      <PalapethiDivider className="my-2" variant="1" />
       <TourPackages />
       <PalapethiDivider className="my-2" variant="2" />
       <ServicesGrid />

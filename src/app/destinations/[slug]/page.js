@@ -125,6 +125,54 @@ const DESTINATION_DATA = {
   },
 };
 
+const PACKAGES = [
+  {
+    id: 1,
+    title: "Grand Ceylon & Cultural Heritage",
+    subtitle: "Sri Lanka In-Depth Expedition",
+    duration: "10 Days / 9 Nights",
+    location: "Sigiriya, Kandy, Ella, Yala & Galle",
+    tag: "Cultural & Wildlife",
+    highlights: [
+      "VIP Fast-Track & Private Luxury SUV transit",
+      "Private guided climb of Sigiriya Fortress",
+      "Leopard & Elephant Safaris in Yala & Wilpattu",
+      "Scenic tea country train in First Class cabin",
+      "5-Star Relais & Châteaux colonial stays"
+    ]
+  },
+  {
+    id: 2,
+    title: "Secluded Atoll & Lagoon Sanctuary",
+    subtitle: "Maldives Ultra-Luxury Escape",
+    duration: "7 Days / 6 Nights",
+    location: "Baa Atoll & Private Sandbanks",
+    tag: "Ocean Sanctuary",
+    highlights: [
+      "Private Seaplane charters to luxury island",
+      "Overwater Sunset Pool Villa sanctuary",
+      "Manta Ray snorkeling guided by marine biologists",
+      "Private Sandbank dinner under the stars",
+      "Bespoke spa therapies & wellness rituals"
+    ]
+  },
+  {
+    id: 3,
+    title: "The Dual Paradise Signature Voyage",
+    subtitle: "Combined Sri Lanka & Maldives Elite Tour",
+    duration: "14 Days / 13 Nights",
+    location: "Highland Tea Country & Maldivian Atolls",
+    tag: "Elite Combined",
+    highlights: [
+      "Best of both worlds: Ancient culture & private island",
+      "Chauffeur-guided heritage tours in Sri Lanka",
+      "Overwater ocean pavilion stay in the Maldives",
+      "Seamless private inter-island flight logistics",
+      "Dedicated 24/7 concierge & local guide network"
+    ]
+  }
+];
+
 export function generateStaticParams() {
   return [{ slug: "sri-lanka" }, { slug: "maldives" }];
 }
@@ -135,6 +183,15 @@ export default function DestinationDetailPage({ params }) {
   if (!data) {
     notFound();
   }
+
+  const filteredPackages = PACKAGES.filter((pkg) => {
+    if (params.slug === "sri-lanka") {
+      return pkg.id === 1 || pkg.id === 3;
+    } else if (params.slug === "maldives") {
+      return pkg.id === 2 || pkg.id === 3;
+    }
+    return false;
+  });
 
   return (
     <main className="min-h-screen bg-ivory-sacred text-charcoal">
@@ -207,7 +264,7 @@ export default function DestinationDetailPage({ params }) {
               </p>
               
               <div className="grid gap-6">
-                {data.packages.map((pkg) => (
+                {filteredPackages.map((pkg) => (
                   <div key={pkg.title} className="border border-gold-dark/20 rounded-lg p-6 hover:border-gold-primary hover:shadow-md transition-all bg-ivory-sacred/40">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                       <div>
@@ -217,10 +274,10 @@ export default function DestinationDetailPage({ params }) {
                         <h3 className="font-serif text-lg text-indigo-dark font-bold">{pkg.title}</h3>
                       </div>
                       <span className="font-sans text-xs font-semibold text-emerald-dark bg-emerald-dark/15 px-3 py-1 rounded-full shrink-0 self-start sm:self-center">
-                        {pkg.price}
+                        {pkg.tag}
                       </span>
                     </div>
-                    <p className="font-sans text-xs text-charcoal leading-relaxed mb-4">{pkg.desc}</p>
+                    <p className="font-sans text-xs text-charcoal leading-relaxed mb-4">{pkg.subtitle} — {pkg.location}</p>
                     <div className="flex flex-wrap gap-2 pt-2 border-t border-gold-dark/10">
                       {pkg.highlights.map((hl) => (
                         <span key={hl} className="font-sans text-[10px] bg-white border border-gold-dark/20 text-indigo-dark px-2 py-0.5 rounded">

@@ -9,7 +9,7 @@ export default function DualParadise() {
   const [hoveredRegion, setHoveredRegion] = useState("sri-lanka");
 
   return (
-    <section id="destinations" className="pt-12 pb-12 bg-indigo-deep text-white relative">
+    <section id="destinations" className="pt-12 pb-0 bg-indigo-deep text-white relative">
       <div className="max-w-7xl mx-auto px-6 text-center mb-12">
         <span className="font-decorative text-xs tracking-widest text-gold-warm uppercase block mb-2">
           Two Kingdoms of Wonder
