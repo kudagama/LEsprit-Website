@@ -15,23 +15,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-gradient-to-b from-[#071526] via-[#050c14] to-[#020508] text-ivory-sacred/80 pt-20 pb-10 border-t border-gold-border/40 relative overflow-hidden">
-      {/* Background Ornament Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(212,175,55,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(212,175,55,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
+
       <div className="absolute top-0 right-0 w-96 h-96 bg-gold-primary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-dark/5 rounded-full blur-3xl pointer-events-none" />
-
-      {/* Repeating Traditional Divider at top of footer */}
-      <div className="absolute top-0 left-0 right-0 w-full z-10 pointer-events-none select-none opacity-25">
-        <div
-          className="w-full h-8"
-          style={{
-            backgroundImage: "url('/assets/images/srilanka.png')",
-            backgroundRepeat: 'repeat-x',
-            backgroundPosition: 'top center',
-            backgroundSize: 'auto 100%'
-          }}
-        />
-      </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
@@ -74,7 +60,7 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-6">
             <div className="space-y-3">
               <span className="font-serif text-2xl font-bold tracking-[0.15em] text-gold-primary block">
-                ☸ L’ESPRIT VOYAGES
+                 L’ESPRIT VOYAGES
               </span>
               <p className="font-sans text-xs italic text-gold-warm font-light leading-relaxed">
                 "Experience the Soul, Spirit, and Authenticity of Every Journey."
@@ -105,8 +91,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Journeys (2.5 cols) */}
-          <div className="lg:col-span-2.5 lg:pl-6">
+          {/* Column 2: Journeys (2 cols) */}
+          <div className="lg:col-span-2 lg:pl-6">
             <h4 className="font-cinzel text-xs text-gold-primary uppercase tracking-[0.15em] mb-5 font-bold">
               Bespoke Escapes
             </h4>
@@ -134,8 +120,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Heritage (2.5 cols) */}
-          <div className="lg:col-span-2.5 lg:pl-4">
+          {/* Column 3: Heritage (3 cols) */}
+          <div className="lg:col-span-3 lg:pl-4">
             <h4 className="font-cinzel text-xs text-gold-primary uppercase tracking-[0.15em] mb-5 font-bold">
               Heritage & Impact
             </h4>
