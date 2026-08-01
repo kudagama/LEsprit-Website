@@ -10,15 +10,15 @@ const HERO_VIDEOS = [
     label: "Maldives Paradise"
   },
   {
-    url: "https://player.vimeo.com/external/409217032.hd.mp4?s=a78df790757a3e7efcdbfd3e5e40e6c2e32f7a63&profile_id=174&oauth2_token_id=57447761",
+    url: "/assets/VIDEOS/tea_estate.mp4",
     label: "Tea Estates, Ella"
   },
   {
-    url: "https://player.vimeo.com/external/371433846.hd.mp4?s=db527d7fc49c8dfbbf14532b21c43f721c54b0eb&profile_id=174&oauth2_token_id=57447761",
+    url: "/assets/VIDEOS/309435_small.mp4",
     label: "Untouched Beaches"
   },
   {
-    url: "https://player.vimeo.com/external/435674703.hd.mp4?s=086c8f6cdb121fb6bb79e000f074d221c54b0eb&profile_id=174&oauth2_token_id=57447761",
+    url: "/assets/VIDEOS/242272_small.mp4",
     label: "Heritage Wildlife"
   }
 ];
