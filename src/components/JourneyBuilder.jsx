@@ -44,7 +44,7 @@ export default function JourneyBuilder() {
               Bespoke Concierge
             </span>
             <h2 className="font-serif text-3xl sm:text-5xl text-indigo-dark mb-3">
-              Let’s Craft Your <span className="gold-gradient-text">Bespoke Itinerary</span>
+              Let’s Craft Your <span className="text-[#A87D46]">Bespoke Itinerary</span>
             </h2>
             <p className="font-sans text-charcoal text-sm sm:text-base font-normal max-w-xl mx-auto">
               Share your travel vision with our Senior Atelier Designers. We will curate a tailor-made proposal within 24 hours.
@@ -64,7 +64,7 @@ export default function JourneyBuilder() {
                   placeholder="e.g. Lord Alexander Wright"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3.5 bg-ivory-sacred border border-gold-dark/40 rounded text-sm text-charcoal font-medium placeholder:text-charcoal/50 focus:outline-none focus:border-gold-primary focus:bg-white transition-all"
+                  className="w-full px-4 py-3.5 border border-gray-300 bg-white focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none rounded text-sm text-charcoal font-medium placeholder:text-charcoal/50 transition-all"
                 />
               </div>
 
@@ -79,7 +79,7 @@ export default function JourneyBuilder() {
                   placeholder="alexander@domain.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3.5 bg-ivory-sacred border border-gold-dark/40 rounded text-sm text-charcoal font-medium placeholder:text-charcoal/50 focus:outline-none focus:border-gold-primary focus:bg-white transition-all"
+                  className="w-full px-4 py-3.5 border border-gray-300 bg-white focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none rounded text-sm text-charcoal font-medium placeholder:text-charcoal/50 transition-all"
                 />
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function JourneyBuilder() {
                 required
                 value={formData.destination}
                 onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
-                className="w-full px-4 py-3.5 bg-ivory-sacred border border-gold-dark/40 rounded text-sm text-charcoal font-medium focus:outline-none focus:border-gold-primary focus:bg-white transition-all"
+                className="w-full px-4 py-3.5 border border-gray-300 bg-white focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none rounded text-sm text-charcoal font-medium transition-all"
               >
                 <option value="" disabled>
                   Select Destination
@@ -119,10 +119,10 @@ export default function JourneyBuilder() {
                       type="button"
                       key={style}
                       onClick={() => toggleStyle(style)}
-                      className={`px-4 py-2 rounded-full text-xs font-sans font-semibold transition-all border ${
+                      className={`px-4 py-2.5 rounded-full text-sm font-medium font-sans transition-all border ${
                         isSelected
-                          ? "bg-indigo-dark text-gold-primary border-gold-primary shadow-md"
-                          : "bg-ivory-sacred text-indigo-dark border-gold-dark/40 hover:bg-gold-primary/10"
+                          ? "bg-[#071526] text-[#D4AF37] border-[#D4AF37] shadow-md"
+                          : "bg-white text-[#071526] border-gray-300 hover:bg-[#D4AF37]/10"
                       }`}
                     >
                       {style}
@@ -142,16 +142,16 @@ export default function JourneyBuilder() {
                 placeholder="Tell us about your estimated travel dates, duration, party size, dietary or flight preferences..."
                 value={formData.notes}
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                className="w-full px-4 py-3.5 bg-ivory-sacred border border-gold-dark/40 rounded text-sm text-charcoal font-medium placeholder:text-charcoal/50 focus:outline-none focus:border-gold-primary focus:bg-white transition-all"
+                className="w-full px-4 py-3.5 border border-gray-300 bg-white focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none rounded text-sm text-charcoal font-medium placeholder:text-charcoal/50 transition-all"
               />
             </div>
 
-            <div className="text-center pt-4">
+            <div className="flex justify-center pt-4">
               <motion.button
-                whileHover={{ scale: 1.03 }}
+                whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="px-10 py-4 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-widest rounded shadow-gold inline-flex items-center gap-3"
+                className="w-full sm:w-2/3 px-10 py-4 bg-gradient-to-r from-[#D4AF37] to-[#C5A880] text-black font-cinzel text-xs font-bold uppercase tracking-widest rounded shadow-gold hover:shadow-lg inline-flex items-center justify-center gap-3 transition-all duration-300"
               >
                 <span>Request Bespoke Proposal</span>
                 <Send className="w-4 h-4" />

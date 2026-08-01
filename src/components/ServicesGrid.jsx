@@ -6,6 +6,13 @@ import { Plane, Compass, Car, Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import LiyawelaCard from "./LiyawelaCard";
 
+const FILTER_BUTTONS = [
+  { id: "all", label: "All Solutions" },
+  { id: "travel", label: "Travel Solutions" },
+  { id: "experiences", label: "Signature Experiences" },
+  { id: "fleet", label: "Premium Fleet" },
+];
+
 const SERVICES = [
   {
     id: "travel",
@@ -65,7 +72,7 @@ export default function ServicesGrid() {
             Expertise & Logistics
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-indigo-dark mb-4">
-            Signature Services <span className="gold-gradient-text">& Fleet Solutions</span>
+            Signature Services <span className="text-[#A87D46]">& Fleet Solutions</span>
           </h2>
           <p className="font-sans text-charcoal font-normal max-w-xl mx-auto text-sm sm:text-base">
             Tailored logistics engineered to perfection. Click any card below to explore full capabilities & specifications.
@@ -73,20 +80,15 @@ export default function ServicesGrid() {
         </div>
 
         {/* Category Filters */}
-        <div className="flex justify-center flex-wrap gap-3 mb-12">
-          {[
-            { id: "all", label: "All Solutions" },
-            { id: "travel", label: "Travel Solutions" },
-            { id: "experiences", label: "Signature Experiences" },
-            { id: "fleet", label: "Premium Fleet" },
-          ].map((btn) => (
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {FILTER_BUTTONS.map((btn) => (
             <button
               key={btn.id}
               onClick={() => setFilter(btn.id)}
               className={`px-6 py-2.5 rounded-full font-cinzel text-xs font-bold uppercase tracking-wider transition-all border ${
                 filter === btn.id
-                  ? "bg-indigo-dark text-gold-primary border-gold-primary shadow-lg"
-                  : "bg-white text-indigo-dark border-gold-dark/40 hover:bg-gold-primary/10"
+                  ? "bg-indigo-deep text-gold-primary border-gold-primary shadow-gold"
+                  : "bg-white text-indigo-dark border-gold-border/60 hover:bg-gold-primary/10 hover:border-gold-primary"
               }`}
             >
               {btn.label}
@@ -107,11 +109,11 @@ export default function ServicesGrid() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4 }}
-                  className="w-full md:w-[350px] lg:w-[380px] flex flex-col justify-between shrink-0"
+                  className="w-full md:w-[350px] lg:w-[380px] flex flex-col justify-between shrink-0 p-8 sm:p-10"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-lg bg-indigo-dark flex items-center justify-center text-gold-primary mb-6 group-hover:bg-gold-primary group-hover:text-indigo-deep transition-colors">
-                      <IconComp className="w-6 h-6" />
+                    <div className="w-8 h-8 rounded-md bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] mb-6 transition-all duration-300">
+                      <IconComp className="w-4 h-4" />
                     </div>
 
                     <span className="font-cinzel text-[0.75rem] font-bold text-indigo-dark uppercase tracking-widest block mb-1">

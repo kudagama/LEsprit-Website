@@ -26,11 +26,11 @@ export default function Footer() {
               Bespoke Journeys
             </h4>
             <ul className="space-y-2 text-xs font-sans">
-              <li><a href="#destinations" className="hover:text-gold-primary transition-colors">Sri Lanka Expeditions</a></li>
-              <li><a href="#destinations" className="hover:text-gold-primary transition-colors">Maldives Overwater Luxury</a></li>
-              <li><a href="#destinations" className="hover:text-gold-primary transition-colors">Multi-Paradise Escapes</a></li>
-              <li><a href="#services" className="hover:text-gold-primary transition-colors">Ayurveda Wellness Retreats</a></li>
-              <li><a href="#services" className="hover:text-gold-primary transition-colors">Private Chauffeur Fleet</a></li>
+              <li><a href="#destinations" className="text-gray-400 hover:text-[#D4AF37] transition-colors">Sri Lanka Expeditions</a></li>
+              <li><a href="#destinations" className="text-gray-400 hover:text-[#D4AF37] transition-colors">Maldives Overwater Luxury</a></li>
+              <li><a href="#destinations" className="text-gray-400 hover:text-[#D4AF37] transition-colors">Multi-Paradise Escapes</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-[#D4AF37] transition-colors">Ayurveda Wellness Retreats</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-[#D4AF37] transition-colors">Private Chauffeur Fleet</a></li>
             </ul>
           </div>
 
@@ -40,10 +40,10 @@ export default function Footer() {
               Company & Heritage
             </h4>
             <ul className="space-y-2 text-xs font-sans">
-              <li><a href="#concept" className="hover:text-gold-primary transition-colors">Our Philosophy</a></li>
-              <li><a href="#concept" className="hover:text-gold-primary transition-colors">The 5 Core Pillars</a></li>
-              <li><a href="#heritage-impact" className="hover:text-gold-primary transition-colors">Sustainability & Impact</a></li>
-              <li><a href="#" className="hover:text-gold-primary transition-colors">Privacy Guarantee</a></li>
+              <li><a href="#concept" className="text-gray-400 hover:text-[#D4AF37] transition-colors">Our Philosophy</a></li>
+              <li><a href="#concept" className="text-gray-400 hover:text-[#D4AF37] transition-colors">The 5 Core Pillars</a></li>
+              <li><a href="#heritage-impact" className="text-gray-400 hover:text-[#D4AF37] transition-colors">Sustainability & Impact</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-[#D4AF37] transition-colors">Privacy Guarantee</a></li>
             </ul>
           </div>
 

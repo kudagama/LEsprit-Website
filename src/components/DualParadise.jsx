@@ -35,7 +35,7 @@ export default function DualParadise() {
             className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-90 group-hover:brightness-100"
             style={{ backgroundImage: "url('/assets/images/sri_lanka.png')" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-indigo-deep via-indigo-deep/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           <div className="absolute inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none" />
 
           {/* Panel Content */}
@@ -86,7 +86,7 @@ export default function DualParadise() {
             className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-90 group-hover:brightness-100"
             style={{ backgroundImage: "url('/assets/images/maldives.png')" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-indigo-deep via-indigo-deep/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           <div className="absolute inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none" />
 
           {/* Panel Content */}

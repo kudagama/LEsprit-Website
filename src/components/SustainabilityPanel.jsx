@@ -32,7 +32,7 @@ export default function SustainabilityPanel() {
               {/* Metrics */}
               <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gold-primary/20">
                 <div>
-                  <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-primary block">
+                  <span className="font-bold text-4xl lg:text-5xl text-[#D4AF37] block">
                     100%
                   </span>
                   <span className="font-sans text-xs text-emerald-200">
@@ -40,7 +40,7 @@ export default function SustainabilityPanel() {
                   </span>
                 </div>
                 <div>
-                  <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-primary block">
+                  <span className="font-bold text-4xl lg:text-5xl text-[#D4AF37] block">
                     25+
                   </span>
                   <span className="font-sans text-xs text-emerald-200">
@@ -48,7 +48,7 @@ export default function SustainabilityPanel() {
                   </span>
                 </div>
                 <div>
-                  <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-primary block">
+                  <span className="font-bold text-4xl lg:text-5xl text-[#D4AF37] block">
                     150+
                   </span>
                   <span className="font-sans text-xs text-emerald-200">
