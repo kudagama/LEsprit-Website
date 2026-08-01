@@ -73,7 +73,7 @@ export default function PuskolaPotha() {
   }, []);
 
   return (
-    <section id="concept" ref={sectionRef} className="py-24 bg-paper-parchment relative overflow-hidden liyavela-bg">
+    <section id="concept" ref={sectionRef} className="pt-12 pb-12 bg-paper-parchment relative overflow-hidden liyavela-bg">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">

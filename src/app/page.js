@@ -13,15 +13,15 @@ export default function Home() {
     <main className="min-h-screen bg-ivory-sacred overflow-x-hidden">
       <Header />
       <Hero />
-      <PalapethiDivider className="my-8" />
+      <PalapethiDivider className="my-2" variant="1" />
       <PuskolaPotha />
-      <PalapethiDivider className="my-8" />
+      <PalapethiDivider className="my-2" variant="2" />
       <DualParadise />
-      <PalapethiDivider className="my-8" />
+      <PalapethiDivider className="my-2" variant="1" />
       <ServicesGrid />
-      <PalapethiDivider className="my-8" />
+      <PalapethiDivider className="my-2" variant="2" />
       <SustainabilityPanel />
-      <PalapethiDivider className="my-8" />
+      <PalapethiDivider className="my-2" variant="1" />
       <JourneyBuilder />
       <Footer />
     </main>

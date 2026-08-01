@@ -36,7 +36,7 @@ export default function JourneyBuilder() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-paper-parchment relative">
+    <section id="contact" className="pt-12 pb-12 bg-paper-parchment relative">
       <div className="max-w-5xl mx-auto px-6">
         <div className="bg-white border border-gold-border rounded-2xl p-8 sm:p-14 shadow-glass relative">
           <div className="text-center mb-12">

@@ -57,7 +57,7 @@ export default function ServicesGrid() {
   const filteredServices = filter === "all" ? SERVICES : SERVICES.filter((s) => s.id === filter);
 
   return (
-    <section id="services" className="py-24 bg-ivory-sacred relative">
+    <section id="services" className="pt-12 pb-12 bg-ivory-sacred relative">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-14">
