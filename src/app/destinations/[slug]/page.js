@@ -18,6 +18,12 @@ const DESTINATION_DATA = {
       "Sacred Ayurvedic Mind-Body Rejuvenation with Master Practitioners",
       "Private Helicopter Transfers across Sacred Cities & Coastal Reserves",
     ],
+    gallery: [
+      "https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+    ],
     packages: [
       {
         title: "Classical Cultural Heritage",
@@ -76,6 +82,12 @@ const DESTINATION_DATA = {
       "Private Island Yacht Charters Across 26 Natural Atolls",
       "Submerged Undersea Gourmet Dining & Deep-Sea Hydrothermal Spas",
       "Exclusive Access to Uncrowded Secret Surfing Reef Breaks",
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80"
     ],
     packages: [
       {
@@ -308,6 +320,22 @@ export default function DestinationDetailPage({ params }) {
                     </span>
                     <h3 className="font-serif text-xl text-indigo-dark font-bold mb-2">{step.title}</h3>
                     <p className="font-sans text-xs text-charcoal font-normal leading-relaxed">{step.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Destination Gallery */}
+            <div className="bg-white border border-gold-dark/30 rounded-xl p-8 sm:p-10 shadow-floating">
+              <h2 className="font-serif text-2xl text-indigo-dark font-bold mb-6">Visual Journey</h2>
+              <div className="grid grid-cols-2 gap-4">
+                {data.gallery.map((img, idx) => (
+                  <div key={idx} className="relative h-40 sm:h-64 rounded-xl overflow-hidden shadow-sm group border border-gold-border/20">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                      style={{ backgroundImage: `url('${img}')` }}
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                   </div>
                 ))}
               </div>
