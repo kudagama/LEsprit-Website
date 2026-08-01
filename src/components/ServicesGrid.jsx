@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plane, Compass, Car, Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import LiyawelaCard from "./LiyawelaCard";
 
 const SERVICES = [
   {
@@ -94,19 +95,19 @@ export default function ServicesGrid() {
         </div>
 
         {/* Glass Cards Grid */}
-        <motion.div layout className="grid md:grid-cols-3 gap-8">
+        <motion.div layout className="flex flex-wrap justify-center gap-8">
           <AnimatePresence>
             {filteredServices.map((svc) => {
               const IconComp = svc.icon;
               return (
-                <motion.div
+                <LiyawelaCard
                   key={svc.id}
                   layout
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4 }}
-                  className="bg-white border border-gold-dark/30 rounded-xl p-8 shadow-floating hover:border-gold-primary hover:-translate-y-2 transition-all group relative flex flex-col justify-between"
+                  className="w-full md:w-[350px] lg:w-[380px] flex flex-col justify-between shrink-0"
                 >
                   <div>
                     <div className="w-12 h-12 rounded-lg bg-indigo-dark flex items-center justify-center text-gold-primary mb-6 group-hover:bg-gold-primary group-hover:text-indigo-deep transition-colors">
@@ -138,7 +139,7 @@ export default function ServicesGrid() {
                     <span>Explore Extra Details</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-gold-dark" />
                   </Link>
-                </motion.div>
+                </LiyawelaCard>
               );
             })}
           </AnimatePresence>

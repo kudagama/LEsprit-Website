@@ -64,3 +64,19 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A880;
+  border: 2px solid #FAF7F2;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A87D46;
+}
+

@@ -1005,19 +1005,22 @@ h1, h2, h3, h4, .serif-heading {
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 2.2rem;
 }
 
 .service-glass-card {
+    flex: 1 1 340px;
+    max-width: 380px;
     background: #FFFFFF;
     border: 1px solid rgba(212, 175, 55, 0.25);
     border-radius: 8px;
     padding: 3rem 2.2rem;
     position: relative;
     box-shadow: var(--shadow-floating);
-    transition: var(--transition-fast);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-glass-card:hover {

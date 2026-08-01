@@ -278,20 +278,36 @@ function initServicesFilter() {
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
+            if (btn.classList.contains('active')) return;
+
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
             const filter = btn.getAttribute('data-filter');
 
+            // 1. Fade out and slide down all currently visible cards
             cards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                    card.style.display = 'block';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                } else {
-                    card.style.display = 'none';
-                }
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(15px)';
             });
+
+            // 2. Wait for fade-out to complete before changing display states
+            setTimeout(() => {
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        
+                        // Force a browser reflow to register the display change
+                        void card.offsetHeight;
+                        
+                        // 3. Fade in and slide up to final position
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }, 300); // 300ms matches transition speed
         });
     });
 }
