@@ -43,7 +43,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-indigo-dark pt-32 pb-24 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-indigo-dark pt-32 pb-28 overflow-hidden">
       {/* Background Video Carousel Layer */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence initial={false} mode="popLayout">
@@ -74,14 +74,14 @@ export default function Hero() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-gold-primary/20 bg-indigo-deep/30 backdrop-blur-md flex items-center justify-center text-ivory-sacred hover:bg-gold-primary hover:text-indigo-deep hover:border-gold-primary transition-all z-30 hidden md:flex"
+        className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-gold-primary/30 bg-indigo-deep/30 backdrop-blur-md flex items-center justify-center text-ivory-sacred hover:bg-gold-primary hover:text-black hover:border-gold-primary transition-all duration-300 z-30 hidden md:flex"
         aria-label="Previous destination"
       >
         <ChevronLeft className="w-5 h-5" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-gold-primary/20 bg-indigo-deep/30 backdrop-blur-md flex items-center justify-center text-ivory-sacred hover:bg-gold-primary hover:text-indigo-deep hover:border-gold-primary transition-all z-30 hidden md:flex"
+        className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-gold-primary/30 bg-indigo-deep/30 backdrop-blur-md flex items-center justify-center text-ivory-sacred hover:bg-gold-primary hover:text-black hover:border-gold-primary transition-all duration-300 z-30 hidden md:flex"
         aria-label="Next destination"
       >
         <ChevronRight className="w-5 h-5" />
@@ -89,37 +89,31 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-20 max-w-5xl mx-auto px-6 text-center text-ivory-sacred">
-        {/* Modern & Creative Luxury Badge */}
+        {/* Modern & Creative Tagline Badge */}
         <motion.div
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-indigo-deep/40 border border-gold-primary/30 shadow-[0_0_15px_rgba(212,175,55,0.1)] backdrop-blur-lg mb-8 select-none"
+          className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-indigo-deep/40 border border-gold-primary/30 shadow-[0_0_15px_rgba(212,175,55,0.05)] backdrop-blur-md mb-8 select-none"
         >
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-primary opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-primary"></span>
           </span>
 
-          <span className="font-serif text-[10px] sm:text-xs tracking-[0.22em] text-white uppercase font-light">
-            L’Esprit de Voyage
-          </span>
-          
-          <div className="h-3 w-[1px] bg-gold-primary/30" />
-
-          <span className="font-cinzel text-[9px] sm:text-[10px] tracking-[0.25em] text-gold-primary uppercase font-bold">
+          <span className="font-cinzel text-[9px] sm:text-[10px] tracking-[0.25em] text-gold-warm uppercase font-bold">
             The Spirit of Bespoke Journeys
           </span>
         </motion.div>
 
         {/* Title */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6 leading-tight">
+        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6 leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.65)]">
           Experience the Soul, Spirit, and <span className="gold-gradient-text">Authenticity</span> of Every Journey.
         </h1>
 
         {/* Subtitle */}
-        <p className="font-sans text-base sm:text-xl text-ivory-sacred/90 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-          With over two decades of expertise in Sri Lanka and the Maldives, we craft tailor-made luxury escapes that go beyond ordinary tourism, blending elegance, culture, and meaningful local connections.
+        <p className="font-sans text-sm sm:text-base text-ivory-sacred/90 max-w-xl sm:max-w-2xl mx-auto mb-10 font-light leading-relaxed tracking-wide drop-shadow-md">
+          Crafting bespoke luxury journeys across Sri Lanka and the Maldives, defined by elegance, culture, and authentic connections.
         </p>
 
         {/* CTA Button Group */}
@@ -134,7 +128,7 @@ export default function Hero() {
 
           <a
             href="#destinations"
-            className="w-full sm:w-auto px-8 py-4 bg-indigo-deep/50 border border-gold-primary text-white font-cinzel text-xs font-semibold uppercase tracking-widest rounded backdrop-blur-md hover:bg-gold-primary/20 flex items-center justify-center gap-3 transition-colors hover:scale-105"
+            className="w-full sm:w-auto px-8 py-4 bg-indigo-deep/50 border border-gold-primary/40 hover:border-gold-primary text-white font-cinzel text-xs font-bold uppercase tracking-widest rounded backdrop-blur-md hover:bg-gold-primary/10 flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 hover:tracking-[0.2em] shadow-lg hover:shadow-[0_0_15px_rgba(212,175,55,0.15)]"
           >
             <span>Explore Maldives</span>
             <ArrowRight className="w-4 h-4" />
@@ -149,7 +143,7 @@ export default function Hero() {
       </div>
 
       {/* Slide Indicators / Navigation Bullets */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 z-30 max-w-[90vw] overflow-x-auto py-2">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-4 z-30 max-w-[90vw] overflow-x-auto py-2">
         {HERO_VIDEOS.map((video, idx) => (
           <button
             key={idx}
@@ -166,6 +160,19 @@ export default function Hero() {
             }`} />
           </button>
         ))}
+      </div>
+
+      {/* Palapethi Bottom Divider */}
+      <div className="absolute bottom-0 left-0 right-0 w-full z-30 pointer-events-none select-none opacity-90">
+        <div
+          className="w-full h-8 md:h-10 text-gold-primary"
+          style={{
+            backgroundImage: "url('/assets/images/bg_remove.svg')",
+            backgroundRepeat: 'repeat-x',
+            backgroundPosition: 'bottom center',
+            backgroundSize: 'auto 100%'
+          }}
+        />
       </div>
     </section>
   );
