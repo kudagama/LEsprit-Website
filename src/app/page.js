@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import PuskolaPotha from "../components/PuskolaPotha";
 import DualParadise from "../components/DualParadise";
+import TourPackages from "../components/TourPackages";
 import ServicesGrid from "../components/ServicesGrid";
 import Gallery from "../components/Gallery";
 import SustainabilityPanel from "../components/SustainabilityPanel";
@@ -20,6 +21,8 @@ export default function Home() {
       <PalapethiDivider className="my-2" variant="2" />
       <DualParadise />
       <PalapethiDivider className="my-2" variant="1" />
+      <TourPackages />
+      <PalapethiDivider className="my-2" variant="2" />
       <ServicesGrid />
       <PalapethiDivider className="my-2" variant="2" />
       <Gallery />

@@ -146,18 +146,7 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Palapethi Bottom Divider */}
-      <div className="absolute bottom-0 left-0 right-0 w-full z-30 pointer-events-none select-none opacity-90">
-        <div
-          className="w-full h-8 md:h-10 text-gold-primary"
-          style={{
-            backgroundImage: "url('/assets/images/bg_remove.svg')",
-            backgroundRepeat: 'repeat-x',
-            backgroundPosition: 'bottom center',
-            backgroundSize: 'auto 100%'
-          }}
-        />
-      </div>
+      
     </section>
   );
 }
