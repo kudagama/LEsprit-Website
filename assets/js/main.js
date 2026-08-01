@@ -358,26 +358,66 @@ function openDestinationModal(region) {
         modalTitle.textContent = 'Sri Lanka: Timeless Cultural Heritage';
         modalBody.innerHTML = `
             <p><strong>Key Highlights & Curated Experiences:</strong></p>
-            <ul style="margin: 1rem 0 1.5rem 1.2rem; line-height: 1.8;">
+            <ul style="margin: 0.5rem 0 1.5rem 1.2rem; line-height: 1.6; font-size: 0.85rem;">
                 <li><strong>Sigiriya Rock Fortress & Ancient Polonnaruwa:</strong> Private dawn access led by senior archaeologists.</li>
                 <li><strong>Yala & Wilpattu Private Jeep Safaris:</strong> VIP tracking of Sri Lankan leopards, sloth bears, and wild elephant herds.</li>
                 <li><strong>Central Tea Highlands (Nuwara Eliya):</strong> Stay in restored colonial planter bungalows with private high-tea service.</li>
                 <li><strong>Sacred Ayurveda Wellness Retreats:</strong> Personalized body-mind rejuvenation guided by master Ayurvedic doctors.</li>
                 <li><strong>Southern Coastal Gastronomy:</strong> Private beachfront dining with fresh seafood & traditional spice infusion.</li>
             </ul>
+            
+            <p style="margin-top: 1.5rem; margin-bottom: 0.5rem;"><strong>Our Curated Tour Packages:</strong></p>
+            <div style="display: grid; gap: 1rem;">
+                <div style="background: rgba(212, 175, 55, 0.04); border: 1px solid rgba(212, 175, 55, 0.2); padding: 1rem; border-radius: 8px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                        <span style="font-family: 'Cinzel', serif; font-size: 0.7rem; font-weight: 700; color: #A87D46;">7 DAYS / 6 NIGHTS</span>
+                        <span style="font-size: 0.75rem; font-weight: 700; color: #0D2818;">From $3,200</span>
+                    </div>
+                    <h4 style="font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #0B1B2B; margin: 0 0 0.4rem 0;">Classical Cultural Heritage</h4>
+                    <p style="font-size: 0.75rem; line-height: 1.5; color: #444; margin: 0;">Embark on an archaeological voyage through Sri Lanka's cultural triangle. Stay in bespoke luxury jungle villas and enjoy private archaeologist-guided ascents of Sigiriya.</p>
+                </div>
+                <div style="background: rgba(212, 175, 55, 0.04); border: 1px solid rgba(212, 175, 55, 0.2); padding: 1rem; border-radius: 8px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                        <span style="font-family: 'Cinzel', serif; font-size: 0.7rem; font-weight: 700; color: #A87D46;">9 DAYS / 8 NIGHTS</span>
+                        <span style="font-size: 0.75rem; font-weight: 700; color: #0D2818;">From $4,500</span>
+                    </div>
+                    <h4 style="font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #0B1B2B; margin: 0 0 0.4rem 0;">Wild Safari & Emerald Highlands</h4>
+                    <p style="font-size: 0.75rem; line-height: 1.5; color: #444; margin: 0;">Track leopards in Yala National Park and unwind in tea estate bungalows. Combines thrilling wildlife jeep safaris with the cool colonial charm of tea country.</p>
+                </div>
+            </div>
         `;
     } else if (region === 'maldives') {
         modalTag.textContent = 'DESTINATION DEEP-DIVE';
         modalTitle.textContent = 'Maldives: The Ocean Sanctuary';
         modalBody.innerHTML = `
             <p><strong>Key Highlights & Curated Experiences:</strong></p>
-            <ul style="margin: 1rem 0 1.5rem 1.2rem; line-height: 1.8;">
+            <ul style="margin: 0.5rem 0 1.5rem 1.2rem; line-height: 1.6; font-size: 0.85rem;">
                 <li><strong>Overwater Pool Villas:</strong> Direct ocean access, glass floor viewports, and 24/7 personal island butler service.</li>
                 <li><strong>Hanifaru Bay Marine Expeditions:</strong> Snorkel alongside majestic Manta Rays and gentle Whale Sharks.</li>
                 <li><strong>Private Yacht Charters:</strong> Island-hopping across 26 untouched natural coral atolls with a private chef.</li>
                 <li><strong>Undersea Dining & Spa Treatments:</strong> Submerged multi-course fine dining surrounded by marine life.</li>
                 <li><strong>Exclusive Surfing Breaks:</strong> Private speed-boat transfers to uncrowded, world-class reef breaks.</li>
             </ul>
+            
+            <p style="margin-top: 1.5rem; margin-bottom: 0.5rem;"><strong>Our Curated Tour Packages:</strong></p>
+            <div style="display: grid; gap: 1rem;">
+                <div style="background: rgba(212, 175, 55, 0.04); border: 1px solid rgba(212, 175, 55, 0.2); padding: 1rem; border-radius: 8px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                        <span style="font-family: 'Cinzel', serif; font-size: 0.7rem; font-weight: 700; color: #A87D46;">5 DAYS / 4 NIGHTS</span>
+                        <span style="font-size: 0.75rem; font-weight: 700; color: #0D2818;">From $6,400</span>
+                    </div>
+                    <h4 style="font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #0B1B2B; margin: 0 0 0.4rem 0;">Romantic Overwater Sanctuary</h4>
+                    <p style="font-size: 0.75rem; line-height: 1.5; color: #444; margin: 0;">Designed exclusively for couples seeking absolute privacy. Enjoy an overwater villa with a private pool, direct ocean ladder, and dedicated 24/7 personal butler service.</p>
+                </div>
+                <div style="background: rgba(212, 175, 55, 0.04); border: 1px solid rgba(212, 175, 55, 0.2); padding: 1rem; border-radius: 8px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                        <span style="font-family: 'Cinzel', serif; font-size: 0.7rem; font-weight: 700; color: #A87D46;">7 DAYS / 6 NIGHTS</span>
+                        <span style="font-size: 0.75rem; font-weight: 700; color: #0D2818;">From $8,200</span>
+                    </div>
+                    <h4 style="font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #0B1B2B; margin: 0 0 0.4rem 0;">Manta & Whale Shark Marine Safari</h4>
+                    <p style="font-size: 0.75rem; line-height: 1.5; color: #444; margin: 0;">An extraordinary marine journey in the Baa Atoll. Snorkel alongside majestic Manta Rays and track whale sharks with expert marine biologists.</p>
+                </div>
+            </div>
         `;
     }
 

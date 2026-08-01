@@ -27,12 +27,12 @@ export default function Hero() {
 
         {/* Title */}
         <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6 leading-tight">
-          Where Royalty Meets <span className="gold-gradient-text">The Spirit of Travel</span>.
+          Experience the Soul, Spirit, and <span className="gold-gradient-text">Authenticity</span> of Every Journey.
         </h1>
 
         {/* Subtitle */}
         <p className="font-sans text-base sm:text-xl text-ivory-sacred/90 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-          Two Decades of Crafting Bespoke Luxury Escapes Across Sri Lanka & The Maldives — Communing with the Soul & Heritage of Every Destination.
+          With over two decades of expertise in Sri Lanka and the Maldives, we craft tailor-made luxury escapes that go beyond ordinary tourism, blending elegance, culture, and meaningful local connections.
         </p>
 
         {/* CTA Button Group */}

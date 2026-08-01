@@ -18,6 +18,29 @@ const DESTINATION_DATA = {
       "Sacred Ayurvedic Mind-Body Rejuvenation with Master Practitioners",
       "Private Helicopter Transfers across Sacred Cities & Coastal Reserves",
     ],
+    packages: [
+      {
+        title: "Classical Cultural Heritage",
+        duration: "7 Days / 6 Nights",
+        price: "From $3,200 / person",
+        desc: "Embark on an archaeological voyage through Sri Lanka's cultural triangle. Stay in bespoke luxury jungle villas and enjoy private archaeologist-guided ascents of Sigiriya.",
+        highlights: ["Sigiriya private sunrise access", "Kandy Temple VIP tour", "Artisan pottery masterclass"]
+      },
+      {
+        title: "Wild Safari & Emerald Highlands",
+        duration: "9 Days / 8 Nights",
+        price: "From $4,500 / person",
+        desc: "Track leopards in Yala National Park and unwind in tea estate bungalows. Combines thrilling wildlife jeep safaris with the cool colonial charm of tea country.",
+        highlights: ["Yala luxury tented safari camp", "Private tea tasting & plucking", "Scenic train ride from Kandy"]
+      },
+      {
+        title: "Sacred Ayurveda & Coastal Wellness",
+        duration: "10 Days / 9 Nights",
+        price: "From $5,100 / person",
+        desc: "Immerse your body and mind in traditional Ayurvedic healing, coupled with private yoga classes overlooking the pristine southern coastline of Weligama.",
+        highlights: ["Consultation with Ayurvedic Master", "Daily customized herbal treatments", "Beachfront villa with private pool"]
+      }
+    ],
     itinerary: [
       {
         day: "Day 01 - 02",
@@ -53,6 +76,29 @@ const DESTINATION_DATA = {
       "Private Island Yacht Charters Across 26 Natural Atolls",
       "Submerged Undersea Gourmet Dining & Deep-Sea Hydrothermal Spas",
       "Exclusive Access to Uncrowded Secret Surfing Reef Breaks",
+    ],
+    packages: [
+      {
+        title: "Romantic Overwater Sanctuary",
+        duration: "5 Days / 4 Nights",
+        price: "From $6,400 / person",
+        desc: "Designed exclusively for couples seeking absolute privacy. Enjoy an overwater villa with a private pool, direct ocean ladder, and dedicated 24/7 personal butler service.",
+        highlights: ["Private sandbank candlelit dinner", "Overwater couple's spa session", "Champagne sunset cruise"]
+      },
+      {
+        title: "Manta & Whale Shark Marine Safari",
+        duration: "7 Days / 6 Nights",
+        price: "From $8,200 / person",
+        desc: "An extraordinary marine journey in the UNESCO biosphere reserve of Baa Atoll. Snorkel with giant manta rays and track whale sharks with marine biologists.",
+        highlights: ["Private Hanifaru Bay speed-boat access", "Diving with PADI certified guides", "Undersea dining experience"]
+      },
+      {
+        title: "Bespoke Yacht Charter & Island Hopping",
+        duration: "8 Days / 7 Nights",
+        price: "From $14,500 / person",
+        desc: "Charter a private luxury mega-yacht to cruise across uncrowded natural atolls. Perfect for surfing secret reef breaks and exploring uninhabited private sandbanks.",
+        highlights: ["Dedicated private captain & chef", "Snorkeling in untouched coral gardens", "Jet ski & water-sports access"]
+      }
     ],
     itinerary: [
       {
@@ -145,6 +191,43 @@ export default function DestinationDetailPage({ params }) {
                   <div key={item} className="flex items-start gap-3 text-sm font-medium text-charcoal">
                     <CheckCircle2 className="w-5 h-5 text-emerald-dark shrink-0 mt-0.5 font-bold" />
                     <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Curated Tour Packages */}
+            <div className="bg-white border border-gold-dark/30 rounded-xl p-8 sm:p-10 shadow-floating">
+              <div className="flex items-center gap-3 mb-6">
+                <Sparkles className="w-6 h-6 text-indigo-dark" />
+                <h2 className="font-serif text-2xl text-indigo-dark font-bold">Our Curated Tour Packages</h2>
+              </div>
+              <p className="font-sans text-xs text-charcoal mb-8 leading-relaxed">
+                Choose from our pre-designed luxury concepts or use them as a starting point to craft your own customized journey.
+              </p>
+              
+              <div className="grid gap-6">
+                {data.packages.map((pkg) => (
+                  <div key={pkg.title} className="border border-gold-dark/20 rounded-lg p-6 hover:border-gold-primary hover:shadow-md transition-all bg-ivory-sacred/40">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                      <div>
+                        <span className="font-cinzel text-[10px] font-bold text-gold-dark tracking-widest uppercase block mb-1">
+                          {pkg.duration}
+                        </span>
+                        <h3 className="font-serif text-lg text-indigo-dark font-bold">{pkg.title}</h3>
+                      </div>
+                      <span className="font-sans text-xs font-semibold text-emerald-dark bg-emerald-dark/15 px-3 py-1 rounded-full shrink-0 self-start sm:self-center">
+                        {pkg.price}
+                      </span>
+                    </div>
+                    <p className="font-sans text-xs text-charcoal leading-relaxed mb-4">{pkg.desc}</p>
+                    <div className="flex flex-wrap gap-2 pt-2 border-t border-gold-dark/10">
+                      {pkg.highlights.map((hl) => (
+                        <span key={hl} className="font-sans text-[10px] bg-white border border-gold-dark/20 text-indigo-dark px-2 py-0.5 rounded">
+                          ✨ {hl}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>

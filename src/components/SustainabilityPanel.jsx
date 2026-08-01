@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Leaf, Users, Droplets } from "lucide-react";
+import { Leaf, Users, Droplets, Zap } from "lucide-react";
 
 export default function SustainabilityPanel() {
   return (
@@ -62,19 +62,24 @@ export default function SustainabilityPanel() {
             <div className="lg:col-span-5 space-y-4">
               {[
                 {
-                  icon: Leaf,
-                  title: "Environmental Impact Reduction",
-                  desc: "Optimized eco-logistics, low-emission fleet routing, and carbon offset initiatives preserving Sri Lanka’s rainforests.",
+                  icon: Droplets,
+                  title: "Reducing Plastic Waste",
+                  desc: "Introduced reusable water bottles for guests and equipped all vehicles with refillable water containers, eliminating single-use disposable plastic during tours.",
                 },
                 {
                   icon: Users,
-                  title: "Community First Initiatives",
-                  desc: "Funding local village school renovations, classroom technology enhancements, and directly commissioning craftspeople.",
+                  title: "Supporting Local Communities",
+                  desc: "Facilitating school renovations, classroom enhancements, and welfare support programs, while supporting local artisans and community-based tourism.",
                 },
                 {
-                  icon: Droplets,
-                  title: "Plastic Waste Elimination",
-                  desc: "Complimentary custom copper reusable water bottles provided to guests with vehicle refillable mineral water stations.",
+                  icon: Leaf,
+                  title: "Environmental Footprint",
+                  desc: "Fleet optimization using fuel-efficient vehicles and promoting flexible internal work practices.",
+                },
+                {
+                  icon: Zap,
+                  title: "Energy & Resource Conservation",
+                  desc: "Active internal monitoring to minimize energy and water consumption across operations.",
                 },
               ].map((item, idx) => {
                 const IconComp = item.icon;
@@ -82,14 +87,14 @@ export default function SustainabilityPanel() {
                   <motion.div
                     key={item.title}
                     whileHover={{ x: 6 }}
-                    className="p-5 bg-white/5 border border-gold-border/30 backdrop-blur-md rounded-lg flex gap-4 items-start hover:bg-gold-primary/10 hover:border-gold-primary transition-all"
+                    className="p-4 bg-white/5 border border-gold-border/30 backdrop-blur-md rounded-lg flex gap-4 items-start hover:bg-gold-primary/10 hover:border-gold-primary transition-all"
                   >
                     <div className="p-2 bg-gold-primary/20 rounded text-gold-primary shrink-0">
                       <IconComp className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-serif text-lg text-gold-warm mb-1">{item.title}</h4>
-                      <p className="font-sans text-xs text-emerald-100/70 leading-relaxed">{item.desc}</p>
+                      <h4 className="font-serif text-base text-gold-warm mb-1">{item.title}</h4>
+                      <p className="font-sans text-[0.7rem] text-emerald-100/70 leading-relaxed">{item.desc}</p>
                     </div>
                   </motion.div>
                 );

@@ -13,10 +13,10 @@ export default function Footer() {
               L’ESPRIT VOYAGES
             </span>
             <p className="font-sans text-xs italic text-gold-warm">
-              "L’Esprit de Voyage — Where Royalty Meets the Spirit of Travel."
+              "Experience the Soul, Spirit, and Authenticity of Every Journey."
             </p>
             <p className="font-sans text-xs text-ivory-sacred/60 leading-relaxed">
-              Two decades of crafting bespoke luxury escapes, private expeditions, and ultra-high-end journeys capturing the living spirit of Sri Lanka and the Maldives.
+              With over two decades of expertise in Sri Lanka and the Maldives, we craft tailor-made luxury escapes that go beyond ordinary tourism, blending elegance, culture, and meaningful local connections.
             </p>
           </div>
 
