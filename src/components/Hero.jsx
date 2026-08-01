@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const HERO_VIDEOS = [
   {
-    url: "https://player.vimeo.com/external/340051877.hd.mp4?s=1d5852f36d8f1e679234b3e3bc24e101f31f9b33&profile_id=174&oauth2_token_id=57447761",
+    url: "/assets/VIDEOS/253907_small.mp4",
     label: "Maldives Paradise"
   },
   {
