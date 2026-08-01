@@ -23,20 +23,27 @@ export default function DualParadise() {
       </div>
 
       {/* Interactive Split Canvas */}
-      <div className="w-full h-[650px] flex flex-col md:flex-row overflow-hidden relative border-y border-gold-border">
+      <div 
+        onMouseLeave={() => setHoveredRegion(null)}
+        className="w-full h-[650px] flex flex-col md:flex-row overflow-visible relative border-y border-gold-border z-10"
+      >
         {/* Panel 1: Sri Lanka */}
         <motion.div
           onMouseEnter={() => setHoveredRegion("sri-lanka")}
-          animate={{ flex: hoveredRegion === "sri-lanka" ? 1.8 : 1 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="relative flex-1 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group border-b md:border-b-0 md:border-r border-gold-border/30"
+          animate={{ 
+            scale: hoveredRegion === "sri-lanka" ? 1.02 : hoveredRegion === "maldives" ? 0.98 : 1,
+            opacity: hoveredRegion === "maldives" ? 0.5 : 1,
+            zIndex: hoveredRegion === "sri-lanka" ? 20 : 10
+          }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="relative flex-1 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group border-b md:border-b-0 md:border-r border-gold-border/30 shadow-2xl transition-all"
         >
           <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-90 group-hover:brightness-100"
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-[0.8] group-hover:brightness-95"
             style={{ backgroundImage: "url('/assets/images/sri_lanka.png')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-          <div className="absolute inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none" />
+          <div className="absolute inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none rounded-lg" />
 
           {/* Panel Content */}
           <div className="relative z-10 max-w-xl">
@@ -49,18 +56,19 @@ export default function DualParadise() {
             </p>
 
             {/* Highlights */}
-            <div className="flex flex-col gap-2 mb-8">
+            <div className="flex flex-col gap-3 mb-8">
               {[
-                "🏛️ UNESCO Heritage (Sigiriya, Kandy, Anuradhapura)",
-                "🐆 Wildlife Safaris (Yala & Wilpattu Leopards)",
-                "🌿 Ayurvedic Sanctuary & Tea Country",
-                "🍲 Authentic Spice & Culinary Journeys",
-              ].map((chip) => (
+                "UNESCO Heritage (Sigiriya, Kandy, Anuradhapura)",
+                "Wildlife Safaris (Yala & Wilpattu Leopards)",
+                "Ayurvedic Sanctuary & Tea Country",
+                "Authentic Spice & Culinary Journeys",
+              ].map((item) => (
                 <div
-                  key={chip}
-                  className="inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-deep/80 backdrop-blur-md border border-gold-border/40 rounded text-xs text-ivory-sacred w-fit"
+                  key={item}
+                  className="flex items-center gap-2.5 text-xs sm:text-sm text-white/90 font-sans font-medium drop-shadow"
                 >
-                  <span>{chip}</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold-primary shadow-[0_0_8px_#D4AF37]" />
+                  <span>{item}</span>
                 </div>
               ))}
             </div>
@@ -78,16 +86,20 @@ export default function DualParadise() {
         {/* Panel 2: Maldives */}
         <motion.div
           onMouseEnter={() => setHoveredRegion("maldives")}
-          animate={{ flex: hoveredRegion === "maldives" ? 1.8 : 1 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="relative flex-1 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group"
+          animate={{ 
+            scale: hoveredRegion === "maldives" ? 1.02 : hoveredRegion === "sri-lanka" ? 0.98 : 1,
+            opacity: hoveredRegion === "sri-lanka" ? 0.5 : 1,
+            zIndex: hoveredRegion === "maldives" ? 20 : 10
+          }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="relative flex-1 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group shadow-2xl transition-all"
         >
           <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-90 group-hover:brightness-100"
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-[0.8] group-hover:brightness-95"
             style={{ backgroundImage: "url('/assets/images/maldives.png')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-          <div className="absolute inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none" />
+          <div className="absolute inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none rounded-lg" />
 
           {/* Panel Content */}
           <div className="relative z-10 max-w-xl">
@@ -100,18 +112,19 @@ export default function DualParadise() {
             </p>
 
             {/* Highlights */}
-            <div className="flex flex-col gap-2 mb-8">
+            <div className="flex flex-col gap-3 mb-8">
               {[
-                "🏝️ 1,000+ Idyllic Islands & 26 Natural Atolls",
-                "🦈 Manta Ray & Whale Shark Expeditions",
-                "🏡 Private Overwater Villa Luxury",
-                "🏄 World-Class Surfing & Yacht Charters",
-              ].map((chip) => (
+                "1,000+ Idyllic Islands & 26 Natural Atolls",
+                "Manta Ray & Whale Shark Expeditions",
+                "Private Overwater Villa Luxury",
+                "World-Class Surfing & Yacht Charters",
+              ].map((item) => (
                 <div
-                  key={chip}
-                  className="inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-deep/80 backdrop-blur-md border border-gold-border/40 rounded text-xs text-ivory-sacred w-fit"
+                  key={item}
+                  className="flex items-center gap-2.5 text-xs sm:text-sm text-white/90 font-sans font-medium drop-shadow"
                 >
-                  <span>{chip}</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold-primary shadow-[0_0_8px_#D4AF37]" />
+                  <span>{item}</span>
                 </div>
               ))}
             </div>
