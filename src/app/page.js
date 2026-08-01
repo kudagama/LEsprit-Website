@@ -5,6 +5,7 @@ import DualParadise from "../components/DualParadise";
 import TourPackages from "../components/TourPackages";
 import ServicesGrid from "../components/ServicesGrid";
 import Gallery from "../components/Gallery";
+import Testimonials from "../components/Testimonials";
 import SustainabilityPanel from "../components/SustainabilityPanel";
 import NewsAndSocial from "../components/NewsAndSocial";
 import JourneyBuilder from "../components/JourneyBuilder";
@@ -23,8 +24,10 @@ export default function Home() {
       <TourPackages />
       <PalapethiDivider className="my-2" variant="2" />
       <ServicesGrid />
-      <PalapethiDivider className="my-2" variant="2" />
+      <PalapethiDivider className="my-2" variant="1" />
       <Gallery />
+      <PalapethiDivider className="my-2" variant="2" />
+      <Testimonials />
       <PalapethiDivider className="my-2" variant="1" />
       <SustainabilityPanel />
       <PalapethiDivider className="my-2" variant="2" />
