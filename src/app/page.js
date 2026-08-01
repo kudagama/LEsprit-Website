@@ -14,7 +14,7 @@ import PalapethiDivider from "../components/PalapethiDivider";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-ivory-sacred overflow-x-hidden">
+    <main className="min-h-screen bg-ivory-sacred">
       <Header />
       <Hero />
       <PalapethiDivider className="my-2" variant="1" />

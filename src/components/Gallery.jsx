@@ -65,8 +65,8 @@ export default function Gallery() {
     offset: ["start start", "end end"]
   });
 
-  // Translate horizontal track leftwards from 0% to -76% based on scroll progress
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-76%"]);
+  // Translate horizontal track leftwards from 0% to -83% based on scroll progress
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-83%"]);
 
   const openLightbox = (index) => {
     setLightboxIndex(index);
@@ -87,12 +87,12 @@ export default function Gallery() {
   };
 
   return (
-    <section ref={targetRef} id="gallery" className="relative h-[450vh] bg-paper-parchment">
+    <section ref={targetRef} id="gallery" className="relative h-[550vh] bg-paper-parchment">
       {/* Sticky Fullscreen Wrapper */}
       <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
         
         {/* Header */}
-        <div className="absolute top-10 sm:top-14 left-6 right-6 text-center z-20">
+        <div className="w-full text-center z-20 mb-8 sm:mb-12 shrink-0 px-6 pt-16 sm:pt-0">
           <span className="font-cinzel text-xs font-bold tracking-widest text-[#A87D46] uppercase block mb-1">
             Visual Diaries
           </span>
@@ -104,7 +104,7 @@ export default function Gallery() {
 
         {/* Horizontal Sliding Track */}
         <div className="relative flex items-center justify-start w-full">
-          <motion.div style={{ x }} className="flex gap-6 sm:gap-10 pl-8 sm:pl-20 pr-[40vw]">
+          <motion.div style={{ x }} className="flex flex-nowrap w-max gap-6 sm:gap-10 pl-8 sm:pl-20 pr-[65vw]">
             {GALLERY_ITEMS.map((item, idx) => (
               <div
                 key={item.id}
