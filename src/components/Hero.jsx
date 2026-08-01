@@ -89,13 +89,28 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-20 max-w-5xl mx-auto px-6 text-center text-ivory-sacred">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gold-primary/10 border border-gold-border backdrop-blur-md mb-8">
-          <span className="w-2 h-2 rounded-full bg-gold-primary shadow-[0_0_10px_#D4AF37]" />
-          <span className="font-cinzel text-xs tracking-widest text-gold-warm uppercase">
-            L’ESPRIT DE VOYAGE — THE SPIRIT OF BESPOKE JOURNEYS
+        {/* Modern & Creative Luxury Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: -15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-indigo-deep/40 border border-gold-primary/30 shadow-[0_0_15px_rgba(212,175,55,0.1)] backdrop-blur-lg mb-8 select-none"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-primary opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-primary"></span>
           </span>
-        </div>
+
+          <span className="font-serif text-[10px] sm:text-xs tracking-[0.22em] text-white uppercase font-light">
+            L’Esprit de Voyage
+          </span>
+          
+          <div className="h-3 w-[1px] bg-gold-primary/30" />
+
+          <span className="font-cinzel text-[9px] sm:text-[10px] tracking-[0.25em] text-gold-primary uppercase font-bold">
+            The Spirit of Bespoke Journeys
+          </span>
+        </motion.div>
 
         {/* Title */}
         <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6 leading-tight">
