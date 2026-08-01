@@ -25,7 +25,7 @@ export default function DualParadise() {
       {/* Interactive Split Canvas */}
       <div 
         onMouseLeave={() => setHoveredRegion(null)}
-        className="w-full h-[650px] flex flex-col md:flex-row overflow-visible relative border-y border-gold-border z-10"
+        className="w-full flex flex-col md:flex-row md:h-[650px] overflow-visible relative border-y border-gold-border z-10"
       >
         {/* Panel 1: Sri Lanka */}
         <motion.div
@@ -36,7 +36,7 @@ export default function DualParadise() {
             zIndex: hoveredRegion === "sri-lanka" ? 20 : 10
           }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="relative flex-1 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group border-b md:border-b-0 md:border-r border-gold-border/30 shadow-2xl transition-all"
+          className="relative flex-1 min-h-[500px] md:min-h-0 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group border-b md:border-b-0 md:border-r border-gold-border/30 shadow-2xl transition-all"
         >
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-[0.8] group-hover:brightness-95"
@@ -92,7 +92,7 @@ export default function DualParadise() {
             zIndex: hoveredRegion === "maldives" ? 20 : 10
           }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="relative flex-1 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group shadow-2xl transition-all"
+          className="relative flex-1 min-h-[500px] md:min-h-0 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group shadow-2xl transition-all"
         >
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-[0.8] group-hover:brightness-95"

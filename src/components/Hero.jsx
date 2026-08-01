@@ -43,7 +43,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-indigo-dark pt-32 pb-28 overflow-hidden">
+    <section id="hero" className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center bg-indigo-dark pt-24 sm:pt-32 pb-20 sm:pb-28 overflow-hidden">
       {/* Background Video Carousel Layer */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence initial={false} mode="popLayout">
