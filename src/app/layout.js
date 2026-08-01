@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { Playfair_Display, Cormorant_Garamond, Montserrat, Cinzel, Cinzel_Decorative } from "next/font/google";
 import PageLoader from "@/components/PageLoader";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
       className={`${playfair.variable} ${cormorant.variable} ${montserrat.variable} ${cinzel.variable} ${cinzelDecorative.variable}`}
     >
       <body className="bg-ivory-sacred text-charcoal antialiased selection:bg-gold-primary selection:text-indigo-deep">
+        <SmoothScroll />
         <Suspense fallback={null}>
           <PageLoader />
         </Suspense>

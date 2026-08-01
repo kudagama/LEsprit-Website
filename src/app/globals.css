@@ -42,3 +42,25 @@
 .liyavela-bg {
   background-image: url('data:image/svg+xml;utf8,<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg"><path d="M60 0 C75 30 105 30 120 60 C105 90 75 90 60 120 C45 90 15 90 0 60 C15 30 45 30 60 0 Z" fill="none" stroke="%23D4AF37" stroke-width="0.75" stroke-opacity="0.12"/><circle cx="60" cy="60" r="10" fill="none" stroke="%23C5A880" stroke-width="0.75" stroke-opacity="0.15"/></svg>');
 }
+
+/* Lenis Smooth Scroll Configuration */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
