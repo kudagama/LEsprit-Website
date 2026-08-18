@@ -7,18 +7,22 @@ import { motion, AnimatePresence } from "framer-motion";
 const HERO_VIDEOS = [
   {
     url: "/assets/VIDEOS/253907_small.mp4",
+    poster: "/assets/images/posters/maldives_poster.jpg",
     label: "Maldives Paradise"
   },
   {
     url: "/assets/VIDEOS/tea_estate.mp4",
+    poster: "/assets/images/posters/tea_estate_poster.jpg",
     label: "Tea Estates, Ella"
   },
   {
     url: "/assets/VIDEOS/309435_small.mp4",
+    poster: "/assets/images/posters/beaches_poster.jpg",
     label: "Untouched Beaches"
   },
   {
     url: "/assets/VIDEOS/242272_small.mp4",
+    poster: "/assets/images/posters/wildlife_poster.jpg",
     label: "Heritage Wildlife"
   }
 ];
@@ -62,6 +66,7 @@ export default function Hero() {
               playsInline
               className="w-full h-full object-cover scale-105"
               src={HERO_VIDEOS[currentSlide].url}
+              poster={HERO_VIDEOS[currentSlide].poster}
             />
           </motion.div>
         </AnimatePresence>
