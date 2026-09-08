@@ -2,7 +2,6 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import PuskolaPotha from "../components/PuskolaPotha";
 import DualParadise from "../components/DualParadise";
-import TourPackages from "../components/TourPackages";
 import ServicesGrid from "../components/ServicesGrid";
 import Gallery from "../components/Gallery";
 import Testimonials from "../components/Testimonials";
@@ -21,7 +20,6 @@ export default function Home() {
       <PuskolaPotha />
       <PalapethiDivider className="my-2" variant="2" />
       <DualParadise />
-      <TourPackages />
       <PalapethiDivider className="my-2" variant="2" />
       <ServicesGrid />
       <PalapethiDivider className="my-2" variant="1" />

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, MapPin, Sparkles, CheckCircle2, BedDouble, Car, Coffee, Plane } from "lucide-react";
 
-const PACKAGES = [
+const SRI_LANKA_PACKAGES = [
   {
     id: 1,
     title: "The Ultimate Sri Lankan Journey",
@@ -38,7 +38,44 @@ const PACKAGES = [
   }
 ];
 
-export default function TourPackages() {
+const MALDIVES_PACKAGES = [
+  {
+    id: 3,
+    title: "Secluded Atoll & Lagoon Sanctuary",
+    subtitle: "Maldives Ultra-Luxury Escape",
+    duration: "7 Days / 6 Nights",
+    location: "Baa Atoll & Private Sandbanks",
+    image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=600&q=80",
+    tag: "Ocean Sanctuary",
+    highlights: [
+      "Private Seaplane charters to luxury island",
+      "Overwater Sunset Pool Villa sanctuary",
+      "Manta Ray snorkeling guided by marine biologists",
+      "Private Sandbank dinner under the stars",
+      "Bespoke spa therapies & wellness rituals"
+    ]
+  },
+  {
+    id: 4,
+    title: "The Dual Paradise Signature Voyage",
+    subtitle: "Combined Sri Lanka & Maldives Elite Tour",
+    duration: "14 Days / 13 Nights",
+    location: "Highland Tea Country & Maldivian Atolls",
+    image: "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?auto=format&fit=crop&w=600&q=80",
+    tag: "Elite Combined",
+    highlights: [
+      "Best of both worlds: Ancient culture & private island",
+      "Chauffeur-guided heritage tours in Sri Lanka",
+      "Overwater ocean pavilion stay in the Maldives",
+      "Seamless private inter-island flight logistics",
+      "Dedicated 24/7 concierge & local guide network"
+    ]
+  }
+];
+
+export default function TourPackages({ region = "sri-lanka" }) {
+  const packagesToDisplay = region === "sri-lanka" ? SRI_LANKA_PACKAGES : MALDIVES_PACKAGES;
+
   return (
     <section id="packages" className="pt-20 pb-20 bg-paper-parchment relative overflow-hidden">
       {/* Background Ornaments */}
@@ -53,7 +90,7 @@ export default function TourPackages() {
             Curated Journeys
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-indigo-dark mb-4">
-            Signature <span className="text-[#A87D46]">Tour Packages</span>
+            {region === "sri-lanka" ? "Sri Lanka" : "Maldives"} <span className="text-[#A87D46]">Signature Packages</span>
           </h2>
           <div className="flex items-center justify-center gap-4 text-gold-primary mb-4">
             <span className="w-16 h-[1px] bg-gradient-to-r from-transparent to-gold-dark" />
@@ -61,13 +98,13 @@ export default function TourPackages() {
             <span className="w-16 h-[1px] bg-gradient-to-l from-transparent to-gold-dark" />
           </div>
           <p className="font-sans text-charcoal text-sm sm:text-base font-normal max-w-xl mx-auto">
-            Immerse yourself in our signature itineraries, handcrafted to reveal the authentic soul and spirit of Sri Lanka.
+            Immerse yourself in our signature itineraries, handcrafted to reveal the authentic soul and spirit of {region === "sri-lanka" ? "Sri Lanka" : "the Maldives"}.
           </p>
         </div>
 
         {/* Packages Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 relative z-10">
-          {PACKAGES.map((pkg, idx) => (
+          {packagesToDisplay.map((pkg, idx) => (
             <motion.div
               key={pkg.id}
               initial={{ opacity: 0, y: 30 }}

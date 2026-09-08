@@ -1,12 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import TourPackages from "./TourPackages";
 
 export default function DualParadise() {
   const [hoveredRegion, setHoveredRegion] = useState("sri-lanka");
+  const [selectedRegion, setSelectedRegion] = useState("sri-lanka");
+
+  const handleRegionClick = (region) => {
+    setSelectedRegion(region);
+    setTimeout(() => {
+      document.getElementById("packages-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
 
   return (
     <section id="destinations" className="pt-12 pb-0 bg-indigo-deep text-white relative">
@@ -30,6 +39,7 @@ export default function DualParadise() {
         {/* Panel 1: Sri Lanka */}
         <motion.div
           onMouseEnter={() => setHoveredRegion("sri-lanka")}
+          onClick={() => handleRegionClick("sri-lanka")}
           animate={{ 
             scale: hoveredRegion === "sri-lanka" ? 1.02 : hoveredRegion === "maldives" ? 0.98 : 1,
             opacity: hoveredRegion === "maldives" ? 0.5 : 1,
@@ -73,19 +83,23 @@ export default function DualParadise() {
               ))}
             </div>
 
-            <Link
-              href="/destinations/sri-lanka"
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleRegionClick("sri-lanka");
+              }}
               className="px-6 py-3 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-wider rounded inline-flex items-center gap-2 hover:shadow-gold transition-all"
             >
-              <span>Explore Sri Lanka Expeditions & Details</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
+              <span>View Sri Lanka Packages</span>
+              <ChevronDown className="w-4 h-4" />
+            </button>
           </div>
         </motion.div>
 
         {/* Panel 2: Maldives */}
         <motion.div
           onMouseEnter={() => setHoveredRegion("maldives")}
+          onClick={() => handleRegionClick("maldives")}
           animate={{ 
             scale: hoveredRegion === "maldives" ? 1.02 : hoveredRegion === "sri-lanka" ? 0.98 : 1,
             opacity: hoveredRegion === "sri-lanka" ? 0.5 : 1,
@@ -129,15 +143,33 @@ export default function DualParadise() {
               ))}
             </div>
 
-            <Link
-              href="/destinations/maldives"
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleRegionClick("maldives");
+              }}
               className="px-6 py-3 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-wider rounded inline-flex items-center gap-2 hover:shadow-gold transition-all"
             >
-              <span>Explore Maldives Escapes & Details</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
+              <span>View Maldives Packages</span>
+              <ChevronDown className="w-4 h-4" />
+            </button>
           </div>
         </motion.div>
+      </div>
+
+      {/* Embedded Packages Section */}
+      <div id="packages-section" className="bg-paper-parchment relative z-20">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedRegion}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+          >
+            <TourPackages region={selectedRegion} />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );
