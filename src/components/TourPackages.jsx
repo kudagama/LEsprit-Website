@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, MapPin, Sparkles, CheckCircle2, BedDouble, Car, Coffee, Plane } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, Sparkles, CheckCircle2, BedDouble, Car, Coffee, Plane, Compass } from "lucide-react";
 
 const SRI_LANKA_PACKAGES = [
   {
@@ -238,7 +238,7 @@ export default function TourPackages({ region = "sri-lanka" }) {
                   <span className="text-xs font-bold font-sans text-indigo-dark">Private A/C Vehicle</span>
                 </div>
                 <div className="bg-[#F8F4EC] border border-[#D4AF37]/20 rounded-lg p-4 flex flex-col items-center justify-center text-center gap-2 hover:border-[#D4AF37]/50 transition-colors">
-                  <span className="text-[#0D2818] w-6 h-6 flex items-center justify-center">🤵</span>
+                  <Compass className="text-[#0D2818] w-6 h-6" />
                   <span className="text-xs font-bold font-sans text-indigo-dark">Professional Guide</span>
                 </div>
                 <div className="bg-[#F8F4EC] border border-[#D4AF37]/20 rounded-lg p-4 flex flex-col items-center justify-center text-center gap-2 hover:border-[#D4AF37]/50 transition-colors">

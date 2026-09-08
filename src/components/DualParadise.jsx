@@ -13,7 +13,11 @@ export default function DualParadise() {
   const handleRegionClick = (region) => {
     setSelectedRegion(region);
     setTimeout(() => {
-      document.getElementById("packages-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (typeof window !== "undefined" && window.innerWidth < 768) {
+        document.getElementById(`mobile-${region}-packages`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        document.getElementById("packages-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }, 100);
   };
 
@@ -96,6 +100,24 @@ export default function DualParadise() {
           </div>
         </motion.div>
 
+        {/* Mobile ONLY: Sri Lanka Packages Accordion */}
+        <div className="md:hidden w-full bg-paper-parchment border-b border-gold-border/20">
+          <AnimatePresence>
+            {selectedRegion === "sri-lanka" && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="overflow-hidden"
+                id="mobile-sri-lanka-packages"
+              >
+                <TourPackages region="sri-lanka" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
         {/* Panel 2: Maldives */}
         <motion.div
           onMouseEnter={() => setHoveredRegion("maldives")}
@@ -155,10 +177,28 @@ export default function DualParadise() {
             </button>
           </div>
         </motion.div>
+
+        {/* Mobile ONLY: Maldives Packages Accordion */}
+        <div className="md:hidden w-full bg-paper-parchment">
+          <AnimatePresence>
+            {selectedRegion === "maldives" && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="overflow-hidden"
+                id="mobile-maldives-packages"
+              >
+                <TourPackages region="maldives" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
 
-      {/* Embedded Packages Section */}
-      <div id="packages-section" className="bg-paper-parchment relative z-20">
+      {/* Embedded Packages Section (Desktop ONLY) */}
+      <div id="packages-section" className="hidden md:block bg-paper-parchment relative z-20">
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedRegion}
