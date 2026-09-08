@@ -1,40 +1,12 @@
 import { Suspense } from "react";
-import { Playfair_Display, Cormorant_Garamond, Montserrat, Cinzel, Cinzel_Decorative } from "next/font/google";
+import { Jost } from "next/font/google";
 import PageLoader from "@/components/PageLoader";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const jost = Jost({
   subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
-  variable: "--font-montserrat",
-  display: "swap",
-});
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-cinzel",
-  display: "swap",
-});
-
-const cinzelDecorative = Cinzel_Decorative({
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  variable: "--font-cinzel-decorative",
+  variable: "--font-futura",
   display: "swap",
 });
 
@@ -48,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${cormorant.variable} ${montserrat.variable} ${cinzel.variable} ${cinzelDecorative.variable}`}
+      className={`${jost.variable}`}
     >
       <body className="bg-ivory-sacred text-charcoal antialiased selection:bg-gold-primary selection:text-indigo-deep">
         <SmoothScroll />

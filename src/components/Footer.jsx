@@ -153,8 +153,14 @@ export default function Footer() {
             <div className="space-y-3.5 text-xs font-sans font-normal text-ivory-sacred/70">
               <div className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-gold-primary shrink-0 mt-0.5" />
-                <a href="mailto:concierge@lespritvoyages.com" className="hover:text-gold-primary transition-colors">
-                  concierge@lespritvoyages.com
+                <a href="mailto:info1@lespritlanka.com" className="hover:text-gold-primary transition-colors">
+                  info1@lespritlanka.com
+                </a>
+              </div>
+              <div className="flex items-start gap-3">
+                <Mail className="w-4 h-4 text-gold-primary shrink-0 mt-0.5" />
+                <a href="mailto:reservations@lespritlanka.com" className="hover:text-gold-primary transition-colors">
+                  reservations@lespritlanka.com
                 </a>
               </div>
               <div className="flex items-start gap-3">

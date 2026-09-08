@@ -35,11 +35,11 @@ module.exports = {
         charcoal: "#1A1A1A",
       },
       fontFamily: {
-        serif: ["var(--font-playfair)", "var(--font-cormorant)", "serif"],
-        cormorant: ["var(--font-cormorant)", "Georgia", "serif"],
-        sans: ["var(--font-montserrat)", "sans-serif"],
-        cinzel: ["var(--font-cinzel)", "serif"],
-        decorative: ["var(--font-cinzel-decorative)", "serif"],
+        serif: ["Futura", "var(--font-futura)", "sans-serif"],
+        cormorant: ["Futura", "var(--font-futura)", "sans-serif"],
+        sans: ["Futura", "var(--font-futura)", "sans-serif"],
+        cinzel: ["Futura", "var(--font-futura)", "sans-serif"],
+        decorative: ["Futura", "var(--font-futura)", "sans-serif"],
       },
       boxShadow: {
         glass: "0 20px 50px rgba(0, 0, 0, 0.25)",
