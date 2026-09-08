@@ -171,8 +171,38 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-gold-primary shrink-0 mt-0.5" />
-                <span>Ward Place, Colombo 07, Sri Lanka</span>
+                <a 
+                  href="https://goo.gl/maps/MSN4QsWgpofBPx8J6?g_st=awb" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-gold-primary transition-colors"
+                >
+                  Ward Place, Colombo 07, Sri Lanka
+                </a>
               </div>
+            </div>
+
+            {/* Embedded Map */}
+            <div className="mt-6 w-full h-32 sm:h-40 rounded border border-gold-primary/20 overflow-hidden relative group shadow-inner">
+              <iframe 
+                src="https://maps.google.com/maps?q=Ward%20Place,%20Colombo%2007,%20Sri%20Lanka&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out pointer-events-none"
+                title="L'Esprit Voyages Location"
+              />
+              {/* Clickable Overlay */}
+              <a 
+                href="https://goo.gl/maps/MSN4QsWgpofBPx8J6?g_st=awb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 z-10 cursor-pointer border border-gold-primary/10 rounded"
+                aria-label="View on Google Maps"
+              />
             </div>
           </div>
 

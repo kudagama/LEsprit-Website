@@ -10,29 +10,29 @@ module.exports = {
       colors: {
         gold: {
           primary: "#D4AF37",
-          warm: "#C5A880",
-          dark: "#A87D46",
+          warm: "#D4AF37",
+          dark: "#D4AF37",
           glow: "rgba(212, 175, 55, 0.4)",
           border: "rgba(212, 175, 55, 0.3)",
         },
         emerald: {
-          dark: "#0D2818",
-          medium: "#16382B",
+          dark: "#000000",
+          medium: "#000000",
         },
         indigo: {
-          dark: "#0B1B2B",
-          deep: "#071526",
+          dark: "#000000",
+          deep: "#000000",
         },
         ivory: {
-          sacred: "#FAF7F2",
+          sacred: "#FFFFFF",
         },
         sand: {
-          fine: "#F5F2EB",
+          fine: "#FFFFFF",
         },
         paper: {
-          parchment: "#F8F4EC",
+          parchment: "#FFFFFF",
         },
-        charcoal: "#1A1A1A",
+        charcoal: "#000000",
       },
       fontFamily: {
         serif: ["Futura", "var(--font-futura)", "sans-serif"],
