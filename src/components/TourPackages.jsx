@@ -185,70 +185,67 @@ export default function TourPackages({ region = "sri-lanka" }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 bg-white border border-gold-primary/20 rounded-2xl p-8 sm:p-10 shadow-sm relative z-10"
+          className="mt-20 bg-black border border-gold-primary/30 rounded-sm p-10 sm:p-14 shadow-2xl relative z-10 overflow-hidden"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
+          {/* Subtle background glow */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-gold-primary/10 blur-[100px] pointer-events-none" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 relative z-10">
             
             {/* Accommodation Options */}
             <div>
-              <h4 className="font-serif text-xl sm:text-2xl text-indigo-dark mb-6 flex items-center gap-3">
-                <BedDouble className="text-[#A87D46] w-6 h-6" />
-                Accommodation Options
+              <h4 className="font-serif text-2xl sm:text-3xl text-white mb-4 flex items-center gap-4">
+                <BedDouble className="text-gold-primary w-8 h-8 stroke-[1.5]" />
+                Accommodation Tiers
               </h4>
-              <p className="text-charcoal/80 text-sm mb-6 leading-relaxed font-sans">
-                Both packages offer flexible options tailored to your preferences:
+              <p className="text-white/50 text-sm mb-10 font-sans font-light leading-relaxed">
+                Tailor your sanctuary. We partner exclusively with properties that meet our rigorous standards for service, design, and authenticity.
               </p>
-              <ul className="space-y-4 font-sans text-sm">
-                <li className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#A87D46] mt-1.5 shrink-0" />
-                  <div>
-                    <span className="font-bold text-indigo-dark block">Standard</span>
-                    <span className="text-charcoal/70">Comfortable and charming 3-star properties.</span>
+              
+              <div className="space-y-6">
+                {[
+                  { level: "Standard", desc: "Charming 3-star boutique properties with authentic local character." },
+                  { level: "Deluxe", desc: "Refined 4-star hotels offering elevated comfort and amenities." },
+                  { level: "Luxury", desc: "Premium 5-star resorts and exclusive private villas." }
+                ].map((tier, i) => (
+                  <div key={i} className="group relative pl-6 border-l border-gold-primary/30 hover:border-gold-primary transition-colors duration-500">
+                    <span className="font-cinzel text-xs font-bold tracking-widest text-gold-primary uppercase block mb-1">
+                      {tier.level}
+                    </span>
+                    <span className="font-sans text-sm text-white/80 font-light block leading-relaxed">
+                      {tier.desc}
+                    </span>
                   </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#A87D46] mt-1.5 shrink-0" />
-                  <div>
-                    <span className="font-bold text-indigo-dark block">Deluxe</span>
-                    <span className="text-charcoal/70">Elegant and refined 4-star hotels.</span>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#A87D46] mt-1.5 shrink-0" />
-                  <div>
-                    <span className="font-bold text-indigo-dark block">Luxury</span>
-                    <span className="text-charcoal/70">Premium 4- and 5-star or exclusive boutique properties.</span>
-                  </div>
-                </li>
-              </ul>
+                ))}
+              </div>
             </div>
 
             {/* Included Services */}
             <div>
-              <h4 className="font-serif text-xl sm:text-2xl text-indigo-dark mb-6 flex items-center gap-3">
-                <Sparkles className="text-[#A87D46] w-6 h-6" />
-                Included Services
+              <h4 className="font-serif text-2xl sm:text-3xl text-white mb-4 flex items-center gap-4">
+                <Sparkles className="text-gold-primary w-8 h-8 stroke-[1.5]" />
+                Signature Inclusions
               </h4>
-              <p className="text-charcoal/80 text-sm mb-6 leading-relaxed font-sans">
-                Every journey includes premium services to ensure a seamless experience:
+              <p className="text-white/50 text-sm mb-10 font-sans font-light leading-relaxed">
+                Every itinerary is underpinned by seamless logistics and uncompromising attention to detail.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-[#F8F4EC] border border-[#D4AF37]/20 rounded-lg p-4 flex flex-col items-center justify-center text-center gap-2 hover:border-[#D4AF37]/50 transition-colors">
-                  <Car className="text-[#0D2818] w-6 h-6" />
-                  <span className="text-xs font-bold font-sans text-indigo-dark">Private A/C Vehicle</span>
-                </div>
-                <div className="bg-[#F8F4EC] border border-[#D4AF37]/20 rounded-lg p-4 flex flex-col items-center justify-center text-center gap-2 hover:border-[#D4AF37]/50 transition-colors">
-                  <Compass className="text-[#0D2818] w-6 h-6" />
-                  <span className="text-xs font-bold font-sans text-indigo-dark">Professional Guide</span>
-                </div>
-                <div className="bg-[#F8F4EC] border border-[#D4AF37]/20 rounded-lg p-4 flex flex-col items-center justify-center text-center gap-2 hover:border-[#D4AF37]/50 transition-colors">
-                  <Coffee className="text-[#0D2818] w-6 h-6" />
-                  <span className="text-xs font-bold font-sans text-indigo-dark">Daily Breakfast</span>
-                </div>
-                <div className="bg-[#F8F4EC] border border-[#D4AF37]/20 rounded-lg p-4 flex flex-col items-center justify-center text-center gap-2 hover:border-[#D4AF37]/50 transition-colors">
-                  <Plane className="text-[#0D2818] w-6 h-6" />
-                  <span className="text-xs font-bold font-sans text-indigo-dark">Airport Transfers</span>
-                </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  { icon: Car, label: "Private Chauffeur" },
+                  { icon: Compass, label: "Expert Guide" },
+                  { icon: Coffee, label: "Daily Breakfast" },
+                  { icon: Plane, label: "VIP Transfers" }
+                ].map((service, i) => (
+                  <div key={i} className="flex items-center gap-4 p-4 border border-white/10 bg-white/5 hover:bg-gold-primary/5 hover:border-gold-primary/40 transition-all duration-500 group rounded-sm">
+                    <div className="w-10 h-10 rounded-full border border-gold-primary/20 flex items-center justify-center bg-black group-hover:scale-110 transition-transform duration-500 shadow-gold">
+                      <service.icon className="text-gold-primary w-4 h-4" />
+                    </div>
+                    <span className="font-sans text-sm text-white font-medium tracking-wide">
+                      {service.label}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
