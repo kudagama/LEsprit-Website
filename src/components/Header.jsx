@@ -26,13 +26,12 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Brand Logo */}
-        <a href="#" className="flex flex-col group justify-center gap-1">
-          <span className="font-serif text-2xl font-bold tracking-widest text-gold-primary leading-none pt-1">
-            L’ESPRIT VOYAGES
-          </span>
-          <span className="font-cinzel text-[0.6rem] tracking-[0.25em] text-gold-warm uppercase leading-none relative z-10">
-            L’ESPRIT DE VOYAGE — SRI LANKA & MALDIVES
-          </span>
+        <a href="#" className="flex items-center">
+          <img 
+            src="/assets/images/logo.png" 
+            alt="L'ESPRIT VOYAGES" 
+            className="h-12 md:h-16 w-auto object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] transform scale-[2.5] md:scale-[3] origin-left"
+          />
         </a>
 
         {/* Desktop Nav Links */}
