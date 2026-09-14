@@ -60,7 +60,7 @@ export default function Testimonials() {
           </h2>
           <div className="flex items-center justify-center gap-4 text-gold-primary mb-4">
             <span className="w-16 h-[1px] bg-gradient-to-r from-transparent to-gold-dark" />
-            <span className="text-sm font-bold text-gold-dark">☸</span>
+            <span className="text-sm font-bold text-gold-dark">✦</span>
             <span className="w-16 h-[1px] bg-gradient-to-l from-transparent to-gold-dark" />
           </div>
         </div>

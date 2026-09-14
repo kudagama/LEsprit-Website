@@ -15,11 +15,11 @@ export default function JourneyBuilder() {
   const [submitted, setSubmitted] = useState(false);
 
   const styleOptions = [
-    "✨ Ultra Luxury",
-    "🏛️ Cultural Heritage",
-    "🐆 Wildlife Safaris",
-    "🌿 Wellness & Ayurveda",
-    "💍 Honeymoon / Romantic Escape",
+    "Ultra Luxury",
+    "Cultural Heritage",
+    "Wildlife Safaris",
+    "Wellness & Ayurveda",
+    "Honeymoon / Romantic Escape",
   ];
 
   const toggleStyle = (style) => {

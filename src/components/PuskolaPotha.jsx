@@ -91,7 +91,7 @@ export default function PuskolaPotha() {
           </h2>
           <div className="flex items-center justify-center gap-4 text-gold-primary">
             <span className="w-16 h-[1px] bg-gradient-to-r from-transparent to-gold-dark" />
-            <span className="text-sm font-bold text-gold-dark">☸</span>
+            <span className="text-sm font-bold text-gold-dark">✦</span>
             <span className="w-16 h-[1px] bg-gradient-to-l from-transparent to-gold-dark" />
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function PuskolaPotha() {
               {/* Our Strength Callout */}
               <div className="bg-gradient-to-br from-emerald-dark to-emerald-medium text-white p-6 sm:p-8 rounded-lg border border-gold-border relative overflow-hidden shadow-xl">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gold-primary/10 rounded-full blur-2xl pointer-events-none" />
-                <div className="text-3xl mb-3">🏛️</div>
+                <Heart className="w-8 h-8 text-gold-primary mb-4" />
                 <h4 className="font-serif text-xl text-gold-primary font-bold mb-3">
                   The Human Heart & Spirit
                 </h4>
@@ -129,10 +129,10 @@ export default function PuskolaPotha() {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="font-cinzel text-[0.75rem] font-bold px-3 py-1 bg-gold-primary/20 border border-gold-primary text-gold-warm rounded-full">
-                    ✓ 20+ Years Excellence
+                    20+ Years Excellence
                   </span>
                   <span className="font-cinzel text-[0.75rem] font-bold px-3 py-1 bg-gold-primary/20 border border-gold-primary text-gold-warm rounded-full">
-                    ✓ Chauffeur Guides
+                    Chauffeur Guides
                   </span>
                 </div>
               </div>
