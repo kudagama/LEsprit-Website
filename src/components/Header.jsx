@@ -20,7 +20,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-indigo-deep/95 backdrop-blur-md py-4 border-b border-gold-border shadow-xl"
+          ? "bg-indigo-deep/95 backdrop-blur-md py-2 border-b border-gold-border shadow-xl"
           : "bg-transparent py-7"
       }`}
     >
@@ -30,7 +30,11 @@ export default function Header() {
           <img 
             src="/assets/images/logo.png" 
             alt="L'ESPRIT VOYAGES" 
-            className="h-12 md:h-16 w-auto object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] transform scale-[2.5] md:scale-[3] origin-left"
+            className={`w-auto object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] origin-left transition-all duration-500 ${
+              isScrolled 
+                ? "h-8 md:h-10 transform scale-[3] md:scale-[3.5]" 
+                : "h-12 md:h-16 transform scale-[2.5] md:scale-[3]"
+            }`}
           />
         </a>
 
