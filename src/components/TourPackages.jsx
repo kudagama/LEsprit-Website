@@ -78,11 +78,21 @@ export default function TourPackages({ region = "sri-lanka" }) {
 
   return (
     <section id="packages" className="pt-20 pb-20 bg-paper-parchment relative overflow-hidden">
+      {/* Subtle background overlay */}
+      <div 
+        className="absolute inset-0 pointer-events-none opacity-10 mix-blend-multiply z-0"
+        style={{ 
+          backgroundImage: "url('/assets/images/bg_remove.svg')", 
+          backgroundSize: "cover", 
+          backgroundPosition: "center", 
+          backgroundAttachment: "fixed" 
+        }}
+      />
       {/* Background Ornaments */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-gold-primary/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-emerald-dark/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-0 w-64 h-64 bg-gold-primary/5 rounded-full blur-3xl pointer-events-none z-0" />
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-emerald-dark/5 rounded-full blur-3xl pointer-events-none z-0" />
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         
         {/* Header */}
         <div className="text-center mb-16 relative z-10">
