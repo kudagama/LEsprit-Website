@@ -1,15 +1,28 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import TourPackages from "./TourPackages";
 
 export default function DualParadise() {
   const [hoveredRegion, setHoveredRegion] = useState("sri-lanka");
+  const [selectedRegion, setSelectedRegion] = useState("sri-lanka");
+
+  const handleRegionClick = (region) => {
+    setSelectedRegion(region);
+    setTimeout(() => {
+      if (typeof window !== "undefined" && window.innerWidth < 768) {
+        document.getElementById(`mobile-${region}-packages`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        document.getElementById("packages-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
+  };
 
   return (
-    <section id="destinations" className="py-20 bg-indigo-deep text-white relative">
+    <section id="destinations" className="pt-12 pb-0 bg-indigo-deep text-white relative">
       <div className="max-w-7xl mx-auto px-6 text-center mb-12">
         <span className="font-decorative text-xs tracking-widest text-gold-warm uppercase block mb-2">
           Two Kingdoms of Wonder
@@ -23,20 +36,28 @@ export default function DualParadise() {
       </div>
 
       {/* Interactive Split Canvas */}
-      <div className="w-full h-[650px] flex flex-col md:flex-row overflow-hidden relative border-y border-gold-border">
+      <div 
+        onMouseLeave={() => setHoveredRegion(null)}
+        className="w-full flex flex-col md:flex-row md:h-[650px] overflow-visible relative border-y border-gold-border z-10"
+      >
         {/* Panel 1: Sri Lanka */}
         <motion.div
           onMouseEnter={() => setHoveredRegion("sri-lanka")}
-          animate={{ flex: hoveredRegion === "sri-lanka" ? 1.8 : 1 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="relative flex-1 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group border-b md:border-b-0 md:border-r border-gold-border/30"
+          onClick={() => handleRegionClick("sri-lanka")}
+          animate={{ 
+            scale: hoveredRegion === "sri-lanka" ? 1.02 : hoveredRegion === "maldives" ? 0.98 : 1,
+            opacity: hoveredRegion === "maldives" ? 0.5 : 1,
+            zIndex: hoveredRegion === "sri-lanka" ? 20 : 10
+          }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="relative flex-1 min-h-[500px] md:min-h-0 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group border-b md:border-b-0 md:border-r border-gold-border/30 shadow-2xl transition-all"
         >
           <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-90 group-hover:brightness-100"
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-[0.8] group-hover:brightness-95"
             style={{ backgroundImage: "url('/assets/images/sri_lanka.png')" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-indigo-deep via-indigo-deep/60 to-transparent" />
-          <div className="absolute inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none rounded-lg" />
 
           {/* Panel Content */}
           <div className="relative z-10 max-w-xl">
@@ -49,45 +70,72 @@ export default function DualParadise() {
             </p>
 
             {/* Highlights */}
-            <div className="flex flex-col gap-2 mb-8">
+            <div className="flex flex-col gap-3 mb-8">
               {[
-                "🏛️ UNESCO Heritage (Sigiriya, Kandy, Anuradhapura)",
-                "🐆 Wildlife Safaris (Yala & Wilpattu Leopards)",
-                "🌿 Ayurvedic Sanctuary & Tea Country",
-                "🍲 Authentic Spice & Culinary Journeys",
-              ].map((chip) => (
+                "UNESCO Heritage (Sigiriya, Kandy, Anuradhapura)",
+                "Wildlife Safaris (Yala & Wilpattu Leopards)",
+                "Ayurvedic Sanctuary & Tea Country",
+                "Authentic Spice & Culinary Journeys",
+              ].map((item) => (
                 <div
-                  key={chip}
-                  className="inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-deep/80 backdrop-blur-md border border-gold-border/40 rounded text-xs text-ivory-sacred w-fit"
+                  key={item}
+                  className="flex items-center gap-2.5 text-xs sm:text-sm text-white/90 font-sans font-medium drop-shadow"
                 >
-                  <span>{chip}</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold-primary shadow-[0_0_8px_#D4AF37]" />
+                  <span>{item}</span>
                 </div>
               ))}
             </div>
 
-            <Link
-              href="/destinations/sri-lanka"
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleRegionClick("sri-lanka");
+              }}
               className="px-6 py-3 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-wider rounded inline-flex items-center gap-2 hover:shadow-gold transition-all"
             >
-              <span>Explore Sri Lanka Expeditions & Details</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
+              <span>View Sri Lanka Packages</span>
+              <ChevronDown className="w-4 h-4" />
+            </button>
           </div>
         </motion.div>
+
+        {/* Mobile ONLY: Sri Lanka Packages Accordion */}
+        <div className="md:hidden w-full bg-paper-parchment border-b border-gold-border/20">
+          <AnimatePresence>
+            {selectedRegion === "sri-lanka" && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="overflow-hidden"
+                id="mobile-sri-lanka-packages"
+              >
+                <TourPackages region="sri-lanka" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
 
         {/* Panel 2: Maldives */}
         <motion.div
           onMouseEnter={() => setHoveredRegion("maldives")}
-          animate={{ flex: hoveredRegion === "maldives" ? 1.8 : 1 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="relative flex-1 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group"
+          onClick={() => handleRegionClick("maldives")}
+          animate={{ 
+            scale: hoveredRegion === "maldives" ? 1.02 : hoveredRegion === "sri-lanka" ? 0.98 : 1,
+            opacity: hoveredRegion === "sri-lanka" ? 0.5 : 1,
+            zIndex: hoveredRegion === "maldives" ? 20 : 10
+          }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="relative flex-1 min-h-[500px] md:min-h-0 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group shadow-2xl transition-all"
         >
           <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-90 group-hover:brightness-100"
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-[0.8] group-hover:brightness-95"
             style={{ backgroundImage: "url('/assets/images/maldives.png')" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-indigo-deep via-indigo-deep/60 to-transparent" />
-          <div className="absolute inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none rounded-lg" />
 
           {/* Panel Content */}
           <div className="relative z-10 max-w-xl">
@@ -100,31 +148,68 @@ export default function DualParadise() {
             </p>
 
             {/* Highlights */}
-            <div className="flex flex-col gap-2 mb-8">
+            <div className="flex flex-col gap-3 mb-8">
               {[
-                "🏝️ 1,000+ Idyllic Islands & 26 Natural Atolls",
-                "🦈 Manta Ray & Whale Shark Expeditions",
-                "🏡 Private Overwater Villa Luxury",
-                "🏄 World-Class Surfing & Yacht Charters",
-              ].map((chip) => (
+                "1,000+ Idyllic Islands & 26 Natural Atolls",
+                "Manta Ray & Whale Shark Expeditions",
+                "Private Overwater Villa Luxury",
+                "World-Class Surfing & Yacht Charters",
+              ].map((item) => (
                 <div
-                  key={chip}
-                  className="inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-deep/80 backdrop-blur-md border border-gold-border/40 rounded text-xs text-ivory-sacred w-fit"
+                  key={item}
+                  className="flex items-center gap-2.5 text-xs sm:text-sm text-white/90 font-sans font-medium drop-shadow"
                 >
-                  <span>{chip}</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold-primary shadow-[0_0_8px_#D4AF37]" />
+                  <span>{item}</span>
                 </div>
               ))}
             </div>
 
-            <Link
-              href="/destinations/maldives"
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleRegionClick("maldives");
+              }}
               className="px-6 py-3 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-wider rounded inline-flex items-center gap-2 hover:shadow-gold transition-all"
             >
-              <span>Explore Maldives Escapes & Details</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
+              <span>View Maldives Packages</span>
+              <ChevronDown className="w-4 h-4" />
+            </button>
           </div>
         </motion.div>
+
+        {/* Mobile ONLY: Maldives Packages Accordion */}
+        <div className="md:hidden w-full bg-paper-parchment">
+          <AnimatePresence>
+            {selectedRegion === "maldives" && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="overflow-hidden"
+                id="mobile-maldives-packages"
+              >
+                <TourPackages region="maldives" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* Embedded Packages Section (Desktop ONLY) */}
+      <div id="packages-section" className="hidden md:block bg-paper-parchment relative z-20">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedRegion}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+          >
+            <TourPackages region={selectedRegion} />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Leaf, Users, Droplets } from "lucide-react";
+import { Leaf, Users, Droplets, Zap } from "lucide-react";
 
 export default function SustainabilityPanel() {
   return (
-    <section id="heritage-impact" className="py-20 bg-sand-fine relative">
+    <section id="heritage-impact" className="pt-12 pb-12 bg-sand-fine relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="relative rounded-2xl overflow-hidden bg-emerald-dark text-white border border-gold-border shadow-2xl">
           {/* Background image overlay */}
@@ -32,7 +32,7 @@ export default function SustainabilityPanel() {
               {/* Metrics */}
               <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gold-primary/20">
                 <div>
-                  <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-primary block">
+                  <span className="font-bold text-4xl lg:text-5xl text-[#D4AF37] block">
                     100%
                   </span>
                   <span className="font-sans text-xs text-emerald-200">
@@ -40,7 +40,7 @@ export default function SustainabilityPanel() {
                   </span>
                 </div>
                 <div>
-                  <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-primary block">
+                  <span className="font-bold text-4xl lg:text-5xl text-[#D4AF37] block">
                     25+
                   </span>
                   <span className="font-sans text-xs text-emerald-200">
@@ -48,7 +48,7 @@ export default function SustainabilityPanel() {
                   </span>
                 </div>
                 <div>
-                  <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-primary block">
+                  <span className="font-bold text-4xl lg:text-5xl text-[#D4AF37] block">
                     150+
                   </span>
                   <span className="font-sans text-xs text-emerald-200">
@@ -73,8 +73,13 @@ export default function SustainabilityPanel() {
                 },
                 {
                   icon: Leaf,
-                  title: "Environmental Footprint & Conservation",
-                  desc: "Fleet optimization using fuel-efficient vehicles, promoting flexible internal work practices, and active internal monitoring to minimize energy and water consumption.",
+                  title: "Environmental Footprint",
+                  desc: "Fleet optimization using fuel-efficient vehicles and promoting flexible internal work practices.",
+                },
+                {
+                  icon: Zap,
+                  title: "Energy & Resource Conservation",
+                  desc: "Active internal monitoring to minimize energy and water consumption across operations.",
                 },
               ].map((item, idx) => {
                 const IconComp = item.icon;
@@ -82,14 +87,14 @@ export default function SustainabilityPanel() {
                   <motion.div
                     key={item.title}
                     whileHover={{ x: 6 }}
-                    className="p-5 bg-white/5 border border-gold-border/30 backdrop-blur-md rounded-lg flex gap-4 items-start hover:bg-gold-primary/10 hover:border-gold-primary transition-all"
+                    className="p-4 bg-white/5 border border-gold-border/30 backdrop-blur-md rounded-lg flex gap-4 items-start hover:bg-gold-primary/10 hover:border-gold-primary transition-all"
                   >
                     <div className="p-2 bg-gold-primary/20 rounded text-gold-primary shrink-0">
                       <IconComp className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-serif text-lg text-gold-warm mb-1">{item.title}</h4>
-                      <p className="font-sans text-xs text-emerald-100/70 leading-relaxed">{item.desc}</p>
+                      <h4 className="font-serif text-base text-gold-warm mb-1">{item.title}</h4>
+                      <p className="font-sans text-[0.7rem] text-emerald-100/70 leading-relaxed">{item.desc}</p>
                     </div>
                   </motion.div>
                 );

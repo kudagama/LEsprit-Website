@@ -5,8 +5,8 @@ document.getElementById('footer-placeholder').innerHTML = `<!-- LUXURY FOOTER WI
             <div class="footer-grid">
                 <div class="footer-col brand-col">
                     <div class="footer-logo">L’ESPRIT VOYAGES</div>
-                    <p class="footer-tagline">Where Royalty Meets Authenticity.</p>
-                    <p class="footer-desc">Two decades of crafting bespoke luxury escapes, private expeditions, and ultra-high-end journeys across the island of Sri Lanka and the coral atolls of the Maldives.</p>
+                    <p class="footer-tagline">Experience the Soul, Spirit, and Authenticity of Every Journey.</p>
+                    <p class="footer-desc">With over two decades of expertise in Sri Lanka and the Maldives, we craft tailor-made luxury escapes that go beyond ordinary tourism, blending elegance, culture, and meaningful local connections.</p>
                     <div class="social-icons">
                         <a href="#" aria-label="Instagram"><span>IG</span></a>
                         <a href="#" aria-label="Facebook"><span>FB</span></a>

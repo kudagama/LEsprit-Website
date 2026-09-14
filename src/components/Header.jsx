@@ -26,11 +26,11 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Brand Logo */}
-        <a href="#" className="flex flex-col group">
-          <span className="font-serif text-2xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white via-ivory-sacred to-gold-primary">
+        <a href="#" className="flex flex-col group justify-center gap-1">
+          <span className="font-serif text-2xl font-bold tracking-widest text-gold-primary leading-none pt-1">
             L’ESPRIT VOYAGES
           </span>
-          <span className="font-cinzel text-[0.6rem] tracking-[0.25em] text-gold-warm uppercase -mt-1">
+          <span className="font-cinzel text-[0.6rem] tracking-[0.25em] text-gold-warm uppercase leading-none relative z-10">
             L’ESPRIT DE VOYAGE — SRI LANKA & MALDIVES
           </span>
         </a>

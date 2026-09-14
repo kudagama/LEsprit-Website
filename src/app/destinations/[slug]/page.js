@@ -18,6 +18,35 @@ const DESTINATION_DATA = {
       "Sacred Ayurvedic Mind-Body Rejuvenation with Master Practitioners",
       "Private Helicopter Transfers across Sacred Cities & Coastal Reserves",
     ],
+    gallery: [
+      "https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+    ],
+    packages: [
+      {
+        title: "Classical Cultural Heritage",
+        duration: "7 Days / 6 Nights",
+        price: "From $3,200 / person",
+        desc: "Embark on an archaeological voyage through Sri Lanka's cultural triangle. Stay in bespoke luxury jungle villas and enjoy private archaeologist-guided ascents of Sigiriya.",
+        highlights: ["Sigiriya private sunrise access", "Kandy Temple VIP tour", "Artisan pottery masterclass"]
+      },
+      {
+        title: "Wild Safari & Emerald Highlands",
+        duration: "9 Days / 8 Nights",
+        price: "From $4,500 / person",
+        desc: "Track leopards in Yala National Park and unwind in tea estate bungalows. Combines thrilling wildlife jeep safaris with the cool colonial charm of tea country.",
+        highlights: ["Yala luxury tented safari camp", "Private tea tasting & plucking", "Scenic train ride from Kandy"]
+      },
+      {
+        title: "Sacred Ayurveda & Coastal Wellness",
+        duration: "10 Days / 9 Nights",
+        price: "From $5,100 / person",
+        desc: "Immerse your body and mind in traditional Ayurvedic healing, coupled with private yoga classes overlooking the pristine southern coastline of Weligama.",
+        highlights: ["Consultation with Ayurvedic Master", "Daily customized herbal treatments", "Beachfront villa with private pool"]
+      }
+    ],
     itinerary: [
       {
         day: "Day 01 - 02",
@@ -54,6 +83,35 @@ const DESTINATION_DATA = {
       "Submerged Undersea Gourmet Dining & Deep-Sea Hydrothermal Spas",
       "Exclusive Access to Uncrowded Secret Surfing Reef Breaks",
     ],
+    gallery: [
+      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80"
+    ],
+    packages: [
+      {
+        title: "Romantic Overwater Sanctuary",
+        duration: "5 Days / 4 Nights",
+        price: "From $6,400 / person",
+        desc: "Designed exclusively for couples seeking absolute privacy. Enjoy an overwater villa with a private pool, direct ocean ladder, and dedicated 24/7 personal butler service.",
+        highlights: ["Private sandbank candlelit dinner", "Overwater couple's spa session", "Champagne sunset cruise"]
+      },
+      {
+        title: "Manta & Whale Shark Marine Safari",
+        duration: "7 Days / 6 Nights",
+        price: "From $8,200 / person",
+        desc: "An extraordinary marine journey in the UNESCO biosphere reserve of Baa Atoll. Snorkel with giant manta rays and track whale sharks with marine biologists.",
+        highlights: ["Private Hanifaru Bay speed-boat access", "Diving with PADI certified guides", "Undersea dining experience"]
+      },
+      {
+        title: "Bespoke Yacht Charter & Island Hopping",
+        duration: "8 Days / 7 Nights",
+        price: "From $14,500 / person",
+        desc: "Charter a private luxury mega-yacht to cruise across uncrowded natural atolls. Perfect for surfing secret reef breaks and exploring uninhabited private sandbanks.",
+        highlights: ["Dedicated private captain & chef", "Snorkeling in untouched coral gardens", "Jet ski & water-sports access"]
+      }
+    ],
     itinerary: [
       {
         day: "Day 01 - 02",
@@ -79,6 +137,54 @@ const DESTINATION_DATA = {
   },
 };
 
+const PACKAGES = [
+  {
+    id: 1,
+    title: "Grand Ceylon & Cultural Heritage",
+    subtitle: "Sri Lanka In-Depth Expedition",
+    duration: "10 Days / 9 Nights",
+    location: "Sigiriya, Kandy, Ella, Yala & Galle",
+    tag: "Cultural & Wildlife",
+    highlights: [
+      "VIP Fast-Track & Private Luxury SUV transit",
+      "Private guided climb of Sigiriya Fortress",
+      "Leopard & Elephant Safaris in Yala & Wilpattu",
+      "Scenic tea country train in First Class cabin",
+      "5-Star Relais & Châteaux colonial stays"
+    ]
+  },
+  {
+    id: 2,
+    title: "Secluded Atoll & Lagoon Sanctuary",
+    subtitle: "Maldives Ultra-Luxury Escape",
+    duration: "7 Days / 6 Nights",
+    location: "Baa Atoll & Private Sandbanks",
+    tag: "Ocean Sanctuary",
+    highlights: [
+      "Private Seaplane charters to luxury island",
+      "Overwater Sunset Pool Villa sanctuary",
+      "Manta Ray snorkeling guided by marine biologists",
+      "Private Sandbank dinner under the stars",
+      "Bespoke spa therapies & wellness rituals"
+    ]
+  },
+  {
+    id: 3,
+    title: "The Dual Paradise Signature Voyage",
+    subtitle: "Combined Sri Lanka & Maldives Elite Tour",
+    duration: "14 Days / 13 Nights",
+    location: "Highland Tea Country & Maldivian Atolls",
+    tag: "Elite Combined",
+    highlights: [
+      "Best of both worlds: Ancient culture & private island",
+      "Chauffeur-guided heritage tours in Sri Lanka",
+      "Overwater ocean pavilion stay in the Maldives",
+      "Seamless private inter-island flight logistics",
+      "Dedicated 24/7 concierge & local guide network"
+    ]
+  }
+];
+
 export function generateStaticParams() {
   return [{ slug: "sri-lanka" }, { slug: "maldives" }];
 }
@@ -89,6 +195,15 @@ export default function DestinationDetailPage({ params }) {
   if (!data) {
     notFound();
   }
+
+  const filteredPackages = PACKAGES.filter((pkg) => {
+    if (params.slug === "sri-lanka") {
+      return pkg.id === 1 || pkg.id === 3;
+    } else if (params.slug === "maldives") {
+      return pkg.id === 2 || pkg.id === 3;
+    }
+    return false;
+  });
 
   return (
     <main className="min-h-screen bg-ivory-sacred text-charcoal">
@@ -150,6 +265,43 @@ export default function DestinationDetailPage({ params }) {
               </div>
             </div>
 
+            {/* Curated Tour Packages */}
+            <div className="bg-white border border-gold-dark/30 rounded-xl p-8 sm:p-10 shadow-floating">
+              <div className="flex items-center gap-3 mb-6">
+                <Sparkles className="w-6 h-6 text-indigo-dark" />
+                <h2 className="font-serif text-2xl text-indigo-dark font-bold">Our Curated Tour Packages</h2>
+              </div>
+              <p className="font-sans text-xs text-charcoal mb-8 leading-relaxed">
+                Choose from our pre-designed luxury concepts or use them as a starting point to craft your own customized journey.
+              </p>
+              
+              <div className="grid gap-6">
+                {filteredPackages.map((pkg) => (
+                  <div key={pkg.title} className="border border-gold-dark/20 rounded-lg p-6 hover:border-gold-primary hover:shadow-md transition-all bg-ivory-sacred/40">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                      <div>
+                        <span className="font-cinzel text-[10px] font-bold text-gold-dark tracking-widest uppercase block mb-1">
+                          {pkg.duration}
+                        </span>
+                        <h3 className="font-serif text-lg text-indigo-dark font-bold">{pkg.title}</h3>
+                      </div>
+                      <span className="font-sans text-xs font-semibold text-emerald-dark bg-emerald-dark/15 px-3 py-1 rounded-full shrink-0 self-start sm:self-center">
+                        {pkg.tag}
+                      </span>
+                    </div>
+                    <p className="font-sans text-xs text-charcoal leading-relaxed mb-4">{pkg.subtitle} — {pkg.location}</p>
+                    <div className="flex flex-wrap gap-2 pt-2 border-t border-gold-dark/10">
+                      {pkg.highlights.map((hl) => (
+                        <span key={hl} className="font-sans text-[10px] bg-white border border-gold-dark/20 text-indigo-dark px-2 py-0.5 rounded">
+                          ✨ {hl}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Sample Itinerary Timeline */}
             <div className="bg-white border border-gold-dark/30 rounded-xl p-8 sm:p-10 shadow-floating">
               <div className="flex items-center gap-3 mb-8">
@@ -168,6 +320,22 @@ export default function DestinationDetailPage({ params }) {
                     </span>
                     <h3 className="font-serif text-xl text-indigo-dark font-bold mb-2">{step.title}</h3>
                     <p className="font-sans text-xs text-charcoal font-normal leading-relaxed">{step.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Destination Gallery */}
+            <div className="bg-white border border-gold-dark/30 rounded-xl p-8 sm:p-10 shadow-floating">
+              <h2 className="font-serif text-2xl text-indigo-dark font-bold mb-6">Visual Journey</h2>
+              <div className="grid grid-cols-2 gap-4">
+                {data.gallery.map((img, idx) => (
+                  <div key={idx} className="relative h-40 sm:h-64 rounded-xl overflow-hidden shadow-sm group border border-gold-border/20">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                      style={{ backgroundImage: `url('${img}')` }}
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                   </div>
                 ))}
               </div>
