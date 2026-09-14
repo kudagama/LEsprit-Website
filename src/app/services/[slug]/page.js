@@ -12,15 +12,15 @@ const SERVICE_DATA = {
       "Whether arranging an intimate solo honeymoon, a multi-generational family reunion, or an executive corporate retreat across Sri Lanka & the Maldives, our travel solutions team handles every logistical detail with 5-star finesse.",
     features: [
       {
-        title: "Free Independent Travelers (FIT)",
+        title: "FIT (Free Independent Travelers)",
         desc: "Tailor-made solo, couple, or family journeys with private concierge and 24/7 dedicated travel designer support.",
       },
       {
-        title: "Group Inclusive Tours (GIT)",
+        title: "GIT (Group Inclusive Tours)",
         desc: "Seamless group management with private luxury coaches, dedicated tour managers, and exclusive group dining.",
       },
       {
-        title: "Corporate MICE & Executive Retreats",
+        title: "MICE (Meetings, Incentives, Conferences & Exhibitions)",
         desc: "High-end corporate incentive programs, international conferences, team retreats, and private island buyouts.",
       },
     ],
@@ -32,40 +32,52 @@ const SERVICE_DATA = {
       "Step beyond standard tourist trails into rare, authentic pursuits. From birdwatching in UNESCO rainforest reserves to sacred Ayurvedic cleanses and high-altitude mountain cycling, we connect you with the soul of the island.",
     features: [
       {
-        title: "Adventure, Trekking & Cycling Trails",
-        desc: "Private guided treks across Horton Plains, Knuckles Mountain Range, and scenic Central Tea Country cycling trails.",
+        title: "Tailor-Made Journeys & À La Carte Travel",
+        desc: "Fully customized itineraries tailored to your unique preferences, pace, and interests across the island.",
       },
       {
-        title: "Voluntourism & Heritage Conservation",
-        desc: "Hands-on participation in turtle hatchery conservation, coral reef restoration, and local village school renovations.",
+        title: "Adventure, Hiking & Trekking Tours",
+        desc: "Private guided treks across Horton Plains, Knuckles Mountain Range, and scenic Central Highlands.",
       },
       {
-        title: "Birdwatching & Wildlife Photography Expeditions",
-        desc: "Specialist-led expeditions tracking 33 endemic bird species and big game photography in Sinharaja & Yala.",
+        title: "Cycling Tours & Sports Travel Programs",
+        desc: "Explore tea country on mountain bikes or engage in specialized sports travel itineraries.",
       },
       {
-        title: "Sacred Ayurveda & Holistic Wellness Retreats",
-        desc: "Personalized multi-day Panchakarma treatments, yoga, and herbal therapies overseen by qualified Ayurvedic doctors.",
+        title: "Voluntourism Programs",
+        desc: "Hands-on participation in turtle hatchery conservation, coral reef restoration, and local village enhancements.",
+      },
+      {
+        title: "Birdwatching & Photography Journeys",
+        desc: "Specialist-led expeditions tracking endemic bird species and big game photography in wilderness reserves.",
+      },
+      {
+        title: "Wellness Retreats (Ayurveda & Yoga)",
+        desc: "Personalized multi-day Panchakarma treatments, yoga, and herbal therapies overseen by qualified practitioners.",
       },
     ],
   },
   "premium-fleet": {
-    title: "Private Chauffeur Fleet & Aviation",
+    title: "Private Transport & Aviation",
     subtitle: "Unrivaled luxury ground transit and domestic aviation charters across Sri Lanka and the Maldives.",
     overview:
       "Travel in supreme comfort with our private fleet of luxury vehicles and dedicated, English-speaking chauffeur guides who serve as your local ambassadors, hosts, and guardians.",
     features: [
       {
-        title: "Luxury Sedans & SUVs",
-        desc: "Mercedes-Benz E/S-Class, Toyota Land Cruiser, and Audi SUVs equipped with complimentary Wi-Fi, mineral water, and cold towels.",
+        title: "Private Cars & Luxury SUVs",
+        desc: "Premium sedans and 4x4 SUVs equipped with complimentary Wi-Fi, mineral water, and ultimate comfort.",
       },
       {
-        title: "Deluxe Micro Vans & Coaster Coaches",
-        desc: "High-roof Toyota Alphard/Vellfire micro vans and deluxe luxury coaches for small groups with reclining leather seats.",
+        title: "Micro Vans & Deluxe Coaches",
+        desc: "High-roof luxury vans and deluxe coaches tailored for small to large group travel with reclining seating.",
       },
       {
-        title: "Domestic Aviation & Helicopter Charters",
-        desc: "Point-to-point floatplane and helicopter transfers cutting transit times between Colombo, Sri Lankan hill country, and Maldivian resorts.",
+        title: "Chauffeur-Driven Vehicles",
+        desc: "Dedicated, professional English-speaking chauffeur guides providing VIP ground logistics and local insights.",
+      },
+      {
+        title: "Domestic Flight Arrangements",
+        desc: "Point-to-point floatplane and helicopter transfers cutting transit times across Sri Lanka and the Maldives.",
       },
     ],
   },

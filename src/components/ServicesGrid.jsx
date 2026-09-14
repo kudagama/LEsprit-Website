@@ -14,9 +14,9 @@ const SERVICES = [
     title: "FIT, GIT & Corporate MICE",
     desc: "Specialized travel execution for Free Independent Travelers (FIT), Group Inclusive Tours (GIT), and high-level Corporate MICE.",
     features: [
-      "Bespoke Solo & Family FIT Concierge",
-      "Exclusive Group Inclusive Journeys (GIT)",
-      "Executive Incentive & Retreat Planning (MICE)",
+      "FIT (Free Independent Travelers)",
+      "GIT (Group Inclusive Tours)",
+      "MICE (Meetings, Incentives, Conferences & Exhibitions)",
     ],
   },
   {
@@ -27,10 +27,10 @@ const SERVICES = [
     title: "Curated Expedition Pursuits",
     desc: "Immersive thematic journeys led by local specialists across pristine wilderness, cultural sanctuaries, and private coastal reserves.",
     features: [
-      "High-Altitude Trekking & Cycling Trails",
-      "Voluntourism & Heritage Conservation",
-      "Expert Birdwatching & Photography Expeditions",
-      "Sacred Ayurveda & Holistic Wellness Retreats",
+      "Tailor-Made Journeys & À La Carte Travel",
+      "Adventure, Hiking, Trekking & Cycling Tours",
+      "Voluntourism, Birdwatching & Photography",
+      "Wellness (Ayurveda & Yoga) & Sports Travel",
     ],
   },
   {
@@ -38,12 +38,13 @@ const SERVICES = [
     slug: "premium-fleet",
     category: "Premium Fleet",
     icon: Car,
-    title: "Private Chauffeur Fleet & Aviation",
+    title: "Private Transport & Aviation",
     desc: "Unmatched ground and air luxury transit with professionally trained English-speaking chauffeur guides and seamless domestic air transfers.",
     features: [
-      "Luxury Sedans & SUVs (Mercedes, Land Cruiser)",
-      "Deluxe Micro Vans & Coaster Coaches",
-      "Scenic Domestic Flights & Helicopter Charters",
+      "Private Cars & Luxury SUVs",
+      "Micro Vans & Deluxe Coaches",
+      "Chauffeur-Driven Vehicles",
+      "Domestic Flight Arrangements",
     ],
   },
 ];

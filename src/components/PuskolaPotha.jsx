@@ -124,10 +124,10 @@ export default function PuskolaPotha() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-gold-primary/10 rounded-full blur-2xl pointer-events-none" />
               <div className="text-3xl mb-3">🏛️</div>
               <h4 className="font-serif text-xl text-gold-primary font-bold mb-3">
-                The Human Heart & Spirit
+                Destination Expertise
               </h4>
               <p className="font-sans text-xs text-white leading-relaxed mb-6 font-normal">
-                Backed by <strong>20+ years of local mastery</strong>, our true strength lies in an exclusive, tight-knit network of master artisans, cultural historians, environmentalists, and dedicated chauffeur guides who embody the spirit of authentic hospitality.
+                Highlighting our <strong>20+ years of destination expertise</strong>, we are supported by a strong, handpicked network of local experts, artisans, experienced guides, and dedicated chauffeur guides who form the human heart of every journey.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="font-cinzel text-[0.75rem] font-bold px-3 py-1 bg-gold-primary/20 border border-gold-primary text-gold-warm rounded-full">

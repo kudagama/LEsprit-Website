@@ -62,19 +62,19 @@ export default function SustainabilityPanel() {
             <div className="lg:col-span-5 space-y-4">
               {[
                 {
-                  icon: Leaf,
-                  title: "Environmental Impact Reduction",
-                  desc: "Optimized eco-logistics, low-emission fleet routing, and carbon offset initiatives preserving Sri Lanka’s rainforests.",
+                  icon: Droplets,
+                  title: "Reducing Plastic Waste",
+                  desc: "Introduced reusable water bottles for guests and equipped all vehicles with refillable water containers, eliminating single-use disposable plastic during tours.",
                 },
                 {
                   icon: Users,
-                  title: "Community First Initiatives",
-                  desc: "Funding local village school renovations, classroom technology enhancements, and directly commissioning craftspeople.",
+                  title: "Supporting Local Communities",
+                  desc: "Facilitating school renovations, classroom enhancements, and welfare support programs, while supporting local artisans and community-based tourism.",
                 },
                 {
-                  icon: Droplets,
-                  title: "Plastic Waste Elimination",
-                  desc: "Complimentary custom copper reusable water bottles provided to guests with vehicle refillable mineral water stations.",
+                  icon: Leaf,
+                  title: "Environmental Footprint & Conservation",
+                  desc: "Fleet optimization using fuel-efficient vehicles, promoting flexible internal work practices, and active internal monitoring to minimize energy and water consumption.",
                 },
               ].map((item, idx) => {
                 const IconComp = item.icon;
