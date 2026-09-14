@@ -52,7 +52,17 @@ const INSTAGRAM_POSTS = [
 export default function NewsAndSocial() {
   return (
     <section id="news-social" className="pt-20 pb-20 bg-ivory-sacred relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+      {/* Subtle background overlay */}
+      <div 
+        className="absolute inset-0 pointer-events-none opacity-10 mix-blend-multiply z-0"
+        style={{ 
+          backgroundImage: "url('/assets/images/bg_remove.svg')", 
+          backgroundSize: "cover", 
+          backgroundPosition: "center", 
+          backgroundAttachment: "fixed" 
+        }}
+      />
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Latest News & Journal */}

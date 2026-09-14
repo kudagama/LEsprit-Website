@@ -44,11 +44,21 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="pt-20 pb-20 bg-ivory-sacred relative overflow-hidden">
+      {/* Subtle background overlay */}
+      <div 
+        className="absolute inset-0 pointer-events-none opacity-10 mix-blend-multiply z-0"
+        style={{ 
+          backgroundImage: "url('/assets/images/bg_remove.svg')", 
+          backgroundSize: "cover", 
+          backgroundPosition: "center", 
+          backgroundAttachment: "fixed" 
+        }}
+      />
       {/* Decorative Ornaments */}
       <div className="absolute top-0 right-0 w-80 h-80 bg-gold-primary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-deep/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header */}
         <div className="text-center mb-14">

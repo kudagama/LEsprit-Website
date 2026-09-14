@@ -13,26 +13,29 @@ import PalapethiDivider from "../components/PalapethiDivider";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-ivory-sacred">
-      <Header />
-      <Hero />
-      <PalapethiDivider className="my-2" variant="1" />
-      <PuskolaPotha />
-      <PalapethiDivider className="my-2" variant="2" />
-      <DualParadise />
-      <PalapethiDivider className="my-2" variant="2" />
-      <ServicesGrid />
-      <PalapethiDivider className="my-2" variant="1" />
-      <Gallery />
-      <PalapethiDivider className="my-2" variant="2" />
-      <Testimonials />
-      <PalapethiDivider className="my-2" variant="1" />
-      <SustainabilityPanel />
-      <PalapethiDivider className="my-2" variant="2" />
-      <NewsAndSocial />
-      <PalapethiDivider className="my-2" variant="1" />
-      <JourneyBuilder />
-      <Footer />
+    <main className="min-h-screen bg-ivory-sacred relative">
+      <div className="relative z-10">
+        <Header />
+        <Hero />
+        <PalapethiDivider className="my-2" variant="1" />
+        <PuskolaPotha />
+        <PalapethiDivider className="my-2" variant="2" />
+        <DualParadise />
+        <PalapethiDivider className="my-2" variant="2" />
+        <ServicesGrid />
+        <PalapethiDivider className="my-2" variant="1" />
+        <Gallery />
+        <PalapethiDivider className="my-2" variant="2" />
+        <Testimonials />
+        <PalapethiDivider className="my-2" variant="1" />
+        <SustainabilityPanel />
+        <PalapethiDivider className="my-2" variant="2" />
+        <NewsAndSocial />
+        <PalapethiDivider className="my-2" variant="1" />
+        <JourneyBuilder />
+        <Footer />
+      </div>
+
     </main>
   );
 }
