@@ -165,19 +165,19 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-gold-primary shrink-0 mt-0.5" />
-                <a href="tel:+94112345678" className="hover:text-gold-primary transition-colors">
-                  +94 (0) 11 234 5678
+                <a href="tel:+94112616389" className="hover:text-gold-primary transition-colors">
+                  +94 11 261 6389
                 </a>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-gold-primary shrink-0 mt-0.5" />
                 <a 
-                  href="https://goo.gl/maps/MSN4QsWgpofBPx8J6?g_st=awb" 
+                  href="https://maps.google.com/maps?q=86/10,+GONAMADITHTHA+ROAD,+KESBEWA,+PILIYANDALA" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-gold-primary transition-colors"
                 >
-                  Ward Place, Colombo 07, Sri Lanka
+                  86/10, GONAMADITHTHA ROAD, KESBEWA, PILIYANDALA
                 </a>
               </div>
             </div>
@@ -185,7 +185,7 @@ export default function Footer() {
             {/* Embedded Map */}
             <div className="mt-6 w-full h-32 sm:h-40 rounded border border-gold-primary/20 overflow-hidden relative group shadow-inner">
               <iframe 
-                src="https://maps.google.com/maps?q=Ward%20Place,%20Colombo%2007,%20Sri%20Lanka&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                src="https://maps.google.com/maps?q=86/10,+GONAMADITHTHA+ROAD,+KESBEWA,+PILIYANDALA&t=&z=14&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -197,7 +197,7 @@ export default function Footer() {
               />
               {/* Clickable Overlay */}
               <a 
-                href="https://goo.gl/maps/MSN4QsWgpofBPx8J6?g_st=awb"
+                href="https://maps.google.com/maps?q=86/10,+GONAMADITHTHA+ROAD,+KESBEWA,+PILIYANDALA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="absolute inset-0 z-10 cursor-pointer border border-gold-primary/10 rounded"
@@ -223,7 +223,7 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-primary/5 border border-gold-primary/20 rounded-full text-gold-warm text-[10px] sm:text-xs">
               <Award className="w-4 h-4 text-gold-primary shrink-0 animate-pulse" />
-              <span>Official: <strong>Ministry of Tourism Sri Lanka Registered</strong></span>
+              <span>Official: <strong>STTDA Reg. No: SLTDA/SQA/TA/01954</strong></span>
             </div>
             
             {/* Scroll back to top */}
