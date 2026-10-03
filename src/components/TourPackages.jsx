@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, MapPin, Sparkles, CheckCircle2, BedDouble, Car, Coffee, Plane, Compass } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, Sparkles, CheckCircle2, BedDouble, Car, Coffee, Plane, Compass, Key, Gem, Crown, CarFront, UtensilsCrossed, PlaneTakeoff, ShieldCheck } from "lucide-react";
 
 const SRI_LANKA_PACKAGES = [
   {
@@ -10,7 +10,7 @@ const SRI_LANKA_PACKAGES = [
     subtitle: "Culture, Nature, Wildlife & Beach",
     duration: "10 Days / 9 Nights",
     location: "Sigiriya → Kandy → Nuwara Eliya → Galle → Bentota",
-    image: "https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=600&q=80",
+    image: "/assets/images/packages/sl_tour_1.jpg",
     tag: "Ultimate Journey",
     highlights: [
       "Explore Polonnaruwa, Dambulla & Temple of the Tooth",
@@ -26,7 +26,7 @@ const SRI_LANKA_PACKAGES = [
     subtitle: "Ancient Heritage & Southern Coast",
     duration: "7 Days / 6 Nights",
     location: "Sigiriya → Kandy → Nuwara Eliya → Udawalawe → Galle",
-    image: "https://images.unsplash.com/photo-1588614959060-4d144f28b207?auto=format&fit=crop&w=600&q=80",
+    image: "/assets/images/packages/sl_tour_2.jpg",
     tag: "Highlights Tour",
     highlights: [
       "Discover the Cultural Triangle ruins & Dambulla Cave",
@@ -104,7 +104,7 @@ export default function TourPackages({ region = "sri-lanka" }) {
           </h2>
           <div className="flex items-center justify-center gap-4 text-gold-primary mb-4">
             <span className="w-16 h-[1px] bg-gradient-to-r from-transparent to-gold-dark" />
-            <span className="text-sm font-bold text-gold-dark">✦</span>
+            <div className="w-1.5 h-1.5 bg-gold-dark rotate-45" />
             <span className="w-16 h-[1px] bg-gradient-to-l from-transparent to-gold-dark" />
           </div>
           <p className="font-sans text-charcoal text-sm sm:text-base font-normal max-w-xl mx-auto">
@@ -220,26 +220,31 @@ export default function TourPackages({ region = "sri-lanka" }) {
             {/* Accommodation Options */}
             <div>
               <h4 className="font-serif text-2xl sm:text-3xl text-white mb-4 flex items-center gap-4">
-                <BedDouble className="text-gold-primary w-8 h-8 stroke-[1.5]" />
+                <ShieldCheck className="text-gold-primary w-8 h-8 stroke-[1.5]" />
                 Accommodation Tiers
               </h4>
-              <p className="text-white/50 text-sm mb-10 font-sans font-light leading-relaxed">
+              <p className="text-white/50 text-sm mb-8 font-sans font-light leading-relaxed">
                 Tailor your sanctuary. We partner exclusively with properties that meet our rigorous standards for service, design, and authenticity.
               </p>
               
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {[
-                  { level: "Standard", desc: "Charming 3-star boutique properties with authentic local character." },
-                  { level: "Deluxe", desc: "Refined 4-star hotels offering elevated comfort and amenities." },
-                  { level: "Luxury", desc: "Premium 5-star resorts and exclusive private villas." }
+                  { level: "Standard", icon: Key, desc: "Charming 3-star boutique properties with authentic local character." },
+                  { level: "Deluxe", icon: Gem, desc: "Refined 4-star hotels offering elevated comfort and amenities." },
+                  { level: "Luxury", icon: Crown, desc: "Premium 5-star resorts and exclusive private villas." }
                 ].map((tier, i) => (
-                  <div key={i} className="group relative pl-6 border-l border-gold-primary/30 hover:border-gold-primary transition-colors duration-500">
-                    <span className="font-cinzel text-xs font-bold tracking-widest text-gold-primary uppercase block mb-1">
-                      {tier.level}
-                    </span>
-                    <span className="font-sans text-sm text-white/80 font-light block leading-relaxed">
-                      {tier.desc}
-                    </span>
+                  <div key={i} className="group flex items-start gap-5 p-5 rounded-lg border border-white/5 bg-white/5 hover:bg-gold-primary/10 hover:border-gold-primary/30 transition-all duration-500">
+                    <div className="w-12 h-12 rounded-full border border-gold-primary/20 bg-black group-hover:scale-110 group-hover:border-gold-primary/50 transition-all duration-500 flex items-center justify-center shrink-0 shadow-gold">
+                      <tier.icon className="w-5 h-5 text-gold-primary" />
+                    </div>
+                    <div>
+                      <span className="font-cinzel text-sm font-bold tracking-widest text-gold-primary uppercase block mb-1">
+                        {tier.level}
+                      </span>
+                      <span className="font-sans text-sm text-white/80 font-light block leading-relaxed group-hover:text-white transition-colors">
+                        {tier.desc}
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -251,24 +256,29 @@ export default function TourPackages({ region = "sri-lanka" }) {
                 <Sparkles className="text-gold-primary w-8 h-8 stroke-[1.5]" />
                 Signature Inclusions
               </h4>
-              <p className="text-white/50 text-sm mb-10 font-sans font-light leading-relaxed">
+              <p className="text-white/50 text-sm mb-8 font-sans font-light leading-relaxed">
                 Every itinerary is underpinned by seamless logistics and uncompromising attention to detail.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { icon: Car, label: "Private Chauffeur" },
-                  { icon: Compass, label: "Expert Guide" },
-                  { icon: Coffee, label: "Daily Breakfast" },
-                  { icon: Plane, label: "VIP Transfers" }
+                  { icon: CarFront, label: "Private Chauffeur", desc: "Premium vehicles & drivers" },
+                  { icon: Compass, label: "Expert Guide", desc: "Deep local knowledge" },
+                  { icon: UtensilsCrossed, label: "Daily Breakfast", desc: "Gourmet dining experiences" },
+                  { icon: PlaneTakeoff, label: "VIP Transfers", desc: "Seamless global logistics" }
                 ].map((service, i) => (
-                  <div key={i} className="flex items-center gap-4 p-4 border border-white/10 bg-white/5 hover:bg-gold-primary/5 hover:border-gold-primary/40 transition-all duration-500 group rounded-sm">
-                    <div className="w-10 h-10 rounded-full border border-gold-primary/20 flex items-center justify-center bg-black group-hover:scale-110 transition-transform duration-500 shadow-gold">
-                      <service.icon className="text-gold-primary w-4 h-4" />
+                  <div key={i} className="flex flex-col gap-3 p-5 border border-white/5 bg-white/5 hover:bg-gold-primary/10 hover:border-gold-primary/40 transition-all duration-500 group rounded-lg text-center items-center">
+                    <div className="w-12 h-12 rounded-full border border-gold-primary/20 flex items-center justify-center bg-black group-hover:-translate-y-1 group-hover:shadow-gold transition-all duration-500">
+                      <service.icon className="text-gold-primary w-5 h-5" />
                     </div>
-                    <span className="font-sans text-sm text-white font-medium tracking-wide">
-                      {service.label}
-                    </span>
+                    <div>
+                      <span className="font-serif text-lg text-white font-medium tracking-wide block mb-1">
+                        {service.label}
+                      </span>
+                      <span className="font-sans text-xs text-white/50 group-hover:text-white/80 transition-colors">
+                        {service.desc}
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>
