@@ -26,7 +26,14 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Brand Logo */}
-        <a href="#" className="flex items-center">
+        <a 
+          href="#" 
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="flex items-center"
+        >
           <img 
             src="/assets/images/logo.png" 
             alt="L'ESPRIT VOYAGES" 
@@ -41,7 +48,7 @@ export default function Header() {
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex items-center gap-8">
           {["Our Concept", "Destinations", "Services", "Heritage Impact"].map((item) => {
-            const href = `#${item.toLowerCase().replace(" ", "-")}`;
+            const href = item === "Our Concept" ? "#concept" : `#${item.toLowerCase().replace(" ", "-")}`;
             return (
               <a
                 key={item}
@@ -85,16 +92,19 @@ export default function Header() {
             className="md:hidden bg-indigo-deep/98 border-b border-gold-border px-6 py-6"
           >
             <div className="flex flex-col gap-5">
-              {["Our Concept", "Destinations", "Services", "Heritage Impact"].map((item) => (
+              {["Our Concept", "Destinations", "Services", "Heritage Impact"].map((item) => {
+                const href = item === "Our Concept" ? "#concept" : `#${item.toLowerCase().replace(" ", "-")}`;
+                return (
                 <a
                   key={item}
-                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+                  href={href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="font-cinzel text-sm uppercase tracking-widest text-ivory-sacred hover:text-gold-primary"
                 >
                   {item}
                 </a>
-              ))}
+                );
+              })}
               <div className="pt-4 flex flex-col gap-4">
                 <a
                   href="#contact"
