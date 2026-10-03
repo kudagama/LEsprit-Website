@@ -113,7 +113,21 @@ export default function TourPackages({ region = "sri-lanka" }) {
         </div>
 
         {/* Packages Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 relative z-10">
+        {region === "maldives" ? (
+          <div className="flex flex-col items-center justify-center py-24 px-8 text-center bg-white border border-gold-border/30 rounded-2xl shadow-floating mx-auto max-w-3xl relative z-10 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent pointer-events-none" />
+            <span className="font-cinzel text-xs font-bold text-gold-primary tracking-widest uppercase block mb-4 relative z-10">
+              Anticipate Perfection
+            </span>
+            <h3 className="font-serif text-3xl sm:text-5xl text-indigo-dark mb-6 relative z-10">
+              Coming Soon
+            </h3>
+            <p className="font-sans text-charcoal text-sm sm:text-base max-w-lg mx-auto relative z-10 leading-relaxed">
+              We are currently handcrafting our exclusive Maldives itineraries. Stay tuned for a collection of unparalleled overwater sanctuaries and pristine ocean experiences.
+            </p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 relative z-10">
           {packagesToDisplay.map((pkg, idx) => (
             <motion.div
               key={pkg.id}
@@ -176,7 +190,7 @@ export default function TourPackages({ region = "sri-lanka" }) {
               {/* Action Button */}
               <div className="p-6 sm:p-8 pt-0 mt-4">
                 <a
-                  href="#concept"
+                  href="#contact"
                   className="w-full py-4 bg-gradient-to-r from-[#D4AF37] to-[#C5A880] text-black font-cinzel text-xs font-bold uppercase tracking-widest rounded shadow-gold flex items-center justify-center gap-2 hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
                 >
                   <Sparkles className="w-4 h-4" />
@@ -187,7 +201,8 @@ export default function TourPackages({ region = "sri-lanka" }) {
 
             </motion.div>
           ))}
-        </div>
+          </div>
+        )}
 
         {/* Accommodations & Inclusions Section */}
         <motion.div
