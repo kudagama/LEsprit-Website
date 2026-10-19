@@ -258,65 +258,66 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gold-primary/15 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-ivory-sacred/70 font-sans font-medium">
-          
-          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left flex-wrap">
-            <p>© 2026 L’ESPRIT VOYAGES. All Rights Reserved.</p>
-            <div className="hidden sm:block w-[1px] h-3.5 bg-gold-primary/30" />
-            <div className="flex gap-4">
-              <a href="#" className="hover:text-gold-primary transition-colors">Privacy Guarantee</a>
-              <button
-                type="button"
-                onClick={() => setIsTermsOpen(true)}
-                className="hover:text-gold-primary transition-colors cursor-pointer"
-              >
-                Terms & Conditions
-              </button>
-              <button
-                type="button"
-                onClick={() => setIsCancelOpen(true)}
-                className="hover:text-gold-primary transition-colors cursor-pointer"
-              >
-                Cancellation Policy
-              </button>
-            </div>
+        {/* Accreditations & Back to Top Strip */}
+        <div className="pb-6 border-b border-gold-primary/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-primary/5 border border-gold-primary/20 rounded-full text-gold-warm text-xs sm:text-sm">
+            <Award className="w-4 h-4 text-gold-primary shrink-0 animate-pulse" />
+            <span>Official: <strong>STTDA Reg. No: SLTDA/SQA/TA/01954</strong></span>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-primary/5 border border-gold-primary/20 rounded-full text-gold-warm text-xs sm:text-sm">
-              <Award className="w-4 h-4 text-gold-primary shrink-0 animate-pulse" />
-              <span>Official: <strong>STTDA Reg. No: SLTDA/SQA/TA/01954</strong></span>
-            </div>
-            
-            {/* Scroll back to top */}
-            <button
-              onClick={scrollToTop}
-              className="w-10 h-10 rounded-full border border-gold-primary/30 bg-white/5 flex items-center justify-center text-gold-warm hover:bg-gold-primary hover:text-[#071526] hover:border-gold-primary transition-all duration-300 cursor-pointer group shadow"
-              aria-label="Back to top"
-            >
+          <button
+            onClick={scrollToTop}
+            className="flex items-center gap-2 text-xs sm:text-sm text-gold-warm hover:text-gold-primary transition-colors cursor-pointer group"
+          >
+            <span>Back to top</span>
+            <div className="w-8 h-8 rounded-full border border-gold-primary/30 bg-white/5 flex items-center justify-center group-hover:bg-gold-primary group-hover:text-[#071526] transition-all">
               <ArrowUp className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+            </div>
+          </button>
+        </div>
+
+        {/* Bottom Bar: Left (Copyright) - Center (Terms & Cancellation) - Right (Developed by Saveen.lk) */}
+        <div className="pt-6 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-sm text-ivory-sacred/70 font-sans font-medium">
+          
+          {/* Left: Copyright */}
+          <div className="text-center md:text-left">
+            <p>© 2026 L’ESPRIT VOYAGES. All Rights Reserved.</p>
+          </div>
+
+          {/* Center: Legal Policies */}
+          <div className="flex items-center justify-center gap-4 sm:gap-6 text-center">
+            <button
+              type="button"
+              onClick={() => setIsTermsOpen(true)}
+              className="hover:text-gold-primary transition-colors cursor-pointer"
+            >
+              Terms & Conditions
+            </button>
+            <span className="w-1 h-1 rounded-full bg-gold-primary/40 select-none" />
+            <button
+              type="button"
+              onClick={() => setIsCancelOpen(true)}
+              className="hover:text-gold-primary transition-colors cursor-pointer"
+            >
+              Cancellation Policy
             </button>
           </div>
 
-        </div>
+          {/* Right: Developer Credit */}
+          <div className="text-center md:text-right">
+            <p>
+              Website Designed &amp; Developed by{" "}
+              <a
+                href="https://saveen.lk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold-warm hover:text-gold-primary font-semibold underline decoration-gold-primary/50 underline-offset-4 transition-colors"
+              >
+                Saveen.lk
+              </a>
+            </p>
+          </div>
 
-        {/* Developer Credit Bar */}
-        <div className="mt-6 pt-5 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs sm:text-[13px] text-ivory-sacred/60">
-          <p>
-            Website Designed &amp; Developed by{" "}
-            <a
-              href="https://saveen.lk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gold-warm hover:text-gold-primary font-semibold underline decoration-gold-primary/50 underline-offset-4 transition-colors"
-            >
-              Saveen.lk
-            </a>
-          </p>
-          <span className="font-sans text-xs text-ivory-sacred/45">
-            Bespoke Luxury Digital Experience
-          </span>
         </div>
 
       </div>
