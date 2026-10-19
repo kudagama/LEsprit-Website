@@ -25,8 +25,8 @@ export default function Header() {
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const searchRef = useRef(null);
+  const searchInputRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +36,18 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Keyboard shortcut: Escape to close search / drawer
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setIsSearchOpen(false);
+        setSideMenuOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   // Click outside to close search dropdown
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -43,9 +55,20 @@ export default function Header() {
         setIsSearchOpen(false);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
+    if (isSearchOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [isSearchOpen]);
+
+  // Auto focus input when search is opened
+  useEffect(() => {
+    if (isSearchOpen && searchInputRef.current) {
+      setTimeout(() => {
+        searchInputRef.current?.focus();
+      }, 100);
+    }
+  }, [isSearchOpen]);
 
   const filteredResults = searchQuery.trim() === ""
     ? []
@@ -61,7 +84,6 @@ export default function Header() {
   const handleSelectSearchResult = (targetId) => {
     setIsSearchOpen(false);
     setSearchQuery("");
-    setMobileSearchOpen(false);
     const element = document.getElementById(targetId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -87,31 +109,33 @@ export default function Header() {
             : "bg-transparent py-6 sm:py-7"
         }`}
       >
-        <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-14 2xl:px-20 flex justify-between items-center gap-4">
+        <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-14 2xl:px-20 flex justify-between items-center relative">
           
-          {/* Brand Logo */}
-          <a 
-            href="#" 
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-            className="flex items-center shrink-0 z-10"
-            aria-label="L'Esprit Voyages Home"
-          >
-            <img 
-              src="/assets/images/logo.png" 
-              alt="L'ESPRIT VOYAGES" 
-              className={`w-auto object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] origin-left transition-all duration-500 ${
-                isScrolled 
-                  ? "h-8 md:h-10 transform scale-[2.8] md:scale-[3.2]" 
-                  : "h-11 md:h-14 transform scale-[2.4] md:scale-[2.8]"
-              }`}
-            />
-          </a>
+          {/* LEFT CORNER: Brand Logo */}
+          <div className="flex items-center shrink-0 z-10">
+            <a 
+              href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="flex items-center"
+              aria-label="L'Esprit Voyages Home"
+            >
+              <img 
+                src="/assets/images/logo.png" 
+                alt="L'ESPRIT VOYAGES" 
+                className={`w-auto object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] origin-left transition-all duration-500 ${
+                  isScrolled 
+                    ? "h-8 md:h-10 transform scale-[2.8] md:scale-[3.2]" 
+                    : "h-11 md:h-14 transform scale-[2.4] md:scale-[2.8]"
+                }`}
+              />
+            </a>
+          </div>
 
-          {/* Desktop Nav Links (Center) */}
-          <nav className="hidden xl:flex items-center gap-7 2xl:gap-8">
+          {/* CENTER: Navigation Topics (Exact Middle of Row) */}
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 2xl:gap-10 absolute left-1/2 -translate-x-1/2 z-10">
             {[
               { label: "Our Concept", href: "#concept" },
               { label: "Destinations", href: "#destinations" },
@@ -130,83 +154,21 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right-hand Corner Controls: Search Bar + Inquire Button + 3 Lines (Menu) */}
-          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+          {/* RIGHT CORNER: Search Button + Inquire Button + 3 Lines (Iri Kali Thunak) */}
+          <div className="flex items-center gap-2.5 sm:gap-3.5 shrink-0 z-10 ml-auto">
             
-            {/* Desktop Search Bar */}
-            <div ref={searchRef} className="relative hidden md:block">
-              <div className="flex items-center bg-black/40 backdrop-blur-md border border-gold-primary/30 hover:border-gold-primary/70 focus-within:border-gold-primary rounded-full px-3.5 py-2 transition-all duration-300 w-36 lg:w-48 xl:w-56 focus-within:w-56 lg:focus-within:w-72 shadow-inner">
-                <Search className="w-4 h-4 text-gold-warm shrink-0 mr-2" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => {
-                    setSearchQuery(e.target.value);
-                    setIsSearchOpen(true);
-                  }}
-                  onFocus={() => setIsSearchOpen(true)}
-                  placeholder="Search journeys..."
-                  className="bg-transparent text-white text-xs lg:text-sm placeholder:text-ivory-sacred/45 focus:outline-none w-full font-sans"
-                />
-                {searchQuery && (
-                  <button
-                    onClick={() => {
-                      setSearchQuery("");
-                      setIsSearchOpen(false);
-                    }}
-                    className="text-ivory-sacred/50 hover:text-white ml-1.5 p-0.5 cursor-pointer"
-                    aria-label="Clear search"
-                  >
-                    <X className="w-3.5 h-3.5" />
-                  </button>
-                )}
-              </div>
-
-              {/* Search Results Dropdown */}
-              <AnimatePresence>
-                {isSearchOpen && searchQuery.trim() !== "" && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 8 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full mt-2.5 right-0 w-80 max-h-84 overflow-y-auto bg-[#071526]/98 backdrop-blur-2xl border border-gold-primary/40 rounded-xl shadow-2xl p-2 z-50 divide-y divide-white/5"
-                  >
-                    {filteredResults.length > 0 ? (
-                      filteredResults.map((item, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => handleSelectSearchResult(item.targetId)}
-                          className="w-full text-left p-2.5 hover:bg-gold-primary/15 rounded-lg transition-colors flex items-center justify-between group cursor-pointer"
-                        >
-                          <div>
-                            <span className="text-[10px] uppercase font-cinzel font-bold text-gold-warm tracking-wider block">
-                              {item.category}
-                            </span>
-                            <span className="text-sm font-sans text-white font-medium group-hover:text-gold-primary transition-colors">
-                              {item.title}
-                            </span>
-                          </div>
-                          <ArrowUpRight className="w-4 h-4 text-gold-primary/60 group-hover:text-gold-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                        </button>
-                      ))
-                    ) : (
-                      <div className="p-4 text-center text-xs text-ivory-sacred/50 font-sans">
-                        No matching destinations or journeys found.
-                      </div>
-                    )}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Mobile Search Icon Toggle */}
+            {/* Search Button (Click opens Search Bar) */}
             <button
-              onClick={() => setMobileSearchOpen(!mobileSearchOpen)}
-              className="md:hidden w-10 h-10 rounded-lg border border-gold-primary/30 flex items-center justify-center text-gold-warm hover:text-gold-primary hover:border-gold-primary bg-black/20 transition-all cursor-pointer"
-              aria-label="Toggle Mobile Search"
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              className={`w-10 sm:w-11 h-10 sm:h-11 rounded-lg border flex items-center justify-center transition-all cursor-pointer shadow-sm group ${
+                isSearchOpen 
+                  ? "border-gold-primary bg-gold-primary/20 text-gold-primary" 
+                  : "border-gold-primary/30 hover:border-gold-primary bg-black/25 hover:bg-gold-primary/10 text-gold-warm hover:text-gold-primary"
+              }`}
+              aria-label="Open Search"
+              title="Search journeys & destinations"
             >
-              <Search className="w-4.5 h-4.5" />
+              <Search className="w-4.5 h-4.5 group-hover:scale-110 transition-transform" />
             </button>
 
             {/* Inquire Button */}
@@ -234,50 +196,94 @@ export default function Header() {
 
         </div>
 
-        {/* Mobile Search Input Overlay */}
+        {/* CLICK-ACTIVATED SEARCH BAR OVERLAY */}
         <AnimatePresence>
-          {mobileSearchOpen && (
+          {isSearchOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden px-4 pt-3 pb-2 bg-[#071526]/98 border-b border-gold-border/40"
+              ref={searchRef}
+              initial={{ opacity: 0, y: -15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.25, ease: "easeInOut" }}
+              className="absolute top-full left-0 w-full bg-[#071526]/98 backdrop-blur-2xl border-b border-gold-primary/40 shadow-2xl py-6 px-6 sm:px-12 z-50"
             >
-              <div className="flex items-center bg-black/50 border border-gold-primary/40 rounded-full px-4 py-2">
-                <Search className="w-4 h-4 text-gold-warm mr-2 shrink-0" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search destinations, packages, fleet..."
-                  className="bg-transparent text-white text-sm placeholder:text-ivory-sacred/45 focus:outline-none w-full"
-                  autoFocus
-                />
-                {searchQuery && (
-                  <button onClick={() => setSearchQuery("")} className="text-white/60 p-1">
-                    <X className="w-4 h-4" />
+              <div className="max-w-3xl mx-auto relative">
+                <div className="flex items-center border-b-2 border-gold-primary/40 focus-within:border-gold-primary py-3 transition-colors">
+                  <Search className="w-5 h-5 sm:w-6 sm:h-6 text-gold-primary shrink-0 mr-3.5" />
+                  <input
+                    ref={searchInputRef}
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search destinations, signature packages, bespoke fleet..."
+                    className="w-full bg-transparent text-white text-base sm:text-xl placeholder:text-ivory-sacred/40 focus:outline-none font-sans"
+                    autoFocus
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery("")}
+                      className="text-ivory-sacred/50 hover:text-white p-1.5 cursor-pointer mr-2"
+                      aria-label="Clear input"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                  )}
+                  <button
+                    onClick={() => {
+                      setIsSearchOpen(false);
+                      setSearchQuery("");
+                    }}
+                    className="px-3 py-1.5 rounded border border-gold-primary/30 text-gold-warm hover:text-white hover:bg-gold-primary/10 text-xs font-cinzel uppercase tracking-wider cursor-pointer transition-colors"
+                  >
+                    Close
                   </button>
+                </div>
+
+                {/* Suggested Quick Searches */}
+                {searchQuery.trim() === "" && (
+                  <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
+                    <span className="text-ivory-sacred/50 uppercase font-cinzel tracking-wider mr-1">Popular:</span>
+                    {["Sri Lanka", "Maldives", "Sigiriya", "Yala Leopards", "Tea Country", "Ayurveda", "Private Fleet"].map((tag) => (
+                      <button
+                        key={tag}
+                        onClick={() => setSearchQuery(tag)}
+                        className="px-3 py-1 rounded-full bg-white/5 hover:bg-gold-primary/20 text-ivory-sacred/80 hover:text-gold-primary border border-white/10 hover:border-gold-primary/40 transition-colors cursor-pointer"
+                      >
+                        {tag}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* Live Filtered Results */}
+                {searchQuery.trim() !== "" && (
+                  <div className="mt-4 max-h-80 overflow-y-auto divide-y divide-white/5 pr-1">
+                    {filteredResults.length > 0 ? (
+                      filteredResults.map((item, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => handleSelectSearchResult(item.targetId)}
+                          className="w-full text-left py-3 px-3 hover:bg-gold-primary/15 rounded-lg transition-colors flex items-center justify-between group cursor-pointer"
+                        >
+                          <div>
+                            <span className="text-[10px] uppercase font-cinzel font-bold text-gold-warm tracking-wider block">
+                              {item.category}
+                            </span>
+                            <span className="text-sm sm:text-base font-sans text-white font-medium group-hover:text-gold-primary transition-colors">
+                              {item.title}
+                            </span>
+                          </div>
+                          <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-gold-primary/60 group-hover:text-gold-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                        </button>
+                      ))
+                    ) : (
+                      <div className="py-6 text-center text-sm text-ivory-sacred/50 font-sans">
+                        No matching destinations or journeys found for "{searchQuery}".
+                      </div>
+                    )}
+                  </div>
                 )}
               </div>
-
-              {searchQuery.trim() !== "" && (
-                <div className="mt-2 max-h-60 overflow-y-auto divide-y divide-white/10 rounded-lg bg-black/40 p-2">
-                  {filteredResults.length > 0 ? (
-                    filteredResults.map((item, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => handleSelectSearchResult(item.targetId)}
-                        className="w-full text-left p-2.5 text-sm text-white hover:text-gold-primary flex justify-between items-center"
-                      >
-                        <span>{item.title}</span>
-                        <span className="text-[10px] text-gold-warm uppercase">{item.category}</span>
-                      </button>
-                    ))
-                  ) : (
-                    <div className="p-3 text-center text-xs text-white/50">No results found</div>
-                  )}
-                </div>
-              )}
             </motion.div>
           )}
         </AnimatePresence>
