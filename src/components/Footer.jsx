@@ -261,7 +261,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gold-primary/15 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-ivory-sacred/70 font-sans font-medium">
           
-          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left flex-wrap">
             <p>© 2026 L’ESPRIT VOYAGES. All Rights Reserved.</p>
             <div className="hidden sm:block w-[1px] h-3.5 bg-gold-primary/30" />
             <div className="flex gap-4">
@@ -299,6 +299,24 @@ export default function Footer() {
             </button>
           </div>
 
+        </div>
+
+        {/* Developer Credit Bar */}
+        <div className="mt-6 pt-5 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs sm:text-[13px] text-ivory-sacred/60">
+          <p>
+            Website Designed &amp; Developed by{" "}
+            <a
+              href="https://saveen.lk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold-warm hover:text-gold-primary font-semibold underline decoration-gold-primary/50 underline-offset-4 transition-colors"
+            >
+              Saveen.lk
+            </a>
+          </p>
+          <span className="font-sans text-xs text-ivory-sacred/45">
+            Bespoke Luxury Digital Experience
+          </span>
         </div>
 
       </div>
