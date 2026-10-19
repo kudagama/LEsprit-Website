@@ -19,13 +19,13 @@ export default function SustainabilityPanel() {
           <div className="relative z-10 grid lg:grid-cols-12 gap-12 p-8 sm:p-16 items-center">
             {/* Left Narrative */}
             <div className="lg:col-span-7">
-              <span className="font-cinzel text-xs text-gold-warm tracking-widest uppercase block mb-2">
+              <span className="font-cinzel text-sm sm:text-[15px] font-bold text-gold-warm tracking-[0.2em] uppercase block mb-2">
                 Ethical Luxury
               </span>
               <h2 className="font-serif text-3xl sm:text-5xl text-white mb-6 leading-tight">
                 Travel that Leaves a <span className="gold-gradient-text">Lasting Heritage</span>
               </h2>
-              <p className="font-sans text-emerald-100/80 text-sm sm:text-base leading-relaxed mb-10">
+              <p className="font-sans text-emerald-100/90 text-base sm:text-lg leading-relaxed mb-10">
                 At L’Esprit Voyages, true luxury safeguards the natural beauty and local communities that make our destinations extraordinary. We integrate sustainable practices directly into every itinerary.
               </p>
 
@@ -35,7 +35,7 @@ export default function SustainabilityPanel() {
                   <span className="font-bold text-4xl lg:text-5xl text-[#D4AF37] block">
                     100%
                   </span>
-                  <span className="font-sans text-xs text-emerald-200">
+                  <span className="font-sans text-xs sm:text-sm text-emerald-200/90 font-medium">
                     Single-Use Plastic Free Vehicles
                   </span>
                 </div>
@@ -43,7 +43,7 @@ export default function SustainabilityPanel() {
                   <span className="font-bold text-4xl lg:text-5xl text-[#D4AF37] block">
                     25+
                   </span>
-                  <span className="font-sans text-xs text-emerald-200">
+                  <span className="font-sans text-xs sm:text-sm text-emerald-200/90 font-medium">
                     Local Schools Renovated
                   </span>
                 </div>
@@ -51,7 +51,7 @@ export default function SustainabilityPanel() {
                   <span className="font-bold text-4xl lg:text-5xl text-[#D4AF37] block">
                     150+
                   </span>
-                  <span className="font-sans text-xs text-emerald-200">
+                  <span className="font-sans text-xs sm:text-sm text-emerald-200/90 font-medium">
                     Artisans Directly Supported
                   </span>
                 </div>
@@ -89,12 +89,12 @@ export default function SustainabilityPanel() {
                     whileHover={{ x: 6 }}
                     className="p-4 bg-white/5 border border-gold-border/30 backdrop-blur-md rounded-lg flex gap-4 items-start hover:bg-gold-primary/10 hover:border-gold-primary transition-all"
                   >
-                    <div className="p-2 bg-gold-primary/20 rounded text-gold-primary shrink-0">
+                    <div className="p-2.5 bg-gold-primary/20 rounded text-gold-primary shrink-0">
                       <IconComp className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-serif text-base text-gold-warm mb-1">{item.title}</h4>
-                      <p className="font-sans text-[0.7rem] text-emerald-100/70 leading-relaxed">{item.desc}</p>
+                      <h4 className="font-serif text-base sm:text-lg text-gold-warm mb-1 font-medium">{item.title}</h4>
+                      <p className="font-sans text-xs sm:text-sm text-emerald-100/80 leading-relaxed">{item.desc}</p>
                     </div>
                   </motion.div>
                 );

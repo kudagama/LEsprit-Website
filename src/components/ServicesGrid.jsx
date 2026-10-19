@@ -146,24 +146,24 @@ export default function ServicesGrid() {
                       </div>
 
                       {/* Small Category Tag */}
-                      <span className="absolute top-4 left-4 px-2.5 py-0.5 bg-white/95 backdrop-blur-sm border border-gold-primary/30 text-gold-dark text-[9px] font-cinzel font-bold tracking-widest uppercase rounded shadow-sm">
+                      <span className="absolute top-4 left-4 px-3 py-1 bg-white/95 backdrop-blur-sm border border-gold-primary/30 text-gold-dark text-xs font-cinzel font-bold tracking-wider uppercase rounded shadow-sm">
                         {svc.category}
                       </span>
                     </div>
 
                     {/* Content Section */}
                     <div className="p-6 sm:p-8 space-y-4">
-                      <h3 className="font-serif text-xl text-indigo-dark font-bold group-hover:text-gold-dark transition-colors">
+                      <h3 className="font-serif text-xl sm:text-2xl text-indigo-dark font-bold group-hover:text-gold-dark transition-colors">
                         {svc.title}
                       </h3>
-                      <p className="font-sans text-xs text-charcoal/80 leading-relaxed">
+                      <p className="font-sans text-sm sm:text-base text-charcoal/85 leading-relaxed font-normal">
                         {svc.desc}
                       </p>
 
                       <ul className="pt-4 border-t border-gold-primary/20 space-y-2.5">
                         {svc.features.map((feat) => (
-                          <li key={feat} className="flex items-start gap-2.5 font-sans text-[11px] font-medium text-charcoal/90 leading-relaxed">
-                            <Check className="w-3.5 h-3.5 text-emerald-dark shrink-0 font-bold mt-0.5" />
+                          <li key={feat} className="flex items-start gap-2.5 font-sans text-xs sm:text-sm font-medium text-charcoal/90 leading-relaxed">
+                            <Check className="w-4 h-4 text-emerald-dark shrink-0 font-bold mt-0.5" />
                             <span>{feat}</span>
                           </li>
                         ))}
@@ -175,7 +175,7 @@ export default function ServicesGrid() {
                   <div className="p-6 sm:p-8 pt-0 mt-4">
                     <Link
                       href={`/services/${svc.slug}`}
-                      className="inline-flex items-center gap-2 font-cinzel text-xs font-bold text-indigo-dark hover:text-gold-dark tracking-wider uppercase transition-colors"
+                      className="inline-flex items-center gap-2 font-cinzel text-xs sm:text-sm font-bold text-indigo-dark hover:text-gold-dark tracking-wider uppercase transition-colors"
                     >
                       <span>Explore Extra Details</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-gold-dark" />

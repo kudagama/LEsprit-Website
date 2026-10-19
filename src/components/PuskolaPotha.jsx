@@ -88,7 +88,7 @@ export default function PuskolaPotha() {
       <div className="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="font-cinzel text-xs font-bold tracking-widest text-indigo-dark uppercase block mb-2">
+          <span className="font-cinzel text-sm sm:text-[15px] font-bold tracking-[0.2em] text-indigo-dark uppercase block mb-2">
             The Philosophy of L’Esprit — The Spirit of Travel
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-indigo-dark mb-4">
@@ -108,16 +108,16 @@ export default function PuskolaPotha() {
             {/* Left Content Column (Text & Callout Stacked) */}
             <div className="md:col-span-7 flex flex-col gap-8">
               <div>
-                <span className="font-cinzel text-xs font-bold text-indigo-dark tracking-widest uppercase block mb-2">
+                <span className="font-cinzel text-sm sm:text-[15px] font-bold text-indigo-dark tracking-[0.18em] uppercase block mb-2">
                   L’Esprit — The Spirit of Journeys Narrative
                 </span>
-                <h3 className="font-serif text-2xl sm:text-3xl text-indigo-dark mb-4">
+                <h3 className="font-serif text-2xl sm:text-3xl text-indigo-dark mb-4 font-bold">
                   Redefining Authentic 5-Star Luxury
                 </h3>
-                <p className="font-sans text-charcoal text-base font-normal leading-relaxed mb-4">
+                <p className="font-sans text-charcoal text-base sm:text-lg font-normal leading-relaxed mb-4">
                   In French, <strong>L’ESPRIT VOYAGES</strong> translates to <em>"The Spirit of Journeys."</em> Rooted in delivering refined, personalized destination experiences, our concept is built upon two decades of passion. We believe luxury travel is not merely visiting a location—it is about communing with the soul, living history, and fine craftsmanship of the land.
                 </p>
-                <p className="font-sans text-charcoal text-base font-normal leading-relaxed">
+                <p className="font-sans text-charcoal text-base sm:text-lg font-normal leading-relaxed">
                   From mist-shrouded emerald tea plantations in the Central Highlands to pristine, untouched Maldivian coral atolls, every itinerary is hand-stitched for those who seek rare, authentic elegance.
                 </p>
               </div>
@@ -126,17 +126,17 @@ export default function PuskolaPotha() {
               <div className="bg-gradient-to-br from-emerald-dark to-emerald-medium text-white p-6 sm:p-8 rounded-lg border border-gold-border relative overflow-hidden shadow-xl">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gold-primary/10 rounded-full blur-2xl pointer-events-none" />
                 <Heart className="w-8 h-8 text-gold-primary mb-4" />
-                <h4 className="font-serif text-xl text-gold-primary font-bold mb-3">
+                <h4 className="font-serif text-xl sm:text-2xl text-gold-primary font-bold mb-3">
                   The Human Heart & Spirit
                 </h4>
-                <p className="font-sans text-xs text-white leading-relaxed mb-6 font-normal">
+                <p className="font-sans text-sm sm:text-base text-white/95 leading-relaxed mb-6 font-normal">
                   Backed by <strong>20+ years of destination expertise</strong>, our true strength is supported by a strong handpicked network of local experts, artisans, experienced guides, and dedicated chauffeur guides who form the human heart of every journey.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="font-cinzel text-[0.75rem] font-bold px-3 py-1 bg-gold-primary/20 border border-gold-primary text-gold-warm rounded-full">
+                <div className="flex flex-wrap gap-2.5">
+                  <span className="font-cinzel text-xs sm:text-sm font-bold px-3.5 py-1.5 bg-gold-primary/20 border border-gold-primary text-gold-warm rounded-full">
                     20+ Years Excellence
                   </span>
-                  <span className="font-cinzel text-[0.75rem] font-bold px-3 py-1 bg-gold-primary/20 border border-gold-primary text-gold-warm rounded-full">
+                  <span className="font-cinzel text-xs sm:text-sm font-bold px-3.5 py-1.5 bg-gold-primary/20 border border-gold-primary text-gold-warm rounded-full">
                     Chauffeur Guides
                   </span>
                 </div>
@@ -170,7 +170,7 @@ export default function PuskolaPotha() {
           {/* 5 Pillars Matrix */}
           <div className="pt-20 border-t border-gold-primary/30 mt-16">
             <div className="text-center mb-16">
-              <span className="font-cinzel text-sm text-gold-dark font-bold tracking-[0.2em] uppercase mb-3 block">
+              <span className="font-cinzel text-sm sm:text-base text-[#A87D46] font-bold tracking-[0.2em] uppercase mb-3 block">
                 The Foundations of Every Bespoke Voyage
               </span>
               <h3 className="font-serif text-4xl sm:text-5xl text-indigo-dark font-bold">
@@ -208,24 +208,24 @@ export default function PuskolaPotha() {
                       </div>
                       
                       <div className="mt-auto">
-                        <div className="font-cinzel text-[10px] xl:text-xs text-gold-primary font-bold mb-3 uppercase tracking-wider xl:tracking-[0.1em] opacity-90 group-hover:opacity-100 transition-opacity drop-shadow-md">
+                        <div className="font-cinzel text-xs xl:text-sm text-gold-primary font-bold mb-3 uppercase tracking-wider xl:tracking-[0.1em] opacity-90 group-hover:opacity-100 transition-opacity drop-shadow-md">
                           {p.subtitle}
                         </div>
                         
-                        <h4 className="font-serif text-xl xl:text-2xl text-white font-bold mb-4 group-hover:-translate-y-1 transition-transform duration-500 break-words drop-shadow-lg">
+                        <h4 className="font-serif text-2xl xl:text-3xl text-white font-bold mb-4 group-hover:-translate-y-1 transition-transform duration-500 break-words drop-shadow-lg">
                           {p.title}
                         </h4>
                         
                         <div className="hidden lg:grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]">
                           <div className="overflow-hidden">
-                            <p className="font-sans text-sm text-white/90 leading-relaxed pt-2 pb-1 drop-shadow-md">
+                            <p className="font-sans text-sm sm:text-base text-white/95 leading-relaxed pt-2 pb-1 drop-shadow-md">
                               {p.desc}
                             </p>
                           </div>
                         </div>
                         {/* Mobile Description Fallback (always visible on small screens) */}
                         <div className="lg:hidden">
-                          <p className="font-sans text-sm text-white/90 leading-relaxed pt-2 pb-1 drop-shadow-md">
+                          <p className="font-sans text-sm sm:text-base text-white/95 leading-relaxed pt-2 pb-1 drop-shadow-md">
                             {p.desc}
                           </p>
                         </div>

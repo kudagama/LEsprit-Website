@@ -96,7 +96,7 @@ export default function TourPackages({ region = "sri-lanka" }) {
         
         {/* Header */}
         <div className="text-center mb-16 relative z-10">
-          <span className="font-cinzel text-xs font-bold tracking-widest text-[#A87D46] uppercase block mb-2">
+          <span className="font-cinzel text-sm sm:text-[15px] font-bold tracking-[0.2em] text-[#A87D46] uppercase block mb-2">
             Curated Journeys
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-indigo-dark mb-4">
@@ -107,7 +107,7 @@ export default function TourPackages({ region = "sri-lanka" }) {
             <div className="w-1.5 h-1.5 bg-gold-dark rotate-45" />
             <span className="w-16 h-[1px] bg-gradient-to-l from-transparent to-gold-dark" />
           </div>
-          <p className="font-sans text-charcoal text-sm sm:text-base font-normal max-w-xl mx-auto">
+          <p className="font-sans text-charcoal text-base sm:text-lg font-normal max-w-2xl mx-auto">
             Immerse yourself in our signature itineraries, handcrafted to reveal the authentic soul and spirit of {region === "sri-lanka" ? "Sri Lanka" : "the Maldives"}.
           </p>
         </div>
@@ -116,13 +116,13 @@ export default function TourPackages({ region = "sri-lanka" }) {
         {region === "maldives" ? (
           <div className="flex flex-col items-center justify-center py-24 px-8 text-center bg-white border border-gold-border/30 rounded-2xl shadow-floating mx-auto max-w-3xl relative z-10 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent pointer-events-none" />
-            <span className="font-cinzel text-xs font-bold text-gold-primary tracking-widest uppercase block mb-4 relative z-10">
+            <span className="font-cinzel text-sm font-bold text-gold-primary tracking-widest uppercase block mb-4 relative z-10">
               Anticipate Perfection
             </span>
             <h3 className="font-serif text-3xl sm:text-5xl text-indigo-dark mb-6 relative z-10">
               Coming Soon
             </h3>
-            <p className="font-sans text-charcoal text-sm sm:text-base max-w-lg mx-auto relative z-10 leading-relaxed">
+            <p className="font-sans text-charcoal text-base sm:text-lg max-w-lg mx-auto relative z-10 leading-relaxed">
               We are currently handcrafting our exclusive Maldives itineraries. Stay tuned for a collection of unparalleled overwater sanctuaries and pristine ocean experiences.
             </p>
           </div>
@@ -148,12 +148,12 @@ export default function TourPackages({ region = "sri-lanka" }) {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   
                   {/* Badge */}
-                  <span className="absolute top-4 left-4 px-3 py-1 bg-[#071526] border border-gold-primary text-gold-warm text-[10px] font-cinzel font-bold tracking-widest uppercase rounded">
+                  <span className="absolute top-4 left-4 px-3.5 py-1.5 bg-[#071526] border border-gold-primary text-gold-warm text-xs sm:text-[13px] font-cinzel font-bold tracking-widest uppercase rounded">
                     {pkg.tag}
                   </span>
 
                   {/* Duration Badge */}
-                  <span className="absolute bottom-5 left-5 font-cinzel text-sm font-bold text-white flex items-center gap-2 drop-shadow-md">
+                  <span className="absolute bottom-5 left-5 font-cinzel text-sm sm:text-base font-bold text-white flex items-center gap-2 drop-shadow-md">
                     <Calendar className="w-4 h-4 text-gold-primary" />
                     {pkg.duration}
                   </span>
@@ -162,7 +162,7 @@ export default function TourPackages({ region = "sri-lanka" }) {
                 {/* Content Section */}
                 <div className="p-6 sm:p-8 space-y-6">
                   <div>
-                    <span className="font-cinzel text-[10px] tracking-widest text-[#A87D46] font-bold uppercase block mb-1.5">
+                    <span className="font-cinzel text-xs sm:text-sm tracking-widest text-[#A87D46] font-bold uppercase block mb-1.5">
                       {pkg.subtitle}
                     </span>
                     <h3 className="font-serif text-2xl sm:text-3xl text-indigo-dark font-bold leading-tight group-hover:text-[#A87D46] transition-colors">
@@ -170,16 +170,16 @@ export default function TourPackages({ region = "sri-lanka" }) {
                     </h3>
                   </div>
 
-                  <div className="flex items-start gap-2 text-charcoal/80 text-sm font-sans font-medium leading-snug">
-                    <MapPin className="w-4 h-4 text-gold-primary shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-2 text-charcoal/85 text-sm sm:text-base font-sans font-medium leading-snug">
+                    <MapPin className="w-4 h-4 text-gold-primary shrink-0 mt-1" />
                     <span>{pkg.location}</span>
                   </div>
 
                   {/* Highlights list */}
                   <ul className="space-y-3 pt-6 border-t border-gold-primary/25">
                     {pkg.highlights.map((highlight) => (
-                      <li key={highlight} className="flex items-start gap-3 text-sm text-charcoal/90 font-sans font-medium leading-relaxed">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-dark shrink-0 mt-0.5" />
+                      <li key={highlight} className="flex items-start gap-3 text-sm sm:text-base text-charcoal/90 font-sans font-medium leading-relaxed">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-dark shrink-0 mt-1" />
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -191,7 +191,7 @@ export default function TourPackages({ region = "sri-lanka" }) {
               <div className="p-6 sm:p-8 pt-0 mt-4">
                 <a
                   href="#contact"
-                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] to-[#C5A880] text-black font-cinzel text-xs font-bold uppercase tracking-widest rounded shadow-gold flex items-center justify-center gap-2 hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
+                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] to-[#C5A880] text-black font-cinzel text-sm sm:text-base font-bold uppercase tracking-wider rounded shadow-gold flex items-center justify-center gap-2 hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Request This Itinerary</span>
@@ -223,7 +223,7 @@ export default function TourPackages({ region = "sri-lanka" }) {
                 <ShieldCheck className="text-gold-primary w-8 h-8 stroke-[1.5]" />
                 Accommodation Tiers
               </h4>
-              <p className="text-white/50 text-sm mb-8 font-sans font-light leading-relaxed">
+              <p className="text-white/60 text-base sm:text-lg mb-8 font-sans font-light leading-relaxed">
                 Tailor your sanctuary. We partner exclusively with properties that meet our rigorous standards for service, design, and authenticity.
               </p>
               
@@ -238,10 +238,10 @@ export default function TourPackages({ region = "sri-lanka" }) {
                       <tier.icon className="w-5 h-5 text-gold-primary" />
                     </div>
                     <div>
-                      <span className="font-cinzel text-sm font-bold tracking-widest text-gold-primary uppercase block mb-1">
+                      <span className="font-cinzel text-sm sm:text-base font-bold tracking-widest text-gold-primary uppercase block mb-1">
                         {tier.level}
                       </span>
-                      <span className="font-sans text-sm text-white/80 font-light block leading-relaxed group-hover:text-white transition-colors">
+                      <span className="font-sans text-sm sm:text-base text-white/80 font-light block leading-relaxed group-hover:text-white transition-colors">
                         {tier.desc}
                       </span>
                     </div>
@@ -256,7 +256,7 @@ export default function TourPackages({ region = "sri-lanka" }) {
                 <Sparkles className="text-gold-primary w-8 h-8 stroke-[1.5]" />
                 Signature Inclusions
               </h4>
-              <p className="text-white/50 text-sm mb-8 font-sans font-light leading-relaxed">
+              <p className="text-white/60 text-base sm:text-lg mb-8 font-sans font-light leading-relaxed">
                 Every itinerary is underpinned by seamless logistics and uncompromising attention to detail.
               </p>
               
@@ -272,10 +272,10 @@ export default function TourPackages({ region = "sri-lanka" }) {
                       <service.icon className="text-gold-primary w-5 h-5" />
                     </div>
                     <div>
-                      <span className="font-serif text-lg text-white font-medium tracking-wide block mb-1">
+                      <span className="font-serif text-lg sm:text-xl text-white font-medium tracking-wide block mb-1">
                         {service.label}
                       </span>
-                      <span className="font-sans text-xs text-white/50 group-hover:text-white/80 transition-colors">
+                      <span className="font-sans text-xs sm:text-sm text-white/60 group-hover:text-white/80 transition-colors">
                         {service.desc}
                       </span>
                     </div>

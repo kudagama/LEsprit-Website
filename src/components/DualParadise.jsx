@@ -24,13 +24,13 @@ export default function DualParadise() {
   return (
     <section id="destinations" className="pt-12 pb-0 bg-indigo-deep text-white relative">
       <div className="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20 text-center mb-12">
-        <span className="font-decorative text-xs tracking-widest text-gold-warm uppercase block mb-2">
+        <span className="font-decorative text-sm sm:text-[15px] font-bold tracking-[0.2em] text-gold-warm uppercase block mb-2">
           Two Kingdoms of Wonder
         </span>
         <h2 className="font-serif text-3xl sm:text-5xl text-white mb-4">
           Dual Paradise <span className="gold-gradient-text">Interactive Showcase</span>
         </h2>
-        <p className="font-sans text-ivory-sacred/70 max-w-2xl 2xl:max-w-3xl mx-auto font-light text-sm sm:text-base">
+        <p className="font-sans text-ivory-sacred/80 max-w-2xl 2xl:max-w-3xl mx-auto font-light text-base sm:text-lg leading-relaxed">
           Hover across our dual canvas to explore Sri Lanka’s ancient emerald valleys or the Maldives’ turquoise lagoons. Click any region to view comprehensive itineraries & extra details.
         </p>
       </div>
@@ -61,16 +61,16 @@ export default function DualParadise() {
 
           {/* Panel Content */}
           <div className="relative z-10 max-w-xl">
-            <span className="font-cinzel text-xs text-gold-warm tracking-widest uppercase block mb-1">
+            <span className="font-cinzel text-sm sm:text-[15px] font-bold text-gold-warm tracking-[0.18em] uppercase block mb-1">
               Island of Culture & Diversity
             </span>
-            <h3 className="font-serif text-3xl sm:text-5xl text-white mb-2">Sri Lanka</h3>
-            <p className="font-sans italic text-ivory-sacred/80 text-sm mb-6">
+            <h3 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-white mb-2">Sri Lanka</h3>
+            <p className="font-sans italic text-ivory-sacred/90 text-base sm:text-lg mb-6">
               "A Land of Timeless Cultural Heritage & Extraordinary Diversity"
             </p>
 
             {/* Highlights */}
-            <div className="flex flex-col gap-3 mb-8">
+            <div className="flex flex-col gap-3.5 mb-8">
               {[
                 "UNESCO Heritage (Sigiriya, Kandy, Anuradhapura)",
                 "Wildlife Safaris (Yala & Wilpattu Leopards)",
@@ -79,9 +79,9 @@ export default function DualParadise() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-2.5 text-xs sm:text-sm text-white/90 font-sans font-medium drop-shadow"
+                  className="flex items-center gap-2.5 text-sm sm:text-base text-white/95 font-sans font-medium drop-shadow"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold-primary shadow-[0_0_8px_#D4AF37]" />
+                  <span className="w-2 h-2 rounded-full bg-gold-primary shadow-[0_0_8px_#D4AF37]" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -92,7 +92,7 @@ export default function DualParadise() {
                 e.stopPropagation();
                 handleRegionClick("sri-lanka");
               }}
-              className="px-6 py-3 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-wider rounded inline-flex items-center gap-2 hover:shadow-gold transition-all"
+              className="px-6 py-3.5 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-sm sm:text-base font-bold uppercase tracking-wider rounded inline-flex items-center gap-2 hover:shadow-gold transition-all"
             >
               <span>View Sri Lanka Packages</span>
               <ChevronDown className="w-4 h-4" />
@@ -139,16 +139,16 @@ export default function DualParadise() {
 
           {/* Panel Content */}
           <div className="relative z-10 max-w-xl">
-            <span className="font-cinzel text-xs text-gold-warm tracking-widest uppercase block mb-1">
+            <span className="font-cinzel text-sm sm:text-[15px] font-bold text-gold-warm tracking-[0.18em] uppercase block mb-1">
               Secluded Ocean Sanctuary
             </span>
-            <h3 className="font-serif text-3xl sm:text-5xl text-white mb-2">Maldives</h3>
-            <p className="font-sans italic text-ivory-sacred/80 text-sm mb-6">
+            <h3 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-white mb-2">Maldives</h3>
+            <p className="font-sans italic text-ivory-sacred/90 text-base sm:text-lg mb-6">
               "The Tropical Paradise of the Maldives"
             </p>
 
             {/* Highlights */}
-            <div className="flex flex-col gap-3 mb-8">
+            <div className="flex flex-col gap-3.5 mb-8">
               {[
                 "1,000+ Idyllic Islands & 26 Natural Atolls",
                 "Manta Ray & Whale Shark Expeditions",
@@ -157,9 +157,9 @@ export default function DualParadise() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-2.5 text-xs sm:text-sm text-white/90 font-sans font-medium drop-shadow"
+                  className="flex items-center gap-2.5 text-sm sm:text-base text-white/95 font-sans font-medium drop-shadow"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold-primary shadow-[0_0_8px_#D4AF37]" />
+                  <span className="w-2 h-2 rounded-full bg-gold-primary shadow-[0_0_8px_#D4AF37]" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -170,7 +170,7 @@ export default function DualParadise() {
                 e.stopPropagation();
                 handleRegionClick("maldives");
               }}
-              className="px-6 py-3 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-wider rounded inline-flex items-center gap-2 hover:shadow-gold transition-all"
+              className="px-6 py-3.5 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-sm sm:text-base font-bold uppercase tracking-wider rounded inline-flex items-center gap-2 hover:shadow-gold transition-all"
             >
               <span>View Maldives Packages</span>
               <ChevronDown className="w-4 h-4" />

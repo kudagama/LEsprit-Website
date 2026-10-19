@@ -101,7 +101,7 @@ export default function Hero() {
         </h1>
 
         {/* Subtitle */}
-        <p className="font-sans text-sm sm:text-base lg:text-lg text-ivory-sacred/90 max-w-2xl sm:max-w-3xl 2xl:max-w-4xl mx-auto mb-10 font-light leading-relaxed tracking-wide drop-shadow-md">
+        <p className="font-sans text-base sm:text-lg lg:text-xl text-ivory-sacred/95 max-w-2xl sm:max-w-3xl 2xl:max-w-4xl mx-auto mb-10 font-light leading-relaxed tracking-wide drop-shadow-md">
           Crafting bespoke luxury journeys across Sri Lanka and the Maldives, defined by elegance, culture, and authentic connections.
         </p>
 
@@ -109,7 +109,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row justify-center items-center gap-5 mb-16">
           <a
             href="#destinations"
-            className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-widest rounded shadow-gold flex items-center justify-center gap-3 hover:scale-105 transition-transform"
+            className="w-full sm:w-auto px-9 py-4 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-sm sm:text-base font-bold uppercase tracking-wider rounded shadow-gold flex items-center justify-center gap-3 hover:scale-105 transition-transform"
           >
             <span>Discover Sri Lanka</span>
             <ArrowRight className="w-4 h-4" />
@@ -117,7 +117,7 @@ export default function Hero() {
 
           <a
             href="#destinations"
-            className="w-full sm:w-auto px-8 py-4 bg-indigo-deep/50 border border-gold-primary/40 hover:border-gold-primary text-white font-cinzel text-xs font-bold uppercase tracking-widest rounded backdrop-blur-md hover:bg-gold-primary/10 flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 hover:tracking-[0.2em] shadow-lg hover:shadow-[0_0_15px_rgba(212,175,55,0.15)]"
+            className="w-full sm:w-auto px-9 py-4 bg-indigo-deep/50 border border-gold-primary/40 hover:border-gold-primary text-white font-cinzel text-sm sm:text-base font-bold uppercase tracking-wider rounded backdrop-blur-md hover:bg-gold-primary/10 flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 hover:tracking-[0.2em] shadow-lg hover:shadow-[0_0_15px_rgba(212,175,55,0.15)]"
           >
             <span>Explore Maldives</span>
             <ArrowRight className="w-4 h-4" />
@@ -125,7 +125,7 @@ export default function Hero() {
         </div>
 
         {/* Scroll Indicator */}
-        <a href="#concept" className="inline-flex flex-col items-center gap-2 text-gold-warm text-xs font-cinzel tracking-widest uppercase opacity-75 hover:opacity-100 transition-opacity">
+        <a href="#concept" className="inline-flex flex-col items-center gap-2 text-gold-warm text-xs sm:text-sm font-cinzel tracking-widest uppercase opacity-80 hover:opacity-100 transition-opacity">
           <span>Unfold The Spirit Of Journey</span>
           <ChevronDown className="w-4 h-4" />
         </a>
@@ -139,8 +139,8 @@ export default function Hero() {
             onClick={() => setCurrentSlide(idx)}
             className="flex flex-col items-center gap-1.5 group focus:outline-none"
           >
-            <span className={`font-cinzel text-[9px] tracking-widest transition-colors uppercase whitespace-nowrap hidden sm:inline ${
-              idx === currentSlide ? "text-gold-primary font-bold" : "text-ivory-sacred/40 group-hover:text-ivory-sacred/80"
+            <span className={`font-cinzel text-xs tracking-wider transition-colors uppercase whitespace-nowrap hidden sm:inline ${
+              idx === currentSlide ? "text-gold-primary font-bold" : "text-ivory-sacred/50 group-hover:text-ivory-sacred/80"
             }`}>
               {video.label}
             </span>

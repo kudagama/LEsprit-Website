@@ -43,30 +43,30 @@ export default function Footer() {
         {/* Newsletter Signup Row */}
         <div className="border-b border-gold-primary/15 pb-14 mb-16 grid lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-2">
-            <span className="font-cinzel text-xs font-bold tracking-[0.2em] text-gold-primary uppercase block">
+            <span className="font-cinzel text-sm sm:text-[15px] font-bold tracking-[0.2em] text-gold-primary uppercase block">
               L’Esprit Dispatch
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl text-white font-medium">
               Subscribe to L’Esprit Journal
             </h3>
-            <p className="font-sans text-xs text-ivory-sacred/60 max-w-xl font-normal leading-relaxed">
+            <p className="font-sans text-sm sm:text-base text-ivory-sacred/75 max-w-xl font-normal leading-relaxed">
               Receive private travel briefs, exclusive luxury charter opportunities, and curated cultural stories straight from the Indian Ocean.
             </p>
           </div>
           <div className="lg:col-span-5 w-full">
-            <form onSubmit={handleSubscribe} className="relative flex items-center border-b border-gold-primary/30 py-2 group focus-within:border-gold-primary transition-colors">
+            <form onSubmit={handleSubscribe} className="relative flex items-center border-b border-gold-primary/30 py-2.5 group focus-within:border-gold-primary transition-colors">
               <input
                 type="email"
                 required
                 placeholder="Enter your private email address"
-                className="w-full bg-transparent text-sm text-white placeholder-ivory-sacred/30 focus:outline-none pr-12 font-sans font-light"
+                className="w-full bg-transparent text-base text-white placeholder-ivory-sacred/40 focus:outline-none pr-12 font-sans font-normal"
               />
               <button
                 type="submit"
                 className="absolute right-0 text-gold-primary hover:text-white p-1.5 transition-colors cursor-pointer"
                 aria-label="Subscribe"
               >
-                <Send className="w-4.5 h-4.5" />
+                <Send className="w-5 h-5" />
               </button>
             </form>
           </div>
@@ -78,14 +78,14 @@ export default function Footer() {
           {/* Brand Info (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
             <div className="space-y-3">
-              <span className="font-serif text-2xl font-bold tracking-[0.15em] text-gold-primary block">
+              <span className="font-serif text-2xl sm:text-3xl font-bold tracking-[0.15em] text-gold-primary block">
                  L’ESPRIT VOYAGES
               </span>
-              <p className="font-sans text-xs italic text-gold-warm font-light leading-relaxed">
+              <p className="font-sans text-sm sm:text-base italic text-gold-warm font-light leading-relaxed">
                 "Experience the Soul, Spirit, and Authenticity of Every Journey."
               </p>
             </div>
-            <p className="font-sans text-xs text-ivory-sacred/60 leading-relaxed font-normal">
+            <p className="font-sans text-sm sm:text-[15px] text-ivory-sacred/75 leading-relaxed font-normal">
               Stitching bespoke luxury voyages across Sri Lanka and the Maldives for over two decades. We design authentic escapes defined by absolute privacy, cultural immersion, and seamless logistics.
             </p>
             
@@ -95,27 +95,27 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-gold-border/20 flex items-center justify-center text-gold-warm hover:bg-gold-primary hover:text-[#071526] hover:border-gold-primary transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-white/5 border border-gold-border/20 flex items-center justify-center text-gold-warm hover:bg-gold-primary hover:text-[#071526] hover:border-gold-primary transition-all duration-300"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-4.5 h-4.5" />
               </a>
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-gold-border/20 flex items-center justify-center text-gold-warm hover:bg-gold-primary hover:text-[#071526] hover:border-gold-primary transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-white/5 border border-gold-border/20 flex items-center justify-center text-gold-warm hover:bg-gold-primary hover:text-[#071526] hover:border-gold-primary transition-all duration-300"
               >
-                <Facebook className="w-4 h-4" />
+                <Facebook className="w-4.5 h-4.5" />
               </a>
             </div>
           </div>
 
           {/* Column 2: Journeys (2 cols) */}
           <div className="lg:col-span-2 lg:pl-6">
-            <h4 className="font-cinzel text-xs text-gold-primary uppercase tracking-[0.15em] mb-5 font-bold">
+            <h4 className="font-cinzel text-sm sm:text-[15px] text-gold-primary uppercase tracking-[0.18em] mb-5 font-bold">
               Bespoke Escapes
             </h4>
-            <ul className="space-y-3 text-xs font-sans font-medium text-gray-400">
+            <ul className="space-y-3.5 text-sm sm:text-[15px] font-sans font-medium text-gray-300">
               <li className="flex items-center group">
                 <span className="text-gold-primary/0 group-hover:text-gold-primary group-hover:mr-2.5 transition-all duration-300 select-none">•</span>
                 <a href="#destinations" className="group-hover:text-gold-primary group-hover:translate-x-1 transition-all duration-300">Sri Lanka Expeditions</a>
@@ -141,10 +141,10 @@ export default function Footer() {
 
           {/* Column 3: Heritage (3 cols) */}
           <div className="lg:col-span-3 lg:pl-4">
-            <h4 className="font-cinzel text-xs text-gold-primary uppercase tracking-[0.15em] mb-5 font-bold">
+            <h4 className="font-cinzel text-sm sm:text-[15px] text-gold-primary uppercase tracking-[0.18em] mb-5 font-bold">
               Heritage & Impact
             </h4>
-            <ul className="space-y-3 text-xs font-sans font-medium text-gray-400">
+            <ul className="space-y-3.5 text-sm sm:text-[15px] font-sans font-medium text-gray-300">
               <li className="flex items-center group">
                 <span className="text-gold-primary/0 group-hover:text-gold-primary group-hover:mr-2.5 transition-all duration-300 select-none">•</span>
                 <a href="#concept" className="group-hover:text-gold-primary group-hover:translate-x-1 transition-all duration-300">Our Philosophy</a>
@@ -186,24 +186,24 @@ export default function Footer() {
 
           {/* Column 4: Private Concierge (3 cols) */}
           <div className="lg:col-span-3 space-y-5">
-            <h4 className="font-cinzel text-xs text-gold-primary uppercase tracking-[0.15em] mb-5 font-bold">
+            <h4 className="font-cinzel text-sm sm:text-[15px] text-gold-primary uppercase tracking-[0.18em] mb-5 font-bold">
               Atelier Concierge
             </h4>
-            <div className="space-y-3.5 text-xs font-sans font-normal text-ivory-sacred/70">
+            <div className="space-y-4 text-sm sm:text-[15px] font-sans font-normal text-ivory-sacred/80">
               <div className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-gold-primary shrink-0 mt-0.5" />
+                <Mail className="w-4.5 h-4.5 text-gold-primary shrink-0 mt-0.5" />
                 <a href="mailto:info1@lespritlanka.com" className="hover:text-gold-primary transition-colors">
                   info1@lespritlanka.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-gold-primary shrink-0 mt-0.5" />
+                <Mail className="w-4.5 h-4.5 text-gold-primary shrink-0 mt-0.5" />
                 <a href="mailto:reservations@lespritlanka.com" className="hover:text-gold-primary transition-colors">
                   reservations@lespritlanka.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-gold-primary shrink-0 mt-0.5" />
+                <Phone className="w-4.5 h-4.5 text-gold-primary shrink-0 mt-0.5" />
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-1.5 flex-wrap">
                     <a href="tel:+94707328070" className="hover:text-gold-primary transition-colors">
@@ -214,18 +214,18 @@ export default function Footer() {
                       +94 71 754 6885
                     </a>
                   </div>
-                  <span className="text-[11px] text-gold-primary/90 font-medium tracking-wide">
+                  <span className="text-xs sm:text-sm text-gold-primary/95 font-medium tracking-wide">
                     Thushari — Atelier Concierge
                   </span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-gold-primary shrink-0 mt-0.5" />
+                <MapPin className="w-4.5 h-4.5 text-gold-primary shrink-0 mt-0.5" />
                 <a 
                   href="https://maps.google.com/maps?q=86/10,+GONAMADITHTHA+ROAD,+KESBEWA,+PILIYANDALA" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="hover:text-gold-primary transition-colors"
+                  className="hover:text-gold-primary transition-colors leading-relaxed"
                 >
                   86/10, GONAMADITHTHA ROAD, KESBEWA, PILIYANDALA
                 </a>
@@ -259,7 +259,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gold-primary/15 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-ivory-sacred/55 font-sans font-medium">
+        <div className="pt-8 border-t border-gold-primary/15 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-ivory-sacred/70 font-sans font-medium">
           
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left">
             <p>© 2026 L’ESPRIT VOYAGES. All Rights Reserved.</p>
@@ -284,7 +284,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-primary/5 border border-gold-primary/20 rounded-full text-gold-warm text-[10px] sm:text-xs">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-primary/5 border border-gold-primary/20 rounded-full text-gold-warm text-xs sm:text-sm">
               <Award className="w-4 h-4 text-gold-primary shrink-0 animate-pulse" />
               <span>Official: <strong>STTDA Reg. No: SLTDA/SQA/TA/01954</strong></span>
             </div>

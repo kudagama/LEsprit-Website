@@ -53,10 +53,10 @@ export default function Header() {
               <a
                 key={item}
                 href={href}
-                className="font-cinzel text-xs uppercase tracking-widest text-ivory-sacred/90 hover:text-gold-primary transition-colors relative py-1 group"
+                className="font-cinzel text-sm lg:text-[15px] uppercase tracking-wider text-ivory-sacred/95 hover:text-gold-primary transition-colors relative py-1 group font-semibold"
               >
                 {item}
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gold-primary transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold-primary transition-all duration-300 group-hover:w-full" />
               </a>
             );
           })}
@@ -66,7 +66,7 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-4">
           <a
             href="#contact"
-            className="px-6 py-2.5 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs font-bold uppercase tracking-wider rounded hover:shadow-gold hover:-translate-y-0.5 transition-all"
+            className="px-7 py-3 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-sm font-bold uppercase tracking-wider rounded-md hover:shadow-gold hover:-translate-y-0.5 transition-all"
           >
             Plan Your Journey
           </a>
