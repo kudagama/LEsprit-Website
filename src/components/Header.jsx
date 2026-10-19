@@ -24,7 +24,7 @@ export default function Header() {
           : "bg-transparent py-7"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20 flex justify-between items-center">
         {/* Brand Logo */}
         <a 
           href="#" 

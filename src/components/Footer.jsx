@@ -38,7 +38,7 @@ export default function Footer() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-gold-primary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-dark/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20 relative z-10">
         
         {/* Newsletter Signup Row */}
         <div className="border-b border-gold-primary/15 pb-14 mb-16 grid lg:grid-cols-12 gap-8 items-center">

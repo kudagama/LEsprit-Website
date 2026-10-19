@@ -37,8 +37,8 @@ export default function JourneyBuilder() {
 
   return (
     <section id="contact" className="pt-12 pb-12 bg-paper-parchment relative">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="bg-white border border-gold-border rounded-2xl p-8 sm:p-14 shadow-glass relative">
+      <div className="w-full max-w-[1500px] 2xl:max-w-[1640px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20">
+        <div className="bg-white border border-gold-border rounded-2xl p-8 sm:p-14 2xl:p-16 shadow-glass relative">
           <div className="text-center mb-12">
             <span className="font-cinzel text-xs font-bold text-indigo-dark tracking-widest uppercase block mb-2">
               Bespoke Concierge

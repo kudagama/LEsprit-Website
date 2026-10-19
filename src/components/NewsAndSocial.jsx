@@ -62,7 +62,7 @@ export default function NewsAndSocial() {
           backgroundAttachment: "fixed" 
         }}
       />
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Latest News & Journal */}

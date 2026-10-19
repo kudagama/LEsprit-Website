@@ -23,14 +23,14 @@ export default function DualParadise() {
 
   return (
     <section id="destinations" className="pt-12 pb-0 bg-indigo-deep text-white relative">
-      <div className="max-w-7xl mx-auto px-6 text-center mb-12">
+      <div className="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20 text-center mb-12">
         <span className="font-decorative text-xs tracking-widest text-gold-warm uppercase block mb-2">
           Two Kingdoms of Wonder
         </span>
         <h2 className="font-serif text-3xl sm:text-5xl text-white mb-4">
           Dual Paradise <span className="gold-gradient-text">Interactive Showcase</span>
         </h2>
-        <p className="font-sans text-ivory-sacred/70 max-w-2xl mx-auto font-light text-sm sm:text-base">
+        <p className="font-sans text-ivory-sacred/70 max-w-2xl 2xl:max-w-3xl mx-auto font-light text-sm sm:text-base">
           Hover across our dual canvas to explore Sri Lanka’s ancient emerald valleys or the Maldives’ turquoise lagoons. Click any region to view comprehensive itineraries & extra details.
         </p>
       </div>
@@ -38,7 +38,7 @@ export default function DualParadise() {
       {/* Interactive Split Canvas */}
       <div 
         onMouseLeave={() => setHoveredRegion(null)}
-        className="w-full flex flex-col md:flex-row md:h-[650px] overflow-visible relative border-y border-gold-border z-10"
+        className="w-full flex flex-col md:flex-row md:h-[650px] 2xl:h-[720px] overflow-visible relative border-y border-gold-border z-10"
       >
         {/* Panel 1: Sri Lanka */}
         <motion.div

@@ -217,7 +217,7 @@ export default function DestinationDetailPage({ params }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-indigo-deep via-indigo-deep/50 to-transparent" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        <div className="relative z-10 w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20">
           <Link
             href="/#destinations"
             className="inline-flex items-center gap-2 font-cinzel text-xs font-bold text-gold-warm uppercase tracking-widest hover:text-white transition-colors mb-6"
@@ -239,7 +239,7 @@ export default function DestinationDetailPage({ params }) {
       </section>
 
       {/* Detail Content */}
-      <section className="py-20 max-w-7xl mx-auto px-6">
+      <section className="py-20 w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20">
         <div className="grid lg:grid-cols-12 gap-14">
           {/* Main Column */}
           <div className="lg:col-span-8 space-y-14">

@@ -93,15 +93,15 @@ export default function Hero() {
       </button>
 
       {/* Hero Content */}
-      <div className="relative z-20 max-w-5xl mx-auto px-6 text-center text-ivory-sacred">
+      <div className="relative z-20 w-full max-w-5xl lg:max-w-6xl 2xl:max-w-7xl mx-auto px-6 text-center text-ivory-sacred">
 
         {/* Title */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6 leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.65)]">
+        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6 leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.65)]">
           Experience the Soul, Spirit, and <span className="gold-gradient-text">Authenticity</span> of Every Journey.
         </h1>
 
         {/* Subtitle */}
-        <p className="font-sans text-sm sm:text-base text-ivory-sacred/90 max-w-xl sm:max-w-2xl mx-auto mb-10 font-light leading-relaxed tracking-wide drop-shadow-md">
+        <p className="font-sans text-sm sm:text-base lg:text-lg text-ivory-sacred/90 max-w-2xl sm:max-w-3xl 2xl:max-w-4xl mx-auto mb-10 font-light leading-relaxed tracking-wide drop-shadow-md">
           Crafting bespoke luxury journeys across Sri Lanka and the Maldives, defined by elegance, culture, and authentic connections.
         </p>
 

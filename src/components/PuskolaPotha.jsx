@@ -85,7 +85,7 @@ export default function PuskolaPotha() {
 
   return (
     <section id="concept" ref={sectionRef} className="pt-12 pb-12 bg-paper-parchment relative overflow-hidden liyavela-bg">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="font-cinzel text-xs font-bold tracking-widest text-indigo-dark uppercase block mb-2">
