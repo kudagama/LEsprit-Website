@@ -4,14 +4,23 @@ import { useState, useEffect } from "react";
 import { Award, Mail, Phone, MapPin, Instagram, Facebook, ArrowUp, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import TermsModal from "./TermsModal";
+import CancellationModal from "./CancellationModal";
 
 export default function Footer() {
   const [isTermsOpen, setIsTermsOpen] = useState(false);
+  const [isCancelOpen, setIsCancelOpen] = useState(false);
 
   useEffect(() => {
-    const handleOpen = () => setIsTermsOpen(true);
-    window.addEventListener("open-terms-modal", handleOpen);
-    return () => window.removeEventListener("open-terms-modal", handleOpen);
+    const handleOpenTerms = () => setIsTermsOpen(true);
+    const handleOpenCancel = () => setIsCancelOpen(true);
+
+    window.addEventListener("open-terms-modal", handleOpenTerms);
+    window.addEventListener("open-cancellation-modal", handleOpenCancel);
+
+    return () => {
+      window.removeEventListener("open-terms-modal", handleOpenTerms);
+      window.removeEventListener("open-cancellation-modal", handleOpenCancel);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -162,6 +171,16 @@ export default function Footer() {
                   Terms & Conditions
                 </button>
               </li>
+              <li className="flex items-center group">
+                <span className="text-gold-primary/0 group-hover:text-gold-primary group-hover:mr-2.5 transition-all duration-300 select-none">•</span>
+                <button
+                  type="button"
+                  onClick={() => setIsCancelOpen(true)}
+                  className="group-hover:text-gold-primary group-hover:translate-x-1 transition-all duration-300 text-left cursor-pointer"
+                >
+                  Cancellation & Refunds
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -254,6 +273,13 @@ export default function Footer() {
               >
                 Terms & Conditions
               </button>
+              <button
+                type="button"
+                onClick={() => setIsCancelOpen(true)}
+                className="hover:text-gold-primary transition-colors cursor-pointer"
+              >
+                Cancellation Policy
+              </button>
             </div>
           </div>
 
@@ -279,6 +305,9 @@ export default function Footer() {
 
       {/* Luxury Terms & Conditions Modal */}
       <TermsModal isOpen={isTermsOpen} onClose={() => setIsTermsOpen(false)} />
+
+      {/* Luxury Cancellation & Refund Policy Modal */}
+      <CancellationModal isOpen={isCancelOpen} onClose={() => setIsCancelOpen(false)} />
     </footer>
   );
 }

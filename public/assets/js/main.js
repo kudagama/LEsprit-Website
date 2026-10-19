@@ -465,3 +465,71 @@ function openTermsModal() {
     `;
     openModal('info-modal');
 }
+
+function openCancellationModal() {
+    document.getElementById('info-modal-title').textContent = 'L’ESPRIT LANKA — Cancellation & Refund Policy';
+    document.getElementById('info-modal-body').innerHTML = `
+        <div style="font-family: inherit; line-height: 1.6; font-size: 0.85rem; color: #444; max-height: 65vh; overflow-y: auto; padding-right: 8px;">
+            <p style="margin-bottom: 14px; color: #333;">At L’ESPRIT LANKA, we understand that travel plans may change. The following policy outlines the terms applicable to cancellations, amendments, and refunds.</p>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">1. Cancellation Requests</h4>
+                <p>All cancellations must be submitted in writing to <a href="mailto:reservations@lespritlanka.com" style="color: #D4AF37; text-decoration: underline;">reservations@lespritlanka.com</a>, including the booking reference and customer details. The cancellation date will be the date we receive the written request.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 6px; font-weight: 700;">2. Cancellation Charges Schedule</h4>
+                <p style="margin-bottom: 8px;">Unless otherwise agreed in writing, the following charges apply to standard bookings:</p>
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 8px; font-size: 0.82rem;">
+                    <thead>
+                        <tr style="background: rgba(212,175,55,0.12); border-bottom: 1px solid rgba(212,175,55,0.3); text-align: left;">
+                            <th style="padding: 6px 10px;">Notice before arrival</th>
+                            <th style="padding: 6px 10px;">Cancellation charge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px 10px;">60 days or more</td><td style="padding: 6px 10px; font-weight: 600; color: #A87D46;">10%</td></tr>
+                        <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px 10px;">30–59 days</td><td style="padding: 6px 10px; font-weight: 600; color: #A87D46;">25%</td></tr>
+                        <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px 10px;">15–29 days</td><td style="padding: 6px 10px; font-weight: 600; color: #A87D46;">50%</td></tr>
+                        <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px 10px;">7–14 days</td><td style="padding: 6px 10px; font-weight: 600; color: #A87D46;">75%</td></tr>
+                        <tr><td style="padding: 6px 10px;">0–6 days or no-show</td><td style="padding: 6px 10px; font-weight: 700; color: #A87D46;">Up to 100%</td></tr>
+                    </tbody>
+                </table>
+                <p style="font-size: 0.78rem; color: #777; font-style: italic;">Special bookings, peak-season reservations, and non-refundable supplier services may be subject to separate cancellation terms, which will be communicated before confirmation.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">3. Refunds</h4>
+                <p>Refunds will be calculated after deducting applicable cancellation charges and disclosed, non-recoverable costs, subject to applicable law. Approved refunds will normally be processed to the original payment method within 14 business days, although bank processing times may vary.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">4. Cancellation by the Company</h4>
+                <p>If L’ESPRIT LANKA cancels a confirmed tour, we will offer suitable alternatives or refunds in accordance with the booking agreement and applicable law.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">5. No-Shows and Unused Services</h4>
+                <p>No refunds are guaranteed for missed tours, unused accommodation, early departures, or other unused services, subject to applicable law and the confirmed booking terms.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">6. Delays and Exceptional Circumstances</h4>
+                <p>Flight disruptions, severe weather, natural disasters, government restrictions, and other unforeseen events may affect travel arrangements. We will make reasonable efforts to arrange alternatives, with any refunds or additional costs handled according to the booking terms and applicable law.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">7. Travel Insurance</h4>
+                <p>We strongly recommend comprehensive travel insurance covering trip cancellation, medical emergencies, travel delays, and other relevant risks.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">8. Special and Group Bookings</h4>
+                <p>Group tours, customized itineraries, peak-season bookings, and special services may have separate cancellation conditions, which will be communicated before booking confirmation.</p>
+            </div>
+
+            <p style="margin-top: 10px; font-size: 0.78rem; color: #777;">All cancellations and refunds are subject to the confirmed booking terms and applicable law.</p>
+        </div>
+    `;
+    openModal('info-modal');
+}

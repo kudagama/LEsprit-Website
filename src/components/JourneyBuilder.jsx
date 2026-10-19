@@ -165,6 +165,14 @@ export default function JourneyBuilder() {
                   className="text-[#A87D46] underline hover:text-[#D4AF37] font-medium cursor-pointer transition-colors"
                 >
                   Terms & Conditions
+                </button>{" "}
+                and{" "}
+                <button
+                  type="button"
+                  onClick={() => window.dispatchEvent(new CustomEvent("open-cancellation-modal"))}
+                  className="text-[#A87D46] underline hover:text-[#D4AF37] font-medium cursor-pointer transition-colors"
+                >
+                  Cancellation Policy
                 </button>
                 .
               </p>
