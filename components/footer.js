@@ -40,7 +40,7 @@ document.getElementById('footer-placeholder').innerHTML = `<!-- LUXURY FOOTER WI
                     <h4>Private Concierge</h4>
                     <ul class="footer-contact">
                         <li><span class="c-icon">✉</span> <a href="mailto:concierge@lespritvoyages.com">concierge@lespritvoyages.com</a></li>
-                        <li><span class="c-icon">📞</span> <a href="tel:+94112345678">+94 (0) 11 234 5678</a></li>
+                        <li><span class="c-icon">📞</span> <a href="tel:+94707328070">+94 70 732 8070</a> / <a href="tel:+94717546885">+94 71 754 6885</a> <span style="font-size: 0.85em; opacity: 0.85; margin-left: 4px;">— Thushari</span></li>
                         <li><span class="c-icon">📍</span> Private Atelier, Ward Place, Colombo 07, Sri Lanka</li>
                     </ul>
                 </div>

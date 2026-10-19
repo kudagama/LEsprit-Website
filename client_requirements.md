@@ -9,10 +9,10 @@ To build trust and satisfy tourism regulations in Sri Lanka and the Maldives, we
 - [ ] **Official Registrations:**
   - Sri Lanka Tourism Development Authority (SLTDA) license number.
   - Maldives Ministry of Tourism registration details.
-- [ ] **Physical Address & Contact Info:**
-  - Official headquarters address.
-  - Primary contact phone number (including country codes for luxury international clientele).
-  - Dedicated concierge booking email address (e.g., `reservations@lespritvoyages.com`).
+- [x] **Physical Address & Contact Info:**
+  - Official headquarters address: 86/10, Gonamadiththa Road, Kesbewa, Piliyandala, Sri Lanka.
+  - Primary contact phone numbers: +94 70 732 8070 / +94 71 754 6885 (Thushari — Atelier Concierge). Landline removed.
+  - Dedicated concierge booking email address: `reservations@lespritlanka.com` / `info1@lespritlanka.com`.
 - [ ] **Legal Documents:**
   - Terms of Service copy (specific to bespoke crafting & luxury deposits).
   - Privacy & GDPR Compliance copy (critical for high-net-worth European/US clients).

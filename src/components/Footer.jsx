@@ -165,9 +165,20 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-gold-primary shrink-0 mt-0.5" />
-                <a href="tel:+94112616389" className="hover:text-gold-primary transition-colors">
-                  +94 11 261 6389
-                </a>
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center gap-1.5 flex-wrap">
+                    <a href="tel:+94707328070" className="hover:text-gold-primary transition-colors">
+                      +94 70 732 8070
+                    </a>
+                    <span className="text-ivory-sacred/40">/</span>
+                    <a href="tel:+94717546885" className="hover:text-gold-primary transition-colors">
+                      +94 71 754 6885
+                    </a>
+                  </div>
+                  <span className="text-[11px] text-gold-primary/90 font-medium tracking-wide">
+                    Thushari — Atelier Concierge
+                  </span>
+                </div>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-gold-primary shrink-0 mt-0.5" />
