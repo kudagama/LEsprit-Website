@@ -30,28 +30,28 @@ export default function SustainabilityPanel() {
               </p>
 
               {/* Metrics */}
-              <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gold-primary/20">
+              <div className="grid grid-cols-3 gap-2.5 sm:gap-6 pt-6 border-t border-gold-primary/20">
                 <div>
-                  <span className="font-bold text-4xl lg:text-5xl text-[#D4AF37] block">
+                  <span className="font-bold text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-[#D4AF37] block">
                     100%
                   </span>
-                  <span className="font-sans text-xs sm:text-sm text-emerald-200/90 font-medium">
+                  <span className="font-sans text-[11px] sm:text-sm text-emerald-200/90 font-medium leading-tight sm:leading-normal block mt-1">
                     Single-Use Plastic Free Vehicles
                   </span>
                 </div>
                 <div>
-                  <span className="font-bold text-4xl lg:text-5xl text-[#D4AF37] block">
+                  <span className="font-bold text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-[#D4AF37] block">
                     25+
                   </span>
-                  <span className="font-sans text-xs sm:text-sm text-emerald-200/90 font-medium">
+                  <span className="font-sans text-[11px] sm:text-sm text-emerald-200/90 font-medium leading-tight sm:leading-normal block mt-1">
                     Local Schools Renovated
                   </span>
                 </div>
                 <div>
-                  <span className="font-bold text-4xl lg:text-5xl text-[#D4AF37] block">
+                  <span className="font-bold text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-[#D4AF37] block">
                     150+
                   </span>
-                  <span className="font-sans text-xs sm:text-sm text-emerald-200/90 font-medium">
+                  <span className="font-sans text-[11px] sm:text-sm text-emerald-200/90 font-medium leading-tight sm:leading-normal block mt-1">
                     Artisans Directly Supported
                   </span>
                 </div>

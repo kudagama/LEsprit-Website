@@ -96,43 +96,43 @@ export default function Hero() {
       <div className="relative z-20 w-full max-w-5xl lg:max-w-6xl 2xl:max-w-7xl mx-auto px-6 text-center text-ivory-sacred">
 
         {/* Title */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6 leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.65)]">
+        <h1 className="font-serif text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-4 sm:mb-6 leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.65)]">
           Experience the Soul, Spirit, and <span className="gold-gradient-text">Authenticity</span> of Every Journey.
         </h1>
 
         {/* Subtitle */}
-        <p className="font-sans text-base sm:text-lg lg:text-xl text-ivory-sacred/95 max-w-2xl sm:max-w-3xl 2xl:max-w-4xl mx-auto mb-10 font-light leading-relaxed tracking-wide drop-shadow-md">
+        <p className="font-sans text-sm sm:text-lg lg:text-xl text-ivory-sacred/95 max-w-2xl sm:max-w-3xl 2xl:max-w-4xl mx-auto mb-8 sm:mb-10 font-light leading-relaxed tracking-wide drop-shadow-md">
           Crafting bespoke luxury journeys across Sri Lanka and the Maldives, defined by elegance, culture, and authentic connections.
         </p>
 
         {/* CTA Button Group */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-5 mb-16">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-3.5 sm:gap-5 mb-10 sm:mb-16 w-full max-w-md sm:max-w-none mx-auto">
           <a
             href="#destinations"
-            className="w-full sm:w-auto px-9 py-4 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-sm sm:text-base font-bold uppercase tracking-wider rounded shadow-gold flex items-center justify-center gap-3 hover:scale-105 transition-transform"
+            className="w-full sm:w-auto px-7 sm:px-9 py-3 sm:py-4 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs sm:text-base font-bold uppercase tracking-wider rounded shadow-gold flex items-center justify-center gap-2.5 sm:gap-3 hover:scale-105 transition-transform"
           >
             <span>Discover Sri Lanka</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </a>
 
           <a
             href="#destinations"
-            className="w-full sm:w-auto px-9 py-4 bg-indigo-deep/50 border border-gold-primary/40 hover:border-gold-primary text-white font-cinzel text-sm sm:text-base font-bold uppercase tracking-wider rounded backdrop-blur-md hover:bg-gold-primary/10 flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 hover:tracking-[0.2em] shadow-lg hover:shadow-[0_0_15px_rgba(212,175,55,0.15)]"
+            className="w-full sm:w-auto px-7 sm:px-9 py-3 sm:py-4 bg-indigo-deep/50 border border-gold-primary/40 hover:border-gold-primary text-white font-cinzel text-xs sm:text-base font-bold uppercase tracking-wider rounded backdrop-blur-md hover:bg-gold-primary/10 flex items-center justify-center gap-2.5 sm:gap-3 transition-all duration-300 hover:scale-105 hover:tracking-[0.2em] shadow-lg hover:shadow-[0_0_15px_rgba(212,175,55,0.15)]"
           >
             <span>Explore Maldives</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </a>
         </div>
 
         {/* Scroll Indicator */}
-        <a href="#concept" className="inline-flex flex-col items-center gap-2 text-gold-warm text-xs sm:text-sm font-cinzel tracking-widest uppercase opacity-80 hover:opacity-100 transition-opacity">
+        <a href="#concept" className="inline-flex flex-col items-center gap-1.5 sm:gap-2 text-gold-warm text-xs sm:text-sm font-cinzel tracking-widest uppercase opacity-80 hover:opacity-100 transition-opacity">
           <span>Unfold The Spirit Of Journey</span>
           <ChevronDown className="w-4 h-4" />
         </a>
       </div>
 
       {/* Slide Indicators / Navigation Bullets */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-4 z-30 max-w-[90vw] overflow-x-auto py-2">
+      <div className="absolute bottom-4 sm:bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-3 sm:gap-4 z-30 max-w-[95vw] overflow-x-auto py-1 sm:py-2">
         {HERO_VIDEOS.map((video, idx) => (
           <button
             key={idx}

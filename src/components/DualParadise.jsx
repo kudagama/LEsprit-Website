@@ -50,14 +50,14 @@ export default function DualParadise() {
             zIndex: hoveredRegion === "sri-lanka" ? 20 : 10
           }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="relative flex-1 min-h-[500px] md:min-h-0 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group border-b md:border-b-0 md:border-r border-gold-border/30 shadow-2xl transition-all"
+          className="relative flex-1 min-h-[460px] sm:min-h-[500px] md:min-h-0 p-6 sm:p-14 flex items-end cursor-pointer overflow-hidden group border-b md:border-b-0 md:border-r border-gold-border/30 shadow-2xl transition-all"
         >
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-[0.8] group-hover:brightness-95"
             style={{ backgroundImage: "url('/assets/images/sri_lanka.png')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-          <div className="absolute inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none rounded-lg" />
+          <div className="absolute inset-3.5 sm:inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none rounded-lg" />
 
           {/* Panel Content */}
           <div className="relative z-10 max-w-xl">
@@ -128,14 +128,14 @@ export default function DualParadise() {
             zIndex: hoveredRegion === "maldives" ? 20 : 10
           }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="relative flex-1 min-h-[500px] md:min-h-0 p-8 sm:p-14 flex items-end cursor-pointer overflow-hidden group shadow-2xl transition-all"
+          className="relative flex-1 min-h-[460px] sm:min-h-[500px] md:min-h-0 p-6 sm:p-14 flex items-end cursor-pointer overflow-hidden group shadow-2xl transition-all"
         >
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 filter brightness-[0.8] group-hover:brightness-95"
             style={{ backgroundImage: "url('/assets/images/maldives.png')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-          <div className="absolute inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none rounded-lg" />
+          <div className="absolute inset-3.5 sm:inset-5 border border-gold-primary/20 group-hover:border-gold-primary group-hover:shadow-[inset_0_0_30px_rgba(212,175,55,0.2)] transition-all pointer-events-none rounded-lg" />
 
           {/* Panel Content */}
           <div className="relative z-10 max-w-xl">

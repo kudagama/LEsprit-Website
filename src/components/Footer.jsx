@@ -277,7 +277,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar: Left (Copyright) - Center (Terms & Cancellation) - Right (Developed by Saveen.lk) */}
-        <div className="pt-6 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-sm text-ivory-sacred/70 font-sans font-medium">
+        <div className="pt-6 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-xs sm:text-sm text-ivory-sacred/70 font-sans font-medium">
           
           {/* Left: Copyright */}
           <div className="text-center md:text-left">
@@ -285,7 +285,7 @@ export default function Footer() {
           </div>
 
           {/* Center: Legal Policies */}
-          <div className="flex items-center justify-center gap-4 sm:gap-6 text-center">
+          <div className="flex items-center justify-center gap-3 sm:gap-6 text-center flex-wrap">
             <button
               type="button"
               onClick={() => setIsTermsOpen(true)}

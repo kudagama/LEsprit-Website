@@ -210,7 +210,7 @@ export default function TourPackages({ region = "sri-lanka" }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20 bg-black border border-gold-primary/30 rounded-sm p-10 sm:p-14 shadow-2xl relative z-10 overflow-hidden"
+          className="mt-20 bg-black border border-gold-primary/30 rounded-sm p-6 sm:p-10 md:p-14 shadow-2xl relative z-10 overflow-hidden"
         >
           {/* Subtle background glow */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-gold-primary/10 blur-[100px] pointer-events-none" />
