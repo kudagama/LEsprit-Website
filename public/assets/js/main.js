@@ -394,10 +394,74 @@ function openPrivacyModal() {
 }
 
 function openTermsModal() {
-    document.getElementById('info-modal-title').textContent = 'Terms of Bespoke Craftsmanship';
+    document.getElementById('info-modal-title').textContent = 'L’ESPRIT LANKA — Terms & Conditions';
     document.getElementById('info-modal-body').innerHTML = `
-        <p>All L’ESPRIT VOYAGES itineraries are fully bespoke and subject to private concierge terms. Flight and accommodation reservations are secured through verified 5-star partner properties across Sri Lanka and the Maldives.</p>
-        <p style="margin-top: 1rem;">Official Tourism Registration: Registered with the Ministry of Tourism Sri Lanka.</p>
+        <div style="font-family: inherit; line-height: 1.6; font-size: 0.85rem; color: #444; max-height: 65vh; overflow-y: auto; padding-right: 8px;">
+            <div style="background: rgba(212,175,55,0.08); border-left: 3px solid #D4AF37; padding: 10px 14px; margin-bottom: 16px; border-radius: 4px;">
+                <strong style="color: #0B1B2B;">Payment Policy & Scope:</strong> All services provided by L’ESPRIT LANKA are subject to these terms. “Services” refers to (a) Transport, (b) Accommodation, and (c) Other tourist services.
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">1. Booking and Confirmation</h4>
+                <p>All booking details must be provided by the traveler or by a designated representative booking on behalf of a group. By making a group booking, the representative confirms that they have the authority of the other group members to make the reservation and accept these Terms & Conditions on their behalf.</p>
+                <p style="margin-top: 6px;">Upon receiving the booking request, L’ESPRIT LANKA will make reasonable efforts to confirm the requested travel arrangements as soon as possible. A booking will generally become contractually binding once a booking confirmation or confirmation invoice has been issued by our company for the services arranged directly or through third-party suppliers.</p>
+                <p style="margin-top: 6px;">Certain travel services, including hotel accommodation, excursions, transportation, and other arrangements, may be subject to availability or additional confirmation from the relevant supplier. Where a service is marked as being subject to confirmation, that service will only be considered confirmed once we have provided specific written confirmation, even if an initial or provisional booking confirmation has already been issued.</p>
+                <p style="margin-top: 6px;">The client is responsible for carefully reviewing all details stated in the booking confirmation or invoice, including travel dates, passenger information, itinerary, accommodation, and other requested services. Any errors or discrepancies must be reported to L’ESPRIT LANKA promptly so that corrections can be made where possible.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">2. Your Contract</h4>
+                <p>This contract and the services provided by, L’ESPRIT LANKA are governed by the laws of Sri Lanka.</p>
+                <p style="margin-top: 6px;">Unless otherwise stated, L’ESPRIT LANKA acts as an agent for third-party service providers, including hotels, airlines, transport operators, and tour or activity providers. While we make reasonable efforts to work with reliable suppliers, we do not directly manage their operations, staff, or equipment.</p>
+                <p style="margin-top: 6px;">To the extent permitted by applicable law, L’ESPRIT LANKA shall not be liable for any loss, injury, damage, delay, or inconvenience arising from the acts, omissions, negligence, or failures of independent service providers or other parties outside our reasonable control.</p>
+                <p style="margin-top: 6px;">The applicable suppliers’ terms and conditions are available upon request or may be provided with the relevant booking voucher.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">3. Payment</h4>
+                <p>Unless otherwise agreed in writing, full payment is required upon booking confirmation or within the timeframe specified in the booking confirmation email. L’ESPRIT LANKA reserves the right to withhold services or cancel the booking, subject to applicable cancellation charges and law, if payment is not received by the due date.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">4. Amendments to the Itinerary by the Passenger</h4>
+                <p>Requests to amend confirmed bookings must be submitted through L’ESPRIT LANKA and are subject to availability and additional charges, which shall be borne by the Client. No refunds or credits will be provided for unused services or missed tour arrangements, subject to applicable law.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">5. Cancellation by the Passenger</h4>
+                <p>Cancellations must be submitted in writing by the lead Client using the email address provided at booking or through our official online channels. Applicable cancellation charges will be determined by the cancellation policy communicated at the time of booking confirmation.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">6. Changes to the Itinerary by L’ESPRIT LANKA</h4>
+                <p>L’ESPRIT LANKA reserves the right to make necessary changes to confirmed itineraries and will notify the Client as soon as reasonably possible. We shall not be liable for additional expenses arising from changes beyond our reasonable control, subject to applicable law.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">7. Complaints and Disputes</h4>
+                <p>Any complaints regarding our services or those of our suppliers must be reported to the relevant supplier and L’ESPRIT LANKA as soon as possible, preferably during the tour, to allow an opportunity for resolution. Complaints should be submitted in writing with the booking reference and relevant details.</p>
+                <p style="margin-top: 6px;">Unresolved disputes may be referred to a single arbitrator in accordance with the ICC Rules of Arbitration, with English as the language of arbitration and Colombo, Sri Lanka, as the seat of arbitration, subject to applicable law.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">8. L’ESPRIT LANKA’S Liability</h4>
+                <p>To the extent permitted by applicable law, L’ESPRIT LANKA’s total liability shall be limited to the price paid for the specific service concerned by the affected Client(s), excluding insurance premiums and amendment charges. This limitation does not apply to liability that cannot legally be excluded or limited.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">9. Passenger Responsibilities</h4>
+                <p>Clients are responsible for their own health, safety, conduct, and personal expenses, including medical treatment and emergency transportation. Comprehensive travel and medical insurance, including trip cancellation coverage, is strongly recommended.</p>
+                <p style="margin-top: 6px;">Clients must ensure they meet all applicable visa, immigration, passport, and health requirements before travelling.</p>
+                <p style="margin-top: 6px;">Clients use facilities and services at their own risk, subject to applicable law. Clients are responsible for damage caused by their negligent or reckless conduct and must reimburse L’ESPRIT LANKA or its suppliers for resulting losses, where legally required. Nothing in this clause excludes liability arising from our own negligence or other liability that cannot legally be excluded.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <h4 style="color: #0B1B2B; margin-bottom: 4px; font-weight: 700;">10. Other Conditions</h4>
+                <p>Optional excursions and additional services are available at an additional cost.</p>
+                <p style="margin-top: 6px;">Wildlife parks visits and safari activities are subject to inherent risks, and Clients must follow all safety instructions provided by guides and operators.</p>
+                <p style="margin-top: 6px;">Safari vehicles may be basic, non-air-conditioned, and covered by limited insurance. Clients are advised to confirm the available insurance coverage before participating.</p>
+            </div>
+        </div>
     `;
     openModal('info-modal');
 }

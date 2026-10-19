@@ -146,7 +146,7 @@ export default function JourneyBuilder() {
               />
             </div>
 
-            <div className="flex justify-center pt-4">
+            <div className="flex flex-col items-center justify-center pt-4">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -156,6 +156,18 @@ export default function JourneyBuilder() {
                 <span>Request Bespoke Proposal</span>
                 <Send className="w-4 h-4" />
               </motion.button>
+              
+              <p className="text-center text-[11px] text-charcoal/65 mt-3.5 font-sans">
+                By submitting an inquiry, you agree to our{" "}
+                <button
+                  type="button"
+                  onClick={() => window.dispatchEvent(new CustomEvent("open-terms-modal"))}
+                  className="text-[#A87D46] underline hover:text-[#D4AF37] font-medium cursor-pointer transition-colors"
+                >
+                  Terms & Conditions
+                </button>
+                .
+              </p>
             </div>
           </form>
         </div>

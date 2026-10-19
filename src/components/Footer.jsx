@@ -1,9 +1,19 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Award, Mail, Phone, MapPin, Instagram, Facebook, ArrowUp, Send } from "lucide-react";
 import { motion } from "framer-motion";
+import TermsModal from "./TermsModal";
 
 export default function Footer() {
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOpen = () => setIsTermsOpen(true);
+    window.addEventListener("open-terms-modal", handleOpen);
+    return () => window.removeEventListener("open-terms-modal", handleOpen);
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -142,6 +152,16 @@ export default function Footer() {
                 <span className="text-gold-primary/0 group-hover:text-gold-primary group-hover:mr-2.5 transition-all duration-300 select-none">•</span>
                 <a href="#news-social" className="group-hover:text-gold-primary group-hover:translate-x-1 transition-all duration-300">L’Esprit Journal Blog</a>
               </li>
+              <li className="flex items-center group">
+                <span className="text-gold-primary/0 group-hover:text-gold-primary group-hover:mr-2.5 transition-all duration-300 select-none">•</span>
+                <button
+                  type="button"
+                  onClick={() => setIsTermsOpen(true)}
+                  className="group-hover:text-gold-primary group-hover:translate-x-1 transition-all duration-300 text-left cursor-pointer"
+                >
+                  Terms & Conditions
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -227,7 +247,13 @@ export default function Footer() {
             <div className="hidden sm:block w-[1px] h-3.5 bg-gold-primary/30" />
             <div className="flex gap-4">
               <a href="#" className="hover:text-gold-primary transition-colors">Privacy Guarantee</a>
-              <a href="#" className="hover:text-gold-primary transition-colors">Terms of Use</a>
+              <button
+                type="button"
+                onClick={() => setIsTermsOpen(true)}
+                className="hover:text-gold-primary transition-colors cursor-pointer"
+              >
+                Terms & Conditions
+              </button>
             </div>
           </div>
 
@@ -250,6 +276,9 @@ export default function Footer() {
         </div>
 
       </div>
+
+      {/* Luxury Terms & Conditions Modal */}
+      <TermsModal isOpen={isTermsOpen} onClose={() => setIsTermsOpen(false)} />
     </footer>
   );
 }
