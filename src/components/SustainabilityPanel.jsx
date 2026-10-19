@@ -6,7 +6,7 @@ import { Leaf, Users, Droplets, Zap } from "lucide-react";
 export default function SustainabilityPanel() {
   return (
     <section id="heritage-impact" className="pt-12 pb-12 bg-sand-fine relative">
-      <div className="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20">
+      <div className="w-full max-w-[1920px] 2xl:max-w-none mx-auto px-4 sm:px-8 lg:px-12 2xl:px-16">
         <div className="relative rounded-2xl overflow-hidden bg-emerald-dark text-white border border-gold-border shadow-2xl">
           {/* Background image overlay */}
           <div

@@ -78,11 +78,11 @@ export default function ServicesGrid() {
           backgroundAttachment: "fixed" 
         }}
       />
-      <div className="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20 relative z-10">
+      <div className="w-full max-w-[1920px] 2xl:max-w-none mx-auto px-4 sm:px-8 lg:px-12 2xl:px-16 relative z-10">
         
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="font-cinzel text-xs font-bold tracking-widest text-[#A87D46] uppercase block mb-2">
+          <span className="font-cinzel text-sm sm:text-[15px] font-bold tracking-[0.2em] text-[#A87D46] uppercase block mb-2">
             Expertise & Logistics
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-indigo-dark mb-4">

@@ -109,7 +109,7 @@ export default function Header() {
             : "bg-transparent py-6 sm:py-7"
         }`}
       >
-        <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-14 2xl:px-20 flex justify-between items-center relative">
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 2xl:px-12 flex justify-between items-center relative">
           
           {/* LEFT CORNER: Brand Logo */}
           <div className="flex items-center shrink-0 z-10">

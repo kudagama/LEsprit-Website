@@ -58,7 +58,7 @@ export default function Testimonials() {
       <div className="absolute top-0 right-0 w-80 h-80 bg-gold-primary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-deep/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20 relative z-10">
+      <div className="w-full max-w-[1920px] 2xl:max-w-none mx-auto px-4 sm:px-8 lg:px-12 2xl:px-16 relative z-10">
         
         {/* Header */}
         <div className="text-center mb-14">

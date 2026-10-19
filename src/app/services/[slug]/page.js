@@ -104,7 +104,7 @@ export default function ServiceDetailPage({ params }) {
 
       {/* Hero */}
       <section className="pt-36 pb-20 bg-indigo-deep text-white relative">
-        <div className="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20">
+        <div className="w-full max-w-[1920px] 2xl:max-w-none mx-auto px-4 sm:px-8 lg:px-12 2xl:px-16">
           <Link
             href="/#services"
             className="inline-flex items-center gap-2 font-cinzel text-xs font-bold text-gold-warm uppercase tracking-widest hover:text-white transition-colors mb-6"
@@ -124,7 +124,7 @@ export default function ServiceDetailPage({ params }) {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20">
+      <section className="py-20 w-full max-w-[1920px] 2xl:max-w-none mx-auto px-4 sm:px-8 lg:px-12 2xl:px-16">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 space-y-10">
             {/* Overview */}

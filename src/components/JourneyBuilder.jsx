@@ -37,7 +37,7 @@ export default function JourneyBuilder() {
 
   return (
     <section id="contact" className="pt-12 pb-12 bg-paper-parchment relative">
-      <div className="w-full max-w-[1500px] 2xl:max-w-[1640px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20">
+      <div className="w-full max-w-[1800px] 2xl:max-w-none mx-auto px-4 sm:px-8 lg:px-12 2xl:px-16">
         <div className="bg-white border border-gold-border rounded-2xl p-8 sm:p-14 2xl:p-16 shadow-glass relative">
           <div className="text-center mb-12">
             <span className="font-cinzel text-sm sm:text-[15px] font-bold text-indigo-dark tracking-[0.2em] uppercase block mb-2">

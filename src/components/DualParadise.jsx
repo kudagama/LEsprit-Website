@@ -23,7 +23,7 @@ export default function DualParadise() {
 
   return (
     <section id="destinations" className="pt-12 pb-0 bg-indigo-deep text-white relative">
-      <div className="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 2xl:px-20 text-center mb-12">
+      <div className="w-full max-w-[1920px] 2xl:max-w-none mx-auto px-4 sm:px-8 lg:px-12 2xl:px-16 text-center mb-12">
         <span className="font-decorative text-sm sm:text-[15px] font-bold tracking-[0.2em] text-gold-warm uppercase block mb-2">
           Two Kingdoms of Wonder
         </span>
