@@ -83,6 +83,8 @@ const SERVICE_DATA = {
   },
 };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return [
     { slug: "travel-solutions" },

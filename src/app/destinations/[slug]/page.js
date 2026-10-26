@@ -185,6 +185,8 @@ const PACKAGES = [
   }
 ];
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return [{ slug: "sri-lanka" }, { slug: "maldives" }];
 }
