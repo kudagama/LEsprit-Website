@@ -6,9 +6,6 @@ import {
   MapPin, 
   Sparkles, 
   Compass, 
-  Clock, 
-  Car, 
-  ShieldCheck, 
   CheckCircle2, 
   ArrowRight,
   Navigation,
@@ -190,7 +187,7 @@ export const TOUR_ROUTES = {
           "Kosgoda Sea Turtle Conservation sanctuary",
           "VIP chauffeur transfer to Airport for departure"
         ],
-        travelTime: "1.5 hrs direct expressway to Airport",
+        travelTime: "1.5 hrs private expressway to Colombo (Airport)",
         stay: "1 Night at Private Oceanfront Villa"
       }
     ]
@@ -201,31 +198,31 @@ export const TOUR_ROUTES = {
     title: "Sri Lanka Highlights",
     subtitle: "Ancient Heritage & Southern Coast",
     duration: "7 Days / 6 Nights",
-    path: "M 48,540 Q 115,450 215,395 Q 210,460 198,518 Q 202,548 218,572 Q 245,625 228,672 Q 160,730 98,755 Q 60,650 48,540",
+    path: "M 50,575 Q 115,450 215,395 Q 210,460 198,518 Q 202,548 218,572 Q 245,625 228,672 Q 160,730 98,755 Q 56,660 50,575",
     stops: [
       {
         id: "h-stop-1",
         num: "01",
-        town: "Negombo",
-        name: "Negombo & Airport",
-        landmarkName: "Royal Welcome & Coastal Lagoon",
-        historicalTag: "Ancient Spice Port",
+        town: "Colombo",
+        name: "Colombo & Bandaranaike Gateway",
+        landmarkName: "Colombo Gateway & Ocean Capital",
+        historicalTag: "Bandaranaike Int. Airport (CMB)",
         days: "Day 01",
         stage: "Arrival in Paradise",
-        region: "Western Coast",
-        x: 48,
-        y: 540,
-        type: "negombo",
+        region: "Western Coastal Capital",
+        x: 50,
+        y: 575,
+        type: "colombo",
         labelOffset: { dx: -18, dy: 6, anchor: "end" },
         image: "/assets/images/packages/sl_tour_1.jpg",
-        desc: "Warm traditional Ayubowan welcome. Private chauffeur transfer to your coastal hotel to rest and acclimatize before your grand heritage tour.",
+        desc: "Warm traditional Ayubowan welcome at Bandaranaike International Airport (CMB). Private luxury chauffeur transfer to your oceanfront sanctuary to rest before your grand heritage tour.",
         highlights: [
-          "VIP Airport meet-and-greet",
-          "Private chauffeur transfer",
-          "Coastal relaxation evening"
+          "Bandaranaike Airport VIP meet-and-greet",
+          "Private luxury chauffeur transfer",
+          "Coastal capital relaxation evening"
         ],
-        travelTime: "20 mins from Airport",
-        stay: "1 Night Beachfront Hotel"
+        travelTime: "Bandaranaike International Airport (CMB)",
+        stay: "1 Night Beachfront / City Sanctuary"
       },
       {
         id: "h-stop-2",
@@ -344,7 +341,7 @@ export const TOUR_ROUTES = {
           "Artisan souvenir & gem shopping",
           "VIP private transfer to Airport"
         ],
-        travelTime: "2.5 hrs express to Airport",
+        travelTime: "2.5 hrs express to Colombo (Airport)",
         stay: "1 Night Historic Fort Villa / Departure"
       }
     ]
@@ -469,6 +466,7 @@ function LandmarkIcon({ type, isActive }) {
         </g>
       );
 
+    case "colombo":
     case "negombo":
     default:
       return (
@@ -975,7 +973,7 @@ export default function SriLankaRouteMap({
                 </p>
 
                 {/* Curated Highlights List */}
-                <div className="space-y-2.5 pt-4 border-t border-gold-border/30 mb-6">
+                <div className="space-y-2.5 pt-4 border-t border-gold-border/30 mb-8">
                   <span className="text-xs font-cinzel tracking-wider text-[#A87D46] uppercase block font-bold mb-2">
                     Historical Curated Inclusions
                   </span>
@@ -985,18 +983,6 @@ export default function SriLankaRouteMap({
                       <span>{h}</span>
                     </div>
                   ))}
-                </div>
-
-                {/* Logistics & Sanctuary Info */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3.5 bg-[#FAF7F2] border border-[#D4AF37]/30 rounded-xl mb-6 text-xs text-charcoal">
-                  <div className="flex items-center gap-2">
-                    <Car className="w-4 h-4 text-[#A87D46] shrink-0" />
-                    <span>{activeStop.travelTime}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-[#A87D46] shrink-0" />
-                    <span>{activeStop.stay}</span>
-                  </div>
                 </div>
               </div>
 
