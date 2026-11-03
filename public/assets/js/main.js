@@ -533,3 +533,41 @@ function openCancellationModal() {
     `;
     openModal('info-modal');
 }
+
+/* ==========================================================================
+   PACIFIC THEME: ABOUT VIDEO MODAL CONTROLLER
+   ========================================================================== */
+function initAboutVideoModal() {
+    const playBtn = document.getElementById('play-about-video');
+    const modal = document.getElementById('about-video-modal');
+    const closeBtn = document.getElementById('close-about-video-modal');
+    const video = document.getElementById('about-video-player');
+
+    if (!playBtn || !modal) return;
+
+    playBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden', 'false');
+        if (video) {
+            video.currentTime = 0;
+            video.play().catch(() => {});
+        }
+    });
+
+    const closeModal = () => {
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+        if (video) video.pause();
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+}
