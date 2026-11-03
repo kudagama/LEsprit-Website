@@ -188,7 +188,7 @@ export const TOUR_ROUTES = {
         y: 660,
         type: "bentota",
         labelOffset: { dx: -20, dy: -4, anchor: "end" },
-        image: "/assets/images/posters/beaches_poster.jpg",
+        image: "/assets/images/packages/bentota_beach.jpg",
         desc: "Unwind on golden sands, glide along the biodiverse Madu River mangrove archipelago by boat, visit a sea turtle nursery, and return comfortably along the expressway to Colombo Airport for departure.",
         highlights: [
           "Private Madu River mangrove boat safari",
@@ -962,56 +962,6 @@ export default function SriLankaRouteMap({
             </svg>
 
           </div>
-
-          {/* Stepper Timeline Ribbon - Responsive Luxury Waypoints (Zero Scrollbar) */}
-          <div className="w-full mt-4 bg-white/95 backdrop-blur-sm border border-[#D4AF37]/35 rounded-2xl p-1.5 sm:p-2.5 shadow-[0_4px_20px_-4px_rgba(212,175,55,0.12)]">
-            <div className="flex flex-wrap items-center justify-center sm:justify-between gap-1 sm:gap-1.5">
-              {stops.map((stop, idx) => {
-                const isActive = activeStopIndex === idx;
-                if (stop.isGateway) {
-                  return (
-                    <button
-                      key={`btn-${stop.id}`}
-                      onClick={() => handleStopClick(idx)}
-                      title="Bandaranaike Int. Airport (CMB) - Arrival & Departure Gateway"
-                      className={`flex-1 min-w-[85px] sm:min-w-0 py-2 px-2 sm:px-3 rounded-xl text-[11px] sm:text-xs font-cinzel font-bold transition-all duration-300 flex items-center justify-center gap-1.5 border ${
-                        isActive
-                          ? "bg-gradient-to-r from-[#071526] to-[#15273C] text-[#FFEAA7] border-[#D4AF37] shadow-gold scale-[1.02]"
-                          : "bg-[#FAF7F2] text-charcoal border-[#D4AF37]/30 hover:border-[#D4AF37] hover:bg-white"
-                      }`}
-                    >
-                      <span className="text-[13px] shrink-0">🛫</span>
-                      <span className="whitespace-nowrap">Colombo</span>
-                    </button>
-                  );
-                }
-                return (
-                  <button
-                    key={`btn-${stop.id}`}
-                    onClick={() => handleStopClick(idx)}
-                    title={`Stop ${stop.num}: ${stop.name}`}
-                    className={`flex-1 min-w-[75px] sm:min-w-0 py-2 px-1.5 sm:px-2.5 rounded-xl text-[11px] sm:text-xs font-cinzel font-bold transition-all duration-300 flex items-center justify-center gap-1.5 border ${
-                      isActive
-                        ? "bg-gradient-to-r from-[#5A3A1A] to-[#422910] text-[#FFEAA7] border-[#D4AF37] shadow-gold scale-[1.02]"
-                        : "bg-[#FAF7F2] text-charcoal border-[#D4AF37]/25 hover:border-[#D4AF37] hover:bg-white"
-                    }`}
-                  >
-                    <span
-                      className={`w-4 h-4 rounded-full flex items-center justify-center text-[9.5px] font-bold shrink-0 transition-colors ${
-                        isActive
-                          ? "bg-[#D4AF37] text-black"
-                          : "bg-black/10 text-[#5A3A1A]"
-                      }`}
-                    >
-                      {stop.num}
-                    </span>
-                    <span className="whitespace-nowrap">{stop.town}</span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
         </div>
 
         {/* ============================================================== */}
