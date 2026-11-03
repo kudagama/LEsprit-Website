@@ -112,23 +112,23 @@ export default function Header() {
         <div className="w-full px-3 sm:px-6 md:px-8 lg:px-10 2xl:px-12 flex justify-between items-center relative">
           
           {/* LEFT CORNER: Brand Logo */}
-          <div className="flex items-center shrink-0 z-10 max-w-[125px] xs:max-w-[145px] sm:max-w-none">
+          <div className="flex items-center shrink-0 z-10">
             <a 
               href="#" 
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className="flex items-center"
+              className="flex items-center group transition-transform duration-300 hover:scale-[1.02]"
               aria-label="L'Esprit Voyages Home"
             >
               <img 
                 src="/assets/images/logo.png" 
                 alt="L'ESPRIT VOYAGES" 
-                className={`w-auto object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] origin-left transition-all duration-500 ${
+                className={`w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] transition-all duration-300 ${
                   isScrolled 
-                    ? "h-6.5 xs:h-7 sm:h-8 md:h-10 transform scale-[1.9] sm:scale-[2.4] md:scale-[3.2]" 
-                    : "h-7 xs:h-8 sm:h-10 md:h-14 transform scale-[1.6] sm:scale-[2.1] md:scale-[2.8]"
+                    ? "h-[30px] sm:h-[34px] md:h-[40px] lg:h-[42px]" 
+                    : "h-[38px] sm:h-[46px] md:h-[50px] lg:h-[54px]"
                 }`}
               />
             </a>
