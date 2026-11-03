@@ -7,33 +7,63 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 const GALLERY_ITEMS = [
   {
     id: 1,
-    image: "/assets/images/gallery/moment_safari_sunset.jpg",
-    location: "Minneriya National Park, Sri Lanka",
-    title: "Sunset Wild Elephant Gathering"
+    image: "/assets/images/gallery/moment_sigiriya_viewpoint.jpg",
+    location: "Pidurangala & Sigiriya Citadel",
+    title: "Dawn Vista of the Ancient Fortress"
   },
   {
     id: 2,
-    image: "/assets/images/gallery/moment_tea_plucking.jpg",
-    location: "Nuwara Eliya Tea Hills, Sri Lanka",
-    title: "Ceylon Tea Harvest Ritual"
+    image: "/assets/images/gallery/moment_safari_sunset.jpg",
+    location: "Minneriya & Kaudulla Wilderness",
+    title: "Sunset Wild Elephant Gathering"
   },
   {
     id: 3,
-    image: "/assets/images/gallery/moment_jeep_friends.jpg",
-    location: "Yala National Park Safari",
-    title: "Expedition Companions"
+    image: "/assets/images/gallery/moment_scenic_train.jpg",
+    location: "Ella & Highland Tea Valleys",
+    title: "Iconic Ceylon Scenic Rail Odyssey"
   },
   {
     id: 4,
-    image: "/assets/images/gallery/moment_village_culture.jpg",
-    location: "Habarana Village Heritage",
-    title: "Authentic Rural Culinary Living"
+    image: "/assets/images/gallery/moment_kandy_blessing.jpg",
+    location: "Temple of the Sacred Tooth, Kandy",
+    title: "Sacred Lotus Flower Offering"
   },
   {
     id: 5,
-    image: "/assets/images/gallery/moment_rail_tunnel.jpg",
-    location: "Demodara Railway Arch, Ella",
-    title: "Highland Rail Odyssey"
+    image: "/assets/images/gallery/moment_rafting_adventure.jpg",
+    location: "Kitulgala Rapids, Kelani River",
+    title: "Wild White Water Rafting Expedition"
+  },
+  {
+    id: 6,
+    image: "/assets/images/gallery/moment_tropical_coast.jpg",
+    location: "Bentota & Southern Coastlines",
+    title: "Azure Reefs & Palm-Fringed Shores"
+  },
+  {
+    id: 7,
+    image: "/assets/images/gallery/moment_artisan_crafts.jpg",
+    location: "Galle Fort Heritage Quarter",
+    title: "Traditional Sculptures & Folk Artistry"
+  },
+  {
+    id: 8,
+    image: "/assets/images/gallery/moment_ayurveda_healing.jpg",
+    location: "Ayurveda Wellness Retreat, Sri Lanka",
+    title: "Harmonic Sound Healing & Inner Balance"
+  },
+  {
+    id: 9,
+    image: "/assets/images/gallery/moment_galle_fort_cafe.jpg",
+    location: "Galle Fort Historic Ramparts",
+    title: "Al Fresco Seafood & Colonial Streets"
+  },
+  {
+    id: 10,
+    image: "/assets/images/gallery/moment_jeep_safari.jpg",
+    location: "Yala National Park Safari",
+    title: "Wilderness Expedition Companions"
   }
 ];
 
@@ -48,7 +78,7 @@ export default function Gallery() {
   });
 
   // Translate horizontal track leftwards based on scroll progress
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-85%"]);
 
   const openLightbox = (index) => {
     setLightboxIndex(index);
@@ -69,7 +99,7 @@ export default function Gallery() {
   };
 
   return (
-    <section ref={targetRef} id="gallery" className="relative h-[420vh] bg-paper-parchment">
+    <section ref={targetRef} id="gallery" className="relative h-[600vh] bg-paper-parchment">
       {/* Sticky Fullscreen Wrapper */}
       <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
         
