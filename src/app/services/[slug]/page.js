@@ -94,8 +94,9 @@ export function generateStaticParams() {
   ];
 }
 
-export default function ServiceDetailPage({ params }) {
-  const data = SERVICE_DATA[params.slug];
+export default async function ServiceDetailPage({ params }) {
+  const resolvedParams = await params;
+  const data = SERVICE_DATA[resolvedParams?.slug];
 
   if (!data) {
     notFound();

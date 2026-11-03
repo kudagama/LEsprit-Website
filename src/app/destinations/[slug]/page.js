@@ -191,17 +191,18 @@ export function generateStaticParams() {
   return [{ slug: "sri-lanka" }, { slug: "maldives" }];
 }
 
-export default function DestinationDetailPage({ params }) {
-  const data = DESTINATION_DATA[params.slug];
+export default async function DestinationDetailPage({ params }) {
+  const resolvedParams = await params;
+  const data = DESTINATION_DATA[resolvedParams?.slug];
 
   if (!data) {
     notFound();
   }
 
   const filteredPackages = PACKAGES.filter((pkg) => {
-    if (params.slug === "sri-lanka") {
+    if (resolvedParams?.slug === "sri-lanka") {
       return pkg.id === 1 || pkg.id === 3;
-    } else if (params.slug === "maldives") {
+    } else if (resolvedParams?.slug === "maldives") {
       return pkg.id === 2 || pkg.id === 3;
     }
     return false;
