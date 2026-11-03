@@ -6,7 +6,6 @@ import {
   ArrowRight, 
   Calendar, 
   MapPin, 
-  Sparkles, 
   CheckCircle2, 
   Compass, 
   LayoutGrid
@@ -275,7 +274,6 @@ export default function TourPackages({ region = "sri-lanka" }) {
                     href="#contact"
                     className="w-full py-4 bg-gradient-to-r from-[#D4AF37] to-[#C5A880] text-black font-cinzel text-sm sm:text-base font-bold uppercase tracking-wider rounded-lg shadow-gold flex items-center justify-center gap-2 hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
                   >
-                    <Sparkles className="w-4 h-4" />
                     <span>Request This Itinerary</span>
                     <ArrowRight className="w-4 h-4" />
                   </a>
