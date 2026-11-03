@@ -21,6 +21,13 @@ export const TOUR_ROUTES = {
     subtitle: "Culture, Nature, Wildlife & Beach",
     duration: "10 Days / 9 Nights",
     path: "M 50,575 Q 115,450 215,395 Q 210,460 198,518 Q 202,548 218,572 Q 245,625 228,672 Q 160,730 98,755 Q 74,710 64,660 Q 52,620 50,575",
+    packageHighlights: [
+      "Explore Polonnaruwa, Dambulla & Temple of the Tooth",
+      "Scenic Nanu Oya to Haputale train journey",
+      "Thrilling jeep safari in Udawalawe National Park",
+      "Madu Ganga Boat Safari & turtle hatchery visit",
+      "Two leisure days relaxing on Bentota beaches"
+    ],
     stops: [
       {
         id: "stop-1",
@@ -199,6 +206,13 @@ export const TOUR_ROUTES = {
     subtitle: "Ancient Heritage & Southern Coast",
     duration: "7 Days / 6 Nights",
     path: "M 50,575 Q 115,450 215,395 Q 210,460 198,518 Q 202,548 218,572 Q 245,625 228,672 Q 160,730 98,755 Q 56,660 50,575",
+    packageHighlights: [
+      "Discover the Cultural Triangle ruins & Dambulla Cave",
+      "Visit a Ceylon tea factory in Nuwara Eliya",
+      "Scenic train ride through the Hill Country",
+      "Elephant Transit Home & Udawalawe safari",
+      "Explore the UNESCO-listed Galle Fort"
+    ],
     stops: [
       {
         id: "h-stop-1",
@@ -916,74 +930,78 @@ export default function SriLankaRouteMap({
         {/* RIGHT: ACTIVE LANDMARK STORY & DETAILS CARD (5 Cols) */}
         {/* ============================================================== */}
         <div className="lg:col-span-5 flex flex-col">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`${selectedRouteKey}-${activeStop.id}`}
-              initial={{ opacity: 0, x: 25 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -25 }}
-              transition={{ duration: 0.45, ease: "easeOut" }}
-              className="bg-white border-2 border-[#D4AF37]/40 rounded-2xl p-6 sm:p-7 shadow-floating relative overflow-hidden flex flex-col justify-between"
-            >
-              {/* Antique Corner Accent */}
-              <div className="absolute top-0 right-0 w-28 h-28 bg-[#D4AF37]/10 rounded-full blur-2xl pointer-events-none" />
+          <div className="bg-white border-2 border-[#D4AF37]/40 rounded-2xl p-6 sm:p-7 shadow-floating relative overflow-hidden flex flex-col justify-between min-h-[580px] sm:min-h-[640px]">
+            {/* Antique Corner Accent */}
+            <div className="absolute top-0 right-0 w-28 h-28 bg-[#D4AF37]/10 rounded-full blur-2xl pointer-events-none" />
 
-              <div>
-                {/* Image Showcase */}
-                <div className="relative h-48 sm:h-56 rounded-xl overflow-hidden mb-6 border border-[#D4AF37]/30 group">
-                  <img
-                    src={activeStop.image}
-                    alt={activeStop.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  
-                  {/* Stop Stage Badge */}
-                  <span className="absolute top-3.5 left-3.5 px-3 py-1 bg-[#071526]/90 backdrop-blur-md border border-gold-primary text-gold-warm font-cinzel text-xs font-bold uppercase tracking-wider rounded">
-                    Stop {activeStop.num} &bull; {activeStop.days}
+            {/* TOP PORTION: ACTIVE STOP DETAILS (Animated & Slides) */}
+            <div className="flex-1">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`${selectedRouteKey}-${activeStop.id}`}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
+                >
+                  {/* Image Showcase */}
+                  <div className="relative h-44 sm:h-52 rounded-xl overflow-hidden mb-4 border border-[#D4AF37]/30 group">
+                    <img
+                      src={activeStop.image}
+                      alt={activeStop.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    
+                    {/* Stop Stage Badge */}
+                    <span className="absolute top-3.5 left-3.5 px-3 py-1 bg-[#071526]/90 backdrop-blur-md border border-gold-primary text-gold-warm font-cinzel text-xs font-bold uppercase tracking-wider rounded">
+                      Stop {activeStop.num} &bull; {activeStop.days}
+                    </span>
+
+                    {/* Region Badge */}
+                    <span className="absolute bottom-3 left-3.5 text-xs font-sans text-white/95 drop-shadow-md flex items-center gap-1.5 font-medium">
+                      <MapPin className="w-3.5 h-3.5 text-gold-primary" />
+                      <span>{activeStop.region}</span>
+                    </span>
+                  </div>
+
+                  {/* Subtitle / Stage */}
+                  <div className="flex items-center gap-2 mb-1">
+                    <Landmark className="w-4 h-4 text-[#A87D46]" />
+                    <span className="text-xs sm:text-[13px] font-cinzel font-bold text-[#A87D46] tracking-widest uppercase">
+                      {activeStop.historicalTag}
+                    </span>
+                  </div>
+
+                  {/* Main Stop Title */}
+                  <h4 className="font-serif text-2xl sm:text-3xl text-indigo-dark font-bold leading-tight mb-1.5">
+                    {activeStop.name}
+                  </h4>
+
+                  <span className="text-xs font-sans font-bold text-[#5A3A1A] block mb-2.5 italic">
+                    "{activeStop.landmarkName}"
                   </span>
 
-                  {/* Region Badge */}
-                  <span className="absolute bottom-3 left-3.5 text-xs font-sans text-white/95 drop-shadow-md flex items-center gap-1.5 font-medium">
-                    <MapPin className="w-3.5 h-3.5 text-gold-primary" />
-                    <span>{activeStop.region}</span>
-                  </span>
-                </div>
+                  {/* Description Narrative */}
+                  <p className="font-sans text-sm sm:text-base text-charcoal font-normal leading-relaxed mb-4">
+                    {activeStop.desc}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+            </div>
 
-                {/* Subtitle / Stage */}
-                <div className="flex items-center gap-2 mb-1.5">
-                  <Landmark className="w-4 h-4 text-[#A87D46]" />
-                  <span className="text-xs sm:text-[13px] font-cinzel font-bold text-[#A87D46] tracking-widest uppercase">
-                    {activeStop.historicalTag}
-                  </span>
-                </div>
-
-                {/* Main Stop Title */}
-                <h4 className="font-serif text-2xl sm:text-3xl text-indigo-dark font-bold leading-tight mb-2">
-                  {activeStop.name}
-                </h4>
-
-                <span className="text-xs font-sans font-bold text-[#5A3A1A] block mb-3 italic">
-                  "{activeStop.landmarkName}"
-                </span>
-
-                {/* Description Narrative */}
-                <p className="font-sans text-sm sm:text-base text-charcoal font-normal leading-relaxed mb-5">
-                  {activeStop.desc}
-                </p>
-
-                {/* Curated Highlights List */}
-                <div className="space-y-2.5 pt-4 border-t border-gold-border/30 mb-8">
-                  <span className="text-xs font-cinzel tracking-wider text-[#A87D46] uppercase block font-bold mb-2">
-                    Historical Curated Inclusions
-                  </span>
-                  {activeStop.highlights.map((h, i) => (
-                    <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-charcoal font-sans font-medium">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-dark shrink-0 mt-0.5" />
-                      <span>{h}</span>
-                    </div>
-                  ))}
-                </div>
+            {/* BOTTOM PORTION: SIGNATURE PACKAGE HIGHLIGHTS & CTA (Static - Stays in place) */}
+            <div className="pt-4 border-t border-gold-border/30 mt-auto">
+              <span className="text-xs font-cinzel tracking-wider text-[#A87D46] uppercase block font-bold mb-3">
+                Signature Package Highlights
+              </span>
+              <div className="space-y-2 mb-6">
+                {(currentRoute.packageHighlights || []).map((h, i) => (
+                  <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-charcoal font-sans font-medium">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-dark shrink-0 mt-0.5" />
+                    <span>{h}</span>
+                  </div>
+                ))}
               </div>
 
               {/* Inquiry Action Button */}
@@ -995,9 +1013,9 @@ export default function SriLankaRouteMap({
                 <span>Customize This Route with L'Esprit</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
+            </div>
 
-            </motion.div>
-          </AnimatePresence>
+          </div>
         </div>
 
       </div>
