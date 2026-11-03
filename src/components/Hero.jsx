@@ -4,57 +4,83 @@ import { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const HERO_VIDEOS = [
+const HERO_SLIDES = [
   {
     url: "/assets/VIDEOS/253907_small.mp4",
     poster: "/assets/images/posters/maldives_poster.jpg",
-    label: "Maldives Paradise"
+    label: "Maldives Paradise",
+    titlePrefix: "Secluded Overwater Villas & ",
+    titleHighlight: "Azure Serenity",
+    titleSuffix: " in Maldives.",
+    subtitle: "Crafting bespoke overwater sanctuaries across secluded coral lagoons, defined by tranquility and ocean elegance."
   },
   {
     url: "/assets/VIDEOS/tea_estate.mp4",
     poster: "/assets/images/posters/tea_estate_poster.jpg",
-    label: "Tea Estates, Ella"
+    label: "Tea Estates, Ella",
+    titlePrefix: "Misty Highland Sanctuaries & ",
+    titleHighlight: "Colonial Charm",
+    titleSuffix: " in Ceylon.",
+    subtitle: "Crafting bespoke highland expeditions across misty emerald tea slopes, defined by heritage and colonial elegance."
   },
   {
     url: "/assets/VIDEOS/309435_small.mp4",
     poster: "/assets/images/posters/beaches_poster.jpg",
-    label: "Untouched Beaches"
+    label: "Untouched Beaches",
+    titlePrefix: "Golden Tropical Coastlines & ",
+    titleHighlight: "Sapphire Tides",
+    titleSuffix: " in Paradise.",
+    subtitle: "Crafting bespoke coastal catamaran escapes across sun-drenched shores, defined by seclusion and island elegance."
   },
   {
     url: "/assets/VIDEOS/242272_small.mp4",
     poster: "/assets/images/posters/wildlife_poster.jpg",
-    label: "Heritage Wildlife"
+    label: "Heritage Wildlife",
+    titlePrefix: "Experience the Soul, Spirit & ",
+    titleHighlight: "Authenticity",
+    titleSuffix: " of Every Journey.",
+    subtitle: "Crafting bespoke luxury expeditions across Sri Lanka and Maldives, defined by culture and authentic connections."
   }
 ];
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [timerKey, setTimerKey] = useState(0);
 
-  // Auto-advance videos every 8 seconds
+  // Auto-advance videos every 8 seconds (resets when user manually navigates)
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % HERO_VIDEOS.length);
+      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
     }, 8000);
     return () => clearInterval(timer);
-  }, []);
+  }, [timerKey]);
+
+  const handleSelectSlide = (idx) => {
+    setCurrentSlide(idx);
+    setTimerKey((k) => k + 1);
+  };
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % HERO_VIDEOS.length);
+    setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    setTimerKey((k) => k + 1);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + HERO_VIDEOS.length) % HERO_VIDEOS.length);
+    setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+    setTimerKey((k) => k + 1);
   };
 
+  const slide = HERO_SLIDES[currentSlide];
+
   return (
-    <section id="hero" className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center bg-indigo-dark pt-24 sm:pt-32 pb-20 sm:pb-28 overflow-hidden">
+    <section id="hero" className="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center bg-indigo-dark pt-24 sm:pt-32 pb-20 sm:pb-28 overflow-hidden">
       {/* Background Video Carousel Layer */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence initial={false} mode="popLayout">
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.45 }}
+            animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
             className="absolute inset-0 w-full h-full"
@@ -65,8 +91,8 @@ export default function Hero() {
               loop
               playsInline
               className="w-full h-full object-cover scale-105"
-              src={HERO_VIDEOS[currentSlide].url}
-              poster={HERO_VIDEOS[currentSlide].poster}
+              src={slide.url}
+              poster={slide.poster}
             />
           </motion.div>
         </AnimatePresence>
@@ -79,14 +105,14 @@ export default function Hero() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-gold-primary/30 bg-indigo-deep/30 backdrop-blur-md flex items-center justify-center text-ivory-sacred hover:bg-gold-primary hover:text-black hover:border-gold-primary transition-all duration-300 z-30 hidden md:flex"
+        className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-gold-primary/30 bg-indigo-deep/30 backdrop-blur-md flex items-center justify-center text-ivory-sacred hover:bg-gold-primary hover:text-black hover:border-gold-primary transition-all duration-300 z-30 hidden md:flex cursor-pointer"
         aria-label="Previous destination"
       >
         <ChevronLeft className="w-5 h-5" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-gold-primary/30 bg-indigo-deep/30 backdrop-blur-md flex items-center justify-center text-ivory-sacred hover:bg-gold-primary hover:text-black hover:border-gold-primary transition-all duration-300 z-30 hidden md:flex"
+        className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-gold-primary/30 bg-indigo-deep/30 backdrop-blur-md flex items-center justify-center text-ivory-sacred hover:bg-gold-primary hover:text-black hover:border-gold-primary transition-all duration-300 z-30 hidden md:flex cursor-pointer"
         aria-label="Next destination"
       >
         <ChevronRight className="w-5 h-5" />
@@ -94,22 +120,45 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-20 w-full max-w-5xl lg:max-w-6xl 2xl:max-w-7xl mx-auto px-6 text-center text-ivory-sacred">
+        
+        {/* CSS Grid Stack: All slide texts share the exact same cell for 100% zero-shift crossfade */}
+        <div className="grid grid-cols-1 grid-rows-1 w-full items-center justify-center">
+          <AnimatePresence initial={false}>
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ 
+                opacity: 1, 
+                y: 0, 
+                transition: { duration: 1.4, ease: [0.25, 0.1, 0.25, 1.0] } 
+              }}
+              exit={{ 
+                opacity: 0, 
+                y: -10, 
+                transition: { duration: 0.8, ease: "easeInOut" } 
+              }}
+              className="col-start-1 row-start-1 flex flex-col items-center w-full"
+            >
+              {/* Title */}
+              <h1 className="font-serif text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-4 sm:mb-6 leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.65)] max-w-5xl 2xl:max-w-6xl mx-auto">
+                {slide.titlePrefix}
+                <span className="gold-gradient-text">{slide.titleHighlight}</span>
+                {slide.titleSuffix}
+              </h1>
 
-        {/* Title */}
-        <h1 className="font-serif text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-4 sm:mb-6 leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.65)]">
-          Experience the Soul, Spirit, and <span className="gold-gradient-text">Authenticity</span> of Every Journey.
-        </h1>
+              {/* Subtitle */}
+              <p className="font-sans text-sm sm:text-lg lg:text-xl text-ivory-sacred/95 max-w-2xl sm:max-w-3xl 2xl:max-w-4xl mx-auto font-light leading-relaxed tracking-wide drop-shadow-md">
+                {slide.subtitle}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
-        {/* Subtitle */}
-        <p className="font-sans text-sm sm:text-lg lg:text-xl text-ivory-sacred/95 max-w-2xl sm:max-w-3xl 2xl:max-w-4xl mx-auto mb-8 sm:mb-10 font-light leading-relaxed tracking-wide drop-shadow-md">
-          Crafting bespoke luxury journeys across Sri Lanka and the Maldives, defined by elegance, culture, and authentic connections.
-        </p>
-
-        {/* CTA Button Group */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-3.5 sm:gap-5 mb-10 sm:mb-16 w-full max-w-md sm:max-w-none mx-auto">
+        {/* Stable CTA Button Group (Anchored, Never Jumps or Shifts) */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-3.5 sm:gap-5 mt-8 sm:mt-10 mb-8 sm:mb-12 w-full max-w-md sm:max-w-none mx-auto">
           <a
             href="#destinations"
-            className="w-full sm:w-auto px-7 sm:px-9 py-3 sm:py-4 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs sm:text-base font-bold uppercase tracking-wider rounded shadow-gold flex items-center justify-center gap-2.5 sm:gap-3 hover:scale-105 transition-transform"
+            className="w-full sm:w-auto px-7 sm:px-9 py-3 sm:py-4 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-xs sm:text-base font-bold uppercase tracking-wider rounded shadow-gold flex items-center justify-center gap-2.5 sm:gap-3 hover:scale-105 transition-transform cursor-pointer"
           >
             <span>Discover Sri Lanka</span>
             <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -117,7 +166,7 @@ export default function Hero() {
 
           <a
             href="#destinations"
-            className="w-full sm:w-auto px-7 sm:px-9 py-3 sm:py-4 bg-indigo-deep/50 border border-gold-primary/40 hover:border-gold-primary text-white font-cinzel text-xs sm:text-base font-bold uppercase tracking-wider rounded backdrop-blur-md hover:bg-gold-primary/10 flex items-center justify-center gap-2.5 sm:gap-3 transition-all duration-300 hover:scale-105 hover:tracking-[0.2em] shadow-lg hover:shadow-[0_0_15px_rgba(212,175,55,0.15)]"
+            className="w-full sm:w-auto px-7 sm:px-9 py-3 sm:py-4 bg-indigo-deep/50 border border-gold-primary/40 hover:border-gold-primary text-white font-cinzel text-xs sm:text-base font-bold uppercase tracking-wider rounded backdrop-blur-md hover:bg-gold-primary/10 flex items-center justify-center gap-2.5 sm:gap-3 transition-all duration-300 hover:scale-105 hover:tracking-[0.2em] shadow-lg hover:shadow-[0_0_15px_rgba(212,175,55,0.15)] cursor-pointer"
           >
             <span>Explore Maldives</span>
             <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -132,17 +181,17 @@ export default function Hero() {
       </div>
 
       {/* Slide Indicators / Navigation Bullets */}
-      <div className="absolute bottom-4 sm:bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-3 sm:gap-4 z-30 max-w-[95vw] overflow-x-auto py-1 sm:py-2">
-        {HERO_VIDEOS.map((video, idx) => (
+      <div className="absolute bottom-4 sm:bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-3 sm:gap-4 z-30 max-w-[95vw] overflow-x-auto py-1 sm:py-2">
+        {HERO_SLIDES.map((item, idx) => (
           <button
             key={idx}
-            onClick={() => setCurrentSlide(idx)}
-            className="flex flex-col items-center gap-1.5 group focus:outline-none"
+            onClick={() => handleSelectSlide(idx)}
+            className="flex flex-col items-center gap-1.5 group focus:outline-none cursor-pointer"
           >
             <span className={`font-cinzel text-xs tracking-wider transition-colors uppercase whitespace-nowrap hidden sm:inline ${
               idx === currentSlide ? "text-gold-primary font-bold" : "text-ivory-sacred/50 group-hover:text-ivory-sacred/80"
             }`}>
-              {video.label}
+              {item.label}
             </span>
             <div className={`h-1 rounded-full transition-all duration-500 ${
               idx === currentSlide ? "w-10 bg-gold-primary" : "w-3 bg-ivory-sacred/20 group-hover:bg-ivory-sacred/50"
@@ -150,8 +199,6 @@ export default function Hero() {
           </button>
         ))}
       </div>
-
-      
     </section>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, X, ArrowUpRight, Phone, Mail, Sparkles } from "lucide-react";
+import { Search, X, ArrowUpRight, Phone, Mail } from "lucide-react";
 
 const SEARCH_ITEMS = [
   { title: "Sri Lanka Expeditions", category: "Destination", targetId: "destinations", keywords: ["sri lanka", "culture", "ceylon", "island"] },
@@ -174,10 +174,14 @@ export default function Header() {
             {/* Inquire Button */}
             <a
               href="#contact"
-              className="px-2.5 xs:px-3 sm:px-5 md:px-6 py-1.5 sm:py-2.5 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider rounded-md hover:shadow-gold hover:-translate-y-0.5 transition-all shadow-md flex items-center gap-1 sm:gap-1.5 whitespace-nowrap cursor-pointer"
+              className="px-2.5 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wider rounded-md hover:shadow-gold hover:-translate-y-0.5 transition-all shadow-md flex items-center gap-1.5 sm:gap-2 whitespace-nowrap cursor-pointer group"
             >
-              <Sparkles className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
               <span>Inquire</span>
+              <img 
+                src="/assets/images/inquire-icon.png" 
+                alt="Inquire" 
+                className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 object-contain shrink-0 transition-transform duration-200 group-hover:scale-110" 
+              />
             </a>
 
             {/* 3 Lines (Iri Kali Thunak) - Hamburger Menu Button */}
@@ -383,10 +387,14 @@ export default function Header() {
                 <a
                   href="#contact"
                   onClick={() => setSideMenuOpen(false)}
-                  className="w-full py-3.5 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-sm font-bold uppercase tracking-wider rounded-md shadow-gold hover:shadow-lg flex items-center justify-center gap-2 transition-all cursor-pointer text-center"
+                  className="w-full py-3.5 bg-gradient-to-r from-gold-primary to-gold-dark text-indigo-deep font-cinzel text-sm font-bold uppercase tracking-wider rounded-md shadow-gold hover:shadow-lg flex items-center justify-center gap-2 transition-all cursor-pointer text-center group"
                 >
-                  <Sparkles className="w-4 h-4" />
                   <span>Inquire Bespoke Journey</span>
+                  <img 
+                    src="/assets/images/inquire-icon.png" 
+                    alt="Inquire" 
+                    className="w-4 h-4 object-contain shrink-0 transition-transform duration-200 group-hover:scale-110" 
+                  />
                 </a>
 
                 <p className="text-[11px] text-center text-ivory-sacred/40 font-sans">
