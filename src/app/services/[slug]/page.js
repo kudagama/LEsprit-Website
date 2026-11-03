@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 
 const SERVICE_DATA = {
   "travel-solutions": {
+    image: "/assets/images/services/travel_solutions.jpg",
     title: "FIT, GIT & Corporate MICE Logistics",
     subtitle: "Tailored luxury travel solutions for individuals, group tours, and high-level corporate retreats.",
     overview:
@@ -105,8 +106,17 @@ export default function ServiceDetailPage({ params }) {
       <Header />
 
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-indigo-deep text-white relative">
-        <div className="w-full max-w-[1920px] 2xl:max-w-none mx-auto px-4 sm:px-8 lg:px-12 2xl:px-16">
+      <section className="pt-36 pb-20 bg-indigo-deep text-white relative overflow-hidden">
+        {data.image && (
+          <>
+            <div 
+              className="absolute inset-0 bg-cover bg-center pointer-events-none opacity-25 mix-blend-luminosity scale-105"
+              style={{ backgroundImage: `url(${data.image})` }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-indigo-deep via-indigo-deep/80 to-transparent" />
+          </>
+        )}
+        <div className="w-full max-w-[1920px] 2xl:max-w-none mx-auto px-4 sm:px-8 lg:px-12 2xl:px-16 relative z-10">
           <Link
             href="/#services"
             className="inline-flex items-center gap-2 font-cinzel text-xs font-bold text-gold-warm uppercase tracking-widest hover:text-white transition-colors mb-6"

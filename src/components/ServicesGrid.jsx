@@ -20,7 +20,7 @@ const SERVICES = [
     category: "Travel Solutions",
     icon: Plane,
     title: "Travel Solutions",
-    image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=600&q=80",
+    image: "/assets/images/services/travel_solutions.jpg",
     desc: "Specialized travel execution for individuals, group tours, and high-level corporate retreats across our destinations.",
     features: [
       "FIT (Free Independent Travelers)",
@@ -136,6 +136,7 @@ export default function ServicesGrid() {
                       <img
                         src={svc.image}
                         alt={svc.title}
+                        style={{ objectPosition: svc.id === "travel" ? "center 28%" : "center" }}
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-108"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
