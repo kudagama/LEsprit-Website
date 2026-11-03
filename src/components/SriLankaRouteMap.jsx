@@ -1063,7 +1063,6 @@ export default function SriLankaRouteMap({
                 href="#contact"
                 className="w-full py-3.5 bg-gradient-to-r from-[#D4AF37] to-[#C5A880] text-black font-cinzel text-xs sm:text-sm font-bold uppercase tracking-wider rounded-lg shadow-gold flex items-center justify-center gap-2 hover:scale-[1.02] hover:shadow-xl transition-all duration-300"
               >
-                <Sparkles className="w-4 h-4" />
                 <span>Customize This Route with L'Esprit</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
