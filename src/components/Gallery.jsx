@@ -7,51 +7,33 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 const GALLERY_ITEMS = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=800&q=80",
-    location: "Ella, Sri Lanka",
-    title: "Tea Country Highlands"
+    image: "/assets/images/gallery/moment_safari_sunset.jpg",
+    location: "Minneriya National Park, Sri Lanka",
+    title: "Sunset Wild Elephant Gathering"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?auto=format&fit=crop&w=800&q=80",
-    location: "Sigiriya, Sri Lanka",
-    title: "Sacred Heritage"
+    image: "/assets/images/gallery/moment_tea_plucking.jpg",
+    location: "Nuwara Eliya Tea Hills, Sri Lanka",
+    title: "Ceylon Tea Harvest Ritual"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=800&q=80",
-    location: "Yala National Park",
-    title: "Majestic Wildlife"
+    image: "/assets/images/gallery/moment_jeep_friends.jpg",
+    location: "Yala National Park Safari",
+    title: "Expedition Companions"
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80",
-    location: "Private Island, Maldives",
-    title: "Overwater Sanctum"
+    image: "/assets/images/gallery/moment_village_culture.jpg",
+    location: "Habarana Village Heritage",
+    title: "Authentic Rural Culinary Living"
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=80",
-    location: "Baa Atoll, Maldives",
-    title: "Secluded Shorelines"
-  },
-  {
-    id: 6,
-    image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=800&q=80",
-    location: "Luxury Yacht Charter",
-    title: "Ocean Exploration"
-  },
-  {
-    id: 7,
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
-    location: "Private Beach Dinner",
-    title: "Bespoke Dining"
-  },
-  {
-    id: 8,
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
-    location: "Wellness Retreat",
-    title: "Ayurvedic Sanctuary"
+    image: "/assets/images/gallery/moment_rail_tunnel.jpg",
+    location: "Demodara Railway Arch, Ella",
+    title: "Highland Rail Odyssey"
   }
 ];
 
@@ -65,8 +47,8 @@ export default function Gallery() {
     offset: ["start start", "end end"]
   });
 
-  // Translate horizontal track leftwards from 0% to -83% based on scroll progress
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-83%"]);
+  // Translate horizontal track leftwards based on scroll progress
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
 
   const openLightbox = (index) => {
     setLightboxIndex(index);
@@ -87,7 +69,7 @@ export default function Gallery() {
   };
 
   return (
-    <section ref={targetRef} id="gallery" className="relative h-[550vh] bg-paper-parchment">
+    <section ref={targetRef} id="gallery" className="relative h-[420vh] bg-paper-parchment">
       {/* Sticky Fullscreen Wrapper */}
       <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
         
@@ -117,8 +99,16 @@ export default function Gallery() {
                   style={{ backgroundImage: `url(${item.image})` }}
                 />
                 
-                {/* Clean hover overlays - no text */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500 z-10" />
+                {/* Clean hover gradient & elegant caption */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                <div className="absolute bottom-5 left-5 right-5 z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 pointer-events-none">
+                  <span className="font-cinzel text-[11px] font-bold text-gold-warm tracking-widest uppercase block mb-1">
+                    {item.location}
+                  </span>
+                  <h4 className="font-serif text-lg sm:text-xl text-white font-medium drop-shadow-md">
+                    {item.title}
+                  </h4>
+                </div>
                 <div className="absolute inset-4 border border-gold-primary/0 group-hover:border-gold-primary/40 transition-all duration-500 pointer-events-none rounded-xl z-20" />
               </div>
             ))}
