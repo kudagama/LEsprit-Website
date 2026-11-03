@@ -116,7 +116,7 @@ export const TOUR_ROUTES = {
         y: 572,
         type: "nuwara-eliya",
         labelOffset: { dx: 24, dy: 4, anchor: "start" },
-        image: "/assets/images/posters/tea_estate_poster.jpg",
+        image: "/assets/images/packages/nuwara_eliya_tea.jpg",
         desc: "Board the world-famous observation train crossing the Nine Arch Bridge into emerald tea valleys. Savor rare artisanal single-estate Ceylon teas in colonial elegance.",
         highlights: [
           "First-class scenic highland observation train",
@@ -164,7 +164,7 @@ export const TOUR_ROUTES = {
         y: 755,
         type: "galle",
         labelOffset: { dx: -20, dy: 14, anchor: "end" },
-        image: "/assets/images/packages/sl_tour_2.jpg",
+        image: "/assets/images/packages/galle_fort.jpg",
         desc: "Stroll the cobblestone bastions and lighthouse ramparts of Galle Fort, exploring 17th-century Dutch architecture, artisan gem workshops, and oceanfront dining.",
         highlights: [
           "Private architectural walking tour of Galle Fort",
@@ -302,7 +302,7 @@ export const TOUR_ROUTES = {
         y: 572,
         type: "nuwara-eliya",
         labelOffset: { dx: 24, dy: 4, anchor: "start" },
-        image: "/assets/images/posters/tea_estate_poster.jpg",
+        image: "/assets/images/packages/nuwara_eliya_tea.jpg",
         desc: "Scenic highland train ride through misty tea fields, fresh mountain waterfalls, and private estate tea tasting.",
         highlights: [
           "Scenic hill country train ride",
@@ -350,7 +350,7 @@ export const TOUR_ROUTES = {
         y: 755,
         type: "galle",
         labelOffset: { dx: -20, dy: 14, anchor: "end" },
-        image: "/assets/images/packages/sl_tour_2.jpg",
+        image: "/assets/images/packages/galle_fort.jpg",
         desc: "Explore the UNESCO Galle Fort ramparts and maritime streets before your comfortable expressway transfer to Colombo Airport for your departure flight.",
         highlights: [
           "Galle Fort lighthouse rampart walk",
@@ -1037,7 +1037,15 @@ export default function SriLankaRouteMap({
                     <img
                       src={activeStop.image}
                       alt={activeStop.name}
-                      style={{ objectPosition: activeStop.isGateway ? "center 38%" : "center" }}
+                      style={{ 
+                        objectPosition: activeStop.isGateway 
+                          ? "center 38%" 
+                          : activeStop.type === "nuwara-eliya" 
+                          ? "center 42%" 
+                          : activeStop.type === "galle"
+                          ? "center 40%"
+                          : "center" 
+                      }}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
