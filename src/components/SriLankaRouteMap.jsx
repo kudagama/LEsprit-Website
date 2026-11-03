@@ -140,7 +140,7 @@ export const TOUR_ROUTES = {
         y: 672,
         type: "udawalawe",
         labelOffset: { dx: 24, dy: 4, anchor: "start" },
-        image: "/assets/images/posters/wildlife_poster.jpg",
+        image: "/assets/images/packages/udawalawe_safari.jpg",
         desc: "Descend to the golden southern plains for open-top 4x4 safaris observing hundred-strong wild elephant herds, wild water buffaloes, and rare endemic birdlife.",
         highlights: [
           "Private open-top 4x4 safari with senior naturalist",
@@ -326,7 +326,7 @@ export const TOUR_ROUTES = {
         y: 672,
         type: "udawalawe",
         labelOffset: { dx: 24, dy: 4, anchor: "start" },
-        image: "/assets/images/posters/wildlife_poster.jpg",
+        image: "/assets/images/packages/udawalawe_safari.jpg",
         desc: "Unforgettable open jeep safari witnessing wild elephant herds in their native savanna sanctuary.",
         highlights: [
           "Udawalawe 4x4 open safari",
@@ -963,43 +963,53 @@ export default function SriLankaRouteMap({
 
           </div>
 
-          {/* Stepper Timeline Buttons */}
-          <div className="w-full mt-4 flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-[#D4AF37]/30">
-            {stops.map((stop, idx) => {
-              const isActive = activeStopIndex === idx;
-              if (stop.isGateway) {
+          {/* Stepper Timeline Ribbon - Responsive Luxury Waypoints (Zero Scrollbar) */}
+          <div className="w-full mt-4 bg-white/95 backdrop-blur-sm border border-[#D4AF37]/35 rounded-2xl p-1.5 sm:p-2.5 shadow-[0_4px_20px_-4px_rgba(212,175,55,0.12)]">
+            <div className="flex flex-wrap items-center justify-center sm:justify-between gap-1 sm:gap-1.5">
+              {stops.map((stop, idx) => {
+                const isActive = activeStopIndex === idx;
+                if (stop.isGateway) {
+                  return (
+                    <button
+                      key={`btn-${stop.id}`}
+                      onClick={() => handleStopClick(idx)}
+                      title="Bandaranaike Int. Airport (CMB) - Arrival & Departure Gateway"
+                      className={`flex-1 min-w-[85px] sm:min-w-0 py-2 px-2 sm:px-3 rounded-xl text-[11px] sm:text-xs font-cinzel font-bold transition-all duration-300 flex items-center justify-center gap-1.5 border ${
+                        isActive
+                          ? "bg-gradient-to-r from-[#071526] to-[#15273C] text-[#FFEAA7] border-[#D4AF37] shadow-gold scale-[1.02]"
+                          : "bg-[#FAF7F2] text-charcoal border-[#D4AF37]/30 hover:border-[#D4AF37] hover:bg-white"
+                      }`}
+                    >
+                      <span className="text-[13px] shrink-0">🛫</span>
+                      <span className="whitespace-nowrap">Colombo</span>
+                    </button>
+                  );
+                }
                 return (
                   <button
                     key={`btn-${stop.id}`}
                     onClick={() => handleStopClick(idx)}
-                    className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-cinzel font-bold transition-all duration-300 flex items-center gap-1.5 border ${
+                    title={`Stop ${stop.num}: ${stop.name}`}
+                    className={`flex-1 min-w-[75px] sm:min-w-0 py-2 px-1.5 sm:px-2.5 rounded-xl text-[11px] sm:text-xs font-cinzel font-bold transition-all duration-300 flex items-center justify-center gap-1.5 border ${
                       isActive
-                        ? "bg-[#071526] text-[#FFEAA7] border-[#D4AF37] shadow-gold scale-105"
-                        : "bg-white text-charcoal border-[#D4AF37]/60 hover:border-[#D4AF37] hover:bg-[#FAF5EA]"
+                        ? "bg-gradient-to-r from-[#5A3A1A] to-[#422910] text-[#FFEAA7] border-[#D4AF37] shadow-gold scale-[1.02]"
+                        : "bg-[#FAF7F2] text-charcoal border-[#D4AF37]/25 hover:border-[#D4AF37] hover:bg-white"
                     }`}
                   >
-                    <span className="text-[13px]">🛫</span>
-                    <span>Colombo Gateway (Start & Finish)</span>
+                    <span
+                      className={`w-4 h-4 rounded-full flex items-center justify-center text-[9.5px] font-bold shrink-0 transition-colors ${
+                        isActive
+                          ? "bg-[#D4AF37] text-black"
+                          : "bg-black/10 text-[#5A3A1A]"
+                      }`}
+                    >
+                      {stop.num}
+                    </span>
+                    <span className="whitespace-nowrap">{stop.town}</span>
                   </button>
                 );
-              }
-              return (
-                <button
-                  key={`btn-${stop.id}`}
-                  onClick={() => handleStopClick(idx)}
-                  className={`shrink-0 px-3 py-1.5 rounded-lg text-xs font-serif font-bold transition-all duration-300 flex items-center gap-1.5 border ${
-                    isActive
-                      ? "bg-[#5A3A1A] text-[#FFEAA7] border-[#D4AF37] shadow-sm scale-105"
-                      : "bg-white text-charcoal border-gold-border/40 hover:border-[#D4AF37] hover:bg-[#FAF5EA]"
-                  }`}
-                >
-                  <span className="w-4 h-4 rounded-full bg-black/10 flex items-center justify-center text-[10px] font-bold">
-                    {stop.num}
-                  </span>
-                  <span>{stop.town}</span>
-                </button>
-              );
-            })}
+              })}
+            </div>
           </div>
 
         </div>
