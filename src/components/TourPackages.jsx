@@ -20,7 +20,7 @@ const SRI_LANKA_PACKAGES = [
     title: "The Ultimate Sri Lankan Journey",
     subtitle: "Culture, Nature, Wildlife & Beach",
     duration: "10 Days / 9 Nights",
-    location: "Colombo → Sigiriya → Kandy → Nuwara Eliya → Galle → Bentota",
+    location: "Round-Trip from Colombo (CMB) ⇄ Sigiriya • Kandy • Nuwara Eliya • Udawalawe • Galle • Bentota",
     image: "/assets/images/packages/sl_tour_1.jpg",
     tag: "Ultimate Journey",
     highlights: [
@@ -37,7 +37,7 @@ const SRI_LANKA_PACKAGES = [
     title: "Sri Lanka Highlights",
     subtitle: "Ancient Heritage & Southern Coast",
     duration: "7 Days / 6 Nights",
-    location: "Colombo → Sigiriya → Kandy → Nuwara Eliya → Udawalawe → Galle",
+    location: "Round-Trip from Colombo (CMB) ⇄ Sigiriya • Kandy • Nuwara Eliya • Udawalawe • Galle",
     image: "/assets/images/packages/sl_tour_2.jpg",
     tag: "Highlights Tour",
     highlights: [

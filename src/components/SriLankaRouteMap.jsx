@@ -30,37 +30,38 @@ export const TOUR_ROUTES = {
     ],
     stops: [
       {
-        id: "stop-1",
-        num: "01",
+        id: "stop-gateway",
+        isGateway: true,
+        num: null,
         town: "Colombo",
         name: "Colombo & Bandaranaike Gateway",
-        landmarkName: "Colombo Gateway & Ocean Capital",
-        historicalTag: "Bandaranaike Int. Airport (CMB)",
-        days: "Day 01",
-        stage: "Arrival & Coastal Capital Welcome",
-        region: "Western Coastal Capital",
+        landmarkName: "Bandaranaike Int. Airport (CMB) & Coastal Gateway",
+        historicalTag: "Arrival & Departure International Hub",
+        days: "Arrival & Departure",
+        stage: "Start & Finish Gateway Hub",
+        region: "Western International Gateway",
         x: 50,
         y: 575,
         type: "colombo",
-        labelOffset: { dx: -18, dy: 6, anchor: "end" },
-        image: "/assets/images/packages/sl_tour_1.jpg",
-        desc: "Touch down at Bandaranaike International Airport (CMB). Receive VIP fast-track reception followed by private luxury chauffeur escort to your oceanfront Colombo suite or coastal sanctuary.",
+        labelOffset: { dx: -14, dy: 4, anchor: "end" },
+        image: "/assets/images/packages/colombo_airport.jpg",
+        desc: "Touch down at Bandaranaike International Airport (CMB). Receive VIP fast-track reception and dedicated luxury chauffeur service. At the journey's close, return comfortably along the scenic expressway for departure.",
         highlights: [
           "Bandaranaike Int. Airport VIP Meet & Fast-Track Assist",
-          "Private luxury chauffeur transfer to five-star oceanfront suite",
-          "Sunset ocean view dinner & colonial heritage unwind"
+          "Dedicated private luxury chauffeur transfer & escort",
+          "Seamless arrival welcome and final departure farewell"
         ],
         travelTime: "Bandaranaike International Airport (CMB)",
-        stay: "1 Night at Luxury Colombo Oceanfront Suite"
+        stay: "Round-trip Gateway & Coastal Welcome"
       },
       {
-        id: "stop-2",
-        num: "02",
+        id: "stop-1",
+        num: "01",
         town: "Sigiriya",
         name: "Sigiriya Citadel & Dambulla",
         landmarkName: "Sigiriya Lion Rock Citadel",
         historicalTag: "UNESCO 5th-Century Sky Fortress",
-        days: "Days 02 – 03",
+        days: "Days 01 – 03",
         stage: "Ancient Royal Kingdoms",
         region: "Cultural Triangle",
         x: 215,
@@ -68,7 +69,7 @@ export const TOUR_ROUTES = {
         type: "sigiriya",
         labelOffset: { dx: 22, dy: -6, anchor: "start" },
         image: "/assets/images/pillars/pillar_2.jpg",
-        desc: "Behold King Kashyapa's dramatic 5th-century palace atop the sheer 200-meter monolith of Sigiriya, ancient water gardens, and the golden cave monasteries of Dambulla.",
+        desc: "Depart Colombo directly for the Cultural Triangle. Behold King Kashyapa's dramatic 5th-century palace atop the sheer 200-meter monolith of Sigiriya, ancient water gardens, and the golden cave monasteries of Dambulla.",
         highlights: [
           "Sigiriya Lion Rock sunrise private ascent",
           "Dambulla UNESCO Golden Cave Temples",
@@ -78,8 +79,8 @@ export const TOUR_ROUTES = {
         stay: "2 Nights at Boutique Heritage Estate"
       },
       {
-        id: "stop-3",
-        num: "03",
+        id: "stop-2",
+        num: "02",
         town: "Kandy",
         name: "Kandy Sacred Hill Capital",
         landmarkName: "Temple of the Sacred Tooth",
@@ -102,8 +103,8 @@ export const TOUR_ROUTES = {
         stay: "1 Night in Colonial Mountain Sanctuary"
       },
       {
-        id: "stop-4",
-        num: "04",
+        id: "stop-3",
+        num: "03",
         town: "Nuwara Eliya",
         name: "Nuwara Eliya & Tea Country",
         landmarkName: "Nine Arch Bridge & Tea Hills",
@@ -126,8 +127,8 @@ export const TOUR_ROUTES = {
         stay: "2 Nights at Historic Tea Planter's Bungalow"
       },
       {
-        id: "stop-5",
-        num: "05",
+        id: "stop-4",
+        num: "04",
         town: "Udawalawe",
         name: "Udawalawe National Park",
         landmarkName: "Wild Elephant Sanctuary",
@@ -150,8 +151,8 @@ export const TOUR_ROUTES = {
         stay: "1 Night at Luxury Safari Glamping Lodge"
       },
       {
-        id: "stop-6",
-        num: "06",
+        id: "stop-5",
+        num: "05",
         town: "Galle",
         name: "Galle Historic Dutch Fort",
         landmarkName: "Galle Fort Lighthouse & Ramparts",
@@ -174,8 +175,8 @@ export const TOUR_ROUTES = {
         stay: "1 Night at Historic Fort Boutique Manor"
       },
       {
-        id: "stop-7",
-        num: "07",
+        id: "stop-6",
+        num: "06",
         town: "Bentota",
         name: "Bentota Golden Coast",
         landmarkName: "Palm Riviera & Madu River",
@@ -188,7 +189,7 @@ export const TOUR_ROUTES = {
         type: "bentota",
         labelOffset: { dx: -20, dy: -4, anchor: "end" },
         image: "/assets/images/posters/beaches_poster.jpg",
-        desc: "Unwind on golden sands, glide along the biodiverse Madu River mangrove archipelago by boat, visit a sea turtle nursery, and depart with VIP chauffeur escort.",
+        desc: "Unwind on golden sands, glide along the biodiverse Madu River mangrove archipelago by boat, visit a sea turtle nursery, and return comfortably along the expressway to Colombo Airport for departure.",
         highlights: [
           "Private Madu River mangrove boat safari",
           "Kosgoda Sea Turtle Conservation sanctuary",
@@ -215,37 +216,38 @@ export const TOUR_ROUTES = {
     ],
     stops: [
       {
-        id: "h-stop-1",
-        num: "01",
+        id: "h-stop-gateway",
+        isGateway: true,
+        num: null,
         town: "Colombo",
         name: "Colombo & Bandaranaike Gateway",
-        landmarkName: "Colombo Gateway & Ocean Capital",
-        historicalTag: "Bandaranaike Int. Airport (CMB)",
-        days: "Day 01",
-        stage: "Arrival in Paradise",
-        region: "Western Coastal Capital",
+        landmarkName: "Bandaranaike Int. Airport (CMB) & Coastal Gateway",
+        historicalTag: "Arrival & Departure International Hub",
+        days: "Arrival & Departure",
+        stage: "Start & Finish Gateway Hub",
+        region: "Western International Gateway",
         x: 50,
         y: 575,
         type: "colombo",
-        labelOffset: { dx: -18, dy: 6, anchor: "end" },
-        image: "/assets/images/packages/sl_tour_1.jpg",
-        desc: "Warm traditional Ayubowan welcome at Bandaranaike International Airport (CMB). Private luxury chauffeur transfer to your oceanfront sanctuary to rest before your grand heritage tour.",
+        labelOffset: { dx: -14, dy: 4, anchor: "end" },
+        image: "/assets/images/packages/colombo_airport.jpg",
+        desc: "Warm Ayubowan greeting at Bandaranaike International Airport (CMB). Receive VIP fast-track reception followed by private luxury chauffeur transfer. At the end of your highlights expedition, return smoothly to CMB for departure.",
         highlights: [
-          "Bandaranaike Airport VIP meet-and-greet",
-          "Private luxury chauffeur transfer",
-          "Coastal capital relaxation evening"
+          "Bandaranaike Airport VIP meet-and-greet assist",
+          "Private luxury chauffeur transfer throughout",
+          "Seamless arrival reception and departure farewell"
         ],
         travelTime: "Bandaranaike International Airport (CMB)",
-        stay: "1 Night Beachfront / City Sanctuary"
+        stay: "Round-trip Gateway & Coastal Welcome"
       },
       {
-        id: "h-stop-2",
-        num: "02",
+        id: "h-stop-1",
+        num: "01",
         town: "Sigiriya",
         name: "Sigiriya Citadel & Dambulla",
         landmarkName: "Sigiriya Lion Rock Citadel",
         historicalTag: "5th-Century Sky Fortress",
-        days: "Day 02",
+        days: "Days 01 – 02",
         stage: "Cultural Triangle & Rock Citadel",
         region: "Cultural Triangle",
         x: 215,
@@ -253,7 +255,7 @@ export const TOUR_ROUTES = {
         type: "sigiriya",
         labelOffset: { dx: 22, dy: -6, anchor: "start" },
         image: "/assets/images/pillars/pillar_2.jpg",
-        desc: "Ascend the iconic Sigiriya Rock citadel and explore the ancient painted cave temple monasteries of Dambulla.",
+        desc: "Depart Colombo directly for the Cultural Triangle. Ascend the iconic Sigiriya Rock citadel and explore the ancient painted cave temple monasteries of Dambulla.",
         highlights: [
           "Sigiriya Lion Rock summit exploration",
           "Dambulla UNESCO Golden Cave Temples",
@@ -263,8 +265,8 @@ export const TOUR_ROUTES = {
         stay: "1 Night Boutique Heritage Resort"
       },
       {
-        id: "h-stop-3",
-        num: "03",
+        id: "h-stop-2",
+        num: "02",
         town: "Kandy",
         name: "Kandy Royal City",
         landmarkName: "Temple of the Sacred Tooth",
@@ -287,8 +289,8 @@ export const TOUR_ROUTES = {
         stay: "1 Night Hillside Sanctuary"
       },
       {
-        id: "h-stop-4",
-        num: "04",
+        id: "h-stop-3",
+        num: "03",
         town: "Nuwara Eliya",
         name: "Nuwara Eliya Tea Hills",
         landmarkName: "Nine Arch Bridge & Tea Hills",
@@ -311,8 +313,8 @@ export const TOUR_ROUTES = {
         stay: "1 Night Colonial Country Club"
       },
       {
-        id: "h-stop-5",
-        num: "05",
+        id: "h-stop-4",
+        num: "04",
         town: "Udawalawe",
         name: "Udawalawe Safari",
         landmarkName: "Wild Elephant Sanctuary",
@@ -335,21 +337,21 @@ export const TOUR_ROUTES = {
         stay: "1 Night Safari Lodge"
       },
       {
-        id: "h-stop-6",
-        num: "06",
+        id: "h-stop-5",
+        num: "05",
         town: "Galle",
         name: "Galle Fort & Departure",
         landmarkName: "Galle Fort Lighthouse & Ramparts",
         historicalTag: "17th-Century Dutch Citadel",
         days: "Days 06 – 07",
-        stage: "Colonial Citadel & Farewell",
-        region: "Southern Coast to Airport",
+        stage: "Colonial Citadel & Return to Colombo",
+        region: "Southern Coast to Colombo (CMB)",
         x: 98,
         y: 755,
         type: "galle",
         labelOffset: { dx: -20, dy: 14, anchor: "end" },
         image: "/assets/images/packages/sl_tour_2.jpg",
-        desc: "Explore the UNESCO Galle Fort ramparts and maritime streets before your comfortable expressway transfer to the airport.",
+        desc: "Explore the UNESCO Galle Fort ramparts and maritime streets before your comfortable expressway transfer to Colombo Airport for your departure flight.",
         highlights: [
           "Galle Fort lighthouse rampart walk",
           "Artisan souvenir & gem shopping",
@@ -665,7 +667,7 @@ export default function SriLankaRouteMap({
 
             {/* SVG MAP */}
             <svg
-              viewBox="0 0 450 793"
+              viewBox="-45 0 500 793"
               className="w-full h-auto max-h-[580px] sm:max-h-[640px] drop-shadow-[0_8px_25px_rgba(168,125,70,0.15)]"
               style={{ overflow: "visible" }}
             >
@@ -816,31 +818,52 @@ export default function SriLankaRouteMap({
                       <LandmarkIcon type={stop.type} isActive={isActive} />
                     </g>
 
-                    {/* Landmark Number Seal Badge */}
-                    <g transform={`translate(${stop.x - 14}, ${stop.y - 14})`}>
-                      <circle
-                        cx="0"
-                        cy="0"
-                        r={isActive ? "7.5" : "6.5"}
-                        fill={isActive ? "#D4AF37" : "#FFFFFF"}
-                        stroke="#4A2E12"
-                        strokeWidth="1"
-                        className="transition-transform duration-300"
-                      />
-                      <text
-                        x="0"
-                        y="3"
-                        textAnchor="middle"
-                        fill={isActive ? "#FFFFFF" : "#5A3A1A"}
-                        fontSize="7"
-                        fontWeight="bold"
-                        fontFamily="serif"
-                      >
-                        {idx + 1}
-                      </text>
-                    </g>
+                    {/* Landmark Badge: Aviation Crest for Gateway, Number Seal for Stops */}
+                    {stop.isGateway ? (
+                      <g transform={`translate(${stop.x - 14}, ${stop.y - 14})`}>
+                        <circle
+                          cx="0"
+                          cy="0"
+                          r={isActive ? "9" : "8"}
+                          fill={isActive ? "#071526" : "#1B2A4A"}
+                          stroke="#D4AF37"
+                          strokeWidth={isActive ? "1.6" : "1.2"}
+                          className="transition-transform duration-300"
+                        />
+                        {/* Golden Aircraft Icon */}
+                        <g transform="translate(-4.5, -4.5) scale(0.38)">
+                          <path
+                            d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
+                            fill={isActive ? "#FFEAA7" : "#D4AF37"}
+                          />
+                        </g>
+                      </g>
+                    ) : (
+                      <g transform={`translate(${stop.x - 14}, ${stop.y - 14})`}>
+                        <circle
+                          cx="0"
+                          cy="0"
+                          r={isActive ? "7.5" : "6.5"}
+                          fill={isActive ? "#D4AF37" : "#FFFFFF"}
+                          stroke="#4A2E12"
+                          strokeWidth="1"
+                          className="transition-transform duration-300"
+                        />
+                        <text
+                          x="0"
+                          y="3"
+                          textAnchor="middle"
+                          fill={isActive ? "#FFFFFF" : "#5A3A1A"}
+                          fontSize="7"
+                          fontWeight="bold"
+                          fontFamily="serif"
+                        >
+                          {stop.num}
+                        </text>
+                      </g>
+                    )}
 
-                    {/* Antique Cartouche Banner Ribbon for Town Name ONLY (Big & Prominent) */}
+                    {/* Antique Cartouche Banner Ribbon for Town Name */}
                     <g className="transition-transform duration-300 group-hover:scale-110">
                       {/* Soft drop shadow */}
                       <rect
@@ -895,6 +918,42 @@ export default function SriLankaRouteMap({
                       >
                         {stop.town}
                       </text>
+
+                      {/* Special Sub-Ribbon for Colombo Gateway */}
+                      {stop.isGateway && (
+                        <g className="pointer-events-none">
+                          <rect
+                            x={
+                              stop.labelOffset.anchor === "start"
+                                ? stop.x + stop.labelOffset.dx + 2
+                                : stop.x + stop.labelOffset.dx - (stop.town.length * 9.5 + 22)
+                            }
+                            y={stop.y + stop.labelOffset.dy + 16}
+                            width={stop.town.length * 9.5 + 20}
+                            height="14"
+                            rx="3"
+                            fill={isActive ? "#D4AF37" : "#FAF5EA"}
+                            stroke={isActive ? "#B88344" : "#A87D46"}
+                            strokeWidth="0.8"
+                          />
+                          <text
+                            x={
+                              stop.labelOffset.anchor === "start"
+                                ? stop.x + stop.labelOffset.dx + 2 + (stop.town.length * 9.5 + 20) / 2
+                                : stop.x + stop.labelOffset.dx - (stop.town.length * 9.5 + 22) + (stop.town.length * 9.5 + 20) / 2
+                            }
+                            y={stop.y + stop.labelOffset.dy + 26.5}
+                            textAnchor="middle"
+                            fill={isActive ? "#071526" : "#5A3A1A"}
+                            fontSize="7.5"
+                            fontWeight="800"
+                            fontFamily="'Cinzel', Georgia, serif"
+                            letterSpacing="0.6px"
+                          >
+                            START & FINISH
+                          </text>
+                        </g>
+                      )}
                     </g>
 
                   </g>
@@ -906,22 +965,41 @@ export default function SriLankaRouteMap({
 
           {/* Stepper Timeline Buttons */}
           <div className="w-full mt-4 flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-[#D4AF37]/30">
-            {stops.map((stop, idx) => (
-              <button
-                key={`btn-${stop.id}`}
-                onClick={() => handleStopClick(idx)}
-                className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-serif font-bold transition-all duration-300 flex items-center gap-1.5 border ${
-                  activeStopIndex === idx
-                    ? "bg-[#5A3A1A] text-[#FFEAA7] border-[#D4AF37] shadow-sm scale-105"
-                    : "bg-white text-charcoal border-gold-border/40 hover:border-[#D4AF37] hover:bg-[#FAF5EA]"
-                }`}
-              >
-                <span className="w-4 h-4 rounded-full bg-black/10 flex items-center justify-center text-[10px] font-bold">
-                  {idx + 1}
-                </span>
-                <span>{stop.town}</span>
-              </button>
-            ))}
+            {stops.map((stop, idx) => {
+              const isActive = activeStopIndex === idx;
+              if (stop.isGateway) {
+                return (
+                  <button
+                    key={`btn-${stop.id}`}
+                    onClick={() => handleStopClick(idx)}
+                    className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-cinzel font-bold transition-all duration-300 flex items-center gap-1.5 border ${
+                      isActive
+                        ? "bg-[#071526] text-[#FFEAA7] border-[#D4AF37] shadow-gold scale-105"
+                        : "bg-white text-charcoal border-[#D4AF37]/60 hover:border-[#D4AF37] hover:bg-[#FAF5EA]"
+                    }`}
+                  >
+                    <span className="text-[13px]">🛫</span>
+                    <span>Colombo Gateway (Start & Finish)</span>
+                  </button>
+                );
+              }
+              return (
+                <button
+                  key={`btn-${stop.id}`}
+                  onClick={() => handleStopClick(idx)}
+                  className={`shrink-0 px-3 py-1.5 rounded-lg text-xs font-serif font-bold transition-all duration-300 flex items-center gap-1.5 border ${
+                    isActive
+                      ? "bg-[#5A3A1A] text-[#FFEAA7] border-[#D4AF37] shadow-sm scale-105"
+                      : "bg-white text-charcoal border-gold-border/40 hover:border-[#D4AF37] hover:bg-[#FAF5EA]"
+                  }`}
+                >
+                  <span className="w-4 h-4 rounded-full bg-black/10 flex items-center justify-center text-[10px] font-bold">
+                    {stop.num}
+                  </span>
+                  <span>{stop.town}</span>
+                </button>
+              );
+            })}
           </div>
 
         </div>
@@ -949,14 +1027,22 @@ export default function SriLankaRouteMap({
                     <img
                       src={activeStop.image}
                       alt={activeStop.name}
+                      style={{ objectPosition: activeStop.isGateway ? "center 38%" : "center" }}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     
                     {/* Stop Stage Badge */}
-                    <span className="absolute top-3.5 left-3.5 px-3 py-1 bg-[#071526]/90 backdrop-blur-md border border-gold-primary text-gold-warm font-cinzel text-xs font-bold uppercase tracking-wider rounded">
-                      Stop {activeStop.num} &bull; {activeStop.days}
-                    </span>
+                    {activeStop.isGateway ? (
+                      <span className="absolute top-3.5 left-3.5 px-3 py-1 bg-[#071526]/95 backdrop-blur-md border border-[#D4AF37] text-[#FFEAA7] font-cinzel text-xs font-bold uppercase tracking-wider rounded flex items-center gap-1.5 shadow-md">
+                        <span>🛫</span>
+                        <span>International Gateway &bull; Start & Finish Hub</span>
+                      </span>
+                    ) : (
+                      <span className="absolute top-3.5 left-3.5 px-3 py-1 bg-[#071526]/90 backdrop-blur-md border border-gold-primary text-gold-warm font-cinzel text-xs font-bold uppercase tracking-wider rounded">
+                        Stop {activeStop.num} &bull; {activeStop.days}
+                      </span>
+                    )}
 
                     {/* Region Badge */}
                     <span className="absolute bottom-3 left-3.5 text-xs font-sans text-white/95 drop-shadow-md flex items-center gap-1.5 font-medium">
