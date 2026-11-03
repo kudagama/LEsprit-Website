@@ -9,13 +9,6 @@ import {
   Sparkles, 
   CheckCircle2, 
   Compass, 
-  Key, 
-  Gem, 
-  Crown, 
-  CarFront, 
-  UtensilsCrossed, 
-  PlaneTakeoff, 
-  ShieldCheck,
   LayoutGrid
 } from "lucide-react";
 import SriLankaRouteMap from "./SriLankaRouteMap";
@@ -292,89 +285,6 @@ export default function TourPackages({ region = "sri-lanka" }) {
             ))}
           </motion.div>
         )}
-
-        {/* Accommodations & Inclusions Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20 bg-black border border-gold-primary/30 rounded-sm p-6 sm:p-10 md:p-14 shadow-2xl relative z-10 overflow-hidden"
-        >
-          {/* Subtle background glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-gold-primary/10 blur-[100px] pointer-events-none" />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 relative z-10">
-            
-            {/* Accommodation Options */}
-            <div>
-              <h4 className="font-serif text-2xl sm:text-3xl text-white mb-4 flex items-center gap-4">
-                <ShieldCheck className="text-gold-primary w-8 h-8 stroke-[1.5]" />
-                Accommodation Tiers
-              </h4>
-              <p className="text-white/60 text-base sm:text-lg mb-8 font-sans font-light leading-relaxed">
-                Tailor your sanctuary. We partner exclusively with properties that meet our rigorous standards for service, design, and authenticity.
-              </p>
-              
-              <div className="space-y-4">
-                {[
-                  { level: "Standard", icon: Key, desc: "Charming 3-star boutique properties with authentic local character." },
-                  { level: "Deluxe", icon: Gem, desc: "Refined 4-star hotels offering elevated comfort and amenities." },
-                  { level: "Luxury", icon: Crown, desc: "Premium 5-star resorts and exclusive private villas." }
-                ].map((tier, i) => (
-                  <div key={i} className="group flex items-start gap-5 p-5 rounded-lg border border-white/5 bg-white/5 hover:bg-gold-primary/10 hover:border-gold-primary/30 transition-all duration-500">
-                    <div className="w-12 h-12 rounded-full border border-gold-primary/20 bg-black group-hover:scale-110 group-hover:border-gold-primary/50 transition-all duration-500 flex items-center justify-center shrink-0 shadow-gold">
-                      <tier.icon className="w-5 h-5 text-gold-primary" />
-                    </div>
-                    <div>
-                      <span className="font-cinzel text-sm sm:text-base font-bold tracking-widest text-gold-primary uppercase block mb-1">
-                        {tier.level}
-                      </span>
-                      <span className="font-sans text-sm sm:text-base text-white/80 font-light block leading-relaxed group-hover:text-white transition-colors">
-                        {tier.desc}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Included Services */}
-            <div>
-              <h4 className="font-serif text-2xl sm:text-3xl text-white mb-4 flex items-center gap-4">
-                <Sparkles className="text-gold-primary w-8 h-8 stroke-[1.5]" />
-                Signature Inclusions
-              </h4>
-              <p className="text-white/60 text-base sm:text-lg mb-8 font-sans font-light leading-relaxed">
-                Every itinerary is underpinned by seamless logistics and uncompromising attention to detail.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  { icon: CarFront, label: "Private Chauffeur", desc: "Premium vehicles & drivers" },
-                  { icon: Compass, label: "Expert Guide", desc: "Deep local knowledge" },
-                  { icon: UtensilsCrossed, label: "Daily Breakfast", desc: "Gourmet dining experiences" },
-                  { icon: PlaneTakeoff, label: "VIP Transfers", desc: "Seamless global logistics" }
-                ].map((service, i) => (
-                  <div key={i} className="flex flex-col gap-3 p-5 border border-white/5 bg-white/5 hover:bg-gold-primary/10 hover:border-gold-primary/40 transition-all duration-500 group rounded-lg text-center items-center">
-                    <div className="w-12 h-12 rounded-full border border-gold-primary/20 flex items-center justify-center bg-black group-hover:-translate-y-1 group-hover:shadow-gold transition-all duration-500">
-                      <service.icon className="text-gold-primary w-5 h-5" />
-                    </div>
-                    <div>
-                      <span className="font-serif text-lg sm:text-xl text-white font-medium tracking-wide block mb-1">
-                        {service.label}
-                      </span>
-                      <span className="font-sans text-xs sm:text-sm text-white/60 group-hover:text-white/80 transition-colors">
-                        {service.desc}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
-        </motion.div>
 
       </div>
     </section>
