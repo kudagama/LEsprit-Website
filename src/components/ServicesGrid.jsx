@@ -34,7 +34,7 @@ const SERVICES = [
     category: "Signature Experiences",
     icon: Compass,
     title: "Signature & Specialized Experiences",
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
+    image: "/assets/images/services/signature_experiences.jpg",
     desc: "Immersive thematic journeys led by local specialists across pristine wilderness, cultural sanctuaries, and private coastal reserves.",
     features: [
       "Tailor-Made Journeys & À La Carte Travel",
@@ -50,7 +50,7 @@ const SERVICES = [
     category: "Premium Fleet",
     icon: Car,
     title: "Premium Transport Fleet",
-    image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80",
+    image: "/assets/images/services/premium_fleet.jpg",
     desc: "Unmatched ground transit and domestic aviation charters, ensuring seamless logistics with dedicated chauffeur-driven services.",
     features: [
       "Private Cars & Luxury SUVs",
@@ -136,7 +136,15 @@ export default function ServicesGrid() {
                       <img
                         src={svc.image}
                         alt={svc.title}
-                        style={{ objectPosition: svc.id === "travel" ? "center 28%" : "center" }}
+                        style={{ 
+                          objectPosition: svc.id === "travel" 
+                            ? "center 28%" 
+                            : svc.id === "experiences" 
+                            ? "center 42%" 
+                            : svc.id === "fleet"
+                            ? "center 42%"
+                            : "center" 
+                        }}
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-108"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />

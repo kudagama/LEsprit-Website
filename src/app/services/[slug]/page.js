@@ -27,6 +27,7 @@ const SERVICE_DATA = {
     ],
   },
   "signature-experiences": {
+    image: "/assets/images/services/signature_experiences.jpg",
     title: "Curated Expedition Pursuits",
     subtitle: "Immersive thematic expeditions guided by local historians, naturalists, and wellness specialists.",
     overview:
@@ -59,6 +60,7 @@ const SERVICE_DATA = {
     ],
   },
   "premium-fleet": {
+    image: "/assets/images/services/premium_fleet.jpg",
     title: "Private Transport & Aviation",
     subtitle: "Unrivaled luxury ground transit and domestic aviation charters across Sri Lanka and the Maldives.",
     overview:
